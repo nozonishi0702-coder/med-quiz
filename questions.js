@@ -1132,6 +1132,78 @@ const QUESTIONS = [
     explanation: "【要点】SSaSSでは、カリウム富化塩(NaCl約75%+KCl約25%)への切替が脳卒中・主要心血管イベント・総死亡をいずれも有意に低下させた。\n【背景/エビデンス】脳卒中既往または60歳以上で高血圧をもつ中国農村の20,995人・600村を対象としたクラスター無作為化、約5年。脳卒中−14%、主要心血管イベント−13%、総死亡−12%、収縮期血圧は約3.3mmHg低下。重症腎障害・カリウム保持性利尿薬使用者は除外され、臨床的高カリウム血症の全体的な増加はみられなかった。\n【臨床応用/注意】腎機能が正常でカリウム制限の不要な高血圧・脳卒中リスク者では、簡便で費用対効果の高い介入となりうる。一方、CKD進行例、カリウム保持性利尿薬/RAS阻害薬併用の高K傾向例、アルドステロン低下病態では避けるか慎重に用いる。\n【誤答】イベント減少なし・変化なし・全例で高K問題化は、いずれも試験結果と異なる。",
     source: { title: "Effect of Salt Substitution on Cardiovascular Events and Death (SSaSS, NEJM 2021)", url: "https://www.nejm.org/doi/full/10.1056/NEJMoa2105675" },
     tags: ["高血圧", "減塩", "カリウム", "脳卒中予防"]
+  },
+  {
+    id: "jr-dupicopd-01",
+    category: "journal",
+    difficulty: 2,
+    added: "2026-07-22",
+    question: "2型炎症を伴うCOPDに対する生物学的製剤デュピルマブについて、BOREAS/NOTUS試験に基づき妥当な記述はどれか。",
+    options: ["好酸球数によらず全COPD患者で増悪抑制が確立している", "IL-4/IL-13の共有受容体をブロックするモノクローナル抗体である", "気管支拡張薬でありLAMA/LABAを置換する位置づけである", "標準吸入トリプル療法に上乗せし、血中好酸球高値(2型炎症)のCOPDで増悪を有意に減少させた"],
+    correct: [1, 3],
+    explanation: "【要点】デュピルマブは、血中好酸球高値(2型炎症)を伴うCOPDで、標準吸入トリプル療法に上乗せして増悪を有意に減らす初のバイオ製剤である。IL-4/IL-13の共有受容体をブロックする。\n【背景/エビデンス】BOREASと確認試験NOTUSは血中好酸球≥300/μLの中等症〜重症COPD計1,874例を対象。52週で年間増悪をプラセボ比で有意に低下(NOTUSで約34%減)、肺機能(FEV1)も改善した。\n【臨床応用/注意】適応の中心は2型炎症のバイオマーカーである好酸球高値例で、既にICS/LABA/LAMAを最適化しても増悪を繰り返す患者に追加する。気管支拡張薬の代替ではない。\n【誤答】『好酸球によらず全例で確立』は誤りで、対象は好酸球高値例。『LAMA/LABAを置換する気管支拡張薬』も機序・位置づけが異なり、この文脈で不適切。",
+    source: { title: "Dupilumab for COPD with Blood Eosinophil Evidence of Type 2 Inflammation (NOTUS, NEJM 2024)", url: "https://www.nejm.org/doi/full/10.1056/NEJMoa2401304" },
+    tags: ["COPD", "デュピルマブ", "2型炎症", "複数選択"]
+  },
+  {
+    id: "jr-abelacimab-01",
+    category: "journal",
+    difficulty: 3,
+    added: "2026-07-22",
+    question: "心房細動患者を対象に抗凝固薬アベラシマブとリバーロキサバンを比較したAZALEA-TIMI 71試験に関して、適切な記述はどれか。",
+    options: ["リバーロキサバンと比べ大出血および臨床的に重要な非大出血を大幅に減少させた", "脳卒中・全身塞栓の予防における優越性が本試験で確定的に示された", "標的は凝固第XI因子で、内因系凝固を抑制する", "月1回皮下投与のモノクローナル抗体である"],
+    correct: [0, 2, 3],
+    explanation: "【要点】アベラシマブは第XI因子を標的とする月1回皮下投与のモノクローナル抗体で、AZALEA-TIMI 71ではリバーロキサバンと比べ出血を大幅に減らした。\n【背景/エビデンス】心房細動1,287例を対象とし、150mg群で大出血/臨床的に重要な非大出血を約67%、大出血を約74%、消化管出血を約93%減少。出血の圧倒的減少により試験は早期中止された。\n【臨床応用/注意】第XI因子阻害は止血に必要なトロンビン生成を比較的保ちつつ病的血栓を抑える戦略として期待される。ただし本試験は脳卒中予防の優越性を検出する検出力はなく、有効性は今後の大規模試験(第III相)待ちである。\n【誤答】『脳卒中予防の優越性が確定的に示された』はイベント数が少なく確定できておらず、この文脈で不適切。他の3つは試験・機序と整合する。",
+    source: { title: "AZALEA-TIMI 71: Abelacimab vs Rivaroxaban in Atrial Fibrillation (TCTMD/TIMI 2024)", url: "https://www.tctmd.com/news/azalea-timi-71-abelacimab-slashes-bleeds-vs-rivaroxaban-af-stroke-impact-unclear" },
+    tags: ["心房細動", "第XI因子", "抗凝固", "複数選択"]
+  },
+  {
+    id: "cl-aprocitentan-01",
+    category: "clinical",
+    difficulty: 3,
+    added: "2026-07-22",
+    question: "二次性高血圧を除外済みで、スピロノラクトンを含む4剤併用でも血圧管理が困難な真の治療抵抗性高血圧の成人。近年承認された新規機序の追加薬として支持されるのはどれか。",
+    options: ["アプロシテンタン(デュアルエンドセリン受容体拮抗薬)を追加する", "サイアザイド系利尿薬をさらに増量する", "長時間作用型硝酸薬を追加する", "第一選択としてドキサゾシン(α遮断薬)を用いる"],
+    correct: 0,
+    explanation: "【要点】スピロノラクトンを含む多剤でも未達の真の治療抵抗性高血圧では、デュアルエンドセリン受容体拮抗薬アプロシテンタンが新規の追加選択肢として支持される。\n【背景/エビデンス】PRECISION試験(第III相)で、標準3剤に上乗せしたアプロシテンタンは4週で24時間収縮期血圧を追加で有意に低下(用量依存的に約4〜6mmHg)、40週まで効果が持続した。主な有害事象は軽〜中等度の浮腫・体液貯留。\n【臨床応用/注意】アドヒアランス・二次性要因を評価し、既存レジメン最適化後に検討する。体液貯留や心不全リスク、妊娠回避に留意する。\n【誤答】サイアザイド増量やドキサゾシンは既存クラス内の一手で『新規機序』に当たらず、硝酸薬は降圧の主役でない。いずれも本設問(新規承認機序)の文脈では最適でない。",
+    source: { title: "Dual Endothelin Antagonist Aprocitentan for Resistant Hypertension (PRECISION, Lancet 2022)", url: "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(22)02034-7/abstract" },
+    tags: ["高血圧", "治療抵抗性", "アプロシテンタン", "エンドセリン"]
+  },
+  {
+    id: "gl-anxiety-01",
+    category: "guideline",
+    difficulty: 1,
+    added: "2026-07-22",
+    question: "2023年 米国USPSTFの成人に対する不安症スクリーニング勧告の内容として正しいものはどれか。",
+    options: ["65歳超を含む全成人に推奨する(Grade A)", "症状のない19〜64歳の成人(妊娠・産後を含む)にスクリーニングを推奨する(Grade B)", "スクリーニングは有害でありルーチンには推奨しない(Grade D)", "対象は小児・思春期のみである"],
+    correct: 1,
+    explanation: "【要点】2023年USPSTFは、症状のない19〜64歳の成人(妊娠・産後を含む)に対する不安症のスクリーニングをGrade Bで推奨した。成人への不安症スクリーニングの推奨は初。\n【背景/エビデンス】不安症は頻度が高く過小診断されがちで、GAD-7等の妥当性ある簡便ツールで拾い上げ、治療につなげる便益が中等度と判断された。65歳超では証拠不十分(I statement)で、推奨・非推奨いずれも表明していない。\n【臨床応用/注意】あくまで無症状者への系統的スクリーニングの話で、陽性例は診断的評価と重症度・自殺リスク評価につなげる。うつ病スクリーニング(成人でGrade B)と併せて運用する。\n【誤答】『全成人にGrade A』『Grade Dで非推奨』『小児のみ』は、いずれも実際の勧告と異なる。",
+    source: { title: "Anxiety Disorders in Adults: Screening — USPSTF Recommendation (2023)", url: "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/anxiety-adults-screening" },
+    tags: ["メンタルヘルス", "不安症", "USPSTF", "スクリーニング"]
+  },
+  {
+    id: "rv-ensifentrine-01",
+    category: "review",
+    difficulty: 2,
+    added: "2026-07-22",
+    question: "COPDの維持療法として2024年に承認された吸入薬エンシフェントリンの薬理学的分類はどれか。",
+    options: ["長時間作用型β2刺激薬(LABA)", "吸入ステロイド(ICS)", "ロイコトリエン受容体拮抗薬", "PDE3/PDE4のデュアル阻害薬で、気管支拡張と抗炎症作用を併せ持つ"],
+    correct: 3,
+    explanation: "【要点】エンシフェントリン(Ohtuvayre)は、PDE3とPDE4を同時に阻害する初のクラスの吸入維持療法薬で、気管支拡張と非ステロイド性の抗炎症作用を併せ持つ。COPD維持治療薬としては約20年ぶりの新規機序。\n【背景/エビデンス】第III相ENHANCE-1/2(中等症〜重症COPD計1,553例、24週)で肺機能(FEV1)・症状・QOLを有意に改善。増悪リスクはENHANCE-2で低下したがENHANCE-1では有意でなかった。\n【臨床応用/注意】PDE3/PDE4阻害によりcAMP/cGMPを増やし気道平滑筋を弛緩させる。既存の吸入療法に上乗せする位置づけで、位置づけの確立には長期増悪データの蓄積が待たれる。\n【誤答】LABA・ICS・ロイコトリエン受容体拮抗薬はいずれも既存の別クラスで、エンシフェントリンの分類として不適切。",
+    source: { title: "FDA Approves Ensifentrine for Maintenance Treatment of COPD (ENHANCE, AJMC 2024)", url: "https://www.ajmc.com/view/fda-approves-ensifentrine-for-maintenance-treatment-of-adult-patients-with-copd" },
+    tags: ["COPD", "エンシフェントリン", "PDE阻害薬", "維持療法"]
+  },
+  {
+    id: "jr-zilebesiran-01",
+    category: "journal",
+    difficulty: 2,
+    added: "2026-07-22",
+    question: "高血圧に対する新規薬ジレベシラン(KARDIA試験)の作用機序・特徴として正しいものはどれか。",
+    options: ["アルドステロン合成酵素を阻害する新規経口薬である", "エンドセリン受容体を拮抗する新規薬である", "肝でのアンジオテンシノーゲン合成を標的とするRNAi治療で、皮下投与により降圧が長期間持続しうる", "新規クラスの経口カルシウム拮抗薬である"],
+    correct: 2,
+    explanation: "【要点】ジレベシランは、肝のアンジオテンシノーゲン(アンジオテンシンIIの前駆体)合成を抑えるRNAi治療で、皮下投与により数か月にわたる持続的な降圧が期待される。\n【背景/エビデンス】KARDIA-1(単剤)およびKARDIA-2(標準降圧薬への上乗せ)で、24時間収縮期血圧をプラセボ比で有意に低下(KARDIA-2で最大約12mmHgの追加低下)。半年に1回程度の投与でアドヒアランス課題の解決が期待される。\n【臨床応用/注意】GalNAc結合技術で肝選択的にRNAi作用を及ぼす。高カリウム血症・低血圧・妊娠時のRAS抑制リスクに留意が必要で、心血管アウトカムは今後の検証を要する。\n【誤答】アルドステロン合成酵素阻害薬(バクスドロスタット等)、エンドセリン受容体拮抗薬(アプロシテンタン)、カルシウム拮抗薬はいずれも別機序で、ジレベシランの分類として不適切。",
+    source: { title: "RNA Interference With Zilebesiran for Mild to Moderate Hypertension (KARDIA-1, JAMA 2024)", url: "https://pubmed.ncbi.nlm.nih.gov/38363577/" },
+    tags: ["高血圧", "ジレベシラン", "RNAi", "アンジオテンシノーゲン"]
   }
 ];
 
