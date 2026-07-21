@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>総合診療 知識アップデート・クイズ</title>
+<style>
+  /* ===== テーマ変数（ライト/ダーク） ===== */
+  :root {
+    --bg: #f4f7f8;
+    --surface: #ffffff;
+    --surface-2: #eef3f4;
+    --text: #1b2a2d;
+    --text-muted: #5c7378;
+    --border: #dbe4e6;
+    --accent: #0d9488;          /* ティール */
+    --accent-dark: #0f766e;
+    --accent-soft: #ccf0eb;
+    --correct: #16a34a;
+    --correct-soft: #dcfce7;
+    --wrong: #dc2626;
+    --wrong-soft: #fee2e2;
+    --star: #f59e0b;
+    --shadow: 0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.04);
+    /* カテゴリ色 */
+    --cat-journal: #2563eb;
+    --cat-guideline: #7c3aed;
+    --cat-review: #0d9488;
+    --cat-clinical: #ea580c;
+  }
+  [data-theme="dark"] {
+    --bg: #0f1719;
+    --surface: #172224;
+    --surface-2: #1e2c2f;
+    --text: #e6eeef;
+    --text-muted: #93a9ad;
+    --border: #2a3a3d;
+    --accent: #2dd4bf;
+    --accent-dark: #14b8a6;
+    --accent-soft: #123c39;
+    --correct: #4ade80;
+    --correct-soft: #14351f;
+    --wrong: #f87171;
+    --wrong-soft: #3a1717;
+    --star: #fbbf24;
+    --shadow: 0 1px 3px rgba(0,0,0,.4);
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN",
+                 "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    transition: background .3s, color .3s;
+  }
+
+  /* ===== ヘッダー ===== */
+  header {
+    position: sticky; top: 0; z-index: 20;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    box-shadow: var(--shadow);
+  }
+  .header-inner {
+    max-width: 760px; margin: 0 auto;
+    padding: 12px 16px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .logo {
+    display: flex; align-items: center; gap: 8px;
+    font-weight: 700; font-size: 1.05rem; color: var(--accent);
+  }
+  .logo svg { width: 24px; height: 24px; }
+  .header-spacer { flex: 1; }
+  .icon-btn {
+    background: transparent; border: 1px solid var(--border);
+    color: var(--text); border-radius: 8px; cursor: pointer;
+    width: 38px; height: 38px; font-size: 1.1rem;
+    display: flex; align-items: center; justify-content: center;
+    transition: background .2s;
+  }
+  .icon-btn:hover { background: var(--surface-2); }
+
+  /* ===== レイアウト ===== */
+  main { max-width: 760px; margin: 0 auto; padding: 16px; }
+
+  /* ===== タブナビ ===== */
+  nav.tabs {
+    display: flex; gap: 6px; margin-bottom: 18px;
+    background: var(--surface); padding: 6px; border-radius: 12px;
+    box-shadow: var(--shadow);
+  }
+  nav.tabs button {
+    flex: 1; padding: 9px 6px; border: none; border-radius: 8px;
+    background: transparent; color: var(--text-muted);
+    font-size: .9rem; font-weight: 600; cursor: pointer;
+    transition: all .2s;
+  }
+  nav.tabs button.active {
+    background: var(--accent); color: #fff;
+  }
+
+  /* ===== カード共通 ===== */
+  .card {
+    background: var(--surface); border-radius: 14px;
+    padding: 20px; box-shadow: var(--shadow);
+    margin-bottom: 16px;
+  }
+  h2 { font-size: 1.15rem; margin: 0 0 14px; }
+  h3 { font-size: 1rem; margin: 0 0 10px; }
+  p.lead { color: var(--text-muted); margin: 0 0 18px; }
+
+  /* ===== ボタン ===== */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+    padding: 13px 20px; border: none; border-radius: 10px;
+    font-size: 1rem; font-weight: 600; cursor: pointer;
+    background: var(--accent); color: #fff;
+    transition: background .2s, transform .1s;
+    width: 100%;
+  }
+  .btn:hover { background: var(--accent-dark); }
+  .btn:active { transform: translateY(1px); }
+  .btn:disabled { opacity: .5; cursor: not-allowed; }
+  .btn.secondary { background: var(--surface-2); color: var(--text); }
+  .btn.secondary:hover { background: var(--border); }
+  .btn.danger { background: var(--wrong); }
+  .btn.outline { background: transparent; border: 1px solid var(--accent); color: var(--accent); }
+  .btn.small { width: auto; padding: 9px 14px; font-size: .88rem; }
+
+  /* ===== カテゴリタグ・難易度 ===== */
+  .cat-tag {
+    display: inline-block; padding: 3px 10px; border-radius: 20px;
+    font-size: .75rem; font-weight: 700; color: #fff;
+  }
+  .cat-journal   { background: var(--cat-journal); }
+  .cat-guideline { background: var(--cat-guideline); }
+  .cat-review    { background: var(--cat-review); }
+  .cat-clinical  { background: var(--cat-clinical); }
+  .difficulty { color: var(--star); font-size: .85rem; letter-spacing: 1px; }
+  .difficulty .empty { color: var(--border); }
+
+  /* ===== 出題画面 ===== */
+  .quiz-meta {
+    display: flex; align-items: center; gap: 10px;
+    margin-bottom: 14px; flex-wrap: wrap;
+  }
+  .progress-bar {
+    height: 6px; background: var(--surface-2); border-radius: 4px;
+    overflow: hidden; margin-bottom: 18px;
+  }
+  .progress-bar > div {
+    height: 100%; background: var(--accent);
+    transition: width .3s ease;
+  }
+  .question-text {
+    font-size: 1.08rem; font-weight: 600; margin-bottom: 18px;
+    line-height: 1.75;
+  }
+  .options { display: flex; flex-direction: column; gap: 10px; }
+  .option {
+    text-align: left; padding: 14px 16px; border-radius: 10px;
+    border: 1.5px solid var(--border); background: var(--surface);
+    color: var(--text); font-size: .98rem; cursor: pointer;
+    transition: border-color .15s, background .15s;
+    display: flex; gap: 10px; align-items: flex-start;
+    line-height: 1.6;
+  }
+  .option:hover:not(:disabled) { border-color: var(--accent); background: var(--surface-2); }
+  .option:disabled { cursor: default; }
+  .option .marker {
+    flex-shrink: 0; width: 24px; height: 24px; border-radius: 50%;
+    border: 1.5px solid var(--border); display: flex;
+    align-items: center; justify-content: center; font-size: .8rem;
+    font-weight: 700; color: var(--text-muted);
+  }
+  .option.correct { border-color: var(--correct); background: var(--correct-soft); }
+  .option.correct .marker { border-color: var(--correct); background: var(--correct); color: #fff; }
+  .option.wrong { border-color: var(--wrong); background: var(--wrong-soft); }
+  .option.wrong .marker { border-color: var(--wrong); background: var(--wrong); color: #fff; }
+  /* 複数選択: 選択中(未回答)の状態 */
+  .option.picked { border-color: var(--accent); background: var(--surface-2); }
+  .option.picked .marker { border-color: var(--accent); background: var(--accent); color: #fff; }
+  /* 複数選択: 正解なのに選べなかった選択肢を示す */
+  .option.missed { border-color: var(--correct); border-style: dashed; }
+  .multi-hint {
+    font-size: .85rem; color: var(--accent-dark); background: var(--surface-2);
+    border-radius: 8px; padding: 8px 12px; margin-bottom: 10px;
+  }
+
+  /* ===== フィードバック・解説 ===== */
+  .feedback { margin-top: 18px; animation: fadeIn .3s ease; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+  .verdict {
+    font-weight: 700; font-size: 1.05rem; margin-bottom: 8px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .verdict.ok { color: var(--correct); }
+  .verdict.ng { color: var(--wrong); }
+  .explanation {
+    background: var(--surface-2); border-radius: 10px; padding: 14px 16px;
+    border-left: 4px solid var(--accent); margin-bottom: 14px;
+    font-size: .95rem; line-height: 1.7; white-space: pre-line;
+  }
+  .source-link {
+    font-size: .85rem; color: var(--text-muted); margin-bottom: 16px;
+    word-break: break-word;
+  }
+  .source-link a { color: var(--accent); text-decoration: none; }
+  .source-link a:hover { text-decoration: underline; }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
+  .mini-tag {
+    font-size: .72rem; background: var(--surface-2); color: var(--text-muted);
+    padding: 2px 8px; border-radius: 6px;
+  }
+
+  /* ===== ダッシュボード ===== */
+  .stat-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;
+    margin-bottom: 16px;
+  }
+  .stat-box {
+    background: var(--surface-2); border-radius: 12px; padding: 14px;
+    text-align: center;
+  }
+  .stat-box .num { font-size: 1.7rem; font-weight: 800; color: var(--accent); }
+  .stat-box .label { font-size: .78rem; color: var(--text-muted); margin-top: 2px; }
+  .stat-box .sub { font-size: .72rem; color: var(--text-muted); }
+
+  .cat-bar-row { margin-bottom: 14px; }
+  .cat-bar-head {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 5px; font-size: .85rem;
+  }
+  .cat-bar-head .name { font-weight: 600; display: flex; align-items: center; gap: 8px; }
+  .cat-bar-track {
+    height: 14px; background: var(--surface-2); border-radius: 7px; overflow: hidden;
+  }
+  .cat-bar-fill {
+    height: 100%; border-radius: 7px; transition: width .5s ease;
+    min-width: 2px;
+  }
+  .cat-bar-note { font-size: .74rem; color: var(--text-muted); margin-top: 3px; }
+
+  /* ===== 設定 ===== */
+  .setting-row {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 12px 0; border-bottom: 1px solid var(--border); gap: 12px;
+    flex-wrap: wrap;
+  }
+  .setting-row:last-child { border-bottom: none; }
+  .setting-row .desc { font-size: .95rem; }
+  .setting-row .desc small { display: block; color: var(--text-muted); font-size: .78rem; }
+  .seg { display: flex; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+  .seg button {
+    padding: 8px 14px; border: none; background: var(--surface);
+    color: var(--text-muted); cursor: pointer; font-size: .88rem; font-weight: 600;
+  }
+  .seg button.active { background: var(--accent); color: #fff; }
+  .chip-group { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip {
+    padding: 7px 13px; border-radius: 20px; border: 1.5px solid var(--border);
+    background: var(--surface); color: var(--text-muted); cursor: pointer;
+    font-size: .85rem; font-weight: 600; transition: all .15s;
+  }
+  .chip.active { background: var(--accent-soft); border-color: var(--accent); color: var(--accent-dark); }
+  [data-theme="dark"] .chip.active { color: var(--accent); }
+
+  /* ===== メッセージ・空状態 ===== */
+  .empty-state { text-align: center; padding: 30px 10px; color: var(--text-muted); }
+  .empty-state .emoji { font-size: 2.5rem; margin-bottom: 8px; }
+
+  /* ===== モーダル ===== */
+  .modal-overlay {
+    position: fixed; inset: 0; background: rgba(0,0,0,.5);
+    display: none; align-items: center; justify-content: center; z-index: 50;
+    padding: 20px;
+  }
+  .modal-overlay.show { display: flex; }
+  .modal {
+    background: var(--surface); border-radius: 14px; padding: 22px;
+    max-width: 380px; width: 100%; box-shadow: 0 10px 40px rgba(0,0,0,.3);
+  }
+  .modal h3 { margin-top: 0; }
+  .modal .btn-row { display: flex; gap: 10px; margin-top: 18px; }
+  .modal .btn-row .btn { flex: 1; }
+
+  .hidden { display: none !important; }
+  footer { text-align: center; padding: 20px; color: var(--text-muted); font-size: .75rem; }
+
+  @media (max-width: 480px) {
+    .stat-grid { grid-template-columns: repeat(2, 1fr); }
+    nav.tabs button { font-size: .82rem; }
+    main { padding: 12px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0-6 0"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/>
+        <path d="M12 8v8M8 12h8"/>
+      </svg>
+      <span>総合診療クイズ</span>
+    </div>
+    <div class="header-spacer"></div>
+    <button class="icon-btn" id="themeToggle" title="ダークモード切替">🌙</button>
+  </div>
+</header>
+
+<main>
+  <nav class="tabs">
+    <button data-tab="home" class="active">学習</button>
+    <button data-tab="dashboard">進捗</button>
+    <button data-tab="settings">設定</button>
+  </nav>
+
+  <!-- ===================== 学習タブ ===================== -->
+  <section id="tab-home">
+    <!-- ホーム（開始画面） -->
+    <div id="homeView">
+      <div class="card">
+        <h2>今日の学習</h2>
+        <p class="lead" id="homeSummary">読み込み中...</p>
+        <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:12px;">
+          <label style="font-size:.9rem;color:var(--text-muted);">難易度レベル</label>
+          <select id="levelSelect" style="padding:8px 10px;border-radius:8px;border:1px solid var(--border);background:var(--surface);color:var(--text);">
+            <option value="all">おまかせ（すべて）</option>
+            <option value="1">やさしい（★）</option>
+            <option value="2">標準（★★）</option>
+            <option value="3">難しい（★★★）</option>
+            <option value="hard">最難関（★★★＋複数正解）</option>
+          </select>
+        </div>
+        <button class="btn" id="startBtn">今日の学習を始める</button>
+      </div>
+      <div class="card">
+        <h3>新着モード</h3>
+        <p class="lead" id="newSummary">最近追加された問題だけを、新しい順に出題します。</p>
+        <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:12px;">
+          <label style="font-size:.9rem;color:var(--text-muted);">対象期間</label>
+          <select id="newWindow" style="padding:8px 10px;border-radius:8px;border:1px solid var(--border);background:var(--surface);color:var(--text);">
+            <option value="3">直近3日</option>
+            <option value="7" selected>直近7日</option>
+            <option value="14">直近14日</option>
+            <option value="30">直近30日</option>
+            <option value="latest">最新の追加分のみ</option>
+          </select>
+        </div>
+        <button class="btn outline" id="newBtn">新着問題を解く</button>
+      </div>
+      <div class="card">
+        <h3>弱点復習モード</h3>
+        <p class="lead" id="weakSummary">過去に間違えた問題だけを解き直します。</p>
+        <button class="btn outline" id="weakBtn">間違えた問題を復習する</button>
+      </div>
+    </div>
+
+    <!-- 出題ビュー -->
+    <div id="quizView" class="hidden">
+      <div class="card">
+        <div class="quiz-meta">
+          <span class="cat-tag" id="qCat"></span>
+          <span class="difficulty" id="qDiff"></span>
+          <span class="header-spacer"></span>
+          <span style="font-size:.85rem;color:var(--text-muted)" id="qCounter"></span>
+        </div>
+        <div class="progress-bar"><div id="qProgress"></div></div>
+        <div class="question-text" id="qText"></div>
+        <div class="multi-hint" id="qMultiHint">当てはまるものを<b>すべて</b>選んで「回答する」を押してください（正解は1つとは限りません）。</div>
+        <div class="options" id="qOptions"></div>
+        <button class="btn hidden" id="submitBtn" style="margin-top:4px;">回答する</button>
+
+        <div class="feedback hidden" id="qFeedback">
+          <div class="verdict" id="qVerdict"></div>
+          <div class="explanation" id="qExplanation"></div>
+          <div class="source-link" id="qSource"></div>
+          <div class="tag-row" id="qTags"></div>
+          <button class="btn" id="nextBtn">次へ</button>
+        </div>
+      </div>
+      <button class="btn secondary small" id="quitBtn" style="margin:0 auto;display:block;">セッションを中断</button>
+    </div>
+
+    <!-- セッション完了ビュー -->
+    <div id="resultView" class="hidden">
+      <div class="card" style="text-align:center;">
+        <div style="font-size:2.5rem;">🎉</div>
+        <h2>セッション完了！</h2>
+        <p class="lead" id="resultSummary"></p>
+        <div class="stat-grid" style="grid-template-columns:repeat(2,1fr);">
+          <div class="stat-box"><div class="num" id="resCorrect">0</div><div class="label">正解</div></div>
+          <div class="stat-box"><div class="num" id="resRate">0%</div><div class="label">正答率</div></div>
+        </div>
+        <button class="btn" id="backHomeBtn" style="margin-top:8px;">ホームに戻る</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ダッシュボードタブ ===================== -->
+  <section id="tab-dashboard" class="hidden">
+    <div class="card">
+      <h2>学習の進捗</h2>
+      <div class="stat-grid">
+        <div class="stat-box"><div class="num" id="dStreak">0</div><div class="label">連続学習日数</div><div class="sub" id="dStreakSub"></div></div>
+        <div class="stat-box"><div class="num" id="dTotal">0</div><div class="label">総回答数</div></div>
+        <div class="stat-box"><div class="num" id="dRate">0%</div><div class="label">全体正答率</div></div>
+        <div class="stat-box"><div class="num" id="dSeen">0</div><div class="label">学習済み問題</div><div class="sub" id="dSeenSub"></div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>カテゴリ別 正答率</h3>
+      <div id="catHeatmap"></div>
+    </div>
+
+    <div class="card">
+      <div class="stat-grid" style="grid-template-columns:repeat(2,1fr);margin-bottom:0;">
+        <div class="stat-box"><div class="num" id="dDue">0</div><div class="label">復習待ち</div></div>
+        <div class="stat-box"><div class="num" id="dNew">0</div><div class="label">未着手</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 設定タブ ===================== -->
+  <section id="tab-settings" class="hidden">
+    <div class="card">
+      <h2>出題設定</h2>
+      <div class="setting-row">
+        <div class="desc">1セッションの問題数<small>隙間時間に合わせて調整</small></div>
+        <div class="seg" id="segCount">
+          <button data-count="3">3問</button>
+          <button data-count="5">5問</button>
+          <button data-count="10">10問</button>
+        </div>
+      </div>
+      <div class="setting-row" style="flex-direction:column;align-items:flex-start;">
+        <div class="desc" style="margin-bottom:8px;">出題カテゴリ<small>チェックを外すと除外</small></div>
+        <div class="chip-group" id="chipCats"></div>
+      </div>
+      <div class="setting-row" style="flex-direction:column;align-items:flex-start;">
+        <div class="desc" style="margin-bottom:8px;">出題難易度</div>
+        <div class="chip-group" id="chipDiff"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>データ管理</h3>
+      <p class="lead">学習進捗はこのブラウザ内(localStorage)にのみ保存されます。</p>
+      <button class="btn danger" id="resetBtn">進捗を全てリセット</button>
+    </div>
+    <footer>
+      総合診療 知識アップデート・クイズ<br>
+      本アプリは医学教育・学習目的のものであり、診療上の助言ではありません。診断・治療の最終判断は、各出典の一次資料と個々の患者の状況に基づいて行ってください。解説は要点をまとめた二次的な記述で、内容の正確性・最新性を保証するものではありません。<br>
+      出典は各問題に明記したリンク先を参照。リンク先の論文・ガイドライン本文の著作権は各発行元に帰属します。
+    </footer>
+  </section>
+</main>
+
+<!-- 確認モーダル -->
+<div class="modal-overlay" id="modal">
+  <div class="modal">
+    <h3 id="modalTitle">確認</h3>
+    <p id="modalBody"></p>
+    <div class="btn-row">
+      <button class="btn secondary" id="modalCancel">キャンセル</button>
+      <button class="btn danger" id="modalConfirm">実行</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================= -->
+<!-- 問題バンク（questions.js の内容をインライン埋め込み）            -->
+<!-- 問題を追加する場合はこの QUESTIONS 配列に同じ構造で追記する      -->
+<!-- ============================================================= -->
+<!-- 問題バンクは questions.js に分離（毎朝の自動追記がそのまま反映される） -->
+<script src="questions.js"></script>
+
+<!-- ============================================================= -->
+<!-- アプリケーションロジック                                        -->
+<!-- ============================================================= -->
+<script>
+(function () {
+  "use strict";
+
+  // ---------- 定数 ----------
+  const PREFIX = "medquiz_";
+  const K_STATE = PREFIX + "state";      // SM-2 カード状態 { [id]: {ef, interval, reps, due, lastResult} }
+  const K_STATS = PREFIX + "stats";      // 集計 { total, correct, catStats:{cat:{total,correct}} }
+  const K_STREAK = PREFIX + "streak";    // { count, lastDate }
+  const K_SETTINGS = PREFIX + "settings";// { count, cats:[], diffs:[], theme }
+
+  const CATS = [
+    { key: "journal",   label: "新着ジャーナル", cls: "cat-journal" },
+    { key: "guideline", label: "ガイドライン改訂", cls: "cat-guideline" },
+    { key: "review",    label: "定番復習", cls: "cat-review" },
+    { key: "clinical",  label: "臨床疑問", cls: "cat-clinical" }
+  ];
+  const CAT_LABEL = {};
+  const CAT_CLS = {};
+  CATS.forEach(c => { CAT_LABEL[c.key] = c.label; CAT_CLS[c.key] = c.cls; });
+  const CAT_COLORVAR = {
+    journal: "var(--cat-journal)", guideline: "var(--cat-guideline)",
+    review: "var(--cat-review)", clinical: "var(--cat-clinical)"
+  };
+
+  const DAY_MS = 24 * 60 * 60 * 1000;
+
+  // ---------- localStorage ヘルパ ----------
+  function load(key, fallback) {
+    try { const v = localStorage.getItem(key); return v ? JSON.parse(v) : fallback; }
+    catch (e) { return fallback; }
+  }
+  function save(key, val) {
+    try { localStorage.setItem(key, JSON.stringify(val)); } catch (e) {}
+  }
+
+  // ---------- 状態初期化 ----------
+  function defaultSettings() {
+    return { count: 5, cats: CATS.map(c => c.key), diffs: [1, 2, 3], theme: "light", level: "all" };
+  }
+  function defaultStats() {
+    const catStats = {};
+    CATS.forEach(c => { catStats[c.key] = { total: 0, correct: 0 }; });
+    return { total: 0, correct: 0, catStats: catStats };
+  }
+
+  let cardState = load(K_STATE, {});      // SM-2 カード
+  let stats = load(K_STATS, defaultStats());
+  let streak = load(K_STREAK, { count: 0, lastDate: null });
+  let settings = Object.assign(defaultSettings(), load(K_SETTINGS, {}));
+
+  // 破損対策: catStats に欠けがあれば補完
+  CATS.forEach(c => { if (!stats.catStats[c.key]) stats.catStats[c.key] = { total: 0, correct: 0 }; });
+
+  // ---------- 日付ユーティリティ ----------
+  function todayStr() {
+    const d = new Date();
+    return d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate();
+  }
+  function todayStart() {
+    const d = new Date(); d.setHours(0, 0, 0, 0); return d.getTime();
+  }
+
+  // ---------- SM-2 簡易版 ----------
+  // quality: 正解=true / 不正解=false
+  function updateCard(id, correct) {
+    let card = cardState[id] || { ef: 2.5, interval: 0, reps: 0, due: 0 };
+    if (correct) {
+      card.reps += 1;
+      if (card.reps === 1) card.interval = 1;
+      else if (card.reps === 2) card.interval = 3;
+      else card.interval = Math.round(card.interval * card.ef);
+      // easiness factor を軽く上昇（quality≈5相当）
+      card.ef = Math.min(2.8, card.ef + 0.1);
+    } else {
+      card.reps = 0;
+      card.interval = 1;              // 翌日に再出題
+      card.ef = Math.max(1.3, card.ef - 0.2);
+    }
+    card.due = todayStart() + card.interval * DAY_MS;
+    card.lastResult = correct ? "ok" : "ng";
+    card.lastSeen = todayStart();
+    cardState[id] = card;
+    save(K_STATE, cardState);
+  }
+
+  // ---------- 出題プール構築 ----------
+  // フィルタ適用
+  // 難易度レベル(手動選択)による難易度判定
+  // "all"=設定の★フィルタに従う / "1","2","3"=その難易度のみ / "hard"=★3または複数正解
+  function levelDiffOk(q) {
+    const lv = settings.level || "all";
+    if (lv === "all") return settings.diffs.indexOf(q.difficulty) !== -1;
+    if (lv === "hard") return q.difficulty === 3 || Array.isArray(q.correct);
+    return q.difficulty === parseInt(lv, 10);
+  }
+
+  function passesFilter(q) {
+    return settings.cats.indexOf(q.category) !== -1 && levelDiffOk(q);
+  }
+
+  // セッション用の問題選定: 復習期限が来た問題を優先、なければ新規、なお足りなければ既習の中から
+  function buildSession() {
+    const now = todayStart();
+    const pool = QUESTIONS.filter(passesFilter);
+    const due = [];      // 期限到来した既習問題
+    const fresh = [];    // 未着手
+    const others = [];   // 既習だが期限未到来
+    pool.forEach(q => {
+      const c = cardState[q.id];
+      if (!c) fresh.push(q);
+      else if (c.due <= now) due.push(q);
+      else others.push(q);
+    });
+    // 期限の早い順に並べる
+    due.sort((a, b) => (cardState[a.id].due) - (cardState[b.id].due));
+    shuffle(fresh); shuffle(others);
+    const ordered = due.concat(fresh, others);
+    return ordered.slice(0, settings.count);
+  }
+
+  // 弱点復習: 直近で間違えた問題（lastResult==="ng"）
+  function buildWeakSession() {
+    const wrongIds = Object.keys(cardState).filter(id => cardState[id].lastResult === "ng");
+    const list = QUESTIONS.filter(q => wrongIds.indexOf(q.id) !== -1);
+    shuffle(list);
+    return list;
+  }
+
+  // added("YYYY-MM-DD") を時刻に変換（無い場合は 0 = 非常に古い扱い）
+  function addedTime(q) {
+    if (!q.added) return 0;
+    const p = q.added.split("-");
+    if (p.length !== 3) return 0;
+    return new Date(+p[0], +p[1] - 1, +p[2]).getTime();
+  }
+
+  // 新着モード用の対象問題を返す。win は "3"/"7"/"14"/"30"(日) または "latest"(最新追加日のみ)
+  function newQuestions(win) {
+    const pool = QUESTIONS.filter(passesFilter).filter(q => q.added);
+    if (pool.length === 0) return [];
+    if (win === "latest") {
+      const maxT = Math.max.apply(null, pool.map(addedTime));
+      return pool.filter(q => addedTime(q) === maxT);
+    }
+    const days = parseInt(win, 10) || 7;
+    const cutoff = todayStart() - days * 86400000;
+    return pool.filter(q => addedTime(q) >= cutoff);
+  }
+
+  // 新着セッション: 対象を新しい順（同日内は未着手を優先）に並べ、全問出題
+  function buildNewSession(win) {
+    const list = newQuestions(win);
+    list.sort((a, b) => {
+      const d = addedTime(b) - addedTime(a);       // 新しい順
+      if (d !== 0) return d;
+      const sa = cardState[a.id] ? 1 : 0, sb = cardState[b.id] ? 1 : 0;
+      return sa - sb;                              // 同日内は未着手(0)を先に
+    });
+    return list;
+  }
+
+  function shuffle(arr) {
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      const t = arr[i]; arr[i] = arr[j]; arr[j] = t;
+    }
+    return arr;
+  }
+
+  // ---------- ストリーク更新 ----------
+  function bumpStreak() {
+    const t = todayStr();
+    if (streak.lastDate === t) return; // 本日既にカウント済
+    // 昨日の日付
+    const y = new Date(); y.setDate(y.getDate() - 1);
+    const yStr = y.getFullYear() + "-" + (y.getMonth() + 1) + "-" + y.getDate();
+    if (streak.lastDate === yStr) streak.count += 1;
+    else streak.count = 1;
+    streak.lastDate = t;
+    save(K_STREAK, streak);
+  }
+
+  // ---------- DOM 参照 ----------
+  const $ = sel => document.querySelector(sel);
+  const $$ = sel => Array.prototype.slice.call(document.querySelectorAll(sel));
+
+  // ---------- タブ切替 ----------
+  function showTab(name) {
+    $$("nav.tabs button").forEach(b => b.classList.toggle("active", b.dataset.tab === name));
+    ["home", "dashboard", "settings"].forEach(t => {
+      $("#tab-" + t).classList.toggle("hidden", t !== name);
+    });
+    if (name === "dashboard") renderDashboard();
+    if (name === "home") renderHome();
+  }
+  $$("nav.tabs button").forEach(b => b.addEventListener("click", () => showTab(b.dataset.tab)));
+
+  // ---------- ホーム描画 ----------
+  function renderHome() {
+    const now = todayStart();
+    const pool = QUESTIONS.filter(passesFilter);
+    let dueCount = 0, freshCount = 0;
+    pool.forEach(q => {
+      const c = cardState[q.id];
+      if (!c) freshCount++;
+      else if (c.due <= now) dueCount++;
+    });
+    const LEVEL_LABEL = { all: "おまかせ", "1": "やさしい★", "2": "標準★★", "3": "難しい★★★", hard: "最難関" };
+    const lvLabel = LEVEL_LABEL[settings.level || "all"];
+    $("#homeSummary").textContent =
+      "難易度[" + lvLabel + "]・1セッション " + settings.count + "問。対象 " + pool.length +
+      "問（復習待ち " + dueCount + "・未着手 " + freshCount + "）から出題します。";
+    // 新着モードの対象件数
+    const newWin = $("#newWindow") ? $("#newWindow").value : "7";
+    const newList = newQuestions(newWin);
+    const newBtn = $("#newBtn");
+    if (newList.length === 0) {
+      $("#newSummary").textContent = "この期間に追加された問題はまだありません。毎朝の自動追加をお待ちください。";
+      newBtn.disabled = true;
+    } else {
+      const label = newWin === "latest" ? "最新の追加分" : ("直近" + newWin + "日");
+      $("#newSummary").textContent = label + "で追加された新着問題が " + newList.length + "問あります（新しい順に出題）。";
+      newBtn.disabled = false;
+    }
+
+    const wrongCount = Object.keys(cardState).filter(id => cardState[id].lastResult === "ng").length;
+    const weakBtn = $("#weakBtn");
+    if (wrongCount === 0) {
+      $("#weakSummary").textContent = "現在、間違えたまま未克服の問題はありません。よくできています。";
+      weakBtn.disabled = true;
+    } else {
+      $("#weakSummary").textContent = "過去に間違えた問題が " + wrongCount + "問あります。集中的に解き直しましょう。";
+      weakBtn.disabled = false;
+    }
+  }
+
+  // ---------- セッション管理 ----------
+  let session = null; // { queue:[], index, correctCount, isWeak }
+
+  function startSession(mode) {
+    // 後方互換: 真偽値が渡された場合は弱点モード扱い
+    if (mode === true) mode = "weak";
+    if (!mode) mode = "daily";
+    let queue;
+    if (mode === "weak") queue = buildWeakSession();
+    else if (mode === "new") queue = buildNewSession($("#newWindow").value);
+    else queue = buildSession();
+    if (queue.length === 0) {
+      const msg = mode === "weak" ? "復習する問題がありません。"
+        : mode === "new" ? "対象期間に新着の問題がありません。期間を広げてみてください。"
+        : "出題できる問題がありません。設定のフィルタを確認してください。";
+      alert(msg);
+      return;
+    }
+    session = { queue: queue, index: 0, correctCount: 0, isWeak: mode === "weak", mode: mode };
+    $("#homeView").classList.add("hidden");
+    $("#resultView").classList.add("hidden");
+    $("#quizView").classList.remove("hidden");
+    renderQuestion();
+  }
+
+  const LETTERS = ["A", "B", "C", "D"];
+
+  // correct が配列なら複数正解問題
+  function isMultiQ(q) { return Array.isArray(q.correct); }
+  function correctSetOf(q) { return isMultiQ(q) ? q.correct.slice() : [q.correct]; }
+
+  function renderQuestion() {
+    const q = session.queue[session.index];
+    const total = session.queue.length;
+    // メタ
+    const catEl = $("#qCat");
+    catEl.textContent = CAT_LABEL[q.category];
+    catEl.className = "cat-tag " + CAT_CLS[q.category];
+    $("#qDiff").innerHTML = diffStars(q.difficulty);
+    $("#qCounter").textContent = (session.index + 1) + " / " + total;
+    $("#qProgress").style.width = ((session.index) / total * 100) + "%";
+    $("#qText").textContent = q.question;
+
+    // 全問を「すべて選ぶ」方式に統一（単一/複数を形式から見分けられないようにする）
+    $("#qMultiHint").classList.remove("hidden");
+    const submitBtn = $("#submitBtn");
+    submitBtn.classList.remove("hidden");
+    submitBtn.disabled = true; // 1つ以上選ぶまで無効
+
+    // 選択肢
+    const opts = $("#qOptions");
+    opts.innerHTML = "";
+    q.options.forEach((opt, i) => {
+      const btn = document.createElement("button");
+      btn.className = "option";
+      btn.innerHTML = '<span class="marker">' + LETTERS[i] + '</span><span>' + escapeHtml(opt) + '</span>';
+      btn.addEventListener("click", () => {
+        btn.classList.toggle("picked");
+        submitBtn.disabled = $$("#qOptions .option.picked").length === 0;
+      });
+      opts.appendChild(btn);
+    });
+    $("#qFeedback").classList.add("hidden");
+  }
+
+  $("#submitBtn").addEventListener("click", () => {
+    const picked = [];
+    $$("#qOptions .option").forEach((btn, i) => { if (btn.classList.contains("picked")) picked.push(i); });
+    if (picked.length === 0) return;
+    reveal(session.queue[session.index], picked);
+  });
+
+  function diffStars(d) {
+    let s = "";
+    for (let i = 1; i <= 3; i++) s += (i <= d) ? "★" : '<span class="empty">★</span>';
+    return s;
+  }
+
+  // 単一・複数の両方を扱う回答処理（複数は全一致で正解）
+  function reveal(q, selectedArr) {
+    const correctSet = correctSetOf(q);
+    const selSet = selectedArr.slice();
+    const isCorrect = correctSet.length === selSet.length &&
+      correctSet.every(x => selSet.indexOf(x) !== -1);
+
+    // 選択肢のハイライト・無効化
+    $$("#qOptions .option").forEach((btn, i) => {
+      btn.disabled = true;
+      btn.classList.remove("picked");
+      const isC = correctSet.indexOf(i) !== -1;
+      const isSel = selSet.indexOf(i) !== -1;
+      if (isC && isSel) btn.classList.add("correct");       // 正しく選べた
+      else if (!isC && isSel) btn.classList.add("wrong");   // 誤って選んだ
+      else if (isC && !isSel) btn.classList.add("missed");  // 選び逃した正解
+    });
+    const submitBtn = $("#submitBtn");
+    submitBtn.classList.add("hidden"); submitBtn.disabled = true;
+
+    // 統計更新（どのモードでも記録する）
+    stats.total += 1;
+    stats.catStats[q.category].total += 1;
+    if (isCorrect) { stats.correct += 1; stats.catStats[q.category].correct += 1; session.correctCount += 1; }
+    save(K_STATS, stats);
+    updateCard(q.id, isCorrect);
+
+    // フィードバック表示
+    const fb = $("#qFeedback");
+    const verdict = $("#qVerdict");
+    verdict.className = "verdict " + (isCorrect ? "ok" : "ng");
+    verdict.textContent = isCorrect ? "✓ 正解" : "✗ 不正解";
+    // 正解の組を先頭に明示（単一・複数とも）
+    const prefix = "正解: " + correctSet.slice().sort((a, b) => a - b).map(i => LETTERS[i]).join("・") + "\n\n";
+    $("#qExplanation").textContent = prefix + q.explanation;
+    $("#qSource").innerHTML = "出典: " +
+      '<a href="' + escapeAttr(q.source.url) + '" target="_blank" rel="noopener noreferrer">' +
+      escapeHtml(q.source.title) + "</a>";
+    const tagRow = $("#qTags");
+    tagRow.innerHTML = "";
+    (q.tags || []).forEach(t => {
+      const s = document.createElement("span");
+      s.className = "mini-tag"; s.textContent = "#" + t;
+      tagRow.appendChild(s);
+    });
+    $("#qProgress").style.width = ((session.index + 1) / session.queue.length * 100) + "%";
+    fb.classList.remove("hidden");
+    $("#nextBtn").focus();
+  }
+
+  $("#nextBtn").addEventListener("click", () => {
+    session.index += 1;
+    if (session.index >= session.queue.length) finishSession();
+    else renderQuestion();
+  });
+
+  function finishSession() {
+    bumpStreak();
+    $("#quizView").classList.add("hidden");
+    $("#resultView").classList.remove("hidden");
+    const total = session.queue.length;
+    const c = session.correctCount;
+    const rate = total ? Math.round(c / total * 100) : 0;
+    $("#resCorrect").textContent = c + "/" + total;
+    $("#resRate").textContent = rate + "%";
+    let msg;
+    if (rate === 100) msg = "全問正解です。素晴らしい知識アップデートでした。";
+    else if (rate >= 60) msg = "お疲れさまでした。間違えた問題は後日また復習に出てきます。";
+    else msg = "難しい回でした。解説を振り返り、弱点復習モードも活用しましょう。";
+    $("#resultSummary").textContent = msg;
+    session = null;
+  }
+
+  $("#startBtn").addEventListener("click", () => startSession("daily"));
+  $("#weakBtn").addEventListener("click", () => startSession("weak"));
+  $("#newBtn").addEventListener("click", () => startSession("new"));
+  $("#newWindow").addEventListener("change", renderHome);
+  // 難易度レベル選択（手動）
+  $("#levelSelect").value = settings.level || "all";
+  $("#levelSelect").addEventListener("change", (e) => {
+    settings.level = e.target.value;
+    save(K_SETTINGS, settings);
+    renderHome();
+  });
+  $("#backHomeBtn").addEventListener("click", () => {
+    $("#resultView").classList.add("hidden");
+    $("#homeView").classList.remove("hidden");
+    renderHome();
+  });
+  $("#quitBtn").addEventListener("click", () => {
+    session = null;
+    $("#quizView").classList.add("hidden");
+    $("#homeView").classList.remove("hidden");
+    renderHome();
+  });
+
+  // ---------- ダッシュボード描画 ----------
+  function renderDashboard() {
+    $("#dStreak").textContent = streak.count;
+    $("#dStreakSub").textContent = streak.lastDate ? ("最終: " + streak.lastDate) : "未学習";
+    $("#dTotal").textContent = stats.total;
+    const rate = stats.total ? Math.round(stats.correct / stats.total * 100) : 0;
+    $("#dRate").textContent = rate + "%";
+
+    const seen = Object.keys(cardState).length;
+    $("#dSeen").textContent = seen;
+    $("#dSeenSub").textContent = "全 " + QUESTIONS.length + "問中";
+
+    // カテゴリ別ヒートマップ/バー
+    const wrap = $("#catHeatmap");
+    wrap.innerHTML = "";
+    CATS.forEach(c => {
+      const cs = stats.catStats[c.key];
+      const pct = cs.total ? Math.round(cs.correct / cs.total * 100) : 0;
+      const row = document.createElement("div");
+      row.className = "cat-bar-row";
+      const barColor = cs.total ? rateColor(pct) : "var(--border)";
+      row.innerHTML =
+        '<div class="cat-bar-head">' +
+          '<span class="name"><span class="cat-tag ' + c.cls + '">' + c.label + '</span></span>' +
+          '<span>' + (cs.total ? pct + "%" : "-") + '</span>' +
+        '</div>' +
+        '<div class="cat-bar-track"><div class="cat-bar-fill" style="width:' +
+          (cs.total ? pct : 0) + '%;background:' + barColor + ';"></div></div>' +
+        '<div class="cat-bar-note">' + cs.correct + " / " + cs.total + " 問正解</div>";
+      wrap.appendChild(row);
+    });
+
+    // 復習待ち・未着手
+    const now = todayStart();
+    let due = 0, fresh = 0;
+    QUESTIONS.filter(passesFilter).forEach(q => {
+      const cc = cardState[q.id];
+      if (!cc) fresh++;
+      else if (cc.due <= now) due++;
+    });
+    $("#dDue").textContent = due;
+    $("#dNew").textContent = fresh;
+  }
+
+  // 正答率に応じた色（赤→黄→緑）
+  function rateColor(pct) {
+    if (pct >= 80) return "#16a34a";
+    if (pct >= 60) return "#65a30d";
+    if (pct >= 40) return "#f59e0b";
+    if (pct >= 20) return "#ea580c";
+    return "#dc2626";
+  }
+
+  // ---------- 設定 UI ----------
+  function renderSettings() {
+    // 問題数セグメント
+    $$("#segCount button").forEach(b => {
+      b.classList.toggle("active", parseInt(b.dataset.count, 10) === settings.count);
+    });
+    // カテゴリチップ
+    const cc = $("#chipCats"); cc.innerHTML = "";
+    CATS.forEach(c => {
+      const chip = document.createElement("button");
+      chip.className = "chip" + (settings.cats.indexOf(c.key) !== -1 ? " active" : "");
+      chip.textContent = c.label;
+      chip.addEventListener("click", () => {
+        const i = settings.cats.indexOf(c.key);
+        if (i === -1) settings.cats.push(c.key);
+        else if (settings.cats.length > 1) settings.cats.splice(i, 1); // 最低1つは残す
+        save(K_SETTINGS, settings); renderSettings();
+      });
+      cc.appendChild(chip);
+    });
+    // 難易度チップ
+    const cd = $("#chipDiff"); cd.innerHTML = "";
+    [1, 2, 3].forEach(d => {
+      const chip = document.createElement("button");
+      chip.className = "chip" + (settings.diffs.indexOf(d) !== -1 ? " active" : "");
+      chip.innerHTML = "★".repeat(d);
+      chip.addEventListener("click", () => {
+        const i = settings.diffs.indexOf(d);
+        if (i === -1) settings.diffs.push(d);
+        else if (settings.diffs.length > 1) settings.diffs.splice(i, 1);
+        save(K_SETTINGS, settings); renderSettings();
+      });
+      cd.appendChild(chip);
+    });
+  }
+  $$("#segCount button").forEach(b => {
+    b.addEventListener("click", () => {
+      settings.count = parseInt(b.dataset.count, 10);
+      save(K_SETTINGS, settings); renderSettings();
+    });
+  });
+
+  // ---------- リセット（確認モーダル） ----------
+  const modal = $("#modal");
+  function openModal(title, body, onConfirm) {
+    $("#modalTitle").textContent = title;
+    $("#modalBody").textContent = body;
+    modal.classList.add("show");
+    const confirmBtn = $("#modalConfirm");
+    const handler = () => {
+      onConfirm();
+      closeModal();
+      confirmBtn.removeEventListener("click", handler);
+    };
+    confirmBtn.addEventListener("click", handler);
+    $("#modalCancel").onclick = () => { closeModal(); confirmBtn.removeEventListener("click", handler); };
+  }
+  function closeModal() { modal.classList.remove("show"); }
+  modal.addEventListener("click", e => { if (e.target === modal) closeModal(); });
+
+  $("#resetBtn").addEventListener("click", () => {
+    openModal("進捗をリセット", "全ての学習進捗・統計・ストリークを削除します。この操作は取り消せません。よろしいですか？", () => {
+      [K_STATE, K_STATS, K_STREAK].forEach(k => localStorage.removeItem(k));
+      cardState = {};
+      stats = defaultStats();
+      streak = { count: 0, lastDate: null };
+      renderSettings(); renderHome();
+      alert("進捗をリセットしました。");
+    });
+  });
+
+  // ---------- テーマ ----------
+  function applyTheme() {
+    document.documentElement.setAttribute("data-theme", settings.theme === "dark" ? "dark" : "light");
+    $("#themeToggle").textContent = settings.theme === "dark" ? "☀️" : "🌙";
+  }
+  $("#themeToggle").addEventListener("click", () => {
+    settings.theme = settings.theme === "dark" ? "light" : "dark";
+    save(K_SETTINGS, settings); applyTheme();
+  });
+
+  // ---------- エスケープ ----------
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, m => ({
+      "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+    }[m]));
+  }
+  function escapeAttr(s) { return escapeHtml(s); }
+
+  // ---------- 初期化 ----------
+  applyTheme();
+  renderSettings();
+  renderHome();
+  showTab("home");
+})();
+</script>
+</body>
+</html>
