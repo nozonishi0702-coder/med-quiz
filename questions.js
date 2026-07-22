@@ -1204,6 +1204,78 @@ const QUESTIONS = [
     explanation: "【要点】ジレベシランは、肝のアンジオテンシノーゲン(アンジオテンシンIIの前駆体)合成を抑えるRNAi治療で、皮下投与により数か月にわたる持続的な降圧が期待される。\n【背景/エビデンス】KARDIA-1(単剤)およびKARDIA-2(標準降圧薬への上乗せ)で、24時間収縮期血圧をプラセボ比で有意に低下(KARDIA-2で最大約12mmHgの追加低下)。半年に1回程度の投与でアドヒアランス課題の解決が期待される。\n【臨床応用/注意】GalNAc結合技術で肝選択的にRNAi作用を及ぼす。高カリウム血症・低血圧・妊娠時のRAS抑制リスクに留意が必要で、心血管アウトカムは今後の検証を要する。\n【誤答】アルドステロン合成酵素阻害薬(バクスドロスタット等)、エンドセリン受容体拮抗薬(アプロシテンタン)、カルシウム拮抗薬はいずれも別機序で、ジレベシランの分類として不適切。",
     source: { title: "RNA Interference With Zilebesiran for Mild to Moderate Hypertension (KARDIA-1, JAMA 2024)", url: "https://pubmed.ncbi.nlm.nih.gov/38363577/" },
     tags: ["高血圧", "ジレベシラン", "RNAi", "アンジオテンシノーゲン"]
+  },
+  {
+    id: "jr-orforglipron-01",
+    category: "journal",
+    difficulty: 2,
+    added: "2026-07-23",
+    question: "経口の小分子(非ペプチド)GLP-1受容体作動薬オルフォルグリプロンを早期2型糖尿病に用いた第3相ACHIEVE-1試験で示された結果はどれか。",
+    options: ["注射GLP-1薬と同じ骨格ペプチド構造をもち、皮下注射を要する", "血糖・体重ともにプラセボと有意差を示さなかった", "1日1回経口投与でHbA1cを最大約1.5%低下させ、体重も用量依存性に減少させた", "重症低血糖が高頻度に発生した"],
+    correct: 2,
+    explanation: "【要点】オルフォルグリプロンは1日1回経口投与の小分子(非ペプチド)GLP-1受容体作動薬で、早期2型糖尿病の第3相ACHIEVE-1試験でHbA1cと体重を有意に改善した。\n【背景/エビデンス】40週時点でHbA1cはプラセボの−0.4%に対し各用量で約−1.2〜−1.5%低下し、体重も3mg群−4.5%〜36mg群−7.6%と用量依存性に減少した。有害事象は用量漸増期に多い軽〜中等度の消化器症状が中心で、重症低血糖の報告はなかった。\n【臨床応用/注意】食事やペプチド薬のような投与制約が少ない経口薬として、注射に抵抗がある患者の選択肢となりうる。心血管アウトカムや長期安全性は今後の検証を要する。\n【誤答】ペプチド構造で皮下注射・血糖体重ともに差なし・重症低血糖多発は、いずれも試験結果や薬剤特性と異なる。",
+    source: { title: "Orforglipron, an Oral Small-Molecule GLP-1 Receptor Agonist, in Early Type 2 Diabetes (ACHIEVE-1, NEJM 2025)", url: "https://www.nejm.org/doi/full/10.1056/NEJMoa2505669" },
+    tags: ["糖尿病", "GLP-1", "経口薬", "オルフォルグリプロン"]
+  },
+  {
+    id: "jr-obicetrapib-01",
+    category: "journal",
+    difficulty: 3,
+    added: "2026-07-23",
+    question: "CETP阻害薬オビセトラピブを、最大耐用量の脂質低下療法中の高リスク患者に用いた第3相BROADWAY試験について、妥当な記述はどれか。",
+    options: ["1日1回経口投与で、LDLコレステロールをプラセボ比で約30%低下させた", "トルセトラピブと同様に血圧上昇・死亡増加により開発中止となった", "HDLコレステロールを低下させることで効果を発揮する", "スタチン等で目標未達の症例への上乗せ経口薬として位置づけられる"],
+    correct: [0, 3],
+    explanation: "【要点】オビセトラピブは経口CETP阻害薬で、BROADWAY試験では最大耐用量の脂質低下療法に上乗せしてLDLコレステロールをプラセボ比で約30%低下させ、目標未達例への追加経口薬として位置づけられる。\n【背景/エビデンス】確立ASCVDまたは家族性高コレステロール血症の2,530例が対象。84日目のLDL変化はオビセトラピブ−29.9%対プラセボ+2.7%で、有害事象は両群同程度だった。CETP阻害はLDLを下げHDLを上げる。\n【臨床応用/注意】スタチン・エゼチミブ・PCSK9阻害薬でも未達の高リスク例で有用となりうるが、心血管アウトカムの改善は今後の大規模試験を待つ必要がある。\n【誤答】トルセトラピブのような血圧上昇・死亡増加での中止や『HDL低下で効果』は、この薬の特性と異なりこの文脈で不適切。",
+    source: { title: "Safety and Efficacy of Obicetrapib in Patients at High Cardiovascular Risk (BROADWAY, NEJM 2025)", url: "https://www.nejm.org/doi/abs/10.1056/NEJMoa2415820" },
+    tags: ["脂質", "CETP阻害薬", "LDL", "複数選択"]
+  },
+  {
+    id: "jr-lecanemab-01",
+    category: "journal",
+    difficulty: 3,
+    added: "2026-07-23",
+    question: "早期アルツハイマー病に対する抗アミロイドβ抗体レカネマブ(CLARITY-AD試験)に関して、妥当な記述はどれか。",
+    options: ["認知機能低下を完全に停止させ、症状を回復させた", "18か月時点で認知・機能の低下をプラセボ比で中等度に緩やかにした", "脳内アミロイドを有意に減少させた", "ARIA(アミロイド関連画像異常:浮腫・微小出血)のモニタリングを要する"],
+    correct: [1, 2, 3],
+    explanation: "【要点】レカネマブは可溶性アミロイドβプロトフィブリルを標的とする抗体で、早期アルツハイマー病のCLARITY-AD試験で認知・機能低下を中等度に緩やかにし、脳内アミロイドを有意に減らした。ARIAのモニタリングを要する。\n【背景/エビデンス】MCIまたは軽度認知症でアミロイド陽性の50〜90歳、約1,795例を18か月追跡。主要評価CDR-SBの悪化を約27%抑制した。ARIA(浮腫ARIA-E・微小出血ARIA-H)が一定頻度で生じ、APOE ε4ホモ接合で高い。\n【臨床応用/注意】適応は早期例に限られ、アミロイド確認(PET/髄液)と定期MRIが前提。抗凝固併用や特定遺伝型では出血リスクに留意する。\n【誤答】『低下を完全停止し症状回復』は誇大で、効果はあくまで進行の緩和にとどまるため、この文脈で不適切。",
+    source: { title: "Lecanemab in Early Alzheimer's Disease (CLARITY-AD, NEJM 2023)", url: "https://www.nejm.org/doi/full/10.1056/NEJMoa2212948" },
+    tags: ["認知症", "アルツハイマー病", "抗アミロイド抗体", "複数選択"]
+  },
+  {
+    id: "cl-uti-gepo-01",
+    category: "clinical",
+    difficulty: 2,
+    added: "2026-07-23",
+    question: "25歳女性、排尿時痛・頻尿の急性単純性膀胱炎。地域のST合剤耐性率が高く、過去にニトロフラントインで強い悪心があった。2024年の第3相EAGLE-2/3で有効性が示された新規経口抗菌薬はどれか。",
+    options: ["ホスホマイシン単回経口", "ニトロフラントイン5日間", "ST合剤(トリメトプリム・スルファメトキサゾール)3日間", "ゲポチダシン(新規トリアザアセナフチレン系の経口抗菌薬)"],
+    correct: 3,
+    explanation: "【要点】局所のST合剤耐性が高くニトロフラントイン不耐がある本例では、2024年に第3相EAGLE-2/3で有効性が示された新規経口抗菌薬ゲポチダシンが選択肢となる。\n【背景/エビデンス】ゲポチダシンは細菌のトポイソメラーゼII/IVを新規機序で阻害するトリアザアセナフチレン系。EAGLE-2/3(計約3,100例)でニトロフラントインに非劣性、EAGLE-3では優越性を示した。主な有害事象は軽〜中等度の下痢だった。\n【臨床応用/注意】耐性菌が問題となる状況で経口治療の幅を広げるが、地域の感受性・薬剤相互作用・コストを踏まえ適応を個別化する。\n【誤答】ホスホマイシン・ニトロフラントイン・ST合剤も単純性膀胱炎の妥当な選択肢だが、設問が問う『EAGLEで検討された新規薬』には当たらず、この文脈で最適でない。",
+    source: { title: "Oral Gepotidacin versus Nitrofurantoin in Uncomplicated Urinary Tract Infection (EAGLE-2 and EAGLE-3, Lancet 2024)", url: "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(23)02196-7/abstract" },
+    tags: ["感染症", "尿路感染症", "ゲポチダシン", "抗菌薬"]
+  },
+  {
+    id: "rv-vms-nk-01",
+    category: "review",
+    difficulty: 1,
+    added: "2026-07-23",
+    question: "閉経に伴う中等症〜重症の血管運動症状(ホットフラッシュ)に用いる非ホルモン薬フェゾリネタント・エリンザネタントの作用機序として正しいものはどれか。",
+    options: ["選択的エストロゲン受容体モジュレーター(SERM)である", "ニューロキニン(NK3ないしNK1/NK3)受容体拮抗薬で、視床下部の体温調節を修飾する", "選択的セロトニン再取り込み阻害薬(SSRI)である", "低用量の経皮エストロゲン製剤である"],
+    correct: 1,
+    explanation: "【要点】フェゾリネタントとエリンザネタントは、閉経期の中等症〜重症血管運動症状に用いる非ホルモン性のニューロキニン受容体拮抗薬で、視床下部KNDyニューロンを介した体温調節の乱れを是正する。\n【背景/エビデンス】フェゾリネタントはNK3拮抗薬、エリンザネタントはNK1/NK3デュアル拮抗薬。第3相(SKYLIGHT、OASIS 1/2など)でホットフラッシュの頻度・重症度を有意に低下させ、エリンザネタントは睡眠の改善も示した。\n【臨床応用/注意】ホルモン療法が禁忌・忌避の女性に有用な選択肢。フェゾリネタントでは肝機能のモニタリングが推奨され、頭痛等の有害事象にも留意する。\n【誤答】SERM・SSRI・経皮エストロゲンはいずれも実在する更年期関連の治療だが、両薬の分類としては誤りである。",
+    source: { title: "Elinzanetant for Vasomotor Symptoms Associated With Menopause: OASIS 1 and 2 Randomized Clinical Trials (JAMA 2024)", url: "https://pubmed.ncbi.nlm.nih.gov/39172446/" },
+    tags: ["更年期", "血管運動症状", "ニューロキニン受容体拮抗薬", "非ホルモン療法"]
+  },
+  {
+    id: "gl-masld-fib4-01",
+    category: "guideline",
+    difficulty: 2,
+    added: "2026-07-23",
+    question: "2025年ADA Standards of Careにおける、2型糖尿病・前糖尿病患者のMASLD/MASH関連肝線維化スクリーニングの初期評価法として推奨されるものはどれか。",
+    options: ["肝酵素が正常でも、FIB-4(年齢・AST・ALT・血小板から算出)でリスクを層別化する", "全例に直ちに肝生検を行う", "腹部造影CTを一次スクリーニングとする", "ALTが正常であれば肝疾患リスクは否定でき、追加評価は不要とする"],
+    correct: 0,
+    explanation: "【要点】2025年ADA Standards of Careは、2型糖尿病・前糖尿病(特に肥満・心代謝リスク併存)の患者に対し、肝酵素が正常でもFIB-4でMASH関連の進行性線維化リスクを評価するよう推奨する。\n【背景/エビデンス】FIB-4は年齢・AST・ALT・血小板から算出する簡便な指標。1.3超では追加のリスク層別化(肝硬度測定やELF)を行い、高リスク例は消化器・肝臓専門医へ紹介する。NAFLD/NASHはMASLD/MASHへ用語が更新された。\n【臨床応用/注意】ALT正常でも進行例が存在するため酵素値のみで否定せず、まずFIB-4で拾い上げる段階的アプローチが要点。\n【誤答】全例即生検・造影CTの一次スクリーニング・ALT正常で評価不要は、いずれも現行の推奨と異なる。",
+    source: { title: "Summary of Revisions: Standards of Care in Diabetes—2025 (Diabetes Care)", url: "https://diabetesjournals.org/care/article/48/Supplement_1/S6/157564/Summary-of-Revisions-Standards-of-Care-in-Diabetes" },
+    tags: ["糖尿病", "MASLD", "FIB-4", "肝線維化"]
   }
 ];
 
