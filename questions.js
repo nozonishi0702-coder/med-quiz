@@ -1744,6 +1744,90 @@ const QUESTIONS = [
     explanation: "【要点】ADA2026は生活習慣介入の減量目標を5〜7%とより積極化し、肥満(BMI≥30、アジア系≥27.5)を伴う1型糖尿病でもGLP-1系薬の使用を新たに支持した。\n【背景/エビデンス】MASLDを合併する2型糖尿病+過体重/肥満では、MASHへの有益性が示されたGLP-1受容体作動薬、またはGIP/GLP-1受容体作動薬(チルゼパチド)を減量目的の補助療法として考慮するよう拡充された。\n【臨床応用/注意】薬物は生活習慣介入への上乗せで、心血管・腎・肝の併存に応じて選択する。個別の適応と費用・忍容性を勘案する。\n【誤答】3%未満で十分・2型限定・MASLD例で薬物非推奨は、いずれも2026改訂の方向性と異なる。",
     source: { title: "Summary of Revisions: Standards of Care in Diabetes—2026 (Diabetes Care 2026;49(Suppl.1):S6-S13, American Diabetes Association)", url: "https://diabetesjournals.org/care/article/49/Supplement_1/S6/163930/Summary-of-Revisions-Standards-of-Care-in-Diabetes" },
     tags: ["肥満", "糖尿病", "GLP-1", "MASLD", "ガイドライン改訂"]
+  },
+  {
+    id: "cl-copd-steroid-01",
+    category: "clinical",
+    difficulty: 2,
+    added: "2026-07-29",
+    question: "COPD急性増悪で救急受診した喫煙歴のある患者に対する全身性ステロイド(プレドニゾロン40mg/日相当)の投与期間について、REDUCE試験の結果に基づく考え方はどれか。",
+    options: ["14日間投与が再増悪抑制において5日間より明確に優れる", "投与期間は21日以上とし緩徐に漸減する必要がある", "5日間投与は14日間投与に対し6か月以内の再増悪について非劣性である", "経口では効果が不十分なため全例で静注を要する"],
+    correct: 2,
+    explanation: "【要点】COPD急性増悪では全身ステロイド5日間投与が14日間投与に非劣性で、標準的な短期投与が支持される。\n【背景/エビデンス】REDUCE試験(スイス5施設・314例、20 pack-year以上)はプレドニゾロン40mg/日を5日 vs 14日で比較し、6か月以内の再増悪は非劣性、ステロイド総曝露量は有意に減少した。人工呼吸・死亡・QOLにも差はなかった。\n【臨床応用/注意】外来・入院を問わず短期投与を基本とし、高血糖や感染など副作用を軽減できる。重症度や個別背景に応じて調整する。\n【誤答】14日が明確に優れる・21日以上必要は本試験と矛盾。全例静注は不要で、経口で忍容性・効果は十分である。",
+    source: { title: "Leuppi JD, et al. Short-term vs Conventional Glucocorticoid Therapy in Acute Exacerbations of COPD: The REDUCE Randomized Clinical Trial (JAMA 2013;309(21):2223-2231)", url: "https://jamanetwork.com/journals/jama/fullarticle/1688035" },
+    tags: ["COPD", "増悪", "ステロイド", "呼吸器", "外来"]
+  },
+  {
+    id: "rv-asthma-air-01",
+    category: "review",
+    difficulty: 2,
+    added: "2026-07-29",
+    question: "軽症喘息の管理におけるSYGMA試験の知見として、抗炎症リリーバー(吸入ステロイド/ホルモテロール頓用)について支持される考え方はどれか。",
+    options: ["ブデソニド/ホルモテロール頓用は、SABA(短時間作用性β2刺激薬)単独頓用より重症増悪を抑制する", "SABA単独頓用が重症増悪抑制において最も優れる", "頓用の抗炎症リリーバーは維持吸入ステロイドより吸入ステロイド曝露量が多い", "軽症では吸入ステロイドを一切用いないことが推奨される"],
+    correct: 0,
+    explanation: "【要点】軽症喘息では吸入ステロイド/ホルモテロール(ブデソニド/ホルモテロール)頓用が、SABA単独頓用より重症増悪を抑制する。\n【背景/エビデンス】SYGMA1試験(NEJM 2018、12歳以上・52週)で、抗炎症リリーバー頓用はテルブタリン頓用より重症増悪が少なく、維持ブデソニドと比べ吸入ステロイド曝露は約1/4に抑えられた。この知見はGINAの抗炎症リリーバー推奨の基盤となった。\n【臨床応用/注意】SABA単独依存を避け、症状時にICSを同時に吸入する戦略が要点。アドヒアランスや吸入手技を確認する。\n【誤答】SABA単独が最良・軽症でICS不使用は現行の考えに反する。頓用リリーバーの曝露量は維持療法より少ない。",
+    source: { title: "O'Byrne PM, et al. Inhaled Combined Budesonide–Formoterol as Needed in Mild Asthma (SYGMA 1) (N Engl J Med 2018;378:1865-1876)", url: "https://www.nejm.org/doi/full/10.1056/NEJMoa1715274" },
+    tags: ["喘息", "吸入ステロイド", "抗炎症リリーバー", "呼吸器"]
+  },
+  {
+    id: "gl-htn-masked-01",
+    category: "guideline",
+    difficulty: 2,
+    added: "2026-07-29",
+    question: "診察室血圧は正常域だが家庭/24時間血圧が高値を示す仮面高血圧について、2017 ACC/AHA高血圧ガイドラインに沿った対応はどれか。",
+    options: ["診察室血圧が正常であれば心血管リスクは上昇しないため経過観察でよい", "白衣高血圧と同様に薬物療法は原則推奨されない", "診断には診察室血圧の反復測定のみで十分である", "持続性高血圧と同様に扱い、生活是正と必要に応じた薬物療法を行う"],
+    correct: 3,
+    explanation: "【要点】仮面高血圧は診察室で正常・診察室外で高値を示す病態で、持続性高血圧と同等の心血管リスクを持つため同様に管理する。\n【背景/エビデンス】2017 ACC/AHA高血圧ガイドラインは、白衣・仮面高血圧の同定に診察室外血圧(ABPMまたは家庭血圧)の活用を推奨。仮面高血圧の治療は持続性高血圧と同じとし、白衣高血圧には原則薬物療法を行わない。\n【臨床応用/注意】糖尿病・CKDや高リスク例で頻度が高く、家庭血圧測定の指導が診断・管理の鍵となる。\n【誤答】診察室が正常ならリスク上昇なし・薬物不要は誤り(リスクは持続性と同等)。診察室測定のみでは診断できず、薬物非推奨は白衣高血圧に当てはまる。",
+    source: { title: "Whelton PK, et al. 2017 ACC/AHA Guideline for the Prevention, Detection, Evaluation, and Management of High Blood Pressure in Adults (Hypertension 2018;71:e13-e115)", url: "https://www.ahajournals.org/doi/10.1161/hyp.0000000000000065" },
+    tags: ["高血圧", "仮面高血圧", "家庭血圧", "循環器"]
+  },
+  {
+    id: "cl-ttp-01",
+    category: "clinical",
+    difficulty: 3,
+    added: "2026-07-29",
+    question: "血小板減少・微小血管症性溶血性貧血を呈し、後天性血栓性血小板減少性紫斑病(TTP)が疑われる成人。病態と初期対応について当てはまるものはどれか。",
+    options: ["ADAMTS13活性の著明低下(典型的に<10%)を特徴とする", "初期治療の第一選択は予防的血小板輸血である", "確定診断を待たず速やかに血漿交換を開始する", "von Willebrand因子A1ドメインを標的とするカプラシズマブを血漿交換・免疫抑制に併用する"],
+    correct: [0, 2, 3],
+    explanation: "【要点】後天性TTPはADAMTS13活性の著明低下(典型的に<10%)を特徴とし、確定を待たず血漿交換を開始する。カプラシズマブを補助に併用する。\n【背景/エビデンス】自己抗体によるADAMTS13欠乏でvon Willebrand因子多量体が過剰となり微小血栓・血小板減少・溶血を来す。HERCULES試験で、VWFのA1ドメインを標的とするナノボディ・カプラシズマブは血小板回復を早め再発を減じた。\n【臨床応用/注意】血漿交換+副腎皮質ステロイド±リツキシマブが基本。ADAMTS13持続低値は再発リスクとなる。\n【誤答】予防的血小板輸血は血栓助長の懸念から原則避け、第一選択ではない(生命を脅かす出血時に限る)。",
+    source: { title: "Scully M, et al. Caplacizumab Treatment for Acquired Thrombotic Thrombocytopenic Purpura (HERCULES) (N Engl J Med 2019;380:335-346)", url: "https://www.nejm.org/doi/full/10.1056/NEJMoa1806311" },
+    tags: ["TTP", "ADAMTS13", "血液", "複数選択", "専門医試験"]
+  },
+  {
+    id: "jr-zeus-01",
+    category: "journal",
+    difficulty: 3,
+    added: "2026-07-29",
+    question: "アテローム性心血管疾患・CKDを有し高感度CRP高値(残余炎症リスク)の患者を対象とするZEUS試験で検証されている治療標的はどれか。",
+    options: ["PCSK9の阻害によるLDLコレステロール低下", "インターロイキン-6(IL-6)を標的とするziltivekimabによる抗炎症治療", "インターロイキン-1β(IL-1β)を標的とするカナキヌマブ", "ナトリウム利尿ペプチド受容体の刺激"],
+    correct: 1,
+    explanation: "【要点】ZEUS試験は、残余炎症リスクを持つASCVD+CKD患者でIL-6を標的とするziltivekimabの心血管保護効果を検証している。\n【背景/エビデンス】ASCVD・CKDかつhsCRP≥2 mg/Lの約6376例を対象に、ziltivekimab 15mg皮下注/月 vs プラセボで主要評価はMACE(非致死性心筋梗塞・脳卒中・心血管死)。LDL低下後も残るIL-6/CRP経路の炎症を標的とする概念に基づく(設計・ベースライン公表段階で、有効性は結果待ち)。\n【臨床応用/注意】残余炎症リスクの評価にhsCRPが有用。抗IL-6療法は感染・脂質・肝機能のモニタリングを要する。\n【誤答】PCSK9阻害・利尿ペプチド刺激は標的が異なる。カナキヌマブはIL-1βを標的(CANTOS)で、ziltivekimabのIL-6標的とは別である。",
+    source: { title: "Ziltivekimab Cardiovascular Outcomes Trial (ZEUS): Rationale, Design, and Baseline Clinical Characteristics (JAMA Cardiology, 2026)", url: "https://pubmed.ncbi.nlm.nih.gov/41369941/" },
+    tags: ["残余炎症リスク", "IL-6", "ziltivekimab", "循環器", "CKD"]
+  },
+  {
+    id: "rv-pbc-01",
+    category: "review",
+    difficulty: 2,
+    added: "2026-07-29",
+    question: "中年女性で慢性の掻痒・倦怠感とALP・γ-GTP優位の胆汁うっ滞を認め、抗ミトコンドリア抗体(AMA)が陽性。原発性胆汁性胆管炎(PBC)の第一選択治療はどれか。",
+    options: ["オベチコール酸(OCA)を初期から単剤で用いる", "プレドニゾロンによる副腎皮質ステロイド療法", "ウルソデオキシコール酸(UDCA)", "免疫抑制薬アザチオプリン"],
+    correct: 2,
+    explanation: "【要点】AMA陽性の胆汁うっ滞(ALP・γ-GTP優位)を呈するPBCの第一選択はウルソデオキシコール酸(UDCA)である。\n【背景/エビデンス】PBCは中年女性に多く、AMAが約90〜95%で陽性。UDCA 13〜15mg/kg/日は肝組織像・生存を改善し肝移植の必要を減らす。約40%は反応不十分で、その場合にオベチコール酸(OCA)を二次治療として追加する。\n【臨床応用/注意】掻痒・倦怠感の対症管理、脂溶性ビタミン欠乏・骨粗鬆症にも留意し、ALP等で治療反応を評価する。\n【誤答】OCAは初期単剤でなく二次選択。副腎皮質ステロイドやアザチオプリンは自己免疫性肝炎で用いる治療で、PBCの第一選択ではない。",
+    source: { title: "Current and potential treatments for primary biliary cholangitis (Lancet Gastroenterology & Hepatology 2020;5:306-315)", url: "https://www.thelancet.com/journals/langas/article/PIIS2468-1253(19)30343-7/abstract" },
+    tags: ["原発性胆汁性胆管炎", "消化器", "AMA", "専門医試験"]
+  },
+  {
+    id: "jr-attrcm-acoramidis-01",
+    category: "journal",
+    difficulty: 3,
+    added: "2026-07-29",
+    question: "労作時息切れとHFpEF様所見を示す高齢男性でトランスサイレチン型心アミロイドーシス(ATTR-CM)を疑う。病態・治療について当てはまるものはどれか。",
+    options: ["心電図で高電位を伴う左室肥大を呈するのが典型的である", "しばしば両側性の手根管症候群が心症状に先行する", "確定診断には常に心内膜心筋生検が必須である", "TTR安定化薬アコラミジスがATTRibute-CM試験で死亡・心血管入院などの複合アウトカムを改善した"],
+    correct: [1, 3],
+    explanation: "【要点】ATTR心アミロイドーシスは高齢のHFpEF様病態で疑い、両側手根管症候群の先行やTTR安定化薬アコラミジスの有効性が要点となる。\n【背景/エビデンス】ATTRibute-CM試験(NEJM 2024)でアコラミジスは死亡・心血管入院・NT-proBNP・6分間歩行を含む階層的複合アウトカムをプラセボより改善した。心電図はしばしば左室肥大に比して相対的低電位を示す。\n【臨床応用/注意】99mTc-ピロリン酸シンチと単クローン性蛋白の除外により、生検なしで診断しうる。タファミジスも安定化薬である。\n【誤答】高電位を伴う左室肥大は非典型で、実際は相対的低電位を示す。心内膜心筋生検は常に必須ではない。",
+    source: { title: "Gillmore JD, et al. Efficacy and Safety of Acoramidis in Transthyretin Amyloid Cardiomyopathy (ATTRibute-CM) (N Engl J Med 2024;390:132-142)", url: "https://www.nejm.org/doi/full/10.1056/NEJMoa2305434" },
+    tags: ["ATTR", "心アミロイドーシス", "循環器", "複数選択", "専門医試験"]
   }
 ];
 
