@@ -1682,7 +1682,7 @@ const QUESTIONS = [
     options: ["合併症の有無にかかわらず一律に70 mg/dL未満を目標とする", "末梢動脈疾患・細小血管症・喫煙のいずれもなければ120 mg/dL未満、いずれかがあれば100 mg/dL未満", "細小血管症があれば160 mg/dL未満、なければ140 mg/dL未満を目標とする", "糖尿病があれば一次予防でも全例100 mg/dL未満を一律の目標とする"],
     correct: 1,
     explanation: "【要点】糖尿病の一次予防では原則LDL-C<120 mg/dLが目標。末梢動脈疾患(PAD)、細小血管症(網膜症・腎症・神経障害)、または喫煙のいずれかを伴う場合は<100 mg/dLとより厳格化する。\n【背景/エビデンス】GL2022は糖尿病を高リスク病態と位置づけ、合併病態で層別化した。二次予防(ASCVD既往)、あるいは糖尿病に急性冠症候群・家族性高コレステロール血症などが加わる場合は<70 mg/dL。\n【臨床応用/注意】随時採血ではnon-HDL目標(LDL目標+30 mg/dL)を併用し、生活習慣是正を基盤に据える。個々の病態で目標は調整する。\n【誤答】一律70は二次予防等の基準で一次予防の一般例には過度。160/140の緩い閾値や、層別化を無視した全例100はGLの区分と合致しない。",
-    source: { title: "動脈硬化性疾患予防ガイドライン2022年版、主な改訂点5つ／日本動脈硬化学会(ケアネット)", url: "https://www.carenet.com/news/general/carenet/54680" },
+    source: { title: "Japan Atherosclerosis Society (JAS) Guidelines for Prevention of Atherosclerotic Cardiovascular Diseases 2022 (J Atheroscler Thromb 2024;31(6):641-853)", url: "https://www.jstage.jst.go.jp/article/jat/31/6/31_GL2022/_article" },
     tags: ["糖尿病", "脂質異常症", "LDLコレステロール", "一次予防", "生活習慣病"]
   },
   {
@@ -1694,7 +1694,7 @@ const QUESTIONS = [
     options: ["主要評価項目のMACE(心血管死・心筋梗塞・脳卒中)でチルゼパチドはデュラグルチドに対し非劣性を示し、全死亡も有意に減少した", "主要評価項目でチルゼパチドはデュラグルチドに劣り有意に不良であった", "両群でMACEに差はなく、体重・HbA1c・腎機能でも差を認めなかった", "チルゼパチドはプラセボと比較して非劣性を示した"],
     correct: 0,
     explanation: "【要点】SURPASS-CVOTでチルゼパチドは実薬デュラグルチドに対しMACE非劣性(HR0.92、95.3%CI0.83-1.01)を達成し、全死亡は有意に約16%減少(HR0.84、95%CI0.75-0.94)した。\n【背景/エビデンス】T2DM+ASCVD 13,000例超、30か国、追跡4.5年超。プラセボではなく確立GLP-1受容体作動薬デュラグルチドを対照に置いた点が特徴で、チルゼパチドの最大規模・最長の心血管試験。\n【臨床応用/注意】体重・HbA1c・腎機能でも良好だった。ただし優越性は主要評価項目の多重性調整下では確定的でなく、上乗せ効果の解釈は慎重を要する。\n【誤答】劣性・差なし・プラセボ対照は、いずれも試験デザインや結果と一致しない。",
-    source: { title: "SURPASS-CVOT: Is Tirzepatide Superior to Dulaglutide in Patients With T2D and ASCVD? (ACC)", url: "https://www.acc.org/latest-in-cardiology/journal-scans/2026/01/07/14/20/surpass-cvot" },
+    source: { title: "Nicholls SJ, et al. Cardiovascular Outcomes with Tirzepatide versus Dulaglutide in Type 2 Diabetes (SURPASS-CVOT, N Engl J Med 2025;393:2409-2420)", url: "https://www.nejm.org/doi/full/10.1056/NEJMoa2505928" },
     tags: ["糖尿病", "GLP-1", "チルゼパチド", "心血管アウトカム", "循環器"]
   },
   {
@@ -1706,7 +1706,7 @@ const QUESTIONS = [
     options: ["自己抗体(TRAb・抗TPO抗体)が高率に陽性となり、無痛性に経過するのが典型である", "上気道感染に続発することが多く、前頸部痛と赤沈・CRP高値を伴う", "初期から甲状腺への放射性ヨード摂取率が上昇し、抗甲状腺薬が第一選択となる", "初期は濾胞破壊による一過性の甲状腺中毒症を呈し、多くは自然軽快するが、有痛例では副腎皮質ステロイドが著効する"],
     correct: [1, 3],
     explanation: "【要点】亜急性甲状腺炎はウイルス感染後に多い有痛性の破壊性甲状腺疾患。前頸部痛・発熱・赤沈/CRP高値が特徴で、初期は濾胞破壊でホルモンが逸脱し中毒症を呈する。\n【背景/エビデンス】30〜50代女性に好発。破壊性のため放射性ヨード摂取率は低下し、バセドウ病と鑑別される。自己抗体は原則陰性。経過は中毒期→一過性機能低下期→回復期をとり多くは自然軽快する。\n【臨床応用/注意】軽症はNSAIDs、中等症以上や強い疼痛はプレドニゾロンが著効し数日で改善、以後漸減する。破壊性病態のため抗甲状腺薬は無効。\n【誤答】自己抗体高率陽性・無痛性、摂取率上昇・抗甲状腺薬第一選択はいずれも本症と矛盾する。",
-    source: { title: "亜急性甲状腺炎(岡本甲状腺クリニック)", url: "https://www.thyroid.jp/basic/subacute/" },
+    source: { title: "Acute Suppurative and Subacute Thyroiditis: From Diagnosis to Management (J Clin Med 2025;14(9):3233)", url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12072761/" },
     tags: ["内分泌", "甲状腺", "複数選択", "専門医試験"]
   },
   {
@@ -1718,7 +1718,7 @@ const QUESTIONS = [
     options: ["皮膚・粘膜の色素沈着を伴い、低ナトリウム血症・高カリウム血症をきたしやすい", "血中ACTHは低値、血漿レニン活性は低下し、鉱質コルチコイド作用は保たれる", "血中コルチゾール低値かつ血中ACTH高値であれば原発性副腎不全が示唆される", "迅速ACTH負荷試験で負荷後のコルチゾール頂値が18 μg/dL未満なら副腎不全は否定できない"],
     correct: [0, 2, 3],
     explanation: "【要点】アジソン病は原発性副腎不全で、糖質・鉱質コルチコイド双方が低下する。コルチゾール低値・ACTH高値が基本で、ACTH/MSH過剰による色素沈着、低Na・高K血症、倦怠感・低血圧・低血糖をきたす。\n【背景/エビデンス】迅速ACTH負荷(コートロシン250μg)で頂値≥18μg/dLなら副腎不全は否定的、<18で否定できず、<15では原発性の可能性が高い。早朝コルチゾール<4μg/dLも示唆的。\n【臨床応用/注意】副腎クリーゼはショック・意識障害で発症し、疑えば結果を待たずヒドロコルチゾンと生食輸液を開始。シックデイのステロイド増量指導が重要。\n【誤答】ACTH低値・レニン低下・鉱質保持は二次性副腎不全の像で、原発性とは異なる。",
-    source: { title: "原発性副腎機能低下症の診断(日本内科学会雑誌)", url: "https://www.jstage.jst.go.jp/article/naika/97/4/97_716/_pdf" },
+    source: { title: "Bornstein SR, et al. Diagnosis and Treatment of Primary Adrenal Insufficiency: An Endocrine Society Clinical Practice Guideline (J Clin Endocrinol Metab 2016;101(2):364-389)", url: "https://academic.oup.com/jcem/article/101/2/364/2810222" },
     tags: ["内分泌", "副腎不全", "複数選択", "救急", "専門医試験"]
   },
   {
@@ -1742,7 +1742,7 @@ const QUESTIONS = [
     options: ["生活習慣介入による減量目標は従来どおりベースライン体重の3%未満で十分とされた", "GLP-1受容体作動薬は2型糖尿病に限って体重管理に用いる", "生活習慣介入ではベースライン体重の5〜7%減量をより積極的な目標とし、肥満を伴う1型糖尿病でもBMIに応じてGLP-1系薬の使用が支持された", "MASLDを合併する例では体重管理のための薬物療法は推奨されない"],
     correct: 2,
     explanation: "【要点】ADA2026は生活習慣介入の減量目標を5〜7%とより積極化し、肥満(BMI≥30、アジア系≥27.5)を伴う1型糖尿病でもGLP-1系薬の使用を新たに支持した。\n【背景/エビデンス】MASLDを合併する2型糖尿病+過体重/肥満では、MASHへの有益性が示されたGLP-1受容体作動薬、またはGIP/GLP-1受容体作動薬(チルゼパチド)を減量目的の補助療法として考慮するよう拡充された。\n【臨床応用/注意】薬物は生活習慣介入への上乗せで、心血管・腎・肝の併存に応じて選択する。個別の適応と費用・忍容性を勘案する。\n【誤答】3%未満で十分・2型限定・MASLD例で薬物非推奨は、いずれも2026改訂の方向性と異なる。",
-    source: { title: "ADA Publishes 2026 Standards of Care With Updates to Technology, Obesity, Cardiometabolic Disease (Patient Care Online)", url: "https://www.patientcareonline.com/view/ada-publishes-2026-standards-of-care-with-updates-to-sections-on-technology-obesity-cardiometabolic-disease-management" },
+    source: { title: "Summary of Revisions: Standards of Care in Diabetes—2026 (Diabetes Care 2026;49(Suppl.1):S6-S13, American Diabetes Association)", url: "https://diabetesjournals.org/care/article/49/Supplement_1/S6/163930/Summary-of-Revisions-Standards-of-Care-in-Diabetes" },
     tags: ["肥満", "糖尿病", "GLP-1", "MASLD", "ガイドライン改訂"]
   }
 ];
