@@ -1774,11 +1774,11 @@ const QUESTIONS = [
     category: "guideline",
     difficulty: 2,
     added: "2026-07-29",
-    question: "診察室血圧は正常域だが家庭/24時間血圧が高値を示す仮面高血圧について、2017 ACC/AHA高血圧ガイドラインに沿った対応はどれか。",
+    question: "診察室血圧は正常域だが家庭/24時間血圧が高値を示す仮面高血圧について、2025 AHA/ACC高血圧ガイドラインに沿った対応はどれか。",
     options: ["診察室血圧が正常であれば心血管リスクは上昇しないため経過観察でよい", "白衣高血圧と同様に薬物療法は原則推奨されない", "診断には診察室血圧の反復測定のみで十分である", "持続性高血圧と同様に扱い、生活是正と必要に応じた薬物療法を行う"],
     correct: 3,
-    explanation: "【要点】仮面高血圧は診察室で正常・診察室外で高値を示す病態で、持続性高血圧と同等の心血管リスクを持つため同様に管理する。\n【背景/エビデンス】2017 ACC/AHA高血圧ガイドラインは、白衣・仮面高血圧の同定に診察室外血圧(ABPMまたは家庭血圧)の活用を推奨。仮面高血圧の治療は持続性高血圧と同じとし、白衣高血圧には原則薬物療法を行わない。\n【臨床応用/注意】糖尿病・CKDや高リスク例で頻度が高く、家庭血圧測定の指導が診断・管理の鍵となる。\n【誤答】診察室が正常ならリスク上昇なし・薬物不要は誤り(リスクは持続性と同等)。診察室測定のみでは診断できず、薬物非推奨は白衣高血圧に当てはまる。",
-    source: { title: "Whelton PK, et al. 2017 ACC/AHA Guideline for the Prevention, Detection, Evaluation, and Management of High Blood Pressure in Adults (Hypertension 2018;71:e13-e115)", url: "https://www.ahajournals.org/doi/10.1161/hyp.0000000000000065" },
+    explanation: "【要点】仮面高血圧は診察室で正常・診察室外で高値を示す病態で、持続性高血圧と同等の心血管リスクを持つため同様に管理する。\n【背景/エビデンス】2025 AHA/ACC高血圧ガイドラインは、白衣・仮面高血圧の同定に診察室外血圧(ABPMまたは家庭血圧)の活用を推奨。仮面高血圧の治療は持続性高血圧と同じとし、白衣高血圧には原則薬物療法を行わない。\n【臨床応用/注意】糖尿病・CKDや高リスク例で頻度が高く、家庭血圧測定の指導が診断・管理の鍵となる。\n【誤答】診察室が正常ならリスク上昇なし・薬物不要は誤り(リスクは持続性と同等)。診察室測定のみでは診断できず、薬物非推奨は白衣高血圧に当てはまる。",
+    source: { title: "2025 AHA/ACC Guideline for the Prevention, Detection, Evaluation and Management of High Blood Pressure in Adults (Hypertension, 2025)", url: "https://www.ahajournals.org/doi/10.1161/HYP.0000000000000249" },
     tags: ["高血圧", "仮面高血圧", "家庭血圧", "循環器"]
   },
   {
