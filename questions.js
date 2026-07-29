@@ -1828,6 +1828,78 @@ const QUESTIONS = [
     explanation: "【要点】ATTR心アミロイドーシスは高齢のHFpEF様病態で疑い、両側手根管症候群の先行やTTR安定化薬アコラミジスの有効性が要点となる。\n【背景/エビデンス】ATTRibute-CM試験(NEJM 2024)でアコラミジスは死亡・心血管入院・NT-proBNP・6分間歩行を含む階層的複合アウトカムをプラセボより改善した。心電図はしばしば左室肥大に比して相対的低電位を示す。\n【臨床応用/注意】99mTc-ピロリン酸シンチと単クローン性蛋白の除外により、生検なしで診断しうる。タファミジスも安定化薬である。\n【誤答】高電位を伴う左室肥大は非典型で、実際は相対的低電位を示す。心内膜心筋生検は常に必須ではない。",
     source: { title: "Gillmore JD, et al. Efficacy and Safety of Acoramidis in Transthyretin Amyloid Cardiomyopathy (ATTRibute-CM) (N Engl J Med 2024;390:132-142)", url: "https://www.nejm.org/doi/full/10.1056/NEJMoa2305434" },
     tags: ["ATTR", "心アミロイドーシス", "循環器", "複数選択", "専門医試験"]
+  },
+  {
+    id: "gl-ada2026-01",
+    category: "guideline",
+    difficulty: 2,
+    added: "2026-07-30",
+    question: "2026年 ADA『糖尿病診療基準(Standards of Care in Diabetes)』第9章の改訂点として当てはまるものはどれか。",
+    options: ["心不全症状の改善・心不全イベント減少が示されたGIP/GLP-1受容体作動薬(チルゼパチド)の使用を推奨する項目が新設された", "血糖降下薬の第一選択は全例メトホルミン単剤に一本化され、併用療法は非推奨となった", "SGLT2阻害薬は心不全合併例では禁忌とされ推奨から削除された", "基礎インスリン使用中の2型糖尿病でも持続血糖モニター(CGM)の使用を検討してよいと改訂された"],
+    correct: [0, 3],
+    explanation: "【要点】2026年版ADA Standardsは、心不全を含む臓器保護の観点を血糖管理アルゴリズムに組み込む方向で改訂された。\n【背景/エビデンス】推奨9.9aが新設され、心不全関連症状の改善と心不全イベント減少が示されたGIP/GLP-1受容体作動薬(チルゼパチド)の使用が位置づけられた。Figure 9.4は症候性HFpEF・MASLD/MASH・肥満を伴う2型糖尿病でGIP/GLP-1作動薬またはGLP-1作動薬を組み込むよう改訂され、Figure 9.5では基礎インスリン使用者へのCGM検討が追記された。\n【臨床応用/注意】HbA1cだけでなく心・腎・肝・体重の併存に応じて薬剤を選び、低血糖・体重増加を招く薬剤依存を減らす。\n【誤答】メトホルミン単剤への一本化やSGLT2阻害薬の禁忌化は事実に反する(SGLT2阻害薬はむしろ心不全で推奨)。",
+    source: { title: "9. Pharmacologic Approaches to Glycemic Treatment: Standards of Care in Diabetes—2026 (Diabetes Care 2026;49(Suppl 1):S183-S215)", url: "https://diabetesjournals.org/care/article/49/Supplement_1/S183/163934/9-Pharmacologic-Approaches-to-Glycemic-Treatment" },
+    tags: ["糖尿病", "ADA", "GLP-1", "心不全", "ガイドライン改訂"]
+  },
+  {
+    id: "jr-confidence-01",
+    category: "journal",
+    difficulty: 3,
+    added: "2026-07-30",
+    question: "アルブミン尿を伴う2型糖尿病+CKD(RAS阻害薬使用中)で、フィネレノンとエンパグリフロジンの同時併用開始を各単剤と比較したCONFIDENCE試験の主要結果はどれか。",
+    options: ["併用は各単剤とUACRの変化に差がなかった", "併用群ではUACRがむしろ増加した", "併用はいずれの単剤よりもUACR(尿中アルブミン/クレアチニン比)を有意に大きく低下させた", "併用群で心血管死が有意に減少した"],
+    correct: 2,
+    explanation: "【要点】CKD+2型糖尿病でフィネレノン＋エンパグリフロジンの同時併用開始は、いずれの単剤よりもアルブミン尿を大きく低下させた。\n【背景/エビデンス】CONFIDENCE試験(NEJM 2025)は、eGFR 30〜90・UACR 100〜5000 mg/gでRAS阻害薬を服用中の約800例を、フィネレノン単剤・エンパグリフロジン単剤・両者併用に1:1:1で割り付けた。主要評価は180日時点のUACR相対変化で、併用は約52%低下し各単剤より有意に大きかった。\n【臨床応用/注意】アルブミン尿は代替エンドポイントであり、腎・心血管の硬性アウトカムは今後の検証課題。併用では高カリウム血症とeGFR初期低下のモニタリングを要する。\n【誤答】UACR不変・増加は結果に反する。本試験は代替指標の検討で、心血管死の有意減少を示すデザインではない。",
+    source: { title: "Finerenone with Empagliflozin in Chronic Kidney Disease and Type 2 Diabetes (CONFIDENCE trial) (N Engl J Med 2025)", url: "https://www.nejm.org/doi/full/10.1056/NEJMoa2410659" },
+    tags: ["CKD", "糖尿病", "フィネレノン", "SGLT2阻害薬", "アルブミン尿"]
+  },
+  {
+    id: "jr-nhdeprescribe-01",
+    category: "journal",
+    difficulty: 2,
+    added: "2026-07-30",
+    question: "80歳以上・収縮期血圧<130 mmHgで複数の降圧薬を服用中の介護施設入所者を対象に、降圧薬の段階的減量(step-down)を通常ケアと比較した無作為化試験(NEJM 2025)の主要結果はどれか。",
+    options: ["段階的減量群と通常ケア群で全死亡に有意差はなかった", "段階的減量群で全死亡が有意に減少した", "段階的減量群で全死亡が有意に増加した", "段階的減量群で脳卒中が有意に増加した"],
+    correct: 0,
+    explanation: "【要点】高齢施設入所者で降圧薬を段階的に減量しても、通常ケアと比べ全死亡に有意差は認められなかった。\n【背景/エビデンス】フランスの多施設無作為化試験(NEJM 2025)で、80歳以上・降圧薬2剤以上・SBP<130 mmHgの1048例を段階的減量群と通常ケア群に割り付け、最長4年追跡した。主要評価項目は全死亡で、減量戦略は死亡を低下させなかった。減量群では服薬数が減りSBPはやや上昇した。\n【臨床応用/注意】フレイルな超高齢者で過降圧・多剤併用が疑われる場合、死亡増加の明確な根拠なく減量を個別に検討しうるが、明らかな予後改善も示されていない点に留意する。\n【誤答】全死亡の有意な減少・増加や脳卒中増加は、本試験の主要・副次結果と一致しない。",
+    source: { title: "Reduction of Antihypertensive Treatment in Nursing Home Residents (N Engl J Med 2025;393:1990-2000)", url: "https://www.nejm.org/doi/full/10.1056/NEJMoa2508157" },
+    tags: ["高血圧", "高齢者", "脱処方", "介護施設", "多剤併用"]
+  },
+  {
+    id: "rv-ra-mtx-01",
+    category: "review",
+    difficulty: 2,
+    added: "2026-07-30",
+    question: "これまでDMARD未使用で中等度〜高疾患活動性の関節リウマチ成人。2021年 米国リウマチ学会(ACR)ガイドラインが第一選択として強く推奨する治療はどれか。",
+    options: ["ヒドロキシクロロキン単剤", "TNF阻害薬(生物学的製剤)単剤", "メトトレキサート単剤", "副腎皮質ステロイドの長期単剤投与"],
+    correct: 2,
+    explanation: "【要点】DMARD未使用で中等度〜高活動性のRAでは、メトトレキサート(MTX)単剤が第一選択として強く推奨される。\n【背景/エビデンス】2021年ACRガイドライン(Fraenkelら)は、MTX単剤をヒドロキシクロロキン・サラゾスルファピリジン・レフルノミド・生物学的製剤・JAK阻害薬などより優先すると位置づけ、MTXを『アンカードラッグ』とした。全身ステロイドは可能な限り短期・最小限にとどめることを推奨する。\n【臨床応用/注意】投与時は葉酸併用、血算・肝機能・腎機能をモニタリングし、肝疾患・妊娠・重度腎障害では避ける。効果不十分なら生物学的製剤/JAK阻害薬を追加する。\n【誤答】ヒドロキシクロロキン・サラゾは低活動性や併用での選択肢、生物学的製剤はMTX不応後、ステロイド長期単剤は非推奨で、いずれもこの状況の第一選択ではない。",
+    source: { title: "Fraenkel L, et al. 2021 American College of Rheumatology Guideline for the Treatment of Rheumatoid Arthritis (Arthritis Care Res 2021;73:924-939)", url: "https://pubmed.ncbi.nlm.nih.gov/34101376/" },
+    tags: ["関節リウマチ", "メトトレキサート", "膠原病", "DMARD", "専門医試験"]
+  },
+  {
+    id: "cl-mg-01",
+    category: "clinical",
+    difficulty: 3,
+    added: "2026-07-30",
+    question: "日内変動する眼瞼下垂・複視と易疲労性を訴える成人。全身型重症筋無力症を疑う。診断・治療について当てはまるものはどれか。",
+    options: ["抗アセチルコリン受容体(AChR)抗体は診断特異性が高く、まず測定する", "ピリドスチグミンは対症療法の第一選択である", "確定診断には常に胸腺摘除術による組織診断が必須である", "胸腺腫を合併する場合、胸腺摘除術が適応となる"],
+    correct: [0, 1, 3],
+    explanation: "【要点】重症筋無力症(MG)はAChR抗体の測定を軸に診断し、対症療法の第一選択はピリドスチグミン、胸腺腫合併例では胸腺摘除術が適応となる。\n【背景/エビデンス】AChR抗体は特異度が高くまず測定し、陰性ならMuSK抗体を追加する。診断は臨床像に反復神経刺激/単線維筋電図や画像を組み合わせて行う。全身型AChR抗体陽性MGでは免疫抑制(ステロイド・アザチオプリン等)を併用し、非胸腺腫でも比較的若年例では胸腺摘除が有益とされる。\n【臨床応用/注意】感染・手術・薬剤(アミノグリコシド等)で筋無力症クリーゼを来しうる。ステロイド導入初期の一過性増悪に注意する。\n【誤答】確定診断に胸腺摘除の組織診断は必須でなく、血清・電気生理・画像で診断する。",
+    source: { title: "Gilhus NE, et al. Generalized myasthenia gravis with acetylcholine receptor antibodies: a guidance for treatment (Eur J Neurol 2024;31:e16229)", url: "https://onlinelibrary.wiley.com/doi/10.1111/ene.16229" },
+    tags: ["重症筋無力症", "神経", "AChR抗体", "胸腺", "専門医試験"]
+  },
+  {
+    id: "gl-dm-initcombo-01",
+    category: "guideline",
+    difficulty: 1,
+    added: "2026-07-30",
+    question: "2026年 ADA『糖尿病診療基準』に基づく2型糖尿病の薬物療法の考え方として適切なものはどれか。",
+    options: ["血糖降下薬は必ずメトホルミン単剤で開始し、目標未達が続いた場合にのみ他剤を段階的に追加する", "SGLT2阻害薬・GLP-1受容体作動薬はHbA1cが高い症例に限って追加する", "確立したASCVDがあってもHbA1cが目標内なら臓器保護薬は不要である", "HbA1cが個別目標を1.5〜2.0%上回る例や高心血管リスク/ASCVD例では初期併用療法を考慮する"],
+    correct: 3,
+    explanation: "【要点】現行のADA基準は、HbA1cが目標を大きく上回る例や高心血管リスク例で『初期併用療法』を考慮し、臓器保護薬はHbA1cと独立に用いる個別化を重視する。\n【背景/エビデンス】従来のメトホルミン単剤からの段階的追加に加え、HbA1cが個別目標より1.5〜2.0%高い例や高CVDリスク/ASCVD例では、より速やかな目標達成のため初期併用(GLP-1受容体作動薬＋SGLT2阻害薬など)が推奨される。ASCVD・心不全・CKDでは、これらの臓器保護薬をHbA1c値に関係なく治療計画に含める。\n【臨床応用/注意】臓器保護薬を早期に組み込むことで、低血糖・体重増加を招く薬剤への依存を減らせる。\n【誤答】メトホルミン単剤固定・HbA1cゲート的な臓器保護薬の追加・ASCVDでの臓器保護薬不要という考えは、いずれも現行基準の個別化方針に反する。",
+    source: { title: "9. Pharmacologic Approaches to Glycemic Treatment: Standards of Care in Diabetes—2026 (Diabetes Care 2026;49(Suppl 1):S183-S215)", url: "https://diabetesjournals.org/care/article/49/Supplement_1/S183/163934/9-Pharmacologic-Approaches-to-Glycemic-Treatment" },
+    tags: ["糖尿病", "ADA", "初期併用療法", "臓器保護", "生活習慣病"]
   }
 ];
 
