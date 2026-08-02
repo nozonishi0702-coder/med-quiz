@@ -1900,6 +1900,78 @@ const QUESTIONS = [
     explanation: "【要点】現行のADA基準は、HbA1cが目標を大きく上回る例や高心血管リスク例で『初期併用療法』を考慮し、臓器保護薬はHbA1cと独立に用いる個別化を重視する。\n【背景/エビデンス】従来のメトホルミン単剤からの段階的追加に加え、HbA1cが個別目標より1.5〜2.0%高い例や高CVDリスク/ASCVD例では、より速やかな目標達成のため初期併用(GLP-1受容体作動薬＋SGLT2阻害薬など)が推奨される。ASCVD・心不全・CKDでは、これらの臓器保護薬をHbA1c値に関係なく治療計画に含める。\n【臨床応用/注意】臓器保護薬を早期に組み込むことで、低血糖・体重増加を招く薬剤への依存を減らせる。\n【誤答】メトホルミン単剤固定・HbA1cゲート的な臓器保護薬の追加・ASCVDでの臓器保護薬不要という考えは、いずれも現行基準の個別化方針に反する。",
     source: { title: "9. Pharmacologic Approaches to Glycemic Treatment: Standards of Care in Diabetes—2026 (Diabetes Care 2026;49(Suppl 1):S183-S215)", url: "https://diabetesjournals.org/care/article/49/Supplement_1/S183/163934/9-Pharmacologic-Approaches-to-Glycemic-Treatment" },
     tags: ["糖尿病", "ADA", "初期併用療法", "臓器保護", "生活習慣病"]
+  },
+  {
+    id: "gl-dm-retinopathy-01",
+    category: "guideline",
+    difficulty: 1,
+    added: "2026-08-03",
+    question: "2型糖尿病患者の糖尿病網膜症スクリーニング(2026年 ADA『糖尿病診療基準』)について当てはまるものはどれか。",
+    options: ["1型糖尿病では発症時に直ちに初回眼底検査を行う", "網膜症がなく血糖が良好なら2〜3年ごとの検査でよい", "2型糖尿病では診断時に初回の散瞳眼底(または眼底写真)検査を行う", "何らかの網膜症を認めても、無症状なら1〜2年ごとの検査でよい"],
+    correct: 2,
+    explanation: "【要点】2型糖尿病では診断時に初回の散瞳眼底(または眼底写真)検査を行う。\n【背景/エビデンス】2026年ADA『糖尿病診療基準(第12章)』は、2型糖尿病は高血糖が診断前から先行し診断時に網膜症が存在しうるため診断時スクリーニングを推奨し、1型は発症後5年以内とする。網膜症がなく血糖が目標範囲なら1〜2年ごと、何らかの網膜症があれば少なくとも年1回、より進行例はより頻回とする。\n【臨床応用/注意】妊娠、急速な血糖是正、進行例では間隔を短縮する。眼科医/検眼医の散瞳検査またはバリデートされた眼底写真で評価する。\n【誤答】1型の即時検査・網膜症なしでの2〜3年間隔・網膜症ありでの1〜2年間隔は、いずれも推奨間隔と異なる。",
+    source: { title: "12. Retinopathy, Neuropathy, and Foot Care: Standards of Care in Diabetes—2026 (Diabetes Care 2026;49(Suppl 1):S261-S274)", url: "https://diabetesjournals.org/care/article/49/Supplement_1/S261/163919/12-Retinopathy-Neuropathy-and-Foot-Care-Standards" },
+    tags: ["糖尿病", "網膜症", "スクリーニング", "ADA", "生活習慣病"]
+  },
+  {
+    id: "gl-htn-lifestyle-01",
+    category: "guideline",
+    difficulty: 2,
+    added: "2026-08-03",
+    question: "2025年 AHA/ACC 高血圧ガイドラインが降圧に有効として推奨する非薬物的介入(生活習慣修正)はどれか。",
+    options: ["ナトリウム制限に伴い、食事性カリウムの摂取も同時に制限する", "DASH型の食事パターンの採用", "ナトリウム摂取の減少(目標 <1500 mg/日)", "過体重・肥満例での5%以上の減量"],
+    correct: [1, 2, 3],
+    explanation: "【要点】DASH型食事、減塩(目標<1500 mg/日)、5%以上の減量はいずれも降圧に有効で、第一選択となる生活習慣修正である。\n【背景/エビデンス】2025年AHA/ACC高血圧ガイドラインは、体重を1 kg減らすごとに約1 mmHgの降圧、低ナトリウム食で高血圧者の血圧を約7/3 mmHg低下と示し、ナトリウム減少と同時に食事性カリウムの『増加』を推奨する。DASH食・運動・節酒も推奨される。\n【臨床応用/注意】生活習慣修正は全成人の基盤であり、低リスク例ではまず3〜6か月試みる。腎機能低下例やカリウム保持性薬併用時はカリウム負荷に注意する。\n【誤答】カリウムは制限ではなく増加が推奨されるため『カリウムも同時に制限』は不適切。",
+    source: { title: "2025 AHA/ACC Guideline for the Prevention, Detection, Evaluation, and Management of High Blood Pressure in Adults (Circulation 2025)", url: "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001356" },
+    tags: ["高血圧", "生活習慣修正", "減塩", "DASH食", "複数選択"]
+  },
+  {
+    id: "rv-pancreatitis-fluid-01",
+    category: "review",
+    difficulty: 2,
+    added: "2026-08-03",
+    question: "発症早期の急性膵炎における初期輸液について、WATERFALL試験(NEJM 2022)の結果に基づき当てはまるものはどれか。",
+    options: ["積極的(aggressive)輸液が中等症・重症化を有意に減らす", "中等度(moderate)輸液は積極的輸液と比べ体液過剰を減らす", "積極的輸液群と中等度輸液群で体液過剰の頻度に差はない", "初期輸液には乳酸リンゲル液より生理食塩水が推奨される"],
+    correct: 1,
+    explanation: "【要点】早期急性膵炎では中等度(moderate)輸液が積極的輸液より体液過剰を減らし、重症化抑制の点で積極的輸液の優越性は示されなかった。\n【背景/エビデンス】WATERFALL試験(NEJM 2022)は乳酸リンゲル液を用い、積極的(20 mL/kgボーラス＋3 mL/kg/時)対 中等度(血管内容量減少例に10 mL/kgボーラス＋1.5 mL/kg/時)に割付。中等症・重症膵炎の発生に差はなく、体液過剰は積極群20.5%対中等群6.3%と有意に多く、安全性上の理由で早期中止された。\n【臨床応用/注意】目標志向で過剰輸液を避け、頻回に容量状態を再評価する。\n【誤答】積極的輸液の重症化抑制・体液過剰同等・生食優先は、いずれも本試験結果と一致しない。",
+    source: { title: "de-Madaria E, et al. Aggressive or Moderate Fluid Resuscitation in Acute Pancreatitis (N Engl J Med 2022;387:989-1000)", url: "https://www.nejm.org/doi/full/10.1056/NEJMoa2202884" },
+    tags: ["急性膵炎", "輸液", "消化器", "救急", "専門医試験"]
+  },
+  {
+    id: "cl-aav-induction-01",
+    category: "clinical",
+    difficulty: 3,
+    added: "2026-08-03",
+    question: "重症のANCA関連血管炎(GPA/MPA)の寛解導入について当てはまるものはどれか。",
+    options: ["リツキシマブは寛解導入においてシクロホスファミドに非劣性である", "リツキシマブは初発例に限り有効で、再発例では無効である", "リツキシマブは再発例でシクロホスファミドより高い寛解率を示した", "寛解導入では副腎皮質ステロイドを併用しない"],
+    correct: [0, 2],
+    explanation: "【要点】重症ANCA関連血管炎の寛解導入で、リツキシマブはシクロホスファミドに非劣性であり、特に再発例で高い寛解率を示す。ステロイドは併用する。\n【背景/エビデンス】RAVE試験(NEJM 2010)はPR3/MPO-ANCA陽性の重症AAV 197例をリツキシマブ(375 mg/m²週1回×4回)対シクロホスファミドに割付、いずれもステロイド漸減を併用した。6か月の完全寛解でリツキシマブは非劣性を示し、再発例では67%対42%と優越した。\n【臨床応用/注意】妊孕性温存が望ましい例や再発例でリツキシマブが有利。投与前にB型肝炎・感染症スクリーニングを行う。\n【誤答】『初発限定で再発無効』は逆で、再発例でこそ有利。ステロイドは導入期に併用するため『非併用』も誤り。",
+    source: { title: "Stone JH, et al. Rituximab versus Cyclophosphamide for ANCA-Associated Vasculitis (RAVE) (N Engl J Med 2010;363:221-232)", url: "https://www.nejm.org/doi/full/10.1056/NEJMoa0909905" },
+    tags: ["ANCA関連血管炎", "膠原病", "リツキシマブ", "寛解導入", "専門医試験"]
+  },
+  {
+    id: "jr-launchhtn-lorundrostat-01",
+    category: "journal",
+    difficulty: 2,
+    added: "2026-08-03",
+    question: "未コントロール/治療抵抗性高血圧を対象にロルンドロスタットを検討したLaunch-HTN試験(JAMA 2025)について当てはまるものはどれか。",
+    options: ["ミネラルコルチコイド受容体拮抗薬として血圧を低下させた", "エンドセリン受容体拮抗薬として血圧を低下させた", "レニン阻害薬として血圧を低下させた", "アルドステロン合成酵素(CYP11B2)阻害薬として収縮期血圧を有意に低下させた"],
+    correct: 3,
+    explanation: "【要点】ロルンドロスタットはアルドステロン合成酵素(CYP11B2)阻害薬で、未コントロール/治療抵抗性高血圧の収縮期血圧を有意に低下させた。\n【背景/エビデンス】Launch-HTN試験(JAMA 2025、1083例)は2剤以上の降圧薬に上乗せし、50 mg 1日1回で6週時の自動診察室収縮期血圧を約16.9 mmHg低下(プラセボ約7.9 mmHg)させた。高カリウム血症の頻度は低く、忍容性は良好であった。\n【臨床応用/注意】アルドステロン過剰が関与する治療抵抗性高血圧で有望だが、カリウム値と血圧のモニタリングを要する。硬性心血管アウトカムは今後の課題。\n【誤答】MRA・エンドセリン受容体拮抗薬・レニン阻害薬はいずれも別クラスで、本剤の作用機序ではない。",
+    source: { title: "Laffin LJ, et al. Lorundrostat in Uncontrolled and Treatment-Resistant Hypertension: The Launch-HTN Randomized Clinical Trial (JAMA 2025)", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC12210145/" },
+    tags: ["高血圧", "治療抵抗性", "アルドステロン合成酵素阻害薬", "ロルンドロスタット", "新薬"]
+  },
+  {
+    id: "jr-essence-mash-01",
+    category: "journal",
+    difficulty: 2,
+    added: "2026-08-03",
+    question: "線維化ステージF2〜F3のMASH(代謝機能障害関連脂肪肝炎)成人を対象にセマグルチドを検討したESSENCE試験(NEJM 2025)の結果として当てはまるものはどれか。",
+    options: ["セマグルチド群でステアトヘパティティスの消退(線維化悪化なし)が有意に多かった(約63%対34%)", "主要評価項目でプラセボと有意差は認められなかった", "肝線維化は改善したが、ステアトヘパティティスの消退には差がなかった", "本試験の対象は肝硬変(F4)患者であった"],
+    correct: 0,
+    explanation: "【要点】F2〜F3線維化を伴うMASHで、セマグルチド2.4 mg週1回は線維化悪化を伴わないステアトヘパティティスの消退を有意に増やした。\n【背景/エビデンス】ESSENCE試験(NEJM 2025)は生検確定のMASH・線維化F2/F3患者を対象とし、72週の中間解析で主要評価のステアトヘパティティス消退(線維化悪化なし)が62.9%対プラセボ34.3%、線維化改善(MASH悪化なし)も有意に多かった。安全性は既知のプロファイルと一致した。\n【臨床応用/注意】2025年に中等度〜進行線維化を伴うMASHへ迅速承認された。消化器症状に留意し、非代償性肝硬変(F4)は本試験の対象外である。\n【誤答】有意差なし・消退に差なし・対象がF4は、いずれも試験結果と異なる。",
+    source: { title: "Sanyal AJ, et al. Phase 3 Trial of Semaglutide in Metabolic Dysfunction–Associated Steatohepatitis (ESSENCE) (N Engl J Med 2025;392:2089-2099)", url: "https://www.nejm.org/doi/full/10.1056/NEJMoa2413258" },
+    tags: ["MASH", "セマグルチド", "肝線維化", "GLP-1", "消化器"]
   }
 ];
 
