@@ -2044,6 +2044,90 @@ const QUESTIONS = [
     explanation: "【要点】治療抵抗性高血圧の4剤目として、スピロノラクトン(ミネラルコルチコイド受容体拮抗薬)が最も高い降圧効果を示す。\n【背景/エビデンス】PATHWAY-2試験(Lancet 2015)は3剤併用でも管理不良な治療抵抗性高血圧を対象に、スピロノラクトン・ビソプロロール・ドキサゾシン・プラセボをクロスオーバーで比較。家庭収縮期血圧の低下はスピロノラクトンが最大で、α遮断薬・β遮断薬に優った。ナトリウム・体液貯留の関与が示唆される。\n【臨床応用/注意】導入後は血清カリウムと腎機能をモニタリングし、高K血症や重度腎機能障害では慎重に用いる。効果不十分ならβ遮断薬・α遮断薬などを次段階として検討する。\n【誤答】ビソプロロール・ドキサゾシンはPATHWAY-2でスピロノラクトンに劣った。ヒドララジンは第一に推奨される4剤目ではない。",
     source: { title: "Williams B, et al. Spironolactone versus placebo, bisoprolol, and doxazosin for drug-resistant hypertension (PATHWAY-2) (Lancet 2015;386:2059-2068)", url: "https://www.thelancet.com/article/S0140-6736(15)00257-3/fulltext" },
     tags: ["高血圧", "治療抵抗性高血圧", "スピロノラクトン", "MRA", "循環器"]
+  },
+  {
+    id: "rv-pv-hct-01",
+    category: "clinical",
+    difficulty: 3,
+    added: "2026-08-04",
+    question: "真性多血症(polycythemia vera)の血栓予防を目的とした管理について、適切なものはどれか。",
+    options: ["禁忌がなければ低用量アスピリンを併用する", "瀉血・細胞減少療法でヘマトクリットを45%未満に維持する", "低リスク例でも全例で第一選択としてルキソリチニブを開始する", "高齢または血栓既往のある高リスク例では細胞減少療法(ヒドロキシウレア等)を考慮する"],
+    correct: [0, 1, 3],
+    explanation: "【要点】PVの血栓予防は、低用量アスピリン併用とヘマトクリット(Hct)<45%の維持が基本で、高リスク例では細胞減少療法を加える。\n【背景/エビデンス】CYTO-PV試験(NEJM 2013、365例)はHct目標<45%群と45〜50%群を比較し、<45%群で心血管死・血栓が有意に少なかった(約4倍の差)。低用量アスピリンはECLAP試験で血栓を減らした。\n【臨床応用/注意】高リスク(60歳以上または血栓既往)ではヒドロキシウレア等の細胞減少療法を第一選択とし、Hct・血球数と血栓/出血をモニタリングする。JAK2 V617F変異はPV診断の手がかりとなる。\n【誤答】ルキソリチニブはヒドロキシウレア抵抗性/不耐例が適応で、低リスク全例の第一選択ではない。",
+    source: { title: "Marchioli R, et al. Cardiovascular Events and Intensity of Treatment in Polycythemia Vera (CYTO-PV) (N Engl J Med 2013;368:22-33)", url: "https://www.nejm.org/doi/full/10.1056/NEJMoa1208500" },
+    tags: ["血液", "真性多血症", "ヘマトクリット", "血栓予防", "専門医試験"]
+  },
+  {
+    id: "jr-oceanicaf-01",
+    category: "journal",
+    difficulty: 2,
+    added: "2026-08-04",
+    question: "心房細動患者を対象に第XIa因子阻害薬アスンデキシアンと標準用量アピキサバンを比較したOCEANIC-AF試験の結果はどれか。",
+    options: ["脳卒中/全身塞栓の予防でアスンデキシアンがアピキサバンに優越した", "有効性・出血とも両群で同等であった", "アスンデキシアン群で脳卒中/全身塞栓が有意に多く、試験は早期中止された", "大出血がアスンデキシアン群で有意に多く中止された"],
+    correct: 2,
+    explanation: "【要点】OCEANIC-AFでは、アスンデキシアンはアピキサバンに対し脳卒中/全身塞栓の予防で劣り、試験は早期中止された。\n【背景/エビデンス】高リスク心房細動患者を対象にアスンデキシアン50mg/日と標準用量アピキサバンを比較(NEJM 2025)。アスンデキシアン群で脳卒中/全身塞栓が有意に多く(HR約3.8)、有効性の劣性が明らかとなり中止。出血はアスンデキシアン群で少なかった。\n【臨床応用/注意】第XIa因子阻害は出血を抑えつつ血栓を防ぐ期待があったが、少なくとも心房細動の塞栓予防ではDOAC(アピキサバン等)が標準であり続ける。\n【誤答】優越・同等は結果と異なる。中止理由は大出血ではなく塞栓イベントの過剰である。",
+    source: { title: "Piccini JP, et al. Asundexian versus Apixaban in Patients with Atrial Fibrillation (OCEANIC-AF) (N Engl J Med 2025;392:23-32)", url: "https://www.nejm.org/doi/full/10.1056/NEJMoa2407105" },
+    tags: ["心房細動", "第XI因子阻害薬", "アスンデキシアン", "抗凝固", "循環器"]
+  },
+  {
+    id: "jr-colchmi-01",
+    category: "journal",
+    difficulty: 2,
+    added: "2026-08-04",
+    question: "急性心筋梗塞後の患者を対象にコルヒチンを検討したCLEAR SYNERGY(OASIS-9)試験の主要結果はどれか。",
+    options: ["主要心血管イベントを約30%有意に減少させた", "主要心血管イベントを有意には減少させなかった", "総死亡を有意に減少させた", "心血管死は増加したが再梗塞は減少した"],
+    correct: 1,
+    explanation: "【要点】CLEAR SYNERGY(OASIS-9)では、急性心筋梗塞後のコルヒチンは主要心血管イベントを有意には減少させなかった(中立)。\n【背景/エビデンス】PCI後の急性MI 7,062例をコルヒチンとプラセボに割付け、中央値約3年追跡(NEJM 2025)。心血管死・再梗塞・脳卒中等の複合主要評価項目に有意差なし。炎症マーカーは低下したが臨床イベントには結びつかなかった。\n【臨床応用/注意】慢性冠動脈疾患を対象としたLoDoCo2やMI後のCOLCOTでは有益性が示唆されていたが、本試験はより厳格な設計で中立を示した。ルーチンのコルヒチン追加は現時点で確立していない。\n【誤答】30%減少・総死亡減少・心血管死増加はいずれも本試験の結果と一致しない。",
+    source: { title: "Jolly SS, et al. Colchicine in Acute Myocardial Infarction (CLEAR SYNERGY/OASIS-9) (N Engl J Med 2025;392:633-642)", url: "https://www.nejm.org/doi/full/10.1056/NEJMoa2405922" },
+    tags: ["心筋梗塞", "コルヒチン", "抗炎症", "二次予防", "循環器"]
+  },
+  {
+    id: "gl-dpn-pain-01",
+    category: "guideline",
+    difficulty: 2,
+    added: "2026-08-04",
+    question: "有痛性糖尿病性末梢神経障害に対し、AAN(米国神経学会)2022年ガイドラインが第一選択の経口薬として推奨する薬剤はどれか。",
+    options: ["デュロキセチン(SNRI)", "プレガバリン(ガバペンチノイド)", "アミトリプチリン(三環系抗うつ薬)", "オキシコドン(オピオイド)"],
+    correct: [0, 1, 2],
+    explanation: "【要点】AAN 2022ガイドラインは有痛性糖尿病性神経障害の第一選択として、三環系抗うつ薬・SNRI・ガバペンチノイド・ナトリウムチャネル遮断薬を推奨し、オピオイドは推奨しない。\n【背景/エビデンス】デュロキセチン・プレガバリン・ガバペンチン・アミトリプチリンはいずれも有効性が示され、OPTION-DM試験では各薬・その併用の効果は概ね同等であった。\n【臨床応用/注意】併存症・副作用・費用で薬剤を選び、単剤最大忍容量で不十分なら併用を考慮する。オピオイドは依存・有害事象から長期使用を避ける。\n【誤答】オキシコドン等のオピオイドは有効性のエビデンスが乏しく害が上回るため第一選択ではない。",
+    source: { title: "Price R, et al. Oral and Topical Treatment of Painful Diabetic Polyneuropathy: Practice Guideline Update Summary (AAN) (Neurology 2022;98(1):31-43)", url: "https://www.neurology.org/doi/10.1212/WNL.0000000000013038" },
+    tags: ["糖尿病", "神経障害", "神経障害性疼痛", "AAN", "神経"]
+  },
+  {
+    id: "rv-statin-dm-01",
+    category: "review",
+    difficulty: 2,
+    added: "2026-08-04",
+    question: "スタチン療法と新規糖尿病発症リスクに関する記述として正しいものはどれか。",
+    options: ["スタチンは新規糖尿病リスクを低下させる", "リスク上昇は用量に依存せず一定である", "リスク上昇のため心血管ハイリスク例でもスタチンは避けるべきである", "高強度スタチンは中等度以下より新規糖尿病リスクが高く、用量依存性の増加を示す"],
+    correct: 3,
+    explanation: "【要点】スタチンは新規糖尿病リスクを用量依存性にわずかに高め、高強度スタチンでより顕著だが、心血管イベント抑制のベネフィットがこれを上回る。\n【背景/エビデンス】CTT共同研究の個別患者データメタ解析(Lancet Diabetes Endocrinol 2024)では、中等度以下でRR約1.10、高強度でRR約1.36。新規糖尿病の多くはベースラインで血糖が診断閾値近傍の人に生じ、血糖のわずかな上方シフトによると解釈される。\n【臨床応用/注意】適応例ではスタチンを中止せず継続し、必要に応じて血糖・HbA1cをモニタリングする。減量・運動など生活習慣是正を併せて行う。\n【誤答】『リスク低下』『用量非依存』『ハイリスクでも避ける』はいずれもエビデンスと矛盾する。",
+    source: { title: "Cholesterol Treatment Trialists' Collaboration. Effects of statin therapy on diagnoses of new-onset diabetes and worsening glycaemia (Lancet Diabetes Endocrinol 2024;12:306-319)", url: "https://www.thelancet.com/journals/landia/article/PIIS2213-8587(24)00040-8/fulltext" },
+    tags: ["脂質", "スタチン", "新規糖尿病", "用量依存性", "生活習慣病"]
+  },
+  {
+    id: "cl-gout-cvsafety-01",
+    category: "clinical",
+    difficulty: 3,
+    added: "2026-08-04",
+    question: "痛風の尿酸降下療法における心血管安全性について、現時点で支持される記述はどれか。",
+    options: ["アロプリノールが第一選択の尿酸降下薬であり、FAST試験ではフェブキソスタットと心血管リスクに差を認めなかった", "フェブキソスタットは全例でアロプリノールより心血管死を減らす", "尿酸降下療法は心血管イベントを増やすため無症候性であれば導入しない", "アロプリノールは心血管リスクを高めるためフェブキソスタットが第一選択である"],
+    correct: 0,
+    explanation: "【要点】痛風の尿酸降下療法はアロプリノールが第一選択であり、FAST試験ではフェブキソスタットと心血管リスクに差を認めなかった。\n【背景/エビデンス】CARES試験(NEJM 2018)は心血管疾患合併痛風でフェブキソスタットの総死亡・心血管死がアロプリノールより高かった。一方、より低リスク集団を含むFAST試験(Lancet 2020)では両薬の心血管イベント・総死亡に差はなく、フェブキソスタットのCV安全性が再確認された。\n【臨床応用/注意】多くのガイドラインはアロプリノールを第一選択とし、treat-to-targetで血清尿酸<6.0mg/dLを目指す。フェブキソスタットは不耐/効果不十分例で用いる。\n【誤答】フェブキソスタット全例優越・尿酸降下療法回避・アロプリノールがCVリスク増で第二選択、はいずれも支持されない。",
+    source: { title: "Mackenzie IS, et al. Long-term cardiovascular safety of febuxostat compared with allopurinol in patients with gout (FAST) (Lancet 2020;396:1745-1757)", url: "https://www.sciencedirect.com/science/article/abs/pii/S0140673620322340" },
+    tags: ["高尿酸血症", "痛風", "フェブキソスタット", "アロプリノール", "生活習慣病"]
+  },
+  {
+    id: "cl-aps-anticoag-01",
+    category: "clinical",
+    difficulty: 3,
+    added: "2026-08-04",
+    question: "抗リン脂質抗体症候群(APS)の血栓に対する長期抗凝固療法について、適切なものはどれか。",
+    options: ["全例でDOAC(直接経口抗凝固薬)が第一選択である", "トリプル陽性の高リスクAPSではワルファリン(INR 2-3)が推奨され、リバーロキサバン等DOACは避ける", "抗リン脂質抗体陽性であれば血栓既往がなくても全例で治療量抗凝固を行う", "低用量アスピリン単独で動脈・静脈血栓の二次予防が可能である"],
+    correct: 1,
+    explanation: "【要点】トリプル陽性の高リスクAPSではワルファリン(INR 2-3)が推奨され、リバーロキサバン等のDOACは避ける。\n【背景/エビデンス】TRAPS試験(Blood 2018)は、ループスアンチコアグラント・抗カルジオリピン・抗β2GPI抗体すべて陽性のAPSでリバーロキサバンとワルファリンを比較。リバーロキサバン群で血栓・大出血・血管死が有意に多く(HR約7)、試験は早期中止された。\n【臨床応用/注意】APSの動脈・静脈血栓の二次予防はビタミンK拮抗薬が標準。DOACは少なくとも高リスク(トリプル陽性)では推奨されない。\n【誤答】DOAC第一選択・抗体陽性のみで治療量抗凝固・アスピリン単独での二次予防、はいずれも不適切である。",
+    source: { title: "Pengo V, et al. Rivaroxaban vs warfarin in high-risk patients with antiphospholipid syndrome (TRAPS) (Blood 2018;132(13):1365-1371)", url: "https://ashpublications.org/blood/article/132/13/1365/105711" },
+    tags: ["膠原病", "抗リン脂質抗体症候群", "抗凝固", "ワルファリン", "専門医試験"]
   }
 ];
 
