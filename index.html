@@ -196,9 +196,19 @@
   }
   /* ===== 分野タブ ===== */
   .field-card { padding: 16px 18px; margin-bottom: 12px; }
+  /* カード全体をタップ可能に */
+  .field-card.tappable {
+    display: block; width: 100%; text-align: left; cursor: pointer;
+    font-family: inherit; color: var(--text);
+    border: 1.5px solid var(--border);
+    transition: border-color .15s, background .15s, transform .1s;
+  }
+  .field-card.tappable:hover { border-color: var(--accent); background: var(--surface-2); }
+  .field-card.tappable:active { transform: scale(.995); }
   .field-head { display: flex; align-items: baseline; gap: 8px; margin-bottom: 8px; }
   .field-name { font-weight: 700; font-size: 1.02rem; }
   .field-count { margin-left: auto; font-size: .85rem; color: var(--text-muted); }
+  .field-go { font-size: .8rem; color: var(--accent); flex-shrink: 0; }
   .field-bar {
     height: 8px; border-radius: 4px; background: var(--surface-2);
     overflow: hidden; margin-bottom: 6px;
@@ -797,12 +807,15 @@
       const s = fieldStats(f);
       if (s.total === 0) return;
       const rate = s.ans ? Math.round(s.ok / s.ans * 100) : null;
-      const card = document.createElement("div");
-      card.className = "card field-card";
+      // カード全体をタップ可能に（ボタンを押さずに直接出題へ）
+      const card = document.createElement("button");
+      card.className = "card field-card tappable";
+      card.setAttribute("aria-label", f + "の問題を解く");
       card.innerHTML =
         '<div class="field-head">' +
           '<span class="field-name">' + (FIELD_ICON[f] || "") + " " + escapeHtml(f) + '</span>' +
           '<span class="field-count">' + s.total + '問</span>' +
+          '<span class="field-go">▶</span>' +
         '</div>' +
         '<div class="field-bar"><div style="width:' + (rate === null ? 0 : rate) + '%;background:' +
           (rate === null ? "var(--border)" : rateColor(rate)) + '"></div></div>' +
@@ -810,12 +823,7 @@
           (rate === null ? "未学習" : ("正答率 " + rate + "%（" + s.ok + "/" + s.ans + "）")) +
           " ｜ 復習待ち " + s.due + " ｜ 未着手 " + s.fresh +
         '</div>';
-      const btn = document.createElement("button");
-      btn.className = "btn outline small";
-      btn.textContent = "この分野を解く";
-      btn.style.marginTop = "10px";
-      btn.addEventListener("click", () => { selectedField = f; startSession("field"); });
-      card.appendChild(btn);
+      card.addEventListener("click", () => { selectedField = f; startSession("field"); });
       wrap.appendChild(card);
     });
   }
@@ -905,9 +913,12 @@
       return;
     }
     session = { queue: queue, index: 0, correctCount: 0, isWeak: mode === "weak", mode: mode };
+    // 出題ビューはホームタブ内にあるため、他タブ（分野など）から開始した場合も必ず表示へ切り替える
+    showTab("home");
     $("#homeView").classList.add("hidden");
     $("#resultView").classList.add("hidden");
     $("#quizView").classList.remove("hidden");
+    window.scrollTo(0, 0);
     renderQuestion();
   }
 
