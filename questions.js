@@ -1,6 +1,7 @@
 // 総合診療 知識アップデート・クイズ 問題バンク
 // カテゴリ: journal(新着ジャーナル) / guideline(ガイドライン改訂) / review(定番復習) / clinical(臨床疑問)
-// 各問題: added(追加日 YYYY-MM-DD)。correct は数値=単一正解、配列=複数正解(全一致で正解)。
+// field: 臓器・領域別の主分野(循環器/内分泌・代謝/腎・電解質/呼吸器/感染症/消化器・肝/神経/血液/膠原病・骨/予防・健診/精神・行動/その他)
+// added(追加日 YYYY-MM-DD)。correct は数値=単一正解、配列=複数正解(全一致で正解)。
 // 問題・解説は日本語、出典は英語リンク。解説は詳細形式(改行\nは表示反映)。
 // 医学内容は各出典時点の情報に基づく。実臨床では最新の一次資料を確認すること。
 
@@ -8,6 +9,7 @@ const QUESTIONS = [
   {
     id: "gl-htn-01",
     category: "guideline",
+    field: "循環器",
     difficulty: 2,
     added: "2026-07-15",
     question: "2025年 AHA/ACC 高血圧ガイドラインで、心血管リスク評価に用いる推奨ツールとして従来のPooled Cohort Equationsに代わり採用されたのはどれか。",
@@ -20,6 +22,7 @@ const QUESTIONS = [
   {
     id: "gl-htn-02",
     category: "guideline",
+    field: "循環器",
     difficulty: 2,
     added: "2026-07-15",
     question: "2025年 AHA/ACC 高血圧ガイドラインにおける薬物療法開始の考え方について、正しいものはどれか。",
@@ -32,6 +35,7 @@ const QUESTIONS = [
   {
     id: "gl-htn-03",
     category: "guideline",
+    field: "循環器",
     difficulty: 3,
     added: "2026-07-15",
     question: "2025年 AHA/ACC 高血圧ガイドラインで、原発性アルドステロン症のスクリーニング対象はどのように拡大されたか。",
@@ -44,6 +48,7 @@ const QUESTIONS = [
   {
     id: "gl-copd-01",
     category: "guideline",
+    field: "呼吸器",
     difficulty: 2,
     added: "2026-07-15",
     question: "2026年 GOLD COPD アップデートで特に強調された領域として、適切なものはどれか。",
@@ -56,6 +61,7 @@ const QUESTIONS = [
   {
     id: "jr-flow-01",
     category: "journal",
+    field: "腎・電解質",
     difficulty: 3,
     added: "2026-07-15",
     question: "FLOW試験(2型糖尿病+CKD、セマグルチド vs プラセボ)で示された主要腎アウトカムの結果として正しいものはどれか。",
@@ -68,6 +74,7 @@ const QUESTIONS = [
   {
     id: "jr-fine-01",
     category: "journal",
+    field: "循環器",
     difficulty: 3,
     added: "2026-07-15",
     question: "FINEARTS-HF試験でフィネレノンが対象とした心不全の主な病型と、示された効果はどれか。",
@@ -80,6 +87,7 @@ const QUESTIONS = [
   {
     id: "jr-vte-01",
     category: "journal",
+    field: "血液",
     difficulty: 3,
     added: "2026-07-15",
     question: "静脈血栓塞栓症(VTE)の延長治療における、減量用量DOAC vs 通常用量DOACを比較した2025年の試験(Lancet)の主眼として最も適切なものはどれか。",
@@ -92,6 +100,7 @@ const QUESTIONS = [
   {
     id: "jr-asa-01",
     category: "journal",
+    field: "循環器",
     difficulty: 3,
     added: "2026-07-15",
     question: "経口抗凝固薬を服用中の慢性冠症候群(chronic coronary syndrome)患者において、アスピリンを併用 vs 併用しない場合の考え方として、近年のエビデンス(NEJM 2025)が支持する方向性はどれか。",
@@ -104,6 +113,7 @@ const QUESTIONS = [
   {
     id: "rv-asa-01",
     category: "review",
+    field: "予防・健診",
     difficulty: 2,
     added: "2026-07-15",
     question: "高齢者の一次予防目的の低用量アスピリンについて、ASPREE試験が示した結論として正しいものはどれか。",
@@ -116,6 +126,7 @@ const QUESTIONS = [
   {
     id: "rv-fishoil-01",
     category: "review",
+    field: "予防・健診",
     difficulty: 2,
     added: "2026-07-15",
     question: "魚油(オメガ3脂肪酸)サプリメントの心血管予防効果について、大規模RCT(STRENGTH等)が示した結論に最も近いものはどれか。",
@@ -128,6 +139,7 @@ const QUESTIONS = [
   {
     id: "cl-aki-01",
     category: "clinical",
+    field: "腎・電解質",
     difficulty: 2,
     added: "2026-07-15",
     question: "70歳男性、発熱・脱水で受診。sCr上昇(AKI)を認める。SGLT2阻害薬・ACE阻害薬・NSAIDs・メトホルミンを内服中。急性期にまず一時中止を検討すべき薬剤の組み合わせとして最も適切なのはどれか。",
@@ -140,6 +152,7 @@ const QUESTIONS = [
   {
     id: "cl-ckd-01",
     category: "clinical",
+    field: "腎・電解質",
     difficulty: 3,
     added: "2026-07-15",
     question: "2型糖尿病+CKD(eGFR 45、UACR 300mg/g)の患者。既にSGLT2阻害薬とACE阻害薬を最大耐用量で使用中だが尿蛋白と残余リスクが残る。上乗せとして近年エビデンスが蓄積し推奨される薬剤はどれか。",
@@ -152,6 +165,7 @@ const QUESTIONS = [
   {
     id: "cl-hf-01",
     category: "clinical",
+    field: "循環器",
     difficulty: 2,
     added: "2026-07-15",
     question: "LVEF 55%のHFpEF、2型糖尿病・肥満を合併する労作時呼吸困難の患者。症状・イベント抑制の両面で近年強く支持される薬剤クラスはどれか。",
@@ -164,6 +178,7 @@ const QUESTIONS = [
   {
     id: "cl-copd-01",
     category: "clinical",
+    field: "呼吸器",
     difficulty: 2,
     added: "2026-07-15",
     question: "COPD増悪を繰り返し、末梢血好酸球数が高値(例:≥300/μL)の患者。GOLDの考え方に沿った吸入療法の調整として適切なのはどれか。",
@@ -176,6 +191,7 @@ const QUESTIONS = [
   {
     id: "cl-htn-01",
     category: "clinical",
+    field: "循環器",
     difficulty: 2,
     added: "2026-07-15",
     question: "45歳、治療抵抗性高血圧(3剤併用でもコントロール不良、うち1剤は利尿薬)。2025 AHA/ACCに沿ってまず考慮すべき評価はどれか。",
@@ -188,6 +204,7 @@ const QUESTIONS = [
   {
     id: "rv-cap-01",
     category: "review",
+    field: "感染症",
     difficulty: 1,
     added: "2026-07-15",
     question: "市中肺炎の外来治療における重症度評価で、簡便で救急・外来向きの指標として広く用いられるのはどれか。",
@@ -200,6 +217,7 @@ const QUESTIONS = [
   {
     id: "rv-afib-01",
     category: "review",
+    field: "循環器",
     difficulty: 1,
     added: "2026-07-15",
     question: "非弁膜症性心房細動の脳梗塞リスク評価に用いるスコアはどれか。",
@@ -212,6 +230,7 @@ const QUESTIONS = [
   {
     id: "rv-dm-01",
     category: "review",
+    field: "内分泌・代謝",
     difficulty: 2,
     added: "2026-07-15",
     question: "2型糖尿病+ASCVD/心不全/CKDを合併する患者の血糖降下薬選択で、HbA1cとは独立に臓器保護目的で優先されるクラスの組み合わせはどれか。",
@@ -224,6 +243,7 @@ const QUESTIONS = [
   {
     id: "rv-thyroid-01",
     category: "review",
+    field: "内分泌・代謝",
     difficulty: 2,
     added: "2026-07-15",
     question: "無症候性の軽度潜在性甲状腺機能低下症(TSH 4.5-10 mU/L、fT4正常)の高齢者に対する近年の考え方として最も適切なのはどれか。",
@@ -236,6 +256,7 @@ const QUESTIONS = [
   {
     id: "rv-vitd-01",
     category: "review",
+    field: "予防・健診",
     difficulty: 2,
     added: "2026-07-15",
     question: "健常成人へのビタミンDサプリメントのルーチン投与について、近年の大規模試験(VITAL等)が示した骨折・心血管・がんへの効果に最も近いものはどれか。",
@@ -248,6 +269,7 @@ const QUESTIONS = [
   {
     id: "cl-vte-01",
     category: "clinical",
+    field: "血液",
     difficulty: 3,
     added: "2026-07-15",
     question: "誘因のない(unprovoked)近位DVT/PEを初回発症し、標準期間の抗凝固を終えた患者。延長治療を行う場合の近年の実践として妥当なものはどれか。",
@@ -260,6 +282,7 @@ const QUESTIONS = [
   {
     id: "cl-obesity-01",
     category: "clinical",
+    field: "内分泌・代謝",
     difficulty: 2,
     added: "2026-07-15",
     question: "BMI 34、2型糖尿病・HFpEFを合併する患者の体重・心血管管理に関して、近年エビデンスが拡大している薬剤クラスはどれか。",
@@ -272,6 +295,7 @@ const QUESTIONS = [
   {
     id: "rv-statin-01",
     category: "review",
+    field: "循環器",
     difficulty: 1,
     added: "2026-07-15",
     question: "確立したASCVD(心筋梗塞既往等)の二次予防における脂質管理の基本方針として正しいものはどれか。",
@@ -284,6 +308,7 @@ const QUESTIONS = [
   {
     id: "cl-uti-01",
     category: "clinical",
+    field: "感染症",
     difficulty: 1,
     added: "2026-07-15",
     question: "無症候性細菌尿(asymptomatic bacteriuria)への抗菌薬治療が推奨される代表的な状況はどれか。",
@@ -296,6 +321,7 @@ const QUESTIONS = [
   {
     id: "cl-ppi-01",
     category: "clinical",
+    field: "消化器・肝",
     difficulty: 2,
     added: "2026-07-15",
     question: "長期PPI内服中の高齢者。適応を再評価し減量・中止(deprescribing)を検討する根拠として最も適切なものはどれか。",
@@ -308,6 +334,7 @@ const QUESTIONS = [
   {
     id: "gl-dm-01",
     category: "guideline",
+    field: "内分泌・代謝",
     difficulty: 2,
     added: "2026-07-15",
     question: "近年の糖尿病診療ガイドライン(ADA Standards of Care等)における薬物選択の基本的な枠組みとして正しいものはどれか。",
@@ -320,6 +347,7 @@ const QUESTIONS = [
   {
     id: "jr-empakidney-01",
     category: "journal",
+    field: "腎・電解質",
     difficulty: 2,
     added: "2026-07-16",
     question: "EMPA-KIDNEY試験(エンパグリフロジン vs プラセボ)がSGLT2阻害薬のCKDへの適応について示した最も重要な点はどれか。",
@@ -332,6 +360,7 @@ const QUESTIONS = [
   {
     id: "jr-surmountosa-01",
     category: "journal",
+    field: "呼吸器",
     difficulty: 2,
     added: "2026-07-16",
     question: "中等症〜重症の閉塞性睡眠時無呼吸(OSA)+肥満の成人を対象としたSURMOUNT-OSA試験で、チルゼパチドが示した結果はどれか。",
@@ -344,6 +373,7 @@ const QUESTIONS = [
   {
     id: "gl-crc-01",
     category: "guideline",
+    field: "予防・健診",
     difficulty: 1,
     added: "2026-07-16",
     question: "平均的リスクの成人に対する大腸癌スクリーニング開始年齢について、2021年のUSPSTF勧告はどう変更したか。",
@@ -356,6 +386,7 @@ const QUESTIONS = [
   {
     id: "cl-cap-abx-01",
     category: "clinical",
+    field: "感染症",
     difficulty: 2,
     added: "2026-07-16",
     question: "外来の市中肺炎で臨床的に安定した成人の抗菌薬投与期間について、近年のエビデンスおよびATSの方向性として適切なものはどれか。",
@@ -368,6 +399,7 @@ const QUESTIONS = [
   {
     id: "gl-rsv-01",
     category: "guideline",
+    field: "予防・健診",
     difficulty: 1,
     added: "2026-07-16",
     question: "2024年の米国ACIPによる成人へのRSVワクチン推奨として正しいものはどれか。",
@@ -380,6 +412,7 @@ const QUESTIONS = [
   {
     id: "cl-diuretic-01",
     category: "clinical",
+    field: "循環器",
     difficulty: 2,
     added: "2026-07-16",
     question: "高齢高血圧患者を対象にクロルタリドンとヒドロクロロチアジド(HCTZ)を比較したDiuretic Comparison Project(DCP)の結果として正しいものはどれか。",
@@ -392,6 +425,7 @@ const QUESTIONS = [
   {
     id: "jr-mash-01",
     category: "journal",
+    field: "消化器・肝",
     difficulty: 2,
     added: "2026-07-15",
     question: "ESSENCE試験(セマグルチド2.4mg vs プラセボ、MASH+F2-F3線維化)の72週での主要組織学的アウトカムはどれか。",
@@ -404,6 +438,7 @@ const QUESTIONS = [
   {
     id: "rv-mash-01",
     category: "review",
+    field: "消化器・肝",
     difficulty: 2,
     added: "2026-07-15",
     question: "非硬変性MASH(中等度〜進行線維化)に対し2024年に初めてFDA承認された経口薬レスメチロムの薬理学的分類はどれか。",
@@ -416,6 +451,7 @@ const QUESTIONS = [
   {
     id: "jr-colch-01",
     category: "journal",
+    field: "循環器",
     difficulty: 3,
     added: "2026-07-15",
     question: "急性心筋梗塞後の患者を対象に低用量コルヒチンをプラセボと比較した大規模RCT(CLEAR SYNERGY/OASIS-9)の主要結果はどれか。",
@@ -428,6 +464,7 @@ const QUESTIONS = [
   {
     id: "gl-dm-02",
     category: "guideline",
+    field: "内分泌・代謝",
     difficulty: 2,
     added: "2026-07-15",
     question: "米国内科学会(ACP)の2型糖尿病の血糖管理ガイダンス(HbA1c目標)に関する立場として正しいものはどれか。",
@@ -440,6 +477,7 @@ const QUESTIONS = [
   {
     id: "cl-gout-01",
     category: "clinical",
+    field: "膠原病・骨",
     difficulty: 2,
     added: "2026-07-15",
     question: "痛風発作を年2回以上繰り返す患者への尿酸降下療法(ULT)の考え方として、近年広く支持される方針はどれか。",
@@ -452,6 +490,7 @@ const QUESTIONS = [
   {
     id: "jr-vte-02",
     category: "journal",
+    field: "血液",
     difficulty: 2,
     added: "2026-07-15",
     question: "誘因のある(provoked)VTEで持続する危険因子を持つ患者を対象に、初期抗凝固後の延長治療を検討したHI-PRO試験(NEJM)の結果はどれか。",
@@ -464,6 +503,7 @@ const QUESTIONS = [
   {
     id: "jr-bb-01",
     category: "journal",
+    field: "循環器",
     difficulty: 2,
     added: "2026-07-16",
     question: "REDUCE-AMI試験(急性心筋梗塞後・LVEF≥50%)で、長期β遮断薬 vs 非投与を比較した主要結果はどれか。",
@@ -476,6 +516,7 @@ const QUESTIONS = [
   {
     id: "jr-pad-01",
     category: "journal",
+    field: "循環器",
     difficulty: 2,
     added: "2026-07-16",
     question: "2型糖尿病+症候性末梢動脈疾患(間欠性跛行)を対象としたSTRIDE試験で、セマグルチドが示した主要アウトカムはどれか。",
@@ -488,6 +529,7 @@ const QUESTIONS = [
   {
     id: "jr-ckd-02",
     category: "journal",
+    field: "腎・電解質",
     difficulty: 3,
     added: "2026-07-16",
     question: "2型糖尿病+CKD(アルブミン尿)患者で、フィネレノンとエンパグリフロジンの同時併用 vs 各単独を比較したCONFIDENCE試験の主要結果はどれか。",
@@ -500,6 +542,7 @@ const QUESTIONS = [
   {
     id: "gl-pcv-01",
     category: "guideline",
+    field: "予防・健診",
     difficulty: 1,
     added: "2026-07-16",
     question: "2024年10月のACIP改訂による成人肺炎球菌結合型ワクチン(PCV)接種の年齢基準として正しいものはどれか。",
@@ -512,6 +555,7 @@ const QUESTIONS = [
   {
     id: "cl-pcnallergy-01",
     category: "clinical",
+    field: "感染症",
     difficulty: 2,
     added: "2026-07-16",
     question: "「ペニシリンアレルギー」の記載がある低リスク患者への近年のアプローチとして、PALACE試験等が支持する方針はどれか。",
@@ -524,6 +568,7 @@ const QUESTIONS = [
   {
     id: "rv-lpa-01",
     category: "review",
+    field: "循環器",
     difficulty: 2,
     added: "2026-07-16",
     question: "リポプロテイン(a)〔Lp(a)〕の測定に関する近年の一般的な考え方として最も適切なものはどれか。",
@@ -536,6 +581,7 @@ const QUESTIONS = [
   {
     id: "rv-gerd-01",
     category: "review",
+    field: "消化器・肝",
     difficulty: 1,
     added: "2026-07-16",
     question: "典型的な胸やけ・逆流症状があり警告徴候(嚥下障害・体重減少・出血・貧血等)のない成人GERDへの初期対応として、標準的な方針はどれか。",
@@ -548,6 +594,7 @@ const QUESTIONS = [
   {
     id: "rv-oa-01",
     category: "review",
+    field: "膠原病・骨",
     difficulty: 1,
     added: "2026-07-16",
     question: "膝・股関節の変形性関節症(OA)に対する中核的治療として、Lancetのレビュー等が第一に位置づけるのはどれか。",
@@ -560,6 +607,7 @@ const QUESTIONS = [
   {
     id: "rv-hypothyroid-01",
     category: "review",
+    field: "内分泌・代謝",
     difficulty: 1,
     added: "2026-07-16",
     question: "顕性甲状腺機能低下症の診断・治療に関する記述として正しいものはどれか。",
@@ -572,6 +620,7 @@ const QUESTIONS = [
   {
     id: "rv-lbp-01",
     category: "review",
+    field: "膠原病・骨",
     difficulty: 2,
     added: "2026-07-16",
     question: "警告徴候(red flags)のない急性・亜急性の非特異的腰痛の初期対応として、Lancetのレビュー等が支持する方針はどれか。",
@@ -584,6 +633,7 @@ const QUESTIONS = [
   {
     id: "rv-ida-01",
     category: "review",
+    field: "血液",
     difficulty: 2,
     added: "2026-07-16",
     question: "鉄欠乏性貧血(IDA)の治療に関する近年のレビューの考え方として適切なものはどれか。",
@@ -596,6 +646,7 @@ const QUESTIONS = [
   {
     id: "rv-asthma-01",
     category: "review",
+    field: "呼吸器",
     difficulty: 2,
     added: "2026-07-16",
     question: "成人喘息の管理に関する近年の考え方(Annals In the Clinic等)として適切なものはどれか。",
@@ -608,6 +659,7 @@ const QUESTIONS = [
   {
     id: "rv-ckd-01",
     category: "review",
+    field: "腎・電解質",
     difficulty: 2,
     added: "2026-07-16",
     question: "慢性腎臓病(CKD)のプライマリ・ケアでの管理として、JAMAレビュー等が挙げる中核要素はどれか。",
@@ -620,6 +672,7 @@ const QUESTIONS = [
   {
     id: "rv-rhinitis-01",
     category: "review",
+    field: "その他",
     difficulty: 1,
     added: "2026-07-16",
     question: "生活の質に影響する持続性のアレルギー性鼻炎に対する第一選択薬として、AAFPのレビュー等が支持するのはどれか。",
@@ -632,6 +685,7 @@ const QUESTIONS = [
   {
     id: "rv-obesity-02",
     category: "review",
+    field: "内分泌・代謝",
     difficulty: 2,
     added: "2026-07-16",
     question: "プライマリ・ケアでの肥満治療に関するレビュー(JAMA Intern Med)の要点として適切なものはどれか。",
@@ -644,6 +698,7 @@ const QUESTIONS = [
   {
     id: "cl-multi-sickday-01",
     category: "clinical",
+    field: "腎・電解質",
     difficulty: 2,
     added: "2026-07-16",
     question: "発熱と下痢による脱水で急性腎障害(AKI)をきたした2型糖尿病患者。急性期に『シックデイ』として一時中止を検討すべき薬剤を選べ。",
@@ -656,6 +711,7 @@ const QUESTIONS = [
   {
     id: "cl-multi-asb-01",
     category: "clinical",
+    field: "感染症",
     difficulty: 2,
     added: "2026-07-16",
     question: "IDSA 2019ガイドラインに基づき、無症候性細菌尿に対して抗菌薬治療(スクリーニング含む)が推奨される状況を選べ。",
@@ -668,6 +724,7 @@ const QUESTIONS = [
   {
     id: "rv-multi-organprotect-01",
     category: "review",
+    field: "内分泌・代謝",
     difficulty: 2,
     added: "2026-07-16",
     question: "2型糖尿病+心血管/腎の高リスク患者において、血糖降下作用とは独立に臓器保護のエビデンスを持つ薬剤クラスを選べ。",
@@ -680,6 +737,7 @@ const QUESTIONS = [
   {
     id: "rv-multi-sglt2-01",
     category: "review",
+    field: "腎・電解質",
     difficulty: 3,
     added: "2026-07-16",
     question: "SGLT2阻害薬に関する記述のうち、現在のエビデンスに照らして正しいものを選べ。",
@@ -692,6 +750,7 @@ const QUESTIONS = [
   {
     id: "jr-surmount5-01",
     category: "journal",
+    field: "内分泌・代謝",
     difficulty: 2,
     added: "2026-07-16",
     question: "肥満(2型糖尿病なし)の成人を対象に、チルゼパチドとセマグルチドを直接比較したSURMOUNT-5試験(NEJM 2025)の主要な減量効果の結果はどれか。",
@@ -704,6 +763,7 @@ const QUESTIONS = [
   {
     id: "jr-select-01",
     category: "journal",
+    field: "循環器",
     difficulty: 2,
     added: "2026-07-16",
     question: "心血管疾患の既往があり2型糖尿病のない過体重・肥満の成人を対象としたSELECT試験で、セマグルチド2.4mgが示した主要心血管アウトカムの結果はどれか。",
@@ -716,6 +776,7 @@ const QUESTIONS = [
   {
     id: "gl-osteo-screen-01",
     category: "guideline",
+    field: "膠原病・骨",
     difficulty: 1,
     added: "2026-07-16",
     question: "2025年のUSPSTFによる骨粗鬆症スクリーニング勧告(骨折予防)として正しいものはどれか。",
@@ -728,6 +789,7 @@ const QUESTIONS = [
   {
     id: "gl-osteo-tx-01",
     category: "guideline",
+    field: "膠原病・骨",
     difficulty: 2,
     added: "2026-07-16",
     question: "米国内科学会(ACP)の骨粗鬆症薬物治療ガイドライン(Annals)で、原発性骨粗鬆症の初回治療の第一選択とされる薬剤クラスはどれか。",
@@ -740,6 +802,7 @@ const QUESTIONS = [
   {
     id: "cl-osteo-01",
     category: "clinical",
+    field: "膠原病・骨",
     difficulty: 2,
     added: "2026-07-16",
     question: "72歳女性、脆弱性骨折の既往はないが大腿骨近位部のTスコア −2.7。腎機能正常、消化管疾患なし。近年のガイドラインに沿った初期方針として最も適切なものはどれか。",
@@ -752,6 +815,7 @@ const QUESTIONS = [
   {
     id: "rv-multi-osteo-01",
     category: "review",
+    field: "膠原病・骨",
     difficulty: 2,
     added: "2026-07-16",
     question: "骨粗鬆症の治療・管理について、現在の一般的なエビデンス・推奨に照らして正しいものを選べ。",
@@ -764,6 +828,7 @@ const QUESTIONS = [
   {
     id: "jr-bproad-01",
     category: "journal",
+    field: "循環器",
     difficulty: 2,
     added: "2026-07-17",
     question: "2型糖尿病+心血管リスク因子を持つ患者で、収縮期血圧の目標を<120 mmHg(強化)と<140 mmHg(標準)で比較したBPROAD試験の主要結果はどれか。",
@@ -776,6 +841,7 @@ const QUESTIONS = [
   {
     id: "jr-semaaud-01",
     category: "journal",
+    field: "精神・行動",
     difficulty: 2,
     added: "2026-07-17",
     question: "アルコール使用障害と肥満を併存する患者を対象に、週1回セマグルチドをプラセボと比較した無作為化試験(Lancet)で示唆された方向性はどれか。",
@@ -788,6 +854,7 @@ const QUESTIONS = [
   {
     id: "jr-soul-01",
     category: "journal",
+    field: "内分泌・代謝",
     difficulty: 2,
     added: "2026-07-17",
     question: "既知のASCVDまたはCKDを伴う2型糖尿病の高リスク成人で、経口セマグルチド(最大14mg)をプラセボと比較したSOUL試験の主要心血管アウトカムはどれか。",
@@ -800,6 +867,7 @@ const QUESTIONS = [
   {
     id: "gl-glp1periop-01",
     category: "guideline",
+    field: "内分泌・代謝",
     difficulty: 2,
     added: "2026-07-17",
     question: "GLP-1受容体作動薬を使用中の患者の待機的手術・内視鏡前の周術期管理について、2024年の多学会(ASA等)アップデートの考え方はどれか。",
@@ -812,6 +880,7 @@ const QUESTIONS = [
   {
     id: "rv-admab-01",
     category: "review",
+    field: "神経",
     difficulty: 2,
     added: "2026-07-17",
     question: "早期アルツハイマー病(軽度認知障害〜軽度認知症)に対する抗アミロイドβ抗体(レカネマブ・ドナネマブ)に関する現在の理解として適切なものはどれか。",
@@ -824,6 +893,7 @@ const QUESTIONS = [
   {
     id: "cl-bempedoic-01",
     category: "clinical",
+    field: "循環器",
     difficulty: 2,
     added: "2026-07-17",
     question: "スタチン不耐の高リスク患者を対象としたCLEAR Outcomes試験(ベンペド酸 vs プラセボ)に関する記述のうち、正しいものを選べ。",
@@ -836,6 +906,7 @@ const QUESTIONS = [
   {
     id: "gl-brca-01",
     category: "guideline",
+    field: "予防・健診",
     difficulty: 1,
     added: "2026-07-18",
     question: "2024年のUSPSTFによる平均リスク女性への乳癌スクリーニング勧告として正しいものはどれか。",
@@ -848,6 +919,7 @@ const QUESTIONS = [
   {
     id: "jr-east-01",
     category: "journal",
+    field: "循環器",
     difficulty: 2,
     added: "2026-07-18",
     question: "診断早期(1年以内)で心血管危険因子を持つ心房細動患者を対象に、早期リズムコントロール vs 通常治療を比較したEAST-AFNET 4試験の主要結果はどれか。",
@@ -860,6 +932,7 @@ const QUESTIONS = [
   {
     id: "gl-zoster-01",
     category: "guideline",
+    field: "予防・健診",
     difficulty: 1,
     added: "2026-07-18",
     question: "組換え帯状疱疹ワクチン(RZV, Shingrix)に関する米国ACIPの推奨として正しいものはどれか。",
@@ -872,6 +945,7 @@ const QUESTIONS = [
   {
     id: "gl-statin-prim-01",
     category: "guideline",
+    field: "予防・健診",
     difficulty: 2,
     added: "2026-07-18",
     question: "2022年USPSTFのスタチンによる心血管一次予防の勧告として正しいものはどれか。",
@@ -884,6 +958,7 @@ const QUESTIONS = [
   {
     id: "jr-multi-traverse-01",
     category: "journal",
+    field: "内分泌・代謝",
     difficulty: 3,
     added: "2026-07-18",
     question: "性腺機能低下症で心血管疾患既往またはリスクの高い男性を対象にテストステロン補充 vs プラセボを比較したTRAVERSE試験について、正しいものを選べ。",
@@ -896,6 +971,7 @@ const QUESTIONS = [
   {
     id: "cl-multi-hp-01",
     category: "clinical",
+    field: "消化器・肝",
     difficulty: 2,
     added: "2026-07-18",
     question: "2024年ACG H. pylori治療ガイドラインに沿った未治療患者へのアプローチとして、正しいものを選べ。",
@@ -908,6 +984,7 @@ const QUESTIONS = [
   {
     id: "rv-insomnia-01",
     category: "review",
+    field: "精神・行動",
     difficulty: 1,
     added: "2026-07-18",
     question: "慢性不眠症(chronic insomnia disorder)の成人に対する初期治療として、ACPガイドライン等が第一に位置づけるのはどれか。",
@@ -920,6 +997,7 @@ const QUESTIONS = [
   {
     id: "gl-lungca-01",
     category: "guideline",
+    field: "予防・健診",
     difficulty: 2,
     added: "2026-07-19",
     question: "喫煙歴のある成人に対する低線量CT(LDCT)を用いた肺癌スクリーニングについて、2021年USPSTF勧告に沿った対象基準はどれか。",
@@ -932,6 +1010,7 @@ const QUESTIONS = [
   {
     id: "cl-divertic-01",
     category: "clinical",
+    field: "消化器・肝",
     difficulty: 2,
     added: "2026-07-19",
     question: "CTで確定した急性単純性(合併症のない)大腸憩室炎で、全身状態が良好・免疫正常の外来成人への抗菌薬治療について、近年のエビデンス・ガイドライン(AGA/ASCRS等)が支持する方針はどれか。",
@@ -944,6 +1023,7 @@ const QUESTIONS = [
   {
     id: "jr-step9oa-01",
     category: "journal",
+    field: "膠原病・骨",
     difficulty: 2,
     added: "2026-07-19",
     question: "肥満を伴う膝変形性関節症(中等度のX線変化)の成人を対象に、週1回セマグルチド2.4mgをプラセボと比較したSTEP 9試験(NEJM 2024)の主要結果はどれか。",
@@ -956,6 +1036,7 @@ const QUESTIONS = [
   {
     id: "gl-psa-01",
     category: "guideline",
+    field: "予防・健診",
     difficulty: 2,
     added: "2026-07-19",
     question: "前立腺癌に対するPSAスクリーニングについて、2018年USPSTF勧告に沿った記述として正しいものはどれか。",
@@ -968,6 +1049,7 @@ const QUESTIONS = [
   {
     id: "rv-menopause-01",
     category: "review",
+    field: "内分泌・代謝",
     difficulty: 2,
     added: "2026-07-19",
     question: "閉経後女性の血管運動症状(ホットフラッシュ等)に対するホルモン療法(HT)について、The Menopause Society(旧NAMS)2022ポジションステートメントに沿った記述として正しいものはどれか。",
@@ -980,6 +1062,7 @@ const QUESTIONS = [
   {
     id: "gl-migraine-01",
     category: "guideline",
+    field: "神経",
     difficulty: 2,
     added: "2026-07-19",
     question: "反復性/慢性片頭痛の予防治療について、米国頭痛学会(AHS)2024年ポジションステートメントが示した方針はどれか。",
@@ -992,6 +1075,7 @@ const QUESTIONS = [
   {
     id: "rv-aud-01",
     category: "review",
+    field: "精神・行動",
     difficulty: 1,
     added: "2026-07-20",
     question: "アルコール使用障害(AUD)に対する薬物療法で、心理社会的支援と併用する第一選択薬として位置づけられるものはどれか。",
@@ -1004,6 +1088,7 @@ const QUESTIONS = [
   {
     id: "cl-aud-01",
     category: "clinical",
+    field: "精神・行動",
     difficulty: 2,
     added: "2026-07-20",
     question: "非代償性肝硬変を合併するアルコール使用障害の患者で、断酒維持のための薬物療法として最も適切なのはどれか。",
@@ -1016,6 +1101,7 @@ const QUESTIONS = [
   {
     id: "gl-acs-01",
     category: "guideline",
+    field: "循環器",
     difficulty: 2,
     added: "2026-07-20",
     question: "2025 ACC/AHA急性冠症候群(ACS)ガイドラインにおける脂質管理の初期方針として適切なものはどれか。",
@@ -1028,6 +1114,7 @@ const QUESTIONS = [
   {
     id: "cl-acs-01",
     category: "clinical",
+    field: "循環器",
     difficulty: 3,
     added: "2026-07-20",
     question: "PCIを受けたACS患者。チカグレロルを含むDAPTを約1か月良好に忍容したが出血リスクが高い。2025 ACC/AHAガイドラインに沿った抗血小板療法の調整として妥当なものはどれか。",
@@ -1040,6 +1127,7 @@ const QUESTIONS = [
   {
     id: "jr-ironhf-01",
     category: "journal",
+    field: "循環器",
     difficulty: 2,
     added: "2026-07-20",
     question: "鉄欠乏を伴う心不全患者への静脈内鉄補充について、複数RCTを統合した近年のメタ解析(FAIR-HF/CONFIRM-HF/AFFIRM-AHF/IRONMAN/HEART-FID等)が示した所見として最も適切なものはどれか。",
@@ -1052,6 +1140,7 @@ const QUESTIONS = [
   {
     id: "gl-rls-01",
     category: "guideline",
+    field: "神経",
     difficulty: 2,
     added: "2026-07-20",
     question: "むずむず脚症候群(RLS)の治療に関する2024年AASMガイドラインの方針として妥当なものはどれか。",
@@ -1064,6 +1153,7 @@ const QUESTIONS = [
   {
     id: "cl-htn-02",
     category: "clinical",
+    field: "循環器",
     difficulty: 3,
     added: "2026-07-21",
     question: "58歳、真の治療抵抗性高血圧。ACE阻害薬/ARB・カルシウム拮抗薬・サイアザイド系利尿薬を最大耐用量で用い、スピロノラクトンを追加してもなお診察室血圧が目標未達。アドヒアランス不良や二次性高血圧は評価済みである。近年承認され、この段階の上乗せ治療の選択肢になりうる薬剤はどれか。",
@@ -1076,6 +1166,7 @@ const QUESTIONS = [
   {
     id: "jr-baxhtn-01",
     category: "journal",
+    field: "循環器",
     difficulty: 2,
     added: "2026-07-21",
     question: "選択的アルドステロン合成酵素阻害薬バクスドロスタットについて、第3相BaxHTN試験の結果および使用上の留意点として適切なものはどれか。",
@@ -1088,6 +1179,7 @@ const QUESTIONS = [
   {
     id: "jr-icodec-01",
     category: "journal",
+    field: "内分泌・代謝",
     difficulty: 2,
     added: "2026-07-21",
     question: "週1回投与の基礎インスリン イコデクを2型糖尿病で1日1回基礎インスリンと比較したONWARDSプログラムの知見として適切なものはどれか。",
@@ -1100,6 +1192,7 @@ const QUESTIONS = [
   {
     id: "gl-cervical-01",
     category: "guideline",
+    field: "予防・健診",
     difficulty: 1,
     added: "2026-07-21",
     question: "子宮頸がん検診に関する近年の米国の方針(USPSTF 2025ドラフト/ACS 2025更新)で新たに取り入れられた点はどれか。",
@@ -1112,6 +1205,7 @@ const QUESTIONS = [
   {
     id: "gl-cdiff-01",
     category: "guideline",
+    field: "感染症",
     difficulty: 2,
     added: "2026-07-21",
     question: "成人の初発Clostridioides difficile感染症(CDI)の治療に関して、2021年SHEA/IDSAアップデートに沿った方針はどれか。",
@@ -1124,6 +1218,7 @@ const QUESTIONS = [
   {
     id: "rv-saltsub-01",
     category: "review",
+    field: "循環器",
     difficulty: 2,
     added: "2026-07-21",
     question: "高血圧・脳卒中予防を目的に、カリウム富化塩(塩化ナトリウムの一部を塩化カリウムに置換した代替塩)への切替を検討する際、大規模クラスター無作為化試験SSaSSが示した知見として適切なものはどれか。",
@@ -1136,6 +1231,7 @@ const QUESTIONS = [
   {
     id: "jr-dupicopd-01",
     category: "journal",
+    field: "呼吸器",
     difficulty: 2,
     added: "2026-07-22",
     question: "2型炎症を伴うCOPDに対する生物学的製剤デュピルマブについて、BOREAS/NOTUS試験に基づき妥当な記述はどれか。",
@@ -1148,6 +1244,7 @@ const QUESTIONS = [
   {
     id: "jr-abelacimab-01",
     category: "journal",
+    field: "循環器",
     difficulty: 3,
     added: "2026-07-22",
     question: "心房細動患者を対象に抗凝固薬アベラシマブとリバーロキサバンを比較したAZALEA-TIMI 71試験に関して、適切な記述はどれか。",
@@ -1160,6 +1257,7 @@ const QUESTIONS = [
   {
     id: "cl-aprocitentan-01",
     category: "clinical",
+    field: "循環器",
     difficulty: 3,
     added: "2026-07-22",
     question: "二次性高血圧を除外済みで、スピロノラクトンを含む4剤併用でも血圧管理が困難な真の治療抵抗性高血圧の成人。近年承認された新規機序の追加薬として支持されるのはどれか。",
@@ -1172,6 +1270,7 @@ const QUESTIONS = [
   {
     id: "gl-anxiety-01",
     category: "guideline",
+    field: "精神・行動",
     difficulty: 1,
     added: "2026-07-22",
     question: "2023年 米国USPSTFの成人に対する不安症スクリーニング勧告の内容として正しいものはどれか。",
@@ -1184,6 +1283,7 @@ const QUESTIONS = [
   {
     id: "rv-ensifentrine-01",
     category: "review",
+    field: "呼吸器",
     difficulty: 2,
     added: "2026-07-22",
     question: "COPDの維持療法として2024年に承認された吸入薬エンシフェントリンの薬理学的分類はどれか。",
@@ -1196,6 +1296,7 @@ const QUESTIONS = [
   {
     id: "jr-zilebesiran-01",
     category: "journal",
+    field: "循環器",
     difficulty: 2,
     added: "2026-07-22",
     question: "高血圧に対する新規薬ジレベシラン(KARDIA試験)の作用機序・特徴として正しいものはどれか。",
@@ -1208,6 +1309,7 @@ const QUESTIONS = [
   {
     id: "jr-orforglipron-01",
     category: "journal",
+    field: "内分泌・代謝",
     difficulty: 2,
     added: "2026-07-23",
     question: "経口の小分子(非ペプチド)GLP-1受容体作動薬オルフォルグリプロンを早期2型糖尿病に用いた第3相ACHIEVE-1試験で示された結果はどれか。",
@@ -1220,6 +1322,7 @@ const QUESTIONS = [
   {
     id: "gl-jp-elddm-01",
     category: "guideline",
+    field: "内分泌・代謝",
     difficulty: 2,
     added: "2026-07-23",
     question: "「高齢者糖尿病の血糖コントロール目標」(日本糖尿病学会・日本老年医学会)の考え方として、妥当な記述はどれか。",
@@ -1232,6 +1335,7 @@ const QUESTIONS = [
   {
     id: "gl-jp-jasldl-01",
     category: "guideline",
+    field: "循環器",
     difficulty: 2,
     added: "2026-07-23",
     question: "『動脈硬化性疾患予防ガイドライン2022年版』(日本動脈硬化学会)における一次予防のリスク評価・LDLコレステロール管理目標に関する記述として正しいものはどれか。",
@@ -1244,6 +1348,7 @@ const QUESTIONS = [
   {
     id: "cl-uti-gepo-01",
     category: "clinical",
+    field: "感染症",
     difficulty: 2,
     added: "2026-07-23",
     question: "25歳女性、排尿時痛・頻尿の急性単純性膀胱炎。地域のST合剤耐性率が高く、過去にニトロフラントインで強い悪心があった。2024年の第3相EAGLE-2/3で有効性が示された新規経口抗菌薬はどれか。",
@@ -1256,6 +1361,7 @@ const QUESTIONS = [
   {
     id: "rv-vms-nk-01",
     category: "review",
+    field: "内分泌・代謝",
     difficulty: 1,
     added: "2026-07-23",
     question: "閉経に伴う中等症〜重症の血管運動症状(ホットフラッシュ)に用いる非ホルモン薬フェゾリネタント・エリンザネタントの作用機序として正しいものはどれか。",
@@ -1268,6 +1374,7 @@ const QUESTIONS = [
   {
     id: "gl-masld-fib4-01",
     category: "guideline",
+    field: "消化器・肝",
     difficulty: 2,
     added: "2026-07-23",
     question: "2025年ADA Standards of Careにおける、2型糖尿病・前糖尿病患者のMASLD/MASH関連肝線維化スクリーニングの初期評価法として推奨されるものはどれか。",
@@ -1280,6 +1387,7 @@ const QUESTIONS = [
   {
     id: "gl-jp-htnhome-01",
     category: "guideline",
+    field: "循環器",
     difficulty: 1,
     added: "2026-07-23",
     question: "『高血圧治療ガイドライン2019(JSH2019)』における血圧の基準・降圧目標に関する記述として正しいものはどれか。",
@@ -1292,6 +1400,7 @@ const QUESTIONS = [
   {
     id: "gl-jp-dmdx-01",
     category: "guideline",
+    field: "内分泌・代謝",
     difficulty: 2,
     added: "2026-07-23",
     question: "日本糖尿病学会の糖尿病診断基準に関する記述として正しいものはどれか。",
@@ -1304,6 +1413,7 @@ const QUESTIONS = [
   {
     id: "cl-siadh-01",
     category: "clinical",
+    field: "腎・電解質",
     difficulty: 2,
     added: "2026-07-23",
     question: "68歳男性、肺小細胞癌。倦怠感・食思不振。血清Na 118 mEq/L、血清浸透圧低下、浮腫や脱水所見はない。SIADHを疑う際の検査所見・初期対応として適切なものはどれか。",
@@ -1316,6 +1426,7 @@ const QUESTIONS = [
   {
     id: "rv-gca-01",
     category: "review",
+    field: "膠原病・骨",
     difficulty: 2,
     added: "2026-07-23",
     question: "72歳女性、新規の側頭部拍動性頭痛、顎跛行、一過性の片眼視力低下。ESRが著明高値。巨細胞性動脈炎(側頭動脈炎)を強く疑う場合の初期対応として最も適切なものはどれか。",
@@ -1328,6 +1439,7 @@ const QUESTIONS = [
   {
     id: "cl-ie-prophylaxis-01",
     category: "clinical",
+    field: "感染症",
     difficulty: 3,
     added: "2026-07-23",
     question: "歯肉・根尖部の操作を伴う歯科処置に際し、AHAが感染性心内膜炎の予防的抗菌薬投与を推奨する『最高リスク心疾患』に該当するものはどれか。",
@@ -1340,6 +1452,7 @@ const QUESTIONS = [
   {
     id: "jr-empactmi-01",
     category: "journal",
+    field: "循環器",
     difficulty: 2,
     added: "2026-07-23",
     question: "急性心筋梗塞後で心不全リスクの高い患者を対象にエンパグリフロジンを検討したEMPACT-MI試験の結果として正しいものはどれか。",
@@ -1352,6 +1465,7 @@ const QUESTIONS = [
   {
     id: "gl-jp-gout-01",
     category: "guideline",
+    field: "膠原病・骨",
     difficulty: 2,
     added: "2026-07-24",
     question: "日本の高尿酸血症・痛風の治療ガイドライン(第3版)に基づく高尿酸血症・痛風の管理として適切なものはどれか。",
@@ -1364,6 +1478,7 @@ const QUESTIONS = [
   {
     id: "rv-fh-01",
     category: "review",
+    field: "循環器",
     difficulty: 2,
     added: "2026-07-24",
     question: "日本動脈硬化学会2022年版ガイドラインで、成人(15歳以上)の家族性高コレステロール血症(FH)の診断基準に含まれる項目はどれか。",
@@ -1376,6 +1491,7 @@ const QUESTIONS = [
   {
     id: "rv-pa-screen-01",
     category: "review",
+    field: "内分泌・代謝",
     difficulty: 2,
     added: "2026-07-24",
     question: "治療抵抗性高血圧や低カリウム血症を伴う高血圧で原発性アルドステロン症を疑う際の、初期スクリーニング検査として適切なものはどれか。",
@@ -1388,6 +1504,7 @@ const QUESTIONS = [
   {
     id: "jr-fineartshf-01",
     category: "journal",
+    field: "循環器",
     difficulty: 2,
     added: "2026-07-24",
     question: "LVEF 40%以上の心不全(HFmrEF/HFpEF)を対象に非ステロイド型ミネラルコルチコイド受容体拮抗薬フィネレノンを検討したFINEARTS-HF試験の結果として正しいものはどれか。",
@@ -1400,6 +1517,7 @@ const QUESTIONS = [
   {
     id: "jr-stephfpef-01",
     category: "journal",
+    field: "循環器",
     difficulty: 2,
     added: "2026-07-24",
     question: "肥満(BMI≧30)を伴うHFpEF(糖尿病を除く)を対象にセマグルチド2.4 mgを検討したSTEP-HFpEF試験で示された主な結果はどれか。",
@@ -1412,6 +1530,7 @@ const QUESTIONS = [
   {
     id: "cl-apap-tox-01",
     category: "clinical",
+    field: "その他",
     difficulty: 3,
     added: "2026-07-24",
     question: "アセトアミノフェン急性過量摂取の評価・治療について正しいものはどれか。",
@@ -1424,6 +1543,7 @@ const QUESTIONS = [
   {
     id: "jr-summit-01",
     category: "journal",
+    field: "循環器",
     difficulty: 2,
     added: "2026-07-24",
     question: "肥満を伴うHFpEF患者を対象にチルゼパチドを約2年間検討したSUMMIT試験の結果として正しいものはどれか。",
@@ -1436,6 +1556,7 @@ const QUESTIONS = [
   {
     id: "gl-jp-mets-01",
     category: "guideline",
+    field: "内分泌・代謝",
     difficulty: 2,
     added: "2026-07-25",
     question: "日本のメタボリックシンドローム診断基準に関する記述として正しいものはどれか。",
@@ -1448,6 +1569,7 @@ const QUESTIONS = [
   {
     id: "gl-jp-dmtarget-01",
     category: "guideline",
+    field: "内分泌・代謝",
     difficulty: 2,
     added: "2026-07-25",
     question: "日本糖尿病学会の「血糖コントロール目標」(熊本宣言2013、糖尿病診療ガイドライン2024)に関する記述として正しいものはどれか。",
@@ -1460,6 +1582,7 @@ const QUESTIONS = [
   {
     id: "gl-jp-dyslipid-dx-01",
     category: "guideline",
+    field: "循環器",
     difficulty: 2,
     added: "2026-07-25",
     question: "日本動脈硬化学会の脂質異常症診断基準(空腹時採血)に関する記述として正しいものはどれか。",
@@ -1472,6 +1595,7 @@ const QUESTIONS = [
   {
     id: "cl-hpt-hyperca-01",
     category: "clinical",
+    field: "内分泌・代謝",
     difficulty: 3,
     added: "2026-07-25",
     question: "62歳女性、健診で高カルシウム血症を指摘。血清Ca高値、intact PTHが基準上限〜軽度高値、eGFR正常、ビタミンD欠乏なし。原発性副甲状腺機能亢進症を疑う際の評価・解釈として最も適切なものはどれか。",
@@ -1484,6 +1608,7 @@ const QUESTIONS = [
   {
     id: "jr-stellar-pah-01",
     category: "journal",
+    field: "循環器",
     difficulty: 2,
     added: "2026-07-25",
     question: "既存治療中の肺動脈性肺高血圧症(PAH)患者にsotatercept(アクチビン受容体シグナル調節薬)を上乗せしたSTELLAR試験(NEJM)の主要結果はどれか。",
@@ -1496,6 +1621,7 @@ const QUESTIONS = [
   {
     id: "jr-sequoia-hcm-01",
     category: "journal",
+    field: "循環器",
     difficulty: 2,
     added: "2026-07-25",
     question: "症候性の閉塞性肥大型心筋症(HCM)を対象に選択的心筋ミオシン阻害薬aficamtenを検討したSEQUOIA-HCM試験(NEJM 2024)の主要結果はどれか。",
@@ -1508,6 +1634,7 @@ const QUESTIONS = [
   {
     id: "rv-jp-ckd-cga-01",
     category: "review",
+    field: "腎・電解質",
     difficulty: 2,
     added: "2026-07-25",
     question: "日本腎臓学会のCKD重症度分類(CGA分類、CKD診療ガイドライン2023)に関する記述として正しいものはどれか。",
@@ -1520,6 +1647,7 @@ const QUESTIONS = [
   {
     id: "rv-smoking-01",
     category: "review",
+    field: "予防・健診",
     difficulty: 1,
     added: "2026-07-26",
     question: "喫煙者の禁煙支援において、WHOの2024年成人禁煙治療ガイドライン等で有効性が示され推奨される薬物療法はどれか。",
@@ -1532,6 +1660,7 @@ const QUESTIONS = [
   {
     id: "gl-jas-2ndprev-01",
     category: "guideline",
+    field: "循環器",
     difficulty: 2,
     added: "2026-07-26",
     question: "『動脈硬化性疾患予防ガイドライン2022年版』(日本動脈硬化学会)における二次予防で、LDLコレステロール管理目標がより厳格な70 mg/dL未満とされる病態はどれか。",
@@ -1544,6 +1673,7 @@ const QUESTIONS = [
   {
     id: "cl-pheo-01",
     category: "clinical",
+    field: "内分泌・代謝",
     difficulty: 3,
     added: "2026-07-26",
     question: "発作性の高血圧・動悸・頭痛・発汗を呈し褐色細胞腫を疑う患者で、スクリーニング検査として感度が高く第一に選択されるのはどれか。",
@@ -1556,6 +1686,7 @@ const QUESTIONS = [
   {
     id: "rv-b12-01",
     category: "review",
+    field: "血液",
     difficulty: 2,
     added: "2026-07-26",
     question: "ビタミンB12欠乏症の臨床像について正しいものはどれか。",
@@ -1568,6 +1699,7 @@ const QUESTIONS = [
   {
     id: "gl-esc-htn-01",
     category: "guideline",
+    field: "循環器",
     difficulty: 2,
     added: "2026-07-26",
     question: "2024年 ESC(欧州心臓病学会)高血圧ガイドラインで新設・変更された点として適切なものはどれか。",
@@ -1580,6 +1712,7 @@ const QUESTIONS = [
   {
     id: "jr-clearspiro-01",
     category: "journal",
+    field: "循環器",
     difficulty: 3,
     added: "2026-07-26",
     question: "経皮的冠動脈形成術後の急性心筋梗塞患者にスピロノラクトンを投与したCLEAR SYNERGY(OASIS-9)試験のスピロノラクトン群の主要結果はどれか。",
@@ -1592,6 +1725,7 @@ const QUESTIONS = [
   {
     id: "gl-jp-hifph-01",
     category: "guideline",
+    field: "腎・電解質",
     difficulty: 2,
     added: "2026-07-27",
     question: "保存期慢性腎臓病(CKD)に伴う腎性貧血に対するHIF-PH阻害薬(ロキサデュスタット、ダプロデュスタット等)の特徴として適切なものはどれか。",
@@ -1604,6 +1738,7 @@ const QUESTIONS = [
   {
     id: "cl-metformin-01",
     category: "clinical",
+    field: "内分泌・代謝",
     difficulty: 2,
     added: "2026-07-27",
     question: "2型糖尿病患者へのメトホルミン投与に関する腎機能・安全性の考え方として適切なものはどれか。",
@@ -1616,6 +1751,7 @@ const QUESTIONS = [
   {
     id: "cl-sarcoid-01",
     category: "clinical",
+    field: "呼吸器",
     difficulty: 3,
     added: "2026-07-27",
     question: "サルコイドーシスの臨床診断において重視される特徴的検査所見はどれか。",
@@ -1628,6 +1764,7 @@ const QUESTIONS = [
   {
     id: "rv-myeloma-01",
     category: "review",
+    field: "血液",
     difficulty: 2,
     added: "2026-07-27",
     question: "症候性多発性骨髄腫のCRAB基準に含まれる臓器障害・所見はどれか。",
@@ -1640,6 +1777,7 @@ const QUESTIONS = [
   {
     id: "jr-adaptafdes-01",
     category: "journal",
+    field: "循環器",
     difficulty: 3,
     added: "2026-07-27",
     question: "薬剤溶出性ステント(DES)留置から1年以上経過した心房細動患者を対象に、NOAC単剤とNOAC+クロピドグレル併用を比較したADAPT AF-DES試験の主要結果はどれか。",
@@ -1652,6 +1790,7 @@ const QUESTIONS = [
   {
     id: "jr-findckd-01",
     category: "journal",
+    field: "腎・電解質",
     difficulty: 2,
     added: "2026-07-27",
     question: "糖尿病を伴わない慢性腎臓病(CKD)患者を対象に、標準治療(最大耐用量のRAS阻害薬を含む)へのフィネレノン上乗せを検討したFIND-CKD試験の結果はどれか。",
@@ -1664,6 +1803,7 @@ const QUESTIONS = [
   {
     id: "jr-obicetrapib-01",
     category: "journal",
+    field: "循環器",
     difficulty: 2,
     added: "2026-07-27",
     question: "最大耐用量の脂質低下療法を受けるHeFHまたはASCVD患者に、経口CETP阻害薬オビセトラピブを上乗せしたBROADWAY試験の主要結果はどれか。",
@@ -1676,6 +1816,7 @@ const QUESTIONS = [
   {
     id: "gl-jp-dm-ldl-01",
     category: "guideline",
+    field: "循環器",
     difficulty: 2,
     added: "2026-07-28",
     question: "『動脈硬化性疾患予防ガイドライン2022年版』(日本動脈硬化学会)における、冠動脈疾患の既往がない糖尿病患者(一次予防)のLDLコレステロール管理目標はどれか。",
@@ -1688,6 +1829,7 @@ const QUESTIONS = [
   {
     id: "jr-surpasscvot-01",
     category: "journal",
+    field: "内分泌・代謝",
     difficulty: 2,
     added: "2026-07-28",
     question: "2型糖尿病と確立したASCVDを有する患者を対象に、チルゼパチドとデュラグルチドを直接比較したSURPASS-CVOT試験の主要結果はどれか。",
@@ -1700,6 +1842,7 @@ const QUESTIONS = [
   {
     id: "rv-subacute-thy-01",
     category: "review",
+    field: "内分泌・代謝",
     difficulty: 2,
     added: "2026-07-28",
     question: "亜急性甲状腺炎(de Quervain甲状腺炎)に関する記述として正しいものはどれか。",
@@ -1712,6 +1855,7 @@ const QUESTIONS = [
   {
     id: "cl-adrenal-01",
     category: "clinical",
+    field: "内分泌・代謝",
     difficulty: 3,
     added: "2026-07-28",
     question: "原発性副腎不全(アジソン病)の診断・病態に関する記述として正しいものはどれか。",
@@ -1724,6 +1868,7 @@ const QUESTIONS = [
   {
     id: "gl-ada-cgm-01",
     category: "guideline",
+    field: "内分泌・代謝",
     difficulty: 1,
     added: "2026-07-28",
     question: "米国糖尿病学会(ADA)Standards of Care 2026における持続血糖モニタリング(CGM)の位置づけはどれか。",
@@ -1736,6 +1881,7 @@ const QUESTIONS = [
   {
     id: "gl-ada-obesity-01",
     category: "guideline",
+    field: "内分泌・代謝",
     difficulty: 2,
     added: "2026-07-28",
     question: "ADA Standards of Care 2026における肥満・体重管理に関する記述はどれか。",
@@ -1748,6 +1894,7 @@ const QUESTIONS = [
   {
     id: "cl-copd-steroid-01",
     category: "clinical",
+    field: "呼吸器",
     difficulty: 2,
     added: "2026-07-29",
     question: "COPD急性増悪で救急受診した喫煙歴のある患者に対する全身性ステロイド(プレドニゾロン40mg/日相当)の投与期間について、REDUCE試験の結果に基づく考え方はどれか。",
@@ -1760,6 +1907,7 @@ const QUESTIONS = [
   {
     id: "rv-asthma-air-01",
     category: "review",
+    field: "呼吸器",
     difficulty: 2,
     added: "2026-07-29",
     question: "軽症喘息の管理におけるSYGMA試験の知見として、抗炎症リリーバー(吸入ステロイド/ホルモテロール頓用)について支持される考え方はどれか。",
@@ -1772,6 +1920,7 @@ const QUESTIONS = [
   {
     id: "gl-htn-masked-01",
     category: "guideline",
+    field: "循環器",
     difficulty: 2,
     added: "2026-07-29",
     question: "診察室血圧は正常域だが家庭/24時間血圧が高値を示す仮面高血圧について、2025 AHA/ACC高血圧ガイドラインに沿った対応はどれか。",
@@ -1784,6 +1933,7 @@ const QUESTIONS = [
   {
     id: "cl-ttp-01",
     category: "clinical",
+    field: "血液",
     difficulty: 3,
     added: "2026-07-29",
     question: "血小板減少・微小血管症性溶血性貧血を呈し、後天性血栓性血小板減少性紫斑病(TTP)が疑われる成人。病態と初期対応について当てはまるものはどれか。",
@@ -1796,6 +1946,7 @@ const QUESTIONS = [
   {
     id: "jr-zeus-01",
     category: "journal",
+    field: "循環器",
     difficulty: 3,
     added: "2026-07-29",
     question: "アテローム性心血管疾患・CKDを有し高感度CRP高値(残余炎症リスク)の患者を対象とするZEUS試験で検証されている治療標的はどれか。",
@@ -1808,6 +1959,7 @@ const QUESTIONS = [
   {
     id: "rv-pbc-01",
     category: "review",
+    field: "消化器・肝",
     difficulty: 2,
     added: "2026-07-29",
     question: "中年女性で慢性の掻痒・倦怠感とALP・γ-GTP優位の胆汁うっ滞を認め、抗ミトコンドリア抗体(AMA)が陽性。原発性胆汁性胆管炎(PBC)の第一選択治療はどれか。",
@@ -1820,6 +1972,7 @@ const QUESTIONS = [
   {
     id: "jr-attrcm-acoramidis-01",
     category: "journal",
+    field: "循環器",
     difficulty: 3,
     added: "2026-07-29",
     question: "労作時息切れとHFpEF様所見を示す高齢男性でトランスサイレチン型心アミロイドーシス(ATTR-CM)を疑う。病態・治療について当てはまるものはどれか。",
@@ -1832,6 +1985,7 @@ const QUESTIONS = [
   {
     id: "gl-ada2026-01",
     category: "guideline",
+    field: "内分泌・代謝",
     difficulty: 2,
     added: "2026-07-30",
     question: "2026年 ADA『糖尿病診療基準(Standards of Care in Diabetes)』第9章の改訂点として当てはまるものはどれか。",
@@ -1844,6 +1998,7 @@ const QUESTIONS = [
   {
     id: "jr-confidence-01",
     category: "journal",
+    field: "腎・電解質",
     difficulty: 3,
     added: "2026-07-30",
     question: "アルブミン尿を伴う2型糖尿病+CKD(RAS阻害薬使用中)で、フィネレノンとエンパグリフロジンの同時併用開始を各単剤と比較したCONFIDENCE試験の主要結果はどれか。",
@@ -1856,6 +2011,7 @@ const QUESTIONS = [
   {
     id: "jr-nhdeprescribe-01",
     category: "journal",
+    field: "循環器",
     difficulty: 2,
     added: "2026-07-30",
     question: "80歳以上・収縮期血圧<130 mmHgで複数の降圧薬を服用中の介護施設入所者を対象に、降圧薬の段階的減量(step-down)を通常ケアと比較した無作為化試験(NEJM 2025)の主要結果はどれか。",
@@ -1868,6 +2024,7 @@ const QUESTIONS = [
   {
     id: "rv-ra-mtx-01",
     category: "review",
+    field: "膠原病・骨",
     difficulty: 2,
     added: "2026-07-30",
     question: "これまでDMARD未使用で中等度〜高疾患活動性の関節リウマチ成人。2021年 米国リウマチ学会(ACR)ガイドラインが第一選択として強く推奨する治療はどれか。",
@@ -1880,6 +2037,7 @@ const QUESTIONS = [
   {
     id: "cl-mg-01",
     category: "clinical",
+    field: "神経",
     difficulty: 3,
     added: "2026-07-30",
     question: "日内変動する眼瞼下垂・複視と易疲労性を訴える成人。全身型重症筋無力症を疑う。診断・治療について当てはまるものはどれか。",
@@ -1892,6 +2050,7 @@ const QUESTIONS = [
   {
     id: "gl-dm-initcombo-01",
     category: "guideline",
+    field: "内分泌・代謝",
     difficulty: 1,
     added: "2026-07-30",
     question: "2026年 ADA『糖尿病診療基準』に基づく2型糖尿病の薬物療法の考え方として適切なものはどれか。",
@@ -1904,6 +2063,7 @@ const QUESTIONS = [
   {
     id: "gl-dm-retinopathy-01",
     category: "guideline",
+    field: "内分泌・代謝",
     difficulty: 1,
     added: "2026-08-03",
     question: "2型糖尿病患者の糖尿病網膜症スクリーニング(2026年 ADA『糖尿病診療基準』)について当てはまるものはどれか。",
@@ -1916,6 +2076,7 @@ const QUESTIONS = [
   {
     id: "gl-htn-lifestyle-01",
     category: "guideline",
+    field: "循環器",
     difficulty: 2,
     added: "2026-08-03",
     question: "2025年 AHA/ACC 高血圧ガイドラインが降圧に有効として推奨する非薬物的介入(生活習慣修正)はどれか。",
@@ -1928,6 +2089,7 @@ const QUESTIONS = [
   {
     id: "rv-pancreatitis-fluid-01",
     category: "review",
+    field: "消化器・肝",
     difficulty: 2,
     added: "2026-08-03",
     question: "発症早期の急性膵炎における初期輸液について、WATERFALL試験(NEJM 2022)の結果に基づき当てはまるものはどれか。",
@@ -1940,6 +2102,7 @@ const QUESTIONS = [
   {
     id: "cl-aav-induction-01",
     category: "clinical",
+    field: "膠原病・骨",
     difficulty: 3,
     added: "2026-08-03",
     question: "重症のANCA関連血管炎(GPA/MPA)の寛解導入について当てはまるものはどれか。",
@@ -1952,6 +2115,7 @@ const QUESTIONS = [
   {
     id: "jr-launchhtn-lorundrostat-01",
     category: "journal",
+    field: "循環器",
     difficulty: 2,
     added: "2026-08-03",
     question: "未コントロール/治療抵抗性高血圧を対象にロルンドロスタットを検討したLaunch-HTN試験(JAMA 2025)について当てはまるものはどれか。",
@@ -1964,6 +2128,7 @@ const QUESTIONS = [
   {
     id: "jr-essence-mash-01",
     category: "journal",
+    field: "消化器・肝",
     difficulty: 2,
     added: "2026-08-03",
     question: "線維化ステージF2〜F3のMASH(代謝機能障害関連脂肪肝炎)成人を対象にセマグルチドを検討したESSENCE試験(NEJM 2025)の結果として当てはまるものはどれか。",
@@ -1976,6 +2141,7 @@ const QUESTIONS = [
   {
     id: "jr-vesalius-01",
     category: "journal",
+    field: "循環器",
     difficulty: 2,
     added: "2026-08-03",
     question: "アテローム性動脈硬化または糖尿病を有するが心筋梗塞・脳卒中の既往がない高リスク成人を対象に、標準治療へエボロクマブを上乗せしたVESALIUS-CV試験(NEJM 2025)の結果として当てはまるものはどれか。",
@@ -1988,6 +2154,7 @@ const QUESTIONS = [
   {
     id: "jr-redefine-cagrisema-01",
     category: "journal",
+    field: "内分泌・代謝",
     difficulty: 2,
     added: "2026-08-03",
     question: "2型糖尿病のない肥満・過体重成人を対象に、カグリリンチド・セマグルチド配合(CagriSema)週1回を検討したREDEFINE 1試験(NEJM 2025)の結果として当てはまるものはどれか。",
@@ -2000,6 +2167,7 @@ const QUESTIONS = [
   {
     id: "cl-hemochromatosis-01",
     category: "clinical",
+    field: "血液",
     difficulty: 3,
     added: "2026-08-03",
     question: "遺伝性ヘモクロマトーシス(HFE遺伝子 C282Yホモ接合)の診断・管理について当てはまるものはどれか。",
@@ -2012,6 +2180,7 @@ const QUESTIONS = [
   {
     id: "cl-acromegaly-01",
     category: "clinical",
+    field: "内分泌・代謝",
     difficulty: 3,
     added: "2026-08-03",
     question: "先端巨大症(末端肥大症)の生化学的診断に関する記述として当てはまるものはどれか。",
@@ -2024,6 +2193,7 @@ const QUESTIONS = [
   {
     id: "gl-kdigo-ckd-2024-01",
     category: "guideline",
+    field: "腎・電解質",
     difficulty: 2,
     added: "2026-08-03",
     question: "KDIGO 2024 CKD診療ガイドラインが、2型糖尿病を伴うCKD患者(eGFR≥20 ml/min/1.73m²)の基盤治療として推奨する薬剤・介入はどれか。",
@@ -2036,6 +2206,7 @@ const QUESTIONS = [
   {
     id: "rv-resistant-htn-spiro-01",
     category: "review",
+    field: "循環器",
     difficulty: 2,
     added: "2026-08-03",
     question: "3剤(RAS阻害薬・Ca拮抗薬・利尿薬)を至適用量で用いても管理不良な治療抵抗性高血圧に対し、4剤目として最も降圧効果が示されている薬剤はどれか。",
@@ -2048,6 +2219,7 @@ const QUESTIONS = [
   {
     id: "rv-pv-hct-01",
     category: "clinical",
+    field: "血液",
     difficulty: 3,
     added: "2026-08-04",
     question: "真性多血症(polycythemia vera)の血栓予防を目的とした管理について、適切なものはどれか。",
@@ -2060,6 +2232,7 @@ const QUESTIONS = [
   {
     id: "jr-oceanicaf-01",
     category: "journal",
+    field: "循環器",
     difficulty: 2,
     added: "2026-08-04",
     question: "心房細動患者を対象に第XIa因子阻害薬アスンデキシアンと標準用量アピキサバンを比較したOCEANIC-AF試験の結果はどれか。",
@@ -2072,6 +2245,7 @@ const QUESTIONS = [
   {
     id: "jr-colchmi-01",
     category: "journal",
+    field: "循環器",
     difficulty: 2,
     added: "2026-08-04",
     question: "急性心筋梗塞後の患者を対象にコルヒチンを検討したCLEAR SYNERGY(OASIS-9)試験の主要結果はどれか。",
@@ -2084,6 +2258,7 @@ const QUESTIONS = [
   {
     id: "gl-dpn-pain-01",
     category: "guideline",
+    field: "神経",
     difficulty: 2,
     added: "2026-08-04",
     question: "有痛性糖尿病性末梢神経障害に対し、AAN(米国神経学会)2022年ガイドラインが第一選択の経口薬として推奨する薬剤はどれか。",
@@ -2096,6 +2271,7 @@ const QUESTIONS = [
   {
     id: "rv-statin-dm-01",
     category: "review",
+    field: "循環器",
     difficulty: 2,
     added: "2026-08-04",
     question: "スタチン療法と新規糖尿病発症リスクに関する記述として正しいものはどれか。",
@@ -2108,6 +2284,7 @@ const QUESTIONS = [
   {
     id: "cl-gout-cvsafety-01",
     category: "clinical",
+    field: "膠原病・骨",
     difficulty: 3,
     added: "2026-08-04",
     question: "痛風の尿酸降下療法における心血管安全性について、現時点で支持される記述はどれか。",
@@ -2120,6 +2297,7 @@ const QUESTIONS = [
   {
     id: "cl-aps-anticoag-01",
     category: "clinical",
+    field: "膠原病・骨",
     difficulty: 3,
     added: "2026-08-04",
     question: "抗リン脂質抗体症候群(APS)の血栓に対する長期抗凝固療法について、適切なものはどれか。",

@@ -194,6 +194,21 @@
     font-size: .85rem; color: var(--accent-dark); background: var(--surface-2);
     border-radius: 8px; padding: 8px 12px; margin-bottom: 10px;
   }
+  /* ===== 分野タブ ===== */
+  .field-card { padding: 16px 18px; margin-bottom: 12px; }
+  .field-head { display: flex; align-items: baseline; gap: 8px; margin-bottom: 8px; }
+  .field-name { font-weight: 700; font-size: 1.02rem; }
+  .field-count { margin-left: auto; font-size: .85rem; color: var(--text-muted); }
+  .field-bar {
+    height: 8px; border-radius: 4px; background: var(--surface-2);
+    overflow: hidden; margin-bottom: 6px;
+  }
+  .field-bar > div { height: 100%; border-radius: 4px; transition: width .3s; }
+  .field-note { font-size: .82rem; color: var(--text-muted); }
+  .search-item {
+    font-size: .85rem; padding: 7px 0; border-top: 1px solid var(--border);
+    color: var(--text); line-height: 1.5;
+  }
 
   /* ===== フィードバック・解説 ===== */
   .feedback { margin-top: 18px; animation: fadeIn .3s ease; }
@@ -321,6 +336,7 @@
 <main>
   <nav class="tabs">
     <button data-tab="home" class="active">学習</button>
+    <button data-tab="fields">分野</button>
     <button data-tab="dashboard">進捗</button>
     <button data-tab="settings">設定</button>
   </nav>
@@ -405,6 +421,18 @@
         <button class="btn" id="backHomeBtn" style="margin-top:8px;">ホームに戻る</button>
       </div>
     </div>
+  </section>
+
+  <!-- ===================== 分野タブ ===================== -->
+  <section id="tab-fields" class="hidden">
+    <div class="card">
+      <h2>分野別に学ぶ</h2>
+      <p class="lead">臓器・領域ごとに出題します。各分野の問題数・正答率・復習待ちを確認して、弱いところから取り組めます。</p>
+      <input type="text" id="fieldSearch" placeholder="キーワード検索（例: フィネレノン、痛風、ワクチン）"
+        style="width:100%;padding:11px 14px;border-radius:10px;border:1.5px solid var(--border);background:var(--surface);color:var(--text);font-size:.95rem;margin-bottom:6px;">
+      <div id="searchResult"></div>
+    </div>
+    <div id="fieldList"></div>
   </section>
 
   <!-- ===================== ダッシュボードタブ ===================== -->
@@ -572,6 +600,9 @@
     card.due = todayStart() + card.interval * DAY_MS;
     card.lastResult = correct ? "ok" : "ng";
     card.lastSeen = todayStart();
+    // 分野別正答率のための累積カウンタ
+    card.seen = (card.seen || 0) + 1;
+    card.okCount = (card.okCount || 0) + (correct ? 1 : 0);
     cardState[id] = card;
     save(K_STATE, cardState);
   }
@@ -680,11 +711,12 @@
   // ---------- タブ切替 ----------
   function showTab(name) {
     $$("nav.tabs button").forEach(b => b.classList.toggle("active", b.dataset.tab === name));
-    ["home", "dashboard", "settings"].forEach(t => {
+    ["home", "fields", "dashboard", "settings"].forEach(t => {
       $("#tab-" + t).classList.toggle("hidden", t !== name);
     });
     if (name === "dashboard") renderDashboard();
     if (name === "home") renderHome();
+    if (name === "fields") renderFields();
   }
   $$("nav.tabs button").forEach(b => b.addEventListener("click", () => showTab(b.dataset.tab)));
 
@@ -727,6 +759,129 @@
     }
   }
 
+  // ---------- 分野タブ ----------
+  // 表示順（総合診療で使用頻度の高い順）。データ側の field と一致させる。
+  const FIELDS = ["循環器", "内分泌・代謝", "腎・電解質", "呼吸器", "消化器・肝", "感染症",
+                  "膠原病・骨", "血液", "神経", "精神・行動", "予防・健診", "その他"];
+  const FIELD_ICON = {
+    "循環器": "❤️", "内分泌・代謝": "🍬", "腎・電解質": "💧", "呼吸器": "🫁",
+    "消化器・肝": "🍽️", "感染症": "🦠", "膠原病・骨": "🦴", "血液": "🩸",
+    "神経": "🧠", "精神・行動": "💭", "予防・健診": "🛡️", "その他": "📋"
+  };
+  let selectedField = null;
+
+  function fieldOf(q) { return q.field || "その他"; }
+
+  // 分野ごとの集計（問題数・正答率・復習待ち・未着手）
+  function fieldStats(f) {
+    const now = todayStart();
+    const list = QUESTIONS.filter(q => fieldOf(q) === f);
+    let due = 0, fresh = 0, ans = 0, ok = 0;
+    list.forEach(q => {
+      const c = cardState[q.id];
+      if (!c) { fresh++; return; }
+      if (c.due <= now) due++;
+      if (c.seen) {                      // 新カウンタがある場合
+        ans += c.seen; ok += (c.okCount || 0);
+      } else if (c.lastResult) {         // 旧データは直近結果で近似
+        ans += 1; ok += (c.lastResult === "ok" ? 1 : 0);
+      }
+    });
+    return { total: list.length, due: due, fresh: fresh, ans: ans, ok: ok };
+  }
+
+  function renderFields() {
+    const wrap = $("#fieldList");
+    wrap.innerHTML = "";
+    FIELDS.forEach(f => {
+      const s = fieldStats(f);
+      if (s.total === 0) return;
+      const rate = s.ans ? Math.round(s.ok / s.ans * 100) : null;
+      const card = document.createElement("div");
+      card.className = "card field-card";
+      card.innerHTML =
+        '<div class="field-head">' +
+          '<span class="field-name">' + (FIELD_ICON[f] || "") + " " + escapeHtml(f) + '</span>' +
+          '<span class="field-count">' + s.total + '問</span>' +
+        '</div>' +
+        '<div class="field-bar"><div style="width:' + (rate === null ? 0 : rate) + '%;background:' +
+          (rate === null ? "var(--border)" : rateColor(rate)) + '"></div></div>' +
+        '<div class="field-note">' +
+          (rate === null ? "未学習" : ("正答率 " + rate + "%（" + s.ok + "/" + s.ans + "）")) +
+          " ｜ 復習待ち " + s.due + " ｜ 未着手 " + s.fresh +
+        '</div>';
+      const btn = document.createElement("button");
+      btn.className = "btn outline small";
+      btn.textContent = "この分野を解く";
+      btn.style.marginTop = "10px";
+      btn.addEventListener("click", () => { selectedField = f; startSession("field"); });
+      card.appendChild(btn);
+      wrap.appendChild(card);
+    });
+  }
+
+  // 分野セッション: その分野内で「復習期限→未着手→既習」の順に settings.count 問
+  function buildFieldSession(f) {
+    const now = todayStart();
+    const pool = QUESTIONS.filter(q => fieldOf(q) === f && settings.cats.indexOf(q.category) !== -1 && levelDiffOk(q));
+    const due = [], fresh = [], others = [];
+    pool.forEach(q => {
+      const c = cardState[q.id];
+      if (!c) fresh.push(q);
+      else if (c.due <= now) due.push(q);
+      else others.push(q);
+    });
+    due.sort((a, b) => cardState[a.id].due - cardState[b.id].due);
+    shuffle(fresh); shuffle(others);
+    return due.concat(fresh, others).slice(0, settings.count);
+  }
+
+  // キーワード検索（問題文・解説・タグ・分野を横断）
+  function runSearch(kw) {
+    const box = $("#searchResult");
+    const q0 = (kw || "").trim();
+    if (!q0) { box.innerHTML = ""; return; }
+    const k = q0.toLowerCase();
+    const hits = QUESTIONS.filter(q =>
+      q.question.toLowerCase().indexOf(k) !== -1 ||
+      (q.explanation || "").toLowerCase().indexOf(k) !== -1 ||
+      (q.tags || []).join(",").toLowerCase().indexOf(k) !== -1 ||
+      fieldOf(q).toLowerCase().indexOf(k) !== -1
+    );
+    if (hits.length === 0) {
+      box.innerHTML = '<p class="lead" style="margin:10px 0 0;">該当する問題がありません。</p>';
+      return;
+    }
+    box.innerHTML = '<p class="lead" style="margin:10px 0 8px;">' + hits.length + '問ヒット</p>';
+    const btn = document.createElement("button");
+    btn.className = "btn small";
+    btn.textContent = "この" + hits.length + "問を解く";
+    btn.addEventListener("click", () => {
+      searchHits = shuffle(hits.slice());
+      startSession("search");
+    });
+    box.appendChild(btn);
+    // ヒットした問題のタイトルを一覧（参照用）
+    const ul = document.createElement("div");
+    ul.style.marginTop = "12px";
+    hits.slice(0, 30).forEach(q => {
+      const d = document.createElement("div");
+      d.className = "search-item";
+      d.innerHTML = '<span class="mini-tag">' + escapeHtml(fieldOf(q)) + '</span> ' +
+        escapeHtml(q.question.slice(0, 60)) + (q.question.length > 60 ? "…" : "");
+      ul.appendChild(d);
+    });
+    if (hits.length > 30) {
+      const more = document.createElement("div");
+      more.className = "field-note";
+      more.textContent = "他 " + (hits.length - 30) + "問…";
+      ul.appendChild(more);
+    }
+    box.appendChild(ul);
+  }
+  let searchHits = [];
+  $("#fieldSearch").addEventListener("input", (e) => runSearch(e.target.value));
+
   // ---------- セッション管理 ----------
   let session = null; // { queue:[], index, correctCount, isWeak }
 
@@ -737,10 +892,14 @@
     let queue;
     if (mode === "weak") queue = buildWeakSession();
     else if (mode === "new") queue = buildNewSession($("#newWindow").value);
+    else if (mode === "field") queue = buildFieldSession(selectedField);
+    else if (mode === "search") queue = searchHits.slice(0, Math.max(settings.count, 10));
     else queue = buildSession();
     if (queue.length === 0) {
       const msg = mode === "weak" ? "復習する問題がありません。"
         : mode === "new" ? "対象期間に新着の問題がありません。期間を広げてみてください。"
+        : mode === "field" ? "この分野に、現在の難易度・カテゴリ設定で出題できる問題がありません。設定を見直してください。"
+        : mode === "search" ? "該当する問題がありません。"
         : "出題できる問題がありません。設定のフィルタを確認してください。";
       alert(msg);
       return;
