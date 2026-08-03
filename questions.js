@@ -1972,6 +1972,78 @@ const QUESTIONS = [
     explanation: "【要点】F2〜F3線維化を伴うMASHで、セマグルチド2.4 mg週1回は線維化悪化を伴わないステアトヘパティティスの消退を有意に増やした。\n【背景/エビデンス】ESSENCE試験(NEJM 2025)は生検確定のMASH・線維化F2/F3患者を対象とし、72週の中間解析で主要評価のステアトヘパティティス消退(線維化悪化なし)が62.9%対プラセボ34.3%、線維化改善(MASH悪化なし)も有意に多かった。安全性は既知のプロファイルと一致した。\n【臨床応用/注意】2025年に中等度〜進行線維化を伴うMASHへ迅速承認された。消化器症状に留意し、非代償性肝硬変(F4)は本試験の対象外である。\n【誤答】有意差なし・消退に差なし・対象がF4は、いずれも試験結果と異なる。",
     source: { title: "Sanyal AJ, et al. Phase 3 Trial of Semaglutide in Metabolic Dysfunction–Associated Steatohepatitis (ESSENCE) (N Engl J Med 2025;392:2089-2099)", url: "https://www.nejm.org/doi/full/10.1056/NEJMoa2413258" },
     tags: ["MASH", "セマグルチド", "肝線維化", "GLP-1", "消化器"]
+  },
+  {
+    id: "jr-vesalius-01",
+    category: "journal",
+    difficulty: 2,
+    added: "2026-08-03",
+    question: "アテローム性動脈硬化または糖尿病を有するが心筋梗塞・脳卒中の既往がない高リスク成人を対象に、標準治療へエボロクマブを上乗せしたVESALIUS-CV試験(NEJM 2025)の結果として当てはまるものはどれか。",
+    options: ["初発の主要心血管イベントは減少したが、非致死性心筋梗塞は減少しなかった", "主要評価項目でプラセボと有意差は認められなかった", "初発の主要心血管イベントを有意に低下させ、平均LDL-Cは約44 mg/dLに達した", "本試験の対象は心筋梗塞・脳卒中の既往を有する二次予防例であった"],
+    correct: 2,
+    explanation: "【要点】確立したASCVDまたは糖尿病があるが心筋梗塞・脳卒中の既往がない高リスク一次予防例で、エボロクマブは初発の主要心血管イベントを有意に減らした。\n【背景/エビデンス】VESALIUS-CV(NEJM 2025)は約12,000例超を対象にエボロクマブをスタチン等に上乗せ。平均LDL-Cは約44 mg/dLまで低下し、初発の主要心血管イベントは有意に減少(相対リスク低下おおむね25〜30%)、心筋梗塞も有意に減少した。\n【臨床応用/注意】PCSK9阻害薬が一次予防でもイベント抑制を示した点が新しい。適応は高リスク一次予防でLDLの追加低下を要する例に個別判断する。\n【誤答】有意差なし(選択肢1)は結果と逆。非致死性MIは有意に減少しており「減少しなかった」は誤り。対象は当該既往のない一次予防例で「二次予防」は誤り。",
+    source: { title: "Sabatine MS, et al. Evolocumab in Patients without a Previous Myocardial Infarction or Stroke (VESALIUS-CV) (N Engl J Med 2025)", url: "https://www.nejm.org/doi/abs/10.1056/NEJMoa2514428" },
+    tags: ["脂質異常症", "PCSK9阻害薬", "エボロクマブ", "一次予防", "循環器"]
+  },
+  {
+    id: "jr-redefine-cagrisema-01",
+    category: "journal",
+    difficulty: 2,
+    added: "2026-08-03",
+    question: "2型糖尿病のない肥満・過体重成人を対象に、カグリリンチド・セマグルチド配合(CagriSema)週1回を検討したREDEFINE 1試験(NEJM 2025)の結果として当てはまるものはどれか。",
+    options: ["配合薬の体重減少はセマグルチド単剤やプラセボと有意差がなかった", "配合薬は68週で平均約20%の体重減少を示し、セマグルチド単剤やプラセボより大きかった", "対象は2型糖尿病を有する患者で、主要評価項目はHbA1cであった", "体重は減少したが、血圧・脂質などの代謝指標は改善しなかった"],
+    correct: 1,
+    explanation: "【要点】糖尿病のない肥満・過体重で、カグリリンチド(アミリン作動薬)とセマグルチド(GLP-1受容体作動薬)の配合は、単剤やプラセボを上回る体重減少を示した。\n【背景/エビデンス】REDEFINE 1(N Engl J Med 2025;393:635-647)は約3,400例を配合薬・各単剤・プラセボに割付。68週で配合薬は平均約20%(遵守例で約22.7%)の体重減少で、セマグルチド約15%・カグリリンチド約11.5%・プラセボ約3%を上回った。収縮期血圧・腹囲・脂質・血糖も改善した。\n【臨床応用/注意】主な有害事象は一過性の悪心・便秘等の消化器症状で、用量漸増と忍容性の確認を要する。硬性心血管アウトカムは今後の課題。\n【誤答】有意差なし・対象が糖尿病・代謝指標が不変、はいずれも試験結果と異なる。",
+    source: { title: "Garvey WT, et al. Coadministered Cagrilintide and Semaglutide in Adults with Overweight or Obesity (REDEFINE 1) (N Engl J Med 2025;393:635-647)", url: "https://www.nejm.org/doi/full/10.1056/NEJMoa2502081" },
+    tags: ["肥満症", "CagriSema", "カグリリンチド", "セマグルチド", "内分泌代謝"]
+  },
+  {
+    id: "cl-hemochromatosis-01",
+    category: "clinical",
+    difficulty: 3,
+    added: "2026-08-03",
+    question: "遺伝性ヘモクロマトーシス(HFE遺伝子 C282Yホモ接合)の診断・管理について当てはまるものはどれか。",
+    options: ["スクリーニングにはトランスフェリン飽和度(TSAT)と血清フェリチンを用い、TSAT高値が鉄過剰を示唆する", "第一選択の治療は経口鉄キレート薬である", "適切な瀉血(静脈切開)により肝硬変や肝細胞癌などの合併症を予防しうる", "飲酒は鉄代謝に影響しないため飲酒制限は不要である"],
+    correct: [0, 2],
+    explanation: "【要点】HFE C282Yホモ接合による鉄過剰症はTSATと血清フェリチンでスクリーニングし、瀉血が治療の第一選択である。\n【背景/エビデンス】診断はC282Yホモ接合に加え、鉄過剰(男性・閉経後女性でTSAT>50%・フェリチン>300μg/L、女性でTSAT>45%・フェリチン>200μg/Lが目安)で支持される(ASH Education Program 2024総説)。早期からの瀉血で肝硬変・肝細胞癌・糖尿病・関節症などを予防しうる。\n【臨床応用/注意】鉄キレート薬は貧血合併など瀉血が困難な例に限る。飲酒・HCV・脂肪肝はヘプシジンを低下させ鉄過剰を増悪させるため生活指導が重要。フェリチン>1000μg/Lでは肝病変の評価を考慮する。\n【誤答】キレート薬第一選択(選択肢2)・飲酒制限不要(選択肢4)は誤り。",
+    source: { title: "Girelli D, Marchi G, Busti F. Diagnosis and management of hereditary hemochromatosis (Hematology Am Soc Hematol Educ Program 2024;2024:434-441)", url: "https://ashpublications.org/hematology/article/2024/1/434/526218/Diagnosis-and-management-of-hereditary" },
+    tags: ["ヘモクロマトーシス", "鉄過剰症", "HFE", "瀉血", "血液"]
+  },
+  {
+    id: "cl-acromegaly-01",
+    category: "clinical",
+    difficulty: 3,
+    added: "2026-08-03",
+    question: "先端巨大症(末端肥大症)の生化学的診断に関する記述として当てはまるものはどれか。",
+    options: ["早朝空腹時の単回成長ホルモン(GH)値のみで確定診断できる", "IGF-1が正常でもGHの随時値が高ければ確定診断となる", "75g経口ブドウ糖負荷でGHが十分に抑制されることを確認して診断する", "年齢・性別基準のIGF-1高値をスクリーニングとし、75g経口ブドウ糖負荷でGHが十分に抑制されないことで確認する"],
+    correct: 3,
+    explanation: "【要点】先端巨大症の生化学的診断は、年齢・性別で補正したIGF-1高値をスクリーニングとし、75g経口ブドウ糖負荷試験(OGTT)でGHが十分に抑制されないことで確認する。\n【背景/エビデンス】GHは拍動性に分泌され単回値の解釈は困難で、IGF-1は統合的な指標として有用。健常では糖負荷でGHが抑制されるが、先端巨大症では抑制されずGHナディアが基準値(高感度アッセイで概ね0.4μg/L)を上回る。\n【臨床応用/注意】確定後は下垂体MRIで腺腫を評価する。IGF-1とGHが乖離する場合はアッセイ差や併存疾患を考慮し追加評価を行う。\n【誤答】単回GHのみ・IGF-1正常での確定・「GHが抑制される」ことでの確認は、いずれも診断原則と異なる。",
+    source: { title: "Akirov A, et al. The Biochemical Diagnosis of Acromegaly (J Clin Med 2021;10:1147)", url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7967116/" },
+    tags: ["先端巨大症", "成長ホルモン", "IGF-1", "OGTT", "内分泌代謝"]
+  },
+  {
+    id: "gl-kdigo-ckd-2024-01",
+    category: "guideline",
+    difficulty: 2,
+    added: "2026-08-03",
+    question: "KDIGO 2024 CKD診療ガイドラインが、2型糖尿病を伴うCKD患者(eGFR≥20 ml/min/1.73m²)の基盤治療として推奨する薬剤・介入はどれか。",
+    options: ["SGLT2阻害薬", "レニン・アンジオテンシン系(RAS)阻害薬", "腎保護を目的としたループ利尿薬の定期内服", "スタチンによる脂質低下療法"],
+    correct: [0, 1, 3],
+    explanation: "【要点】KDIGO 2024はCKDの基盤治療として、SGLT2阻害薬・RAS阻害薬・スタチンを可能な限り開始することを推奨する。\n【背景/エビデンス】2型糖尿病を伴うCKDでeGFR≥20 ml/min/1.73m²ならSGLT2阻害薬を推奨(1A)。アルブミン尿を伴うCKDではRAS阻害薬を用量調整のうえ最大忍容量で使用する。脂質管理としてスタチン(±エゼチミブ)を年齢・リスクに応じ開始する。\n【臨床応用/注意】SGLT2阻害薬は開始後にeGFRが20未満へ低下しても、忍容性があり腎代替療法導入前であれば継続が妥当。RAS阻害薬は高K血症・急性の腎機能低下をモニタリングする。残存アルブミン尿にはフィネレノンの追加を考慮。\n【誤答】ループ利尿薬は溢水管理には用いるが、腎保護目的の基盤治療ではない。",
+    source: { title: "KDIGO 2024 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease (Kidney Int 2024;105(4S):S117-S314)", url: "https://kdigo.org/wp-content/uploads/2024/03/KDIGO-2024-CKD-Guideline.pdf" },
+    tags: ["CKD", "KDIGO", "SGLT2阻害薬", "RAS阻害薬", "腎臓"]
+  },
+  {
+    id: "rv-resistant-htn-spiro-01",
+    category: "review",
+    difficulty: 2,
+    added: "2026-08-03",
+    question: "3剤(RAS阻害薬・Ca拮抗薬・利尿薬)を至適用量で用いても管理不良な治療抵抗性高血圧に対し、4剤目として最も降圧効果が示されている薬剤はどれか。",
+    options: ["スピロノラクトン", "ビソプロロール", "ドキサゾシン", "ヒドララジン"],
+    correct: 0,
+    explanation: "【要点】治療抵抗性高血圧の4剤目として、スピロノラクトン(ミネラルコルチコイド受容体拮抗薬)が最も高い降圧効果を示す。\n【背景/エビデンス】PATHWAY-2試験(Lancet 2015)は3剤併用でも管理不良な治療抵抗性高血圧を対象に、スピロノラクトン・ビソプロロール・ドキサゾシン・プラセボをクロスオーバーで比較。家庭収縮期血圧の低下はスピロノラクトンが最大で、α遮断薬・β遮断薬に優った。ナトリウム・体液貯留の関与が示唆される。\n【臨床応用/注意】導入後は血清カリウムと腎機能をモニタリングし、高K血症や重度腎機能障害では慎重に用いる。効果不十分ならβ遮断薬・α遮断薬などを次段階として検討する。\n【誤答】ビソプロロール・ドキサゾシンはPATHWAY-2でスピロノラクトンに劣った。ヒドララジンは第一に推奨される4剤目ではない。",
+    source: { title: "Williams B, et al. Spironolactone versus placebo, bisoprolol, and doxazosin for drug-resistant hypertension (PATHWAY-2) (Lancet 2015;386:2059-2068)", url: "https://www.thelancet.com/article/S0140-6736(15)00257-3/fulltext" },
+    tags: ["高血圧", "治療抵抗性高血圧", "スピロノラクトン", "MRA", "循環器"]
   }
 ];
 
