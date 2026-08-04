@@ -996,6 +996,8 @@
     submitBtn.classList.add("hidden"); submitBtn.disabled = true;
 
     // 統計更新（どのモードでも記録する）
+    // 1問でも回答した時点でその日の学習として記録（中断してもストリークが途切れない）
+    bumpStreak();
     stats.total += 1;
     stats.catStats[q.category].total += 1;
     if (isCorrect) { stats.correct += 1; stats.catStats[q.category].correct += 1; session.correctCount += 1; }
@@ -1031,17 +1033,21 @@
     else renderQuestion();
   });
 
-  function finishSession() {
+  function finishSession(interrupted) {
     bumpStreak();
     $("#quizView").classList.add("hidden");
     $("#resultView").classList.remove("hidden");
-    const total = session.queue.length;
+    // 中断時は「解いた問題数」を母数にする（未回答分は含めない）
+    const total = interrupted ? session.index : session.queue.length;
     const c = session.correctCount;
     const rate = total ? Math.round(c / total * 100) : 0;
     $("#resCorrect").textContent = c + "/" + total;
     $("#resRate").textContent = rate + "%";
     let msg;
-    if (rate === 100) msg = "全問正解です。素晴らしい知識アップデートでした。";
+    if (interrupted) {
+      const left = session.queue.length - session.index;
+      msg = total + "問を記録しました。" + (left > 0 ? "残り" + left + "問はまた次回に出題されます。" : "");
+    } else if (rate === 100) msg = "全問正解です。素晴らしい知識アップデートでした。";
     else if (rate >= 60) msg = "お疲れさまでした。間違えた問題は後日また復習に出てきます。";
     else msg = "難しい回でした。解説を振り返り、弱点復習モードも活用しましょう。";
     $("#resultSummary").textContent = msg;
@@ -1065,10 +1071,15 @@
     renderHome();
   });
   $("#quitBtn").addEventListener("click", () => {
-    session = null;
-    $("#quizView").classList.add("hidden");
-    $("#homeView").classList.remove("hidden");
-    renderHome();
+    // 途中で中断しても、解いた分の結果を表示する（記録は回答時に保存済み）
+    if (session && session.index > 0) {
+      finishSession(true);
+    } else {
+      session = null;
+      $("#quizView").classList.add("hidden");
+      $("#homeView").classList.remove("hidden");
+      renderHome();
+    }
   });
 
   // ---------- ダッシュボード描画 ----------
