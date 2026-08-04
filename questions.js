@@ -2306,6 +2306,71 @@ const QUESTIONS = [
     explanation: "【要点】トリプル陽性の高リスクAPSではワルファリン(INR 2-3)が推奨され、リバーロキサバン等のDOACは避ける。\n【背景/エビデンス】TRAPS試験(Blood 2018)は、ループスアンチコアグラント・抗カルジオリピン・抗β2GPI抗体すべて陽性のAPSでリバーロキサバンとワルファリンを比較。リバーロキサバン群で血栓・大出血・血管死が有意に多く(HR約7)、試験は早期中止された。\n【臨床応用/注意】APSの動脈・静脈血栓の二次予防はビタミンK拮抗薬が標準。DOACは少なくとも高リスク(トリプル陽性)では推奨されない。\n【誤答】DOAC第一選択・抗体陽性のみで治療量抗凝固・アスピリン単独での二次予防、はいずれも不適切である。",
     source: { title: "Pengo V, et al. Rivaroxaban vs warfarin in high-risk patients with antiphospholipid syndrome (TRAPS) (Blood 2018;132(13):1365-1371)", url: "https://ashpublications.org/blood/article/132/13/1365/105711" },
     tags: ["膠原病", "抗リン脂質抗体症候群", "抗凝固", "ワルファリン", "専門医試験"]
+  },
+  {
+    id: "jr-unite-mig-mdd-01",
+    category: "journal",
+    field: "神経",
+    difficulty: 3,
+    added: "2026-08-05",
+    question: "片頭痛と大うつ病性障害(MDD)を併存する成人を対象としたUNITE試験で、抗CGRP抗体フレマネズマブについて示された結果はどれか。",
+    options: ["片頭痛日数は減らしたがうつ症状には影響しなかった", "MDD合併例では抗CGRP抗体はむしろ避けるべきとされた", "MDD合併片頭痛では予防薬は無効で急性期治療のみ行うべきとされた", "片頭痛日数とうつ症状の双方を有意に改善した"],
+    correct: 3,
+    explanation: "【要点】UNITE試験は、片頭痛と大うつ病性障害(MDD)を併存する成人で、抗CGRP抗体フレマネズマブが片頭痛日数とうつ症状の双方を有意に改善したことを示した。\n【背景/エビデンス】JAMA Neurology 2025掲載。反復性/慢性片頭痛+活動性MDDの353例(平均42.9歳、女性88%)を12週二重盲検でフレマネズマブ月1回皮下 vs プラセボに割付。月間片頭痛日数の減少に加え、うつ症状尺度でもプラセボを上回る改善を示した最初の無作為化試験。\n【臨床応用/注意】うつ併存を理由に片頭痛予防を控える必要はなく、単一薬で両病態の改善が期待できる。抗うつ薬併用の可否や適応は個別に判断する。\n【誤答】うつに無効・MDD併存で回避・予防薬は無効は、いずれも試験結果と矛盾する。",
+    source: { title: "Fremanezumab for the Treatment of Patients With Migraine and Comorbid Major Depressive Disorder: The UNITE Randomized Clinical Trial (JAMA Neurology 2025)", url: "https://jamanetwork.com/journals/jamaneurology/fullarticle/2833452" },
+    tags: ["片頭痛", "CGRP", "うつ病", "併存症", "神経"]
+  },
+  {
+    id: "gl-ats-cap-2025-01",
+    category: "guideline",
+    field: "呼吸器",
+    difficulty: 2,
+    added: "2026-08-05",
+    question: "2025年ATS市中肺炎(CAP)診療ガイドライン改訂の内容として、適切なものはどれか。",
+    options: ["非重症の入院例にも全身性ステロイドをルーチンに併用することが強く推奨された", "抗菌薬は臨床的安定化にかかわらず最低10日間継続することが推奨された", "臨床的に安定化した非重症例では抗菌薬を5日未満(最低3日)に短縮してよい", "重症CAPの入院例では全身性ステロイドの併用を提案する(条件付き推奨)"],
+    correct: [2, 3],
+    explanation: "【要点】2025年ATS CAPガイドラインは、臨床的に安定化した非重症例で抗菌薬を5日未満(最低3日)に短縮し、重症入院例では全身性ステロイド併用を提案する一方、非重症入院例へのステロイドは推奨しない。\n【背景/エビデンス】改訂は画像診断・経験的抗菌薬・治療期間・ステロイドの4領域が中心。ステロイドはRCTメタ解析で重症CAPに限り死亡を低下(NNT約17)、非重症では有益性を認めなかった。短期投与は抗菌薬適正使用の観点から支持される。\n【臨床応用/注意】バイタル安定・経口移行可などの安定化を確認してから短縮する。ステロイドは重症例で個別に検討し、血糖上昇・二次感染に留意する。\n【誤答】非重症へのルーチンのステロイド併用、安定化に関わらず10日継続は、現行の推奨に反する。",
+    source: { title: "Diagnosis and Management of Community-acquired Pneumonia: An Official American Thoracic Society Clinical Practice Guideline (Am J Respir Crit Care Med 2025)", url: "https://academic.oup.com/ajrccm/article/212/1/24/8435770" },
+    tags: ["肺炎", "CAP", "抗菌薬適正使用", "ステロイド", "複数選択"]
+  },
+  {
+    id: "jr-zuranolone-mdd-01",
+    category: "review",
+    field: "精神・行動",
+    difficulty: 2,
+    added: "2026-08-05",
+    question: "うつ病治療薬ズラノロン(zuranolone)の特徴として、適切なものはどれか。",
+    options: ["経口のSSRIで、MDDに対し連日長期投与する薬剤である", "経口の神経ステロイドだが、効果発現が遅く数か月の連日投与を要する", "経口の神経ステロイド(GABA-A受容体PAM)で、産後うつに承認され14日間の短期投与で速やかに効く", "静注の神経ステロイドで、入院下の24時間持続投与でのみ用いる"],
+    correct: 2,
+    explanation: "【要点】ズラノロンは経口の神経ステロイド(GABA-A受容体の陽性アロステリック調節薬)で、産後うつに承認され、14日間の短期投与で速やかな抗うつ効果を示す。\n【背景/エビデンス】第3相試験(Am J Psychiatry)で重症MDDに50mg/日を14日間投与し、15日目のうつ症状を有意に改善、効果は3日目から認めた。米国では産後うつに承認された一方、MDD全般への適応は承認に至っていない。\n【臨床応用/注意】短期コースで用い、鎮静・傾眠に注意して運転等を避ける。ブレキサノロン(静注)とは別製剤で、経口・外来で使える点が利点。\n【誤答】SSRIで長期投与・効果発現が遅い・静注のみ、はいずれも本剤の特徴と異なる。",
+    source: { title: "Zuranolone for the Treatment of Adults With Major Depressive Disorder: A Randomized, Placebo-Controlled Phase 3 Trial (Am J Psychiatry)", url: "https://psychiatryonline.org/doi/full/10.1176/appi.ajp.20220459" },
+    tags: ["うつ病", "ズラノロン", "神経ステロイド", "精神"]
+  },
+  {
+    id: "jr-inspires-dapt-01",
+    category: "clinical",
+    field: "神経",
+    difficulty: 2,
+    added: "2026-08-05",
+    question: "軽症の非心原性脳梗塞または高リスクTIAの二次予防として、近年のエビデンスが支持する抗血栓療法はどれか。",
+    options: ["発症早期に抗血小板薬2剤併用(DAPT)を約21日間行い、その後は単剤に戻す", "軽症脳梗塞/TIAではDAPTを1年以上継続するのが標準である", "非心原性脳梗塞の二次予防は抗凝固薬(DOAC)が第一選択である", "軽症脳梗塞/TIAでは抗血小板薬は禁忌であり投与しない"],
+    correct: 0,
+    explanation: "【要点】軽症の非心原性脳梗塞または高リスクTIAでは、発症早期に抗血小板薬2剤併用(DAPT)を約21日間行い、その後は単剤に戻すのが標準である。\n【背景/エビデンス】CHANCE/POINT試験で発症24時間以内のアスピリン+クロピドグレル短期併用が再発を減らし、INSPIRES試験は開始windowを72時間まで広げても21日間DAPTが有効なことを示した。長期併用は虚血抑制の上乗せに乏しく出血を増やす。\n【臨床応用/注意】出血リスクやCYP2C19機能を考慮し、原則21日で単剤へ移行する。心原性(心房細動等)では抗凝固が適応で、本戦略とは区別する。\n【誤答】1年以上のDAPT継続・DOAC第一選択・抗血小板薬は禁忌は、いずれも不適切である。",
+    source: { title: "Clopidogrel and Aspirin Initiated Between 24 to 72 Hours for Mild Ischemic Stroke: A Subgroup Analysis of the INSPIRES Randomized Clinical Trial (PMC)", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC11380102/" },
+    tags: ["脳梗塞", "TIA", "抗血小板薬", "DAPT", "神経"]
+  },
+  {
+    id: "jr-convince-stroke-01",
+    category: "journal",
+    field: "神経",
+    difficulty: 3,
+    added: "2026-08-05",
+    question: "非心原性脳梗塞/高リスクTIAへの低用量コルヒチンを検討したCONVINCE試験の主要結果はどれか。",
+    options: ["低用量コルヒチンは再発を有意に減らすことが証明された", "主要ITT解析では、低用量コルヒチン追加は血管イベント再発を有意には減らさなかった", "コルヒチンは脳梗塞二次予防の標準治療として全例に推奨された", "コルヒチンは抗血小板薬を置換する薬剤として承認された"],
+    correct: 1,
+    explanation: "【要点】CONVINCE試験の主要ITT解析では、標準治療への低用量コルヒチン(0.5mg/日)追加は非心原性脳梗塞/高リスクTIAの血管イベント再発を有意には減らさなかった。\n【背景/エビデンス】Lancet 2024掲載の国際無作為化非盲検試験。冠動脈疾患では抗炎症療法の有益性が示唆されていたが、脳卒中二次予防では主要評価項目で有意差に至らなかった。ただしCRP低値例やCAD合併例の事前規定サブ解析では減少傾向もみられ、炎症仮説は否定されていない。\n【臨床応用/注意】現時点でコルヒチンを脳卒中二次予防の標準として全例に推奨する根拠は不十分で、適応は個別・研究的位置づけにとどまる。\n【誤答】再発を有意に減少・全例推奨・抗血小板薬を置換して承認は、いずれも支持されない。",
+    source: { title: "Long-term colchicine for the prevention of vascular recurrent events in non-cardioembolic stroke (CONVINCE): a randomised controlled trial (Lancet 2024)", url: "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(24)00968-1/abstract" },
+    tags: ["脳梗塞", "コルヒチン", "抗炎症", "二次予防", "神経"]
   }
 ];
 
