@@ -2371,6 +2371,84 @@ const QUESTIONS = [
     explanation: "【要点】CONVINCE試験の主要ITT解析では、標準治療への低用量コルヒチン(0.5mg/日)追加は非心原性脳梗塞/高リスクTIAの血管イベント再発を有意には減らさなかった。\n【背景/エビデンス】Lancet 2024掲載の国際無作為化非盲検試験。冠動脈疾患では抗炎症療法の有益性が示唆されていたが、脳卒中二次予防では主要評価項目で有意差に至らなかった。ただしCRP低値例やCAD合併例の事前規定サブ解析では減少傾向もみられ、炎症仮説は否定されていない。\n【臨床応用/注意】現時点でコルヒチンを脳卒中二次予防の標準として全例に推奨する根拠は不十分で、適応は個別・研究的位置づけにとどまる。\n【誤答】再発を有意に減少・全例推奨・抗血小板薬を置換して承認は、いずれも支持されない。",
     source: { title: "Long-term colchicine for the prevention of vascular recurrent events in non-cardioembolic stroke (CONVINCE): a randomised controlled trial (Lancet 2024)", url: "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(24)00968-1/abstract" },
     tags: ["脳梗塞", "コルヒチン", "抗炎症", "二次予防", "神経"]
+  },
+  {
+    id: "cl-cdiff-recur-01",
+    category: "clinical",
+    field: "感染症",
+    difficulty: 2,
+    added: "2026-08-06",
+    question: "再発性Clostridioides difficile感染症(CDI)の治療および再発予防に関する近年の考え方はどれか。",
+    options: ["再発CDIの治療はメトロニダゾール経口が第一選択である", "再発予防の補助であった抗トキシン抗体ベズロトクスマブは現在も第一に広く推奨される", "再発例ではフィダキソマイシンが選択肢の一つで、難治・多数回再発には便微生物叢由来製剤(承認された微生物製剤/FMT)が再発予防に用いられる", "多数回再発でも便微生物叢由来製剤(FMT)は禁忌である"],
+    correct: 2,
+    explanation: "【要点】再発CDIではフィダキソマイシンが有力な選択肢で、難治・多数回再発の再発予防に便微生物叢由来製剤(承認されたlive biotherapeutics/FMT)が用いられる。\n【背景/エビデンス】2021年SHEA/IDSA更新以降、フィダキソマイシンは再発率の低さからバンコマイシンより優先され得る。多数回再発にはfecal microbiota系製剤(例: RBX2660、SER-109)が再発抑制の選択肢として位置づけられた。一方、再発予防の補助として用いられてきた抗トキシン抗体ベズロトクスマブは供給・製造の終了により2025年に入手不能となり、標準選択肢から外れた。\n【臨床応用/注意】再発予防では抗菌薬選択と微生物叢回復の両面を考える。免疫抑制例やPPI長期使用など再発リスク因子の是正も併せて行う。\n【誤答】メトロニダゾール第一選択・ベズロトクスマブを現在も第一推奨・FMTを一律禁忌とするのは、いずれも現行の考え方に沿わない。",
+    source: { title: "Clostridioides difficile 2021 Focused Update Guideline (IDSA/SHEA)", url: "https://www.idsociety.org/practice-guideline/clostridioides-difficile-2021-focused-update/" },
+    tags: ["CDI", "フィダキソマイシン", "便微生物移植", "再発予防", "感染症"]
+  },
+  {
+    id: "jr-ivriron-maternal-01",
+    category: "journal",
+    field: "血液",
+    difficulty: 2,
+    added: "2026-08-06",
+    question: "妊娠中の中等度鉄欠乏性貧血に対し、単回静注鉄と経口鉄を比較した2025年の無作為化試験の結果として支持されるものはどれか。",
+    options: ["静注鉄は経口鉄に比べ母体の非貧血達成をむしろ低下させた", "母体・新生児いずれのアウトカムにも一切差を認めなかった", "経口鉄が静注鉄より低出生体重を有意に減らした", "静注ferric carboxymaltoseは低出生体重の発生を減らし、追加治療を要さない母体の非貧血達成も高めた"],
+    correct: 3,
+    explanation: "【要点】妊娠中の中等度鉄欠乏性貧血で、単回静注ferric carboxymaltose(FCM)は低出生体重児の発生を減らし、追加治療なしでの母体非貧血達成も経口鉄より高めた。\n【背景/エビデンス】2025年の無作為化試験(産科領域)で、単回静注FCMは低出生体重の相対リスクを約0.87に低下(ferric derisomaltoseでは有意でない)。追加鉄剤や輸血を要した例を失敗とみなす解析では、両静注製剤とも母体非貧血達成が経口鉄より高かった。\n【臨床応用/注意】経口鉄は安価で多くの症例で妥当な初期治療だが、忍容性不良・不応・妊娠後期で時間的余裕が乏しい場合に静注鉄が優先され得る。投与時の過敏反応・低リン血症に留意する。\n【誤答】静注鉄が達成を低下・差なし・経口鉄優位はいずれも試験結果と整合しない。",
+    source: { title: "Single-dose intravenous iron vs oral iron for treatment of maternal iron deficiency anemia: a randomized clinical trial (2025)", url: "https://pubmed.ncbi.nlm.nih.gov/39909327/" },
+    tags: ["鉄欠乏性貧血", "静注鉄", "妊娠", "血液"]
+  },
+  {
+    id: "cl-esketamine-mono-01",
+    category: "clinical",
+    field: "精神・行動",
+    difficulty: 2,
+    added: "2026-08-06",
+    question: "治療抵抗性うつ病(TRD)に対する点鼻エスケタミンについて、近年の第4相試験と適応拡大が支持する内容はどれか。",
+    options: ["単剤療法として症状を有意に改善し、単剤での適応拡大の根拠となった", "経口抗うつ薬併用下でのみ有効で、単剤では無効であった", "投与後の院内観察は不要で在宅自己投与が標準となった", "TRDよりも初発の軽症うつ病が主たる適応である"],
+    correct: 0,
+    explanation: "【要点】点鼻エスケタミンは第4相試験で単剤療法としてもTRD症状を有意に改善し、単剤での適応拡大(2025年の承認)につながった。\n【背景/エビデンス】外来施設で56mgまたは84mgを週2回・4週間投与しプラセボと比較、抑うつ評価尺度で有意な改善を示した。これが従来の『経口抗うつ薬併用が前提』からの拡大根拠となった。\n【臨床応用/注意】解離・血圧上昇・鎮静のリスクがあり、投与後は原則2時間以上の院内観察とREMS的な管理が必要で、多忙な一般外来では実施体制が課題になる。適応はあくまでTRDで、初発の軽症うつ病が主対象ではない。\n【誤答】単剤で無効・院内観察不要で在宅自己投与が標準・軽症うつ病が主適応は、いずれも支持されない。",
+    source: { title: "SPRAVATO (esketamine) approved as the first and only monotherapy for adults with treatment-resistant depression", url: "https://www.jnj.com/media-center/press-releases/spravato-esketamine-approved-in-the-u-s-as-the-first-and-only-monotherapy-for-adults-with-treatment-resistant-depression" },
+    tags: ["治療抵抗性うつ病", "エスケタミン", "精神・行動"]
+  },
+  {
+    id: "jr-saphyr-pmr-01",
+    category: "journal",
+    field: "膠原病・骨",
+    difficulty: 3,
+    added: "2026-08-06",
+    question: "グルココルチコイド漸減中に再燃したリウマチ性多発筋痛症(PMR)に対するサリルマブを検討したSAPHYR試験の結果はどれか。",
+    options: ["サリルマブは有効性を示せず、いずれのアウトカムも改善しなかった", "プラセボ比で持続寛解を高め、累積グルココルチコイド曝露を減らした", "PMRではなく巨細胞性動脈炎のみが適応となった", "グルココルチコイド単剤への上乗せ効果は認めなかった"],
+    correct: 1,
+    explanation: "【要点】SAPHYR試験で、IL-6受容体抗体サリルマブはグルココルチコイド(GC)漸減中に再燃したPMRの持続寛解を高め、フレアと累積GC曝露を減らした。\n【背景/エビデンス】NEJM掲載の第3相二重盲検試験。52週時点で持続寛解達成が対照より多く、GC総量も少なかった。これに基づき、GCへの反応不良例やGC漸減が困難な例でサリルマブが承認された。\n【臨床応用/注意】高齢者に多いPMRではGC長期使用の有害事象(骨粗鬆症・糖代謝・感染)が問題で、GC節減効果は臨床的に有用。導入後は感染徴候・好中球・脂質・肝機能をモニタリングする。\n【誤答】有効性を示せず・GCAのみが適応・上乗せ効果なしは、いずれも試験結果と整合しない。",
+    source: { title: "Sarilumab for Relapse of Polymyalgia Rheumatica during Glucocorticoid Taper (SAPHYR, NEJM)", url: "https://www.nejm.org/doi/full/10.1056/NEJMoa2303452" },
+    tags: ["リウマチ性多発筋痛症", "サリルマブ", "IL-6", "ステロイド節減", "膠原病・骨"]
+  },
+  {
+    id: "gl-uc-mild-01",
+    category: "guideline",
+    field: "消化器・肝",
+    difficulty: 2,
+    added: "2026-08-06",
+    question: "軽症〜中等症の潰瘍性大腸炎(UC)に対する近年のガイドラインの推奨として支持されるものを選べ。",
+    options: ["軽症〜中等症の潰瘍性直腸炎では、まず局所(経直腸)5-ASAで寛解導入を図る", "経口5-ASAで不応の軽〜中等症には、経口ブデソニド(budesonide MMX)追加を検討する", "軽症例では高用量5-ASA(4.8g)が低用量(2.0〜2.4g)より寛解率で明確に優る", "導入療法の効果は概ね8週以内に再評価する"],
+    correct: [0, 1, 3],
+    explanation: "【要点】軽症〜中等症UCでは、局所5-ASAで直腸炎を導入し、経口5-ASA不応例にはブデソニドMMXを追加、導入効果は概ね8週以内に再評価する。\n【背景/エビデンス】2025年の消化器系ガイドライン(AGA/ACG)は、経口・局所5-ASAとブデソニドを軸に据える。直腸炎では経直腸5-ASA(約1g/日)で導入し、左側/広範型では経口+局所併用が有効。5-ASA不応時にブデソニドMMX 9mg/日を追加する。\n【臨床応用/注意】導入後8週での再評価で不応なら次段階へ進む。粘膜治癒と長期の維持を見据え、アドヒアランス(1日1回化など)も工夫する。\n【誤答】高用量5-ASA(4.8g)は低用量に対し寛解率で明確な優越を示さないため、この選択肢のみ不適切である。",
+    source: { title: "New Guideline for Management of Mild-to-Moderate Ulcerative Colitis (2025)", url: "https://www.pharmacytimes.com/view/new-guideline-released-for-management-of-mild-to-moderate-ulcerative-colitis" },
+    tags: ["潰瘍性大腸炎", "5-ASA", "ブデソニド", "消化器・肝"]
+  },
+  {
+    id: "jr-capecod-cap-steroid-01",
+    category: "review",
+    field: "呼吸器",
+    difficulty: 3,
+    added: "2026-08-06",
+    question: "重症市中肺炎(CAP)に対する全身性コルチコステロイドのエビデンスについて、支持される記述を選べ。",
+    options: ["全てのCAP(軽症を含む)に一律でステロイドを推奨する強い根拠が確立した", "ICUの重症CAPを対象としたCAPE-COD試験では、ヒドロコルチゾンが死亡を低下させた", "REMAP-CAPのステロイドドメインでは、大幅な死亡低下は示されなかった", "重症度(低酸素・呼吸不全の程度)に応じた個別化と早期開始が現時点で妥当とされる"],
+    correct: [1, 2, 3],
+    explanation: "【要点】重症CAPへのステロイドは、CAPE-CODで死亡低下を示す一方、REMAP-CAPでは大幅な死亡低下を示さず、重症度に応じた個別化と早期開始が現時点で妥当とされる。\n【背景/エビデンス】CAPE-COD試験(ICUの重症CAP)ではヒドロコルチゾンが28日死亡を低下させた。一方、REMAP-CAPのステロイドドメインでは大幅な死亡低下は確認されず、益は小さく害も否定しきれないと報告された。試験間で対象重症度や投与法が異なり結果が割れている。\n【臨床応用/注意】低酸素・呼吸不全が強い重症例では早期のステロイドを個別に検討し、高血糖・二次感染に留意する。軽症CAPへの一律投与を支持する根拠は乏しい。\n【誤答】軽症を含む全CAPへの一律推奨が確立したという記述のみが不適切である。",
+    source: { title: "Hydrocortisone in Severe Community-Acquired Pneumonia (CAPE-COD, NEJM) and REMAP-CAP Corticosteroid Domain (2025)", url: "https://www.nejm.org/doi/full/10.1056/NEJMoa2215145" },
+    tags: ["市中肺炎", "コルチコステロイド", "重症肺炎", "呼吸器"]
   }
 ];
 
