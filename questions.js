@@ -2449,6 +2449,84 @@ const QUESTIONS = [
     explanation: "【要点】重症CAPへのステロイドは、CAPE-CODで死亡低下を示す一方、REMAP-CAPでは大幅な死亡低下を示さず、重症度に応じた個別化と早期開始が現時点で妥当とされる。\n【背景/エビデンス】CAPE-COD試験(ICUの重症CAP)ではヒドロコルチゾンが28日死亡を低下させた。一方、REMAP-CAPのステロイドドメインでは大幅な死亡低下は確認されず、益は小さく害も否定しきれないと報告された。試験間で対象重症度や投与法が異なり結果が割れている。\n【臨床応用/注意】低酸素・呼吸不全が強い重症例では早期のステロイドを個別に検討し、高血糖・二次感染に留意する。軽症CAPへの一律投与を支持する根拠は乏しい。\n【誤答】軽症を含む全CAPへの一律推奨が確立したという記述のみが不適切である。",
     source: { title: "Hydrocortisone in Severe Community-Acquired Pneumonia (CAPE-COD, NEJM) and REMAP-CAP Corticosteroid Domain (2025)", url: "https://www.nejm.org/doi/full/10.1056/NEJMoa2215145" },
     tags: ["市中肺炎", "コルチコステロイド", "重症肺炎", "呼吸器"]
+  },
+  {
+    id: "jr-fairhf2-01",
+    category: "journal",
+    field: "血液",
+    difficulty: 3,
+    added: "2026-08-07",
+    question: "鉄欠乏を伴うHFrEF患者を対象に静脈内フェリックカルボキシマルトース(FCM)をプラセボと比較したFAIR-HF2試験(JAMA 2025)の結果として、支持される記述はどれか。",
+    options: ["総死亡を単独で有意に低下させ、生命予後の改善が確立した", "経口鉄がFCMより有効であることを示した", "QOL改善と良好な忍容性は示したが、心血管死・心不全入院のハードアウトカムへの明確なベネフィットは示せなかった", "鉄欠乏の有無にかかわらず全HF患者への一律投与を推奨する根拠となった"],
+    correct: 2,
+    explanation: "【要点】FAIR-HF2は、鉄欠乏を伴うHFrEF患者へのIV鉄(FCM)がQOLを改善し忍容性も良好だが、心血管死・心不全入院のハードアウトカムを明確には減らせなかったことを示した。\n【背景/エビデンス】欧州6か国・約1,105例(平均70歳、女性33%)を、FCM(初回1,000〜2,000mg、以後500mg/4か月)かプラセボに割付。最初の主要評価項目(CV死/初回HF入院)は16.7% vs 21.9%と差が出たものの、階層的複合や総HF入院では有意差に至らず、TSAT<20%層でも一貫した明確な利益は得られなかった。\n【臨床応用/注意】症状・QOL改善を目的とした選択的使用は妥当だが、予後改善を過度に期待しない。投与前後で鉄動態(フェリチン・TSAT)を評価する。\n【誤答】総死亡低下の確立、経口鉄の優越、全例一律投与の推奨はいずれも試験結果と整合しない。",
+    source: { title: "Intravenous Ferric Carboxymaltose in Heart Failure With Iron Deficiency: The FAIR-HF2 DZHK05 Randomized Clinical Trial (JAMA)", url: "https://jamanetwork.com/journals/jama/fullarticle/2832132" },
+    tags: ["心不全", "鉄欠乏", "静注鉄", "血液"]
+  },
+  {
+    id: "jr-zostervac-dementia-01",
+    category: "journal",
+    field: "神経",
+    difficulty: 2,
+    added: "2026-08-07",
+    question: "帯状疱疹ワクチン接種と認知症リスクの関連を検討した自然実験研究(Nature 2025, ウェールズ)の知見として、支持されるものはどれか。",
+    options: ["接種は認知症の発症をむしろ増加させた", "生年月日で接種資格が分かれる制度を利用した準ランダム化で、接種群の新規認知症診断が相対的に減少した", "認知症の完全な予防効果(発症ゼロ化)が証明された", "効果はすでに認知症を発症した患者の進行抑制に限られた"],
+    correct: 1,
+    explanation: "【要点】ウェールズの自然実験では、帯状疱疹(生ワクチン)接種群で新規の認知症診断が相対的に約2割減少し、因果性を支持する所見が得られた。\n【背景/エビデンス】1933年9月2日より前に生まれた人は生涯接種不適格、以降は適格という制度上の断絶を利用し、生年月日近傍で背景がそろった集団を比較する擬似ランダム化を実現。この設計は健康志向バイアスや交絡を大きく減らせる点が強みで、追跡期間で接種群の認知症診断が低かった。機序としてVZV再活性化の抑制などが仮説とされる。\n【臨床応用/注意】観察研究であり因果を断定はできないが、高齢者への帯状疱疹ワクチンの追加的意義を示唆する。適応・製剤・費用は各国の推奨に従う。\n【誤答】発症増加・完全予防・進行抑制限定はいずれも研究結果と異なる。",
+    source: { title: "A natural experiment on the effect of herpes zoster vaccination on dementia (Nature)", url: "https://www.nature.com/articles/s41586-025-08800-x" },
+    tags: ["帯状疱疹ワクチン", "認知症", "予防", "神経"]
+  },
+  {
+    id: "gl-asb-2025-01",
+    category: "guideline",
+    field: "感染症",
+    difficulty: 2,
+    added: "2026-08-07",
+    question: "無症候性細菌尿(ASB)に対するスクリーニング・抗菌薬治療の考え方について、近年のIDSA更新も踏まえ支持される記述を選べ。",
+    options: ["健康な非妊娠女性のASBはスクリーニング・治療の対象としない", "全ての糖尿病患者でASBを定期的にスクリーニングし治療する", "妊婦では有症状化・合併症リスクからスクリーニングと治療が推奨される", "小児・固形臓器移植後・好中球減少患者は、新たに検査・治療を要しない集団として整理された"],
+    correct: [0, 2, 3],
+    explanation: "【要点】ASBは原則スクリーニング・治療せず、抗菌薬の対象は妊婦など限られた集団に絞る。近年のIDSA更新で非対象群がさらに整理・拡大された。\n【背景/エビデンス】健康な非妊娠女性、糖尿病患者、高齢者・施設入所者、脊髄損傷、カテーテル留置例では治療の有益性が示されず、むしろ耐性・C. difficile・副作用リスクを増やす。2019年版に続く更新では、小児・固形臓器移植後・好中球減少なども検査/治療不要の集団として明確化された。妊婦は腎盂腎炎・早産リスクからスクリーニングと治療が推奨される。\n【臨床応用/注意】尿培養陽性のみで治療せず、症状の有無で判断する。抗菌薬適正使用(スチュワードシップ)の観点が中心となる。\n【誤答】糖尿病患者の定期スクリーニング・治療は推奨されず、この記述のみ不適切である。",
+    source: { title: "IDSA Issues Updated Treatment Guidelines for Asymptomatic Bacteriuria (Contagion Live)", url: "https://www.contagionlive.com/view/idsa-issues-updated-treatment-guidelines-for-asymptomatic-bacteriuria" },
+    tags: ["無症候性細菌尿", "抗菌薬適正使用", "IDSA", "感染症"]
+  },
+  {
+    id: "rv-antidep-init-01",
+    category: "review",
+    field: "精神・行動",
+    difficulty: 2,
+    added: "2026-08-07",
+    question: "成人の中等症〜重症うつ病に薬物療法を開始する際の初期抗うつ薬選択について、ネットワークメタ解析等のエビデンスから支持される考え方はどれか。",
+    options: ["三環系抗うつ薬(TCA)を第一選択とするのが標準である", "ベンゾジアゼピン単剤で寛解を目指すのが第一選択である", "効果はどの薬剤も完全に同一で、選択に個別要因は考慮しない", "SSRIが一般的な第一選択で、有効性・忍容性・費用のバランスからセルトラリンやエスシタロプラムが妥当な初期選択肢となる"],
+    correct: 3,
+    explanation: "【要点】中等症〜重症うつ病では、SSRIが一般的な第一選択で、有効性・忍容性・費用のバランスからセルトラリンやエスシタロプラムが妥当な初期選択肢とされる。\n【背景/エビデンス】21種の抗うつ薬を比較したネットワークメタ解析(Cipriani 2018, Lancet)では、有効性と受容性(脱落の少なさ)の総合でエスシタロプラム・セルトラリン等が良好。セルトラリンは有効性・受容性・費用の総合バランス、エスシタロプラムは有効性・忍容性で評価が高い。個々の副作用プロファイル・併存症・相互作用・患者の希望も加味して選ぶ。\n【臨床応用/注意】低用量から開始し2〜4週で反応を評価、不十分なら増量・変更を検討する。中止時は離脱を避けるため漸減する。\n【誤答】TCA第一選択は忍容性・過量毒性の点で現在は非標準、ベンゾ単剤は根治的でなく依存リスク、薬剤間で差がないとの断定も誤り。",
+    source: { title: "Comparative efficacy and acceptability of 21 antidepressant drugs for major depressive disorder (Lancet)", url: "https://www.thelancet.com/article/S0140-6736(17)32802-7/fulltext" },
+    tags: ["うつ病", "SSRI", "抗うつ薬選択", "精神・行動"]
+  },
+  {
+    id: "gl-masld-sema-tx-01",
+    category: "guideline",
+    field: "消化器・肝",
+    difficulty: 2,
+    added: "2026-08-07",
+    question: "代謝機能障害関連脂肪肝炎(MASH)に対する薬物療法の位置づけについて、2025年の動向(FDA承認・AASLD実践ガイダンス更新)から支持される記述はどれか。",
+    options: ["線維化ステージF2〜F3のMASHで、生活習慣是正に加えセマグルチド2.4mgが治療選択肢として位置づけられた", "非代償性肝硬変(F4)における生命予後改善効果が確立し、第一選択となった", "薬物療法は不要で、減量以外の介入は推奨されない", "診断には肝生検が必須で、非侵襲的線維化指標は用いない"],
+    correct: 0,
+    explanation: "【要点】2025年、線維化F2〜F3のMASHに対し、生活習慣是正に加えセマグルチド2.4mg週1回が治療選択肢として位置づけられた。\n【背景/エビデンス】ESSENCE試験でセマグルチドは72週でMASH消退(線維化悪化なし)を有意に増やし、これを受けFDAは2025年に中等度〜進行線維化のMASHへ承認、AASLDの実践ガイダンスも更新された。代謝・体重改善を介した効果が中心で、心血管・代謝併存症の管理とも親和的。\n【臨床応用/注意】適応はF2〜F3が中心で、非代償性肝硬変での有効性・安全性は確立していない。診断・重症度評価はFIB-4やエラストグラフィなど非侵襲的指標を活用し、必要に応じて生検を検討する。消化器症状に留意する。\n【誤答】F4での予後改善確立、薬物療法不要、生検必須はいずれも現状と異なる。",
+    source: { title: "Semaglutide therapy for MASH: November 2025 updates to AASLD Practice Guidance (PubMed)", url: "https://pubmed.ncbi.nlm.nih.gov/41201884/" },
+    tags: ["MASH", "セマグルチド", "肝線維化", "消化器・肝"]
+  },
+  {
+    id: "jr-biologic-airway-01",
+    category: "journal",
+    field: "呼吸器",
+    difficulty: 3,
+    added: "2026-08-07",
+    question: "重症喘息・COPDに対する生物学的製剤(dupilumab, tezepelumab等)の使い分けについて、近年の知見から支持される記述を選べ。",
+    options: ["COPDでは血中好酸球数にかかわらず全例でdupilumabを追加すべきである", "dupilumabは、最大限の吸入3剤併用でも増悪を繰り返す好酸球高値(概ね≥300/µL)のCOPDで追加が検討される", "tezepelumabはT2バイオマーカーが高い症例にのみ効果があり、低い症例では無効である", "重症喘息ではdupilumabとtezepelumabは実臨床で同程度の増悪抑制を示し、鼻茸合併やバイオマーカーの有無で使い分ける"],
+    correct: [1, 3],
+    explanation: "【要点】dupilumabは吸入3剤併用でも増悪を繰り返す好酸球高値(概ね≥300/µL)のCOPDで追加が検討され、重症喘息ではtezepelumabと同程度の増悪抑制を示し、鼻茸やバイオマーカーで使い分ける。\n【背景/エビデンス】GOLD 2025はType2炎症を伴う増悪反復COPD(好酸球≥300)にdupilumabを段階治療へ位置づけた(BOREAS/NOTUS)。重症喘息の実臨床データ(CHEST 2025報告)ではdupilumabとtezepelumabの増悪・好酸球・ステロイド減量効果は同程度であった。tezepelumabはTSLPを標的とし、T2バイオマーカーが低い症例でも効果が期待できる点が特徴。\n【臨床応用/注意】好酸球・鼻茸・併存症・費用/保険で選択し、専門医と連携のうえ導入する。\n【誤答】好酸球を問わない全例投与、tezepelumabがT2高値のみ有効との記述は不適切である。",
+    source: { title: "Biologics in the treatment of severe asthma in children and adults — updates 2024-2025 (J Allergy Clin Immunol)", url: "https://www.jacionline.org/article/S0091-6749(26)00009-6/fulltext" },
+    tags: ["重症喘息", "COPD", "生物学的製剤", "呼吸器"]
   }
 ];
 
