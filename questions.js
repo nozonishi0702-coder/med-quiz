@@ -2605,6 +2605,84 @@ const QUESTIONS = [
     explanation: "【要点】複雑性尿路感染症(急性腎盂腎炎を含む)では、フルオロキノロンで5〜7日、非フルオロキノロン薬で7日程度と、従来の10〜14日より短期でも非劣性である。\n【背景/エビデンス】IDSA 2025ガイドラインは、死亡・再発・再入院などのアウトカムで短期治療が長期治療に非劣性とするエビデンスに基づき、複雑性UTIの標準投与期間を短縮した。不要な抗菌薬曝露を減らし、耐性やC. difficile感染のリスクを抑える狙いがある。\n【臨床応用/注意】臨床的安定化と適切なソースコントロール(閉塞解除等)が前提で、菌血症・膿瘍・反応不良例では個別に延長を判断する。可能なら経口薬へのステップダウンを行う。\n【誤答】全例10〜14日の標準化、3日以内での一律終了、全期間静注の必須化はいずれも現行の推奨と異なる。",
     source: { title: "IDSA 2025 Guideline on Management and Treatment of Complicated Urinary Tract Infections: Duration of Antibiotics (Clinical Infectious Diseases)", url: "https://academic.oup.com/cid/advance-article/doi/10.1093/cid/ciaf462/8384478" },
     tags: ["複雑性尿路感染症", "抗菌薬期間", "IDSA", "感染症"]
+  },
+  {
+    id: "gl-al-amyloid-dx-01",
+    category: "guideline",
+    field: "血液",
+    difficulty: 3,
+    added: "2026-08-11",
+    question: "ALアミロイドーシスの診断に関して、ASH 2026ガイドラインで支持される初期評価の考え方はどれか。",
+    options: ["確定のための組織生検を最優先し、血清・尿の蛋白検査は補助的に後から行う", "血清・尿の免疫固定と血清遊離軽鎖(sFLC)測定を初期評価に用い、モノクローナルガンモパチーを検出する", "モノクローナル蛋白が検出できれば、組織でのアミロイド型判定を省略してAL型と確定してよい", "初期評価は血清遊離軽鎖(sFLC)測定のみで十分で、免疫固定は不要である"],
+    correct: 1,
+    explanation: "【要点】ALアミロイドーシスの初期評価では、血清・尿の免疫固定と血清遊離軽鎖(sFLC)測定を併用してモノクローナルガンモパチーを検出する。\n【背景/エビデンス】ASH 2026ガイドライン(GRADE、22名の多職種パネル、12推奨)は、感度の高いsFLCと免疫固定の併用を初期スクリーニングに位置づける。診断確定には組織でのアミロイド沈着の証明に加え、検証済み手法(質量分析等)による型判定が必須で、AL型とATTR型などの鑑別を誤らないことを重視する。組織採取はまず腹壁脂肪吸引や骨髄生検などのサロゲートを行い、非診断的・実施困難な場合に臓器特異的生検を検討する。\n【臨床応用/注意】原因不明の心不全・ネフローゼ・末梢神経障害・巣状の臓器障害でALを疑い早期に検査する。型判定を欠くと治療方針を誤りうる。\n【誤答】組織生検を最優先しsFLC/免疫固定を後回しにする発想は診断を遅らせる。単クローン蛋白の検出のみで型判定を省く、sFLC単独で免疫固定を不要とする、はいずれもこの文脈で不適切である。",
+    source: { title: "American Society of Hematology 2026 Guidelines on Diagnosis of Light Chain Amyloidosis (Blood Advances)", url: "https://ashpublications.org/bloodadvances/article/10/14/5113/566264/American-Society-of-Hematology-2026-guidelines-on" },
+    tags: ["ALアミロイドーシス", "遊離軽鎖", "診断", "血液"]
+  },
+  {
+    id: "rv-ilae-seizure-2025-01",
+    category: "review",
+    field: "神経",
+    difficulty: 2,
+    added: "2026-08-11",
+    question: "2025年に改訂されたILAEてんかん発作分類に関する記述として、適切なものはどれか。",
+    options: ["主要な発作クラスは焦点・全般の2つに整理された", "意識は認識(awareness)のみで評価し、責任(responsiveness)は用いない", "運動・非運動の二分法は廃止され、観察可能性による区別も導入されなかった", "主要クラスは焦点・全般・起始不明・分類不能の4つを維持し、クラス名から『起始(onset)』の語が外された"],
+    correct: 3,
+    explanation: "【要点】2025年ILAE発作分類は、焦点・全般・起始不明・分類不能の4つの主要クラスを維持しつつ、クラス名から『起始(onset)』の語を外した。\n【背景/エビデンス】全般発作でも焦点起始を示唆する所見があるとの知見を踏まえた改訂で、修正Delphi法(2/3超の合意)で策定された。意識は認識(awareness)と責任(responsiveness)の両面で操作的に評価し、翻訳や責任の欠落といった2017年版の課題に対処した。運動・非運動の二分は観察可能・不可能へ拡張された。全21発作型からなり、基本版は一次診療・資源限定環境でも使えるよう配慮されている。\n【臨床応用/注意】問診や目撃情報から発作型を系統的に記述し、抗発作薬選択や専門医紹介の判断に活かす。分類は病歴で更新しうる。\n【誤答】主要クラスを2つに簡略化した、認識のみで評価する、運動・非運動を廃止し観察可能性の区別を導入しなかった、はいずれも改訂内容と異なる。",
+    source: { title: "Updated Classification of Epileptic Seizures: Position Paper of the International League Against Epilepsy (Epilepsia)", url: "https://onlinelibrary.wiley.com/doi/10.1111/epi.18338" },
+    tags: ["てんかん", "発作分類", "ILAE", "神経"]
+  },
+  {
+    id: "gl-iap-pancreatitis-2025-01",
+    category: "guideline",
+    field: "消化器・肝",
+    difficulty: 2,
+    added: "2026-08-11",
+    question: "急性膵炎の初期管理について、2025年 IAP改訂ガイドラインで支持される考え方を選べ。",
+    options: ["感染性合併症の予防を目的とした予防的抗菌薬の投与は推奨されない", "感染性合併症の予防のためにプロバイオティクスの投与が推奨される", "軽症〜中等症で悪心・嘔吐がなく食欲があれば、低脂肪の固形食による経口摂取を早期に開始してよい", "経口摂取が困難な場合、経腸栄養は発症後おおむね72時間以内の開始が望ましい"],
+    correct: [0, 2, 3],
+    explanation: "【要点】急性膵炎では、感染予防目的の予防的抗菌薬やプロバイオティクスは推奨されず、栄養は早期経口・早期経腸を基本とする。\n【背景/エビデンス】IAP 2025改訂ガイドライン(米国膵臓学会・欧州膵臓クラブ・日本膵臓学会等が支持、18領域96設問)は、予防的抗菌薬が感染性合併症や死亡を減らさないとして推奨しない。軽症〜中等症では悪心・嘔吐がなく食欲があれば低脂肪固形食で早期に経口再開でき、経口困難例では発症後おおむね72時間以内の経腸栄養が望ましいとされる。プロバイオティクスや選択的消化管除菌も感染予防としては推奨されない。\n【臨床応用/注意】十分な初期輸液と疼痛管理を行い、抗菌薬は感染性壊死が疑われる場合に治療的に用いる。重症度と経過に応じて個別化する。\n【誤答】プロバイオティクスによる感染予防のみ、感染性合併症を減らす根拠に乏しくこの文脈で支持されない。",
+    source: { title: "International Association of Pancreatology Revised Guidelines on Acute Pancreatitis 2025 (Pancreatology, ScienceDirect)", url: "https://www.sciencedirect.com/science/article/pii/S1424390325000857" },
+    tags: ["急性膵炎", "栄養", "抗菌薬", "消化器・肝"]
+  },
+  {
+    id: "cl-aasm-insomnia-combo-01",
+    category: "clinical",
+    field: "精神・行動",
+    difficulty: 2,
+    added: "2026-08-11",
+    question: "成人の慢性不眠症に対する治療の考え方について、2026年 AASMガイドラインで支持されるものはどれか。",
+    options: ["薬物療法単独を第一選択とし、認知行動療法(CBT-I)は補助的に用いる", "全例でCBT-Iに睡眠薬を併用する方がCBT-I単独より優先される", "CBT-Iを第一選択とし、薬物単独よりはCBT-Iとの併用が支持されるが、CBT-I単独に対して併用を一律には推奨しない", "慢性不眠症に対して薬物療法は無効であり用いるべきでない"],
+    correct: 2,
+    explanation: "【要点】慢性不眠症ではCBT-Iが最も有効な第一選択で、薬物単独よりはCBT-Iとの併用が支持されるが、CBT-I単独に対して併用を一律には推奨しない。\n【背景/エビデンス】2026年AASMガイドライン(J Clin Sleep Med、2026年4月)は2つの条件付き推奨を示す。第一に、成人でCBT-Iと薬物の併用を薬物単独より提案する(睡眠アウトカムの改善)。第二に、CBT-I単独に対する併用は一律には推奨しないが、治療早期に総睡眠時間の増加を重視する、あるいは日中症状の改善への価値づけが低い患者では併用も妥当としうる。いずれも『条件付き』で、患者の価値観と臨床判断を要する。\n【臨床応用/注意】まずCBT-Iへのアクセスを確保し、必要に応じ短期の薬物併用を検討する。漫然投与を避け、効果と有害事象をモニタリングする。\n【誤答】薬物単独を第一選択とする、全例で併用をCBT-I単独より優先する、薬物を一律に無効とする、はいずれもガイドラインの立場と異なる。",
+    source: { title: "Combination Treatment for Chronic Insomnia Disorder in Adults: An AASM Clinical Practice Guideline (AASM)", url: "https://aasm.org/combination-treatment-chronic-insomnia-guideline/" },
+    tags: ["不眠症", "CBT-I", "併用療法", "精神・行動"]
+  },
+  {
+    id: "gl-eular-pmr-lvv-01",
+    category: "guideline",
+    field: "膠原病・骨",
+    difficulty: 3,
+    added: "2026-08-11",
+    question: "リウマチ性多発筋痛症(PMR)・大型血管炎の管理について、2025年 EULAR推奨で支持される考え方を選べ。",
+    options: ["巨細胞性動脈炎(GCA)が疑われても、確定検査の結果が出るまでグルココルチコイド開始を待つ", "GCAの臨床的疑いが強ければ、確定検査の結果を待たずにグルココルチコイドを速やかに開始する", "PMR・GCA・高安動脈炎が疑われても、まず一次診療で経過観察し専門医紹介は行わない", "GCAが疑われる患者は、おおむね24時間以内に専門医評価へ紹介する"],
+    correct: [1, 3],
+    explanation: "【要点】GCAを強く疑えば確定検査の結果を待たずにグルココルチコイド(GC)を速やかに開始し、疑い例はおおむね24時間以内に専門医へ紹介する。\n【背景/エビデンス】2025年 EULAR推奨(PMRと一次性大型血管炎を統合、4原則・12推奨・2質指標)は、視力障害など不可逆的合併症を防ぐため、GCA疑い例での早期GC開始と迅速な専門医評価を重視する。PMR・GCA・高安動脈炎(TAK)いずれも専門医評価への紹介が原則で、GCAは特に緊急性が高い。再発・合併症の管理やGC減量、必要に応じた補助薬(トシリズマブ等)の位置づけも整理された。\n【臨床応用/注意】GC開始前に可能な範囲で検査検体を確保しつつ治療を遅らせない。長期GCに伴う骨粗鬆症・感染・血糖悪化のモニタリングを行う。\n【誤答】確定検査までGCを待つ、一次診療のみで経過観察し紹介しない、はいずれも失明等のリスクを高めこの文脈で不適切である。",
+    source: { title: "2025 EULAR Recommendations for the Management of Polymyalgia Rheumatica and Primary Large Vessel Vasculitis (ScienceDirect)", url: "https://www.sciencedirect.com/science/article/pii/S0003496726003572" },
+    tags: ["リウマチ性多発筋痛症", "巨細胞性動脈炎", "EULAR", "膠原病・骨"]
+  },
+  {
+    id: "jr-rsv-pref-hosp-01",
+    category: "journal",
+    field: "呼吸器",
+    difficulty: 2,
+    added: "2026-08-11",
+    question: "60歳以上の高齢者を対象としたRSVプレフュージョンF蛋白ワクチンの無作為化試験(NEJM)で示された知見はどれか。",
+    options: ["ワクチン接種はRSV関連の入院を減少させることが示された", "ワクチン接種はRSV関連入院に有意な影響を示さなかった", "有効性は示されたが対象は50歳未満に限られていた", "RSV関連下気道疾患は減らすが入院はむしろ増加させた"],
+    correct: 0,
+    explanation: "【要点】60歳以上を対象としたRSVプレフュージョンF蛋白ワクチンの無作為化試験では、接種によりRSV関連の入院が減少することが支持された。\n【背景/エビデンス】高齢者ではRSVが肺炎やCOPD・心不全の増悪の契機となり、入院・死亡につながりうる。本試験(NEJM)は入院予防をアウトカムに据え、接種群で対照群よりRSV関連入院が少ないことを示した。既存の観察研究でもRSV関連下気道疾患や入院・救急受診の減少が報告されており、方向性は一致する。\n【臨床応用/注意】60歳以上、特に慢性心肺疾患・糖尿病・免疫低下などのリスク保有者で接種を検討する。効果の持続や複数シーズンにわたる追加接種の要否は今後の評価による。実際の適応は各国の推奨と個別リスクに基づく。\n【誤答】入院に影響しない、効果はあるが50歳未満に限られる、下気道疾患は減るが入院はむしろ増える、はいずれも本試験の結果と異なる。",
+    source: { title: "RSV Prefusion F Vaccine for Prevention of Hospitalization in Older Adults (New England Journal of Medicine)", url: "https://www.nejm.org/doi/abs/10.1056/NEJMoa2509810" },
+    tags: ["RSV", "ワクチン", "高齢者", "呼吸器"]
   }
 ];
 
