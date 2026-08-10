@@ -2527,6 +2527,84 @@ const QUESTIONS = [
     explanation: "【要点】dupilumabは吸入3剤併用でも増悪を繰り返す好酸球高値(概ね≥300/µL)のCOPDで追加が検討され、重症喘息ではtezepelumabと同程度の増悪抑制を示し、鼻茸やバイオマーカーで使い分ける。\n【背景/エビデンス】GOLD 2025はType2炎症を伴う増悪反復COPD(好酸球≥300)にdupilumabを段階治療へ位置づけた(BOREAS/NOTUS)。重症喘息の実臨床データ(CHEST 2025報告)ではdupilumabとtezepelumabの増悪・好酸球・ステロイド減量効果は同程度であった。tezepelumabはTSLPを標的とし、T2バイオマーカーが低い症例でも効果が期待できる点が特徴。\n【臨床応用/注意】好酸球・鼻茸・併存症・費用/保険で選択し、専門医と連携のうえ導入する。\n【誤答】好酸球を問わない全例投与、tezepelumabがT2高値のみ有効との記述は不適切である。",
     source: { title: "Biologics in the treatment of severe asthma in children and adults — updates 2024-2025 (J Allergy Clin Immunol)", url: "https://www.jacionline.org/article/S0091-6749(26)00009-6/fulltext" },
     tags: ["重症喘息", "COPD", "生物学的製剤", "呼吸器"]
+  },
+  {
+    id: "jr-oceanicstroke-01",
+    category: "journal",
+    field: "神経",
+    difficulty: 3,
+    added: "2026-08-10",
+    question: "非心原性の虚血性脳卒中または高リスクTIA後の再発予防について、OCEANIC-STROKE試験(NEJM 2026)が示した知見として支持されるものはどれか。",
+    options: ["ワルファリンが抗血小板薬より再発予防に優れることが示された", "DOAC(アピキサバン等)の抗血小板薬上乗せで大出血を増やさず再発を抑制した", "第XIa因子阻害薬アスンデキシアンの抗血小板薬上乗せで、大出血を増やさず虚血性脳卒中を有意に抑制した", "抗血小板薬2剤併用(DAPT)の12か月継続がプラセボ上乗せより優れることが示された"],
+    correct: 2,
+    explanation: "【要点】非心原性の虚血性脳卒中/高リスクTIA後に、第XIa因子阻害薬アスンデキシアンを抗血小板薬へ上乗せすると、大出血を増やさずに虚血性脳卒中を有意に抑制した。\n【背景/エビデンス】OCEANIC-STROKE(NEJM 2026)は37か国12,327例を発症72時間以内に登録し、アスンデキシアン50mg/日 vs プラセボを抗血小板療法へ上乗せ。虚血性脳卒中・主要心血管イベントを有意に低下(相対約26%減)させ、ISTH大出血は1.9% vs 1.7%と同等だった。第XI因子は止血より病的血栓形成への関与が大きく、低第XI因子は脳卒中リスク低下と関連する。\n【臨床応用/注意】従来DOACや抗血小板薬強化は出血増加が課題だった非心原性脳卒中で、出血を増やさない再発予防の新選択肢となりうる。実装や適応は今後の位置づけを要する。\n【誤答】ワルファリン優越、DOAC上乗せの安全な有効性、DAPT長期継続の優越はいずれも既存試験と整合せず、この文脈では支持されない。",
+    source: { title: "Asundexian for Secondary Stroke Prevention (NEJM)", url: "https://www.nejm.org/doi/full/10.1056/NEJMoa2513880" },
+    tags: ["脳卒中", "第XIa因子阻害薬", "アスンデキシアン", "神経"]
+  },
+  {
+    id: "jr-opioidtaper-01",
+    category: "journal",
+    field: "精神・行動",
+    difficulty: 2,
+    added: "2026-08-10",
+    question: "慢性疼痛で長期オピオイドを使用する成人の減量(テーパリング)について、患者中心の漸減法を検討したランダム化比較試験(Annals 2026)から支持される考え方はどれか。",
+    options: ["急速に中止するほうが緩徐な漸減より成功率が高い", "減量には認知行動療法(CBT)の併用が不可欠で、単独の漸減では効果がない", "オピオイド使用障害の有無にかかわらず入院下での強制的減量が第一選択である", "密なモニタリングと電子的支援を伴う患者中心の緩徐な漸減で、疼痛を悪化させずに減量に成功する例が相当数みられた"],
+    correct: 3,
+    explanation: "【要点】密なモニタリングと電子的支援を伴う患者中心の緩徐なオピオイド漸減により、疼痛を悪化させずに減量に成功する例が相当数みられた。\n【背景/エビデンス】Darnallらのランダム化比較試験(Annals 2026)は、6か月以上の疼痛でMEDD≥10を3か月以上・中等症以上のオピオイド使用障害がない成人を、米11施設で『漸減のみ』『漸減+疼痛CBT』『漸減+慢性疼痛セルフマネジメント』に割付け、3〜4週ごとに受診。減量成功(MEDD≥50%減で疼痛悪化なし、またはMEDD不変で疼痛軽減)は緩徐な自発的漸減で達成可能で、CBT併用は必須ではなかった。\n【臨床応用/注意】強制的・急速な中止は離脱や有害事象・自己調達のリスクを高める。患者の合意のもと緩徐に、疼痛と機能を追いながら調整する。\n【誤答】急速中止の優越、CBT必須、入院下の強制減量の第一選択化はいずれもこの文脈で支持されない。",
+    source: { title: "Patient-Centered Prescription Opioid Tapering Methods: A Randomized Clinical Trial (Annals of Internal Medicine)", url: "https://www.acpjournals.org/doi/10.7326/ANNALS-25-04784" },
+    tags: ["オピオイド", "テーパリング", "慢性疼痛", "精神・行動"]
+  },
+  {
+    id: "gl-hpylori-01",
+    category: "guideline",
+    field: "消化器・肝",
+    difficulty: 3,
+    added: "2026-08-10",
+    question: "Helicobacter pylori感染症の治療・治癒判定について、近年のACGガイドライン(2024更新)を踏まえ支持される記述を選べ。",
+    options: ["最適化ビスマス四剤併用療法(BQT)が第一選択として推奨される", "クラリスロマイシン3剤併用が耐性を問わず全例の第一選択である", "除菌治療の効果判定(治癒確認)はルーチンには不要で、症状消失で十分である", "治癒判定は治療終了後4週以上あけ、PPIを2週間中止して尿素呼気試験や便中抗原で行う"],
+    correct: [0, 3],
+    explanation: "【要点】クラリスロマイシン耐性の増加を背景に最適化ビスマス四剤併用療法(BQT)が第一選択として推奨され、治癒判定は治療終了後4週以上あけて非侵襲的検査で行う。\n【背景/エビデンス】ACGガイドライン(2024更新, AAFP要約)は、耐性上昇によりクラリスロマイシン3剤併用の経験的第一選択を見直し、PPI・ビスマス・メトロニダゾール・テトラサイクリンからなる最適化BQTを優先。効果判定は治療終了後4週以上あけ、PPIを2週間中止したうえで尿素呼気試験または便中抗原で行い、偽陰性を回避する。\n【臨床応用/注意】過去のマクロライド曝露歴があればクラリスロマイシン含有レジメンは避ける。ペニシリンアレルギー歴は正確な評価により選択肢が広がる。\n【誤答】耐性を問わないクラリスロマイシン3剤の一律第一選択、症状消失のみで治癒判定を省くことは、この文脈で不適切である。",
+    source: { title: "ACG Guideline for Treatment of Helicobacter pylori Infection in Adults (AFP)", url: "https://www.aafp.org/pubs/afp/issues/2025/0300/poems-helicobacter-pylori-treatment.html" },
+    tags: ["ヘリコバクター・ピロリ", "除菌療法", "ACG", "消化器・肝"]
+  },
+  {
+    id: "cl-irondef-oral-01",
+    category: "clinical",
+    field: "血液",
+    difficulty: 2,
+    added: "2026-08-10",
+    question: "鉄欠乏(鉄欠乏性貧血を含む)に対する経口鉄補充について、ヘプシジンの生理や近年の国際コンセンサス(Lancet Haematology 2025)を踏まえ支持される記述はどれか。",
+    options: ["吸収を最大化するため、1日3回に分けて毎日高用量投与するのが最適である", "連日の分割投与よりも、隔日1回や1日1回・単回投与のほうがヘプシジン上昇を避け分割吸収効率を高めうる", "経口鉄は無効であり、鉄欠乏では原則として初回から静注鉄を用いる", "補充後の再評価は不要で、ヘモグロビンの正常化のみを目標とする"],
+    correct: 1,
+    explanation: "【要点】経口鉄補充では、連日の分割高用量よりも隔日・単回投与のほうがヘプシジン上昇を避け、分割吸収効率を高めうる。\n【背景/エビデンス】鉄摂取後に上昇するヘプシジンは翌日までの鉄吸収を抑制するため、1日複数回や連日高用量では相対吸収がむしろ低下する。健常者を対象とした薬物動態研究(Stoffelら)や国際コンセンサス(Lancet Haematology 2025)は、隔日1回または1日1回・単回といった負荷の少ないレジメンが吸収効率と忍容性の点で妥当と示唆する。\n【臨床応用/注意】まず経口鉄を試み、忍容性不良・吸収障害・急速な補正が必要な場合や消化管疾患では静注鉄を検討する。補充後はヘモグロビンだけでなくフェリチンで貯蔵鉄の回復も確認する。\n【誤答】1日3回連日高用量が最適、鉄欠乏で原則初回から静注、再評価不要は、この文脈でいずれも支持されない。",
+    source: { title: "Management of iron deficiency in children, adults, and pregnant individuals: evidence-based and expert consensus recommendations (Lancet Haematology)", url: "https://www.thelancet.com/journals/lanhae/article/PIIS2352-3026(25)00038-9/abstract" },
+    tags: ["鉄欠乏", "経口鉄", "ヘプシジン", "血液"]
+  },
+  {
+    id: "rv-gout-t2t-01",
+    category: "review",
+    field: "膠原病・骨",
+    difficulty: 3,
+    added: "2026-08-10",
+    question: "痛風の尿酸降下療法(ULT)について、ACR痛風管理ガイドラインで支持される考え方を選べ。",
+    options: ["尿酸降下療法は目標血清尿酸値(一般に<6 mg/dL)を定めて調整するtreat-to-target戦略が推奨される", "CKDを含む多くの患者でアロプリノールが第一選択の尿酸降下薬である", "第一選択薬はフェブキソスタットで、アロプリノールは避けるべきである", "発作が稀でも、CKD stage≥3・著明な高尿酸血症(>9 mg/dL)・尿路結石があればULT開始を考慮しうる"],
+    correct: [0, 1, 3],
+    explanation: "【要点】痛風のULTは目標血清尿酸値(一般に<6 mg/dL)を定めて調整するtreat-to-target戦略が推奨され、多くの患者でアロプリノールが第一選択となる。\n【背景/エビデンス】ACR痛風管理ガイドラインは、ULT施行例すべてにtreat-to-targetの有益性を認め、CKD合併例を含めアロプリノールを第一選択に位置づける。ULT開始適応は拡大され、発作が稀でもCKD stage≥3・著明な高尿酸血症(>9 mg/dL)・尿路結石があれば開始を条件付きで考慮しうる。開始前のHLA-B*5801検査の対象も整理された。\n【臨床応用/注意】少量から開始し尿酸値を見ながら漸増し、開始期はコルヒチン等で発作予防を併用する。目標到達後も維持する。\n【誤答】フェブキソスタットを一律第一選択としアロプリノールを避けるという記述のみ、この文脈で不適切である(アロプリノールが第一選択)。",
+    source: { title: "ACR Releases Gout Management Guideline with Emphasis on Treat-to-Target Strategy (American College of Rheumatology)", url: "https://rheumatology.org/press-releases/acr-releases-gout-management-guideline-with-emphasis-on-treat-to-target-strategy-for-urate-lowering-therapy" },
+    tags: ["痛風", "尿酸降下療法", "treat-to-target", "膠原病・骨"]
+  },
+  {
+    id: "gl-cuti-duration-01",
+    category: "guideline",
+    field: "感染症",
+    difficulty: 2,
+    added: "2026-08-10",
+    question: "複雑性尿路感染症(急性腎盂腎炎を含む)に対する抗菌薬投与期間について、2025年のIDSAガイドラインで支持される考え方はどれか。",
+    options: ["全例で10〜14日間の投与が標準として推奨される", "症状が消失すれば3日以内での終了が推奨される", "フルオロキノロンで5〜7日、非フルオロキノロン薬で7日程度と、従来より短期でも非劣性である", "経口薬は無効で、全期間を静注で完遂する必要がある"],
+    correct: 2,
+    explanation: "【要点】複雑性尿路感染症(急性腎盂腎炎を含む)では、フルオロキノロンで5〜7日、非フルオロキノロン薬で7日程度と、従来の10〜14日より短期でも非劣性である。\n【背景/エビデンス】IDSA 2025ガイドラインは、死亡・再発・再入院などのアウトカムで短期治療が長期治療に非劣性とするエビデンスに基づき、複雑性UTIの標準投与期間を短縮した。不要な抗菌薬曝露を減らし、耐性やC. difficile感染のリスクを抑える狙いがある。\n【臨床応用/注意】臨床的安定化と適切なソースコントロール(閉塞解除等)が前提で、菌血症・膿瘍・反応不良例では個別に延長を判断する。可能なら経口薬へのステップダウンを行う。\n【誤答】全例10〜14日の標準化、3日以内での一律終了、全期間静注の必須化はいずれも現行の推奨と異なる。",
+    source: { title: "IDSA 2025 Guideline on Management and Treatment of Complicated Urinary Tract Infections: Duration of Antibiotics (Clinical Infectious Diseases)", url: "https://academic.oup.com/cid/advance-article/doi/10.1093/cid/ciaf462/8384478" },
+    tags: ["複雑性尿路感染症", "抗菌薬期間", "IDSA", "感染症"]
   }
 ];
 
