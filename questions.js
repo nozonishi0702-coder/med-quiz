@@ -2839,6 +2839,84 @@ const QUESTIONS = [
     explanation: "【要点】ルスフェルチド(ヘプシジン模倣ペプチド)は、鉄の細胞外輸送を担うフェロポーチンを抑制して機能的鉄制限をつくり、PVのヘマトクリットを制御して瀉血の必要性を減らした。\n【背景/エビデンス】PVではヘプシジン低下により鉄が過剰動員され赤血球増多が進む。無作為化試験で標準治療への上乗せにより瀉血非該当を維持した患者の割合がプラセボより高く(週20〜32でおよそ77% vs 33%)、症状改善も報告された。\n【臨床応用/注意】瀉血依存例での血球コントロール手段として期待されるが、血栓予防・低用量アスピリン・リスク層別化に基づく既存治療を置き換えるものではなく、長期安全性は継続評価が必要。\n【誤答】JAK2変異の消失、造血刺激による貧血是正、血栓イベント増加は、本剤の作用機序や試験結果と異なる。",
     source: { title: "Rusfertide, a Hepcidin Mimetic, for Control of Erythrocytosis in Polycythemia Vera (New England Journal of Medicine)", url: "https://www.nejm.org/doi/full/10.1056/NEJMoa2308809" },
     tags: ["真性多血症", "ルスフェルチド", "ヘプシジン", "血液"]
+  },
+  {
+    id: "jr-option-tnk-nlvo-01",
+    category: "journal",
+    field: "神経",
+    difficulty: 3,
+    added: "2026-08-14",
+    question: "発症4.5〜24時間の非大血管閉塞(non-LVO)による急性期虚血性脳卒中に対する静注テネクテプラーゼの有効性を検討した無作為化試験(OPTION、JAMA 2026)について、支持されるものはどれか。",
+    options: ["全例で灌流画像を用いず一律に投与する方針が有効性を高めた", "症候性頭蓋内出血はテネクテプラーゼ群で有意に減少した", "灌流画像で救済可能組織を有する症例で90日の良好機能転帰(mRS 0–1)を改善した", "90日死亡率を有意に低下させることが示された"],
+    correct: 2,
+    explanation: "【要点】灌流画像で救済可能組織を有する発症4.5〜24時間の非大血管閉塞脳卒中で、静注テネクテプラーゼは90日の良好機能転帰(mRS 0–1)を改善した。\n【背景/エビデンス】OPTION(JAMA 2026)は中国48施設・566例。mRS 0–1が43.6% vs 34.2%(RR 1.28、95%CI 1.04–1.57、P=.02)。一方で症候性頭蓋内出血は2.8% vs 0%と増加し、90日死亡は5.0% vs 3.2%で有意差はなかった。\n【臨床応用/注意】適応は灌流ミスマッチ等で救済可能組織が確認された症例に限られ、出血リスクを踏まえた個別判断が前提。標準の4.5時間枠を無条件に延長するものではない。\n【誤答】画像非依存の一律投与や、出血の有意減少・死亡率の有意低下は、いずれも試験結果と異なる。",
+    source: { title: "Tenecteplase for Acute Non-Large Vessel Occlusion 4.5 to 24 Hours After Ischemic Stroke: The OPTION Randomized Clinical Trial (JAMA)", url: "https://jamanetwork.com/journals/jama/article-abstract/2844754" },
+    tags: ["脳卒中", "テネクテプラーゼ", "血栓溶解", "神経"]
+  },
+  {
+    id: "jr-mirtazapine-mud-01",
+    category: "journal",
+    field: "精神・行動",
+    difficulty: 2,
+    added: "2026-08-14",
+    question: "覚醒剤(メタンフェタミン)使用障害に対するミルタザピンの有効性を検討した第3相無作為化プラセボ対照試験(JAMA Psychiatry 2026)について、支持されるものはどれか。",
+    options: ["ミルタザピン30mg/日は覚醒剤使用の減少をもたらし、新たな重大な安全性の懸念は認めなかった", "本剤は覚醒剤使用障害に対する既承認の第一選択薬として位置づけられた", "傾眠や体重増加はプラセボ群でより多く認められた", "効果は大きく、心理社会的治療を代替できることが示された"],
+    correct: 0,
+    explanation: "【要点】メタンフェタミン使用障害に対しミルタザピン30mg/日は使用量の減少をもたらし、新たな重大な安全性の懸念は示されなかったが、効果は中等度にとどまる。\n【背景/エビデンス】JAMA Psychiatry 2026の第3相二重盲検試験(豪州6施設)。有害事象は両群で高頻度(全体約89%)で、ミルタザピン群で傾眠(47% vs 33%)や体重増加(10% vs 3%)が多かった。承認薬が存在しない領域での選択肢として意義がある。\n【臨床応用/注意】心理社会的支援を基盤とした補助的薬物療法として検討され、単独で行動療法を代替するものではない。眠気・体重増加のモニタリングを要する。\n【誤答】既承認の第一選択、プラセボ群で有害事象が多い、心理社会的治療を代替、はいずれも試験結果や現状と異なる。",
+    source: { title: "Mirtazapine for Methamphetamine Use Disorder: A Randomized Clinical Trial (JAMA Psychiatry)", url: "https://jamanetwork.com/journals/jamapsychiatry/fullarticle/2847070" },
+    tags: ["物質使用障害", "覚醒剤", "ミルタザピン", "精神・行動"]
+  },
+  {
+    id: "jr-gotest-ult-01",
+    category: "journal",
+    field: "膠原病・骨",
+    difficulty: 2,
+    added: "2026-08-14",
+    question: "尿酸降下療法(ULT)で目標尿酸値に到達した痛風患者における治療継続の是非を検討した無作為化試験(GO TEST Overture、Lancet Rheumatology 2026)について、支持されるものはどれか。",
+    options: ["目標到達後はULTを中止しても発作再燃リスクは増えないことが示された", "ULTを継続した群のほうが寛解基準を満たす割合が高かった", "ULT中止を試みた群では発作の累積発生が継続群より多かった", "目標到達後もULTを継続する方針が支持される"],
+    correct: [1, 2, 3],
+    explanation: "【要点】ULTで目標尿酸値に達した痛風患者では、ULTを中止せず継続する治療戦略が、寛解維持と発作予防の点で支持される。\n【背景/エビデンス】GO TEST Overture(Lancet Rheumatology 2026、蘭・二次医療8施設、309例)。24カ月で寛解基準の達成は継続群79.2% vs 中止試行群62.9%、発作の累積発生は12.3% vs 31.8%と継続群で良好であった。\n【臨床応用/注意】血清尿酸<6mg/dL等の目標到達後も安易に中止せず継続を基本とする。中止を検討する場合は再燃リスクを説明し、尿酸値と症状のモニタリングを継続する。\n【誤答】「中止しても再燃は増えない」は結果に反する。継続群で寛解が多い/中止群で発作が多い/継続方針が支持される、の3点は結果に整合する。",
+    source: { title: "A treat-to-target strategy versus symptom-driven management of gout (GO TEST Overture): a randomised controlled trial (The Lancet Rheumatology)", url: "https://www.thelancet.com/journals/lanrhe/article/PIIS2665-9913(26)00034-2/abstract" },
+    tags: ["痛風", "尿酸降下療法", "treat-to-target", "膠原病・骨", "複数選択"]
+  },
+  {
+    id: "rv-iron-dx-inflam-01",
+    category: "review",
+    field: "血液",
+    difficulty: 2,
+    added: "2026-08-14",
+    question: "成人の鉄欠乏(鉄欠乏性貧血)の診断におけるフェリチンとトランスフェリン飽和度(TSAT)の解釈について、支持されるものはどれか(AAFP 2025 / ASH 2025)。",
+    options: ["炎症のない成人ではフェリチン<45ng/mLで鉄欠乏と診断できる", "炎症のない成人ではフェリチン<15ng/mLを満たさなければ鉄欠乏は否定される", "炎症の有無にかかわらずTSATは診断に用いる必要はない", "炎症を伴う場合はフェリチン<100ng/mLを鉄欠乏の診断閾値とする"],
+    correct: [0, 3],
+    explanation: "【要点】炎症のない成人ではフェリチン<45ng/mL(または46〜99ng/mL+TSAT<20%)で鉄欠乏と診断でき、炎症を伴う場合はフェリチン<100ng/mLを閾値とする。\n【背景/エビデンス】AAFP(AFP 2025年11月)およびASH 2025ドラフトは、フェリチン単独でなくTSATを併用した評価を推奨する。従来の<15ng/mLは特異度は高いが感度が低く多くの鉄欠乏を見逃すため、閾値の引き上げが支持される。\n【臨床応用/注意】CKD・炎症性疾患・悪性腫瘍などではフェリチンが上昇しうるため、TSATや臨床背景と併せて解釈する。診断後は出血源など原因検索を行う。\n【誤答】<15ng/mL未満が必須、TSATを用いない、は現行の推奨と異なる。",
+    source: { title: "Iron Deficiency Anemia: Evaluation and Management (American Family Physician)", url: "https://www.aafp.org/pubs/afp/issues/2025/1100/iron-deficiency-anemia.html" },
+    tags: ["鉄欠乏性貧血", "フェリチン", "診断", "血液", "複数選択"]
+  },
+  {
+    id: "gl-gold-copd-2026-01",
+    category: "guideline",
+    field: "呼吸器",
+    difficulty: 2,
+    added: "2026-08-14",
+    question: "COPDの管理に関する2026年GOLDレポートの改訂点について、支持されるものはどれか。",
+    options: ["group Bには長時間作用性気管支拡張薬(LABAまたはLAMA)単剤を初期治療として推奨する", "喘息を合併するCOPDではICSは避けるべきである", "RSVワクチンは今回の改訂で推奨から除外された", "喘息を合併するCOPDは喘息として扱い、ICSの併用を必須とする"],
+    correct: 3,
+    explanation: "【要点】2026年GOLDレポートは、喘息を合併するCOPDを喘息として扱いICS併用を必須とし、group BではLABA+LAMAの2剤併用を初期から推奨するなど、より積極的な治療開始へ方向づけた。\n【背景/エビデンス】group Aは気管支拡張薬、group BはLABA+LAMA、group EはLABA+LAMA(±ICS)。50歳以上へのRSVワクチンなど予防を強化し、心血管疾患・骨粗鬆症・うつなど多疾患併存の章を再編した。\n【臨床応用/注意】喘息要素(好酸球高値・可逆性)を有する例ではICSを外さない。増悪・症状に応じ吸入デバイスとアドヒアランスを評価する。\n【誤答】group B単剤、喘息合併でICS回避、RSVワクチン除外は、いずれも2026年改訂の方向と逆である。",
+    source: { title: "2026 GOLD Report: Global Strategy for Prevention, Diagnosis and Management of COPD", url: "https://goldcopd.org/2026-gold-report-and-pocket-guide/" },
+    tags: ["COPD", "GOLD", "吸入療法", "呼吸器"]
+  },
+  {
+    id: "cl-trace5-bao-01",
+    category: "clinical",
+    field: "神経",
+    difficulty: 3,
+    added: "2026-08-14",
+    question: "発症24時間以内の脳底動脈閉塞(BAO)による急性期脳梗塞に対する静注テネクテプラーゼの有効性を検討した無作為化試験(TRACE-5、Lancet 2026)について、支持されるものはどれか。",
+    options: ["テネクテプラーゼは標準治療に比べ症候性頭蓋内出血を有意に増加させた", "テネクテプラーゼは標準治療に比べ90日の良好機能転帰を改善した", "本試験の対象は発症4.5時間以内に限定されていた", "テネクテプラーゼは90日死亡率を有意に増加させた"],
+    correct: 1,
+    explanation: "【要点】発症24時間以内の脳底動脈閉塞による脳梗塞で、静注テネクテプラーゼは標準治療に比べ90日の良好機能転帰を改善し、症候性出血・死亡の増加は認めなかった。\n【背景/エビデンス】TRACE-5(Lancet 2026、中国66施設、452例)。90日のmRS 0–1(excellent outcome)は38% vs 29%(NNT≈11)で、より早期の再灌流が得られた。後方循環では治療選択肢が限られていた点で意義がある。\n【臨床応用/注意】主に中国人集団・選択された症例での結果であり、画像評価に基づく適応判断が前提。血栓回収療法との併用・使い分けは個別に検討する。\n【誤答】症候性出血の有意増加、対象を4.5時間以内に限定、死亡率の有意増加は、いずれも試験結果と異なる。",
+    source: { title: "Tenecteplase versus standard medical treatment for basilar artery occlusion within 24 h (TRACE-5): a phase 3 trial (The Lancet)", url: "https://www.thelancet.com/article/S0140-6736(26)00139-X/abstract" },
+    tags: ["脳卒中", "脳底動脈閉塞", "テネクテプラーゼ", "神経"]
   }
 ];
 
