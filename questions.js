@@ -2917,6 +2917,71 @@ const QUESTIONS = [
     explanation: "【要点】発症24時間以内の脳底動脈閉塞による脳梗塞で、静注テネクテプラーゼは標準治療に比べ90日の良好機能転帰を改善し、症候性出血・死亡の増加は認めなかった。\n【背景/エビデンス】TRACE-5(Lancet 2026、中国66施設、452例)。90日のmRS 0–1(excellent outcome)は38% vs 29%(NNT≈11)で、より早期の再灌流が得られた。後方循環では治療選択肢が限られていた点で意義がある。\n【臨床応用/注意】主に中国人集団・選択された症例での結果であり、画像評価に基づく適応判断が前提。血栓回収療法との併用・使い分けは個別に検討する。\n【誤答】症候性出血の有意増加、対象を4.5時間以内に限定、死亡率の有意増加は、いずれも試験結果と異なる。",
     source: { title: "Tenecteplase versus standard medical treatment for basilar artery occlusion within 24 h (TRACE-5): a phase 3 trial (The Lancet)", url: "https://www.thelancet.com/article/S0140-6736(26)00139-X/abstract" },
     tags: ["脳卒中", "脳底動脈閉塞", "テネクテプラーゼ", "神経"]
+  },
+  {
+    id: "jr-dexenceph-01",
+    category: "journal",
+    field: "感染症",
+    difficulty: 2,
+    added: "2026-08-15",
+    question: "成人の単純ヘルペスウイルス(HSV)脳炎に対し、アシクロビルへの副腎皮質ステロイド(デキサメタゾン)併用を検討した無作為化試験(DexEnceph、Lancet Neurology 2026)について、支持されるものはどれか。",
+    options: ["デキサメタゾン併用はアシクロビル単独に比べ主要評価項目の言語記憶を有意に改善した", "デキサメタゾン併用は死亡率を有意に低下させた", "デキサメタゾン併用による言語記憶の上乗せ改善は示されなかったが、安全性は確認された", "本試験によりHSV脳炎全例へのルーチンのステロイド併用が新たな標準治療として確立した"],
+    correct: 2,
+    explanation: "【要点】成人のHSV脳炎で、アシクロビルへのデキサメタゾン併用は主要評価項目の言語記憶を改善しなかったが、安全性は確認された。\n【背景/エビデンス】DexEnceph(Lancet Neurology 2026、英国NHS 53施設、94例)。デキサメタゾン+アシクロビル vs アシクロビル単独で、主要評価の言語記憶スコアに有意差なし。言語記憶はHSV脳炎の後遺症を特異的に反映する指標として選ばれた。\n【臨床応用/注意】安全性が示されたことは、原因確定前の脳炎疑い例で早期にステロイドを併用しうる根拠となりうる。ただし記憶転帰の改善は示されておらず、適応は個別に判断する。\n【誤答】言語記憶の有意改善・死亡率の有意低下・全例ルーチンの標準化は、いずれも本試験結果と整合しない。",
+    source: { title: "Safety and efficacy of adjunct dexamethasone in adults with herpes simplex virus encephalitis in the UK (DexEnceph): a phase 3 trial (The Lancet Neurology)", url: "https://www.thelancet.com/journals/laneur/article/PIIS1474-4422(25)00454-5/fulltext" },
+    tags: ["ヘルペス脳炎", "デキサメタゾン", "アシクロビル", "感染症"]
+  },
+  {
+    id: "cl-emphasis-mino-01",
+    category: "clinical",
+    field: "神経",
+    difficulty: 2,
+    added: "2026-08-15",
+    question: "発症72時間以内の急性期脳梗塞に対する経口ミノサイクリンを検討した二重盲検無作為化試験(EMPHASIS、Lancet 2026)について、支持されるものはどれか。",
+    options: ["ミノサイクリンは症候性頭蓋内出血を有意に増加させた", "対象は発症4.5時間以内で血栓溶解療法を受けた患者に限定された", "ミノサイクリンは細菌感染症の予防を主目的として投与された", "ミノサイクリンは90日の機能的アウトカムをプラセボに比べ改善し、安全性の懸念はみられなかった"],
+    correct: 3,
+    explanation: "【要点】発症72時間以内の急性期脳梗塞で、経口ミノサイクリンは90日の機能的アウトカムをプラセボに比べ改善し、安全性の懸念はみられなかった。\n【背景/エビデンス】EMPHASIS(Lancet 2026、中国58施設、1724例、NIHSS 4–25)。負荷200 mg後100 mgを12時間毎に4日間投与し、抗神経炎症作用による神経保護を狙う。ただし主要解析は完全症例に基づき、事前規定の最悪シナリオ感度解析では有意差が減弱した点に留意する。\n【臨床応用/注意】主に中国人集団の結果で、既存の再灌流療法(血栓溶解・血栓回収)を置き換えるものではない。適応・併用は個別に検討する。\n【誤答】症候性出血の有意増加・対象を4.5時間以内に限定・感染予防目的は、いずれも試験と異なる。",
+    source: { title: "Efficacy and safety of minocycline in patients with acute ischaemic stroke (EMPHASIS): a randomised controlled trial (The Lancet)", url: "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(25)01862-8/abstract" },
+    tags: ["脳梗塞", "ミノサイクリン", "神経保護", "神経"]
+  },
+  {
+    id: "jr-replenish-pmr-01",
+    category: "journal",
+    field: "膠原病・骨",
+    difficulty: 3,
+    added: "2026-08-15",
+    question: "グルココルチコイド漸減中に再燃したリウマチ性多発筋痛症(PMR)に対するセクキヌマブを検討した第3相試験(REPLENISH、NEJM 2026)について、支持されるものはどれか。",
+    options: ["IL-17A阻害薬セクキヌマブは、24週のグルココルチコイド漸減併用下で持続寛解の割合を高め、累積グルココルチコイド量を減らした", "セクキヌマブはIL-6受容体を阻害することで効果を発揮する", "セクキヌマブ群はプラセボ群より救済グルココルチコイドを要した割合が高かった", "本試験はPMRではなく巨細胞性動脈炎を対象とした"],
+    correct: 0,
+    explanation: "【要点】GC漸減中に再燃したPMRで、IL-17A阻害薬セクキヌマブはGC漸減併用下の持続寛解を高め、累積GC量を減らした。\n【背景/エビデンス】REPLENISH(NEJM 2026)。再燃PMRをセクキヌマブ300 mg/150 mg/プラセボに割付け、全例24週のプレドニゾン漸減を併用。52週の持続寛解が対照より多く、救済GCを要した割合はセクキヌマブ約51% vs プラセボ約76%、年間累積GC量も有意に低下した。\n【臨床応用/注意】高齢者に多いPMRではGC長期使用の有害事象(骨粗鬆症・糖代謝・感染)が課題で、GC節減は有用。IL-6経路(サリルマブ等)とは作用機序が異なる新たな選択肢である。\n【誤答】IL-6阻害・救済GC増加・GCA対象は、いずれも本試験と整合しない。",
+    source: { title: "Phase 3 Trial of Secukinumab in Polymyalgia Rheumatica (NEJM)", url: "https://www.nejm.org/doi/full/10.1056/NEJMoa2602567" },
+    tags: ["リウマチ性多発筋痛症", "セクキヌマブ", "IL-17A", "ステロイド節減", "膠原病・骨"]
+  },
+  {
+    id: "gl-crc-acs2026-01",
+    category: "guideline",
+    field: "予防・健診",
+    difficulty: 1,
+    added: "2026-08-15",
+    question: "2026年 米国がん協会(ACS)大腸がん検診ガイドライン改訂について、支持されるものを選べ。",
+    options: ["平均リスクの成人は45歳から検診を開始し、余命10年超なら75歳まで継続する", "血液検査(血中バイオマーカー)は感度が高く、便検査や大腸内視鏡より優先される第一選択に位置づけられた", "血液検査は優先検査を受けない/完遂しない人への選択肢であり、陽性なら大腸内視鏡での精査が必要である", "検診の中心は依然として高感度便検査(FIT/FIT-DNA)や大腸内視鏡などの優先検査である"],
+    correct: [0, 2, 3],
+    explanation: "【要点】2026年ACS改訂は、平均リスクで45歳開始・75歳まで(余命10年超)を再確認しつつ、血液検査を選択肢に追加した。\n【背景/エビデンス】改訂(CA Cancer J Clin 2026)は、血中バイオマーカー検査(例: Shield)を診療所で採血のみで実施できる選択肢として収載。ただし前がん病変やStage Iの検出感度が低く『優先』検査ではない。優先されるのは高感度便検査(FIT/FIT-DNA)や大腸内視鏡等である。\n【臨床応用/注意】血液検査は、優先検査を受けない/完遂しない人への代替として位置づけ、陽性なら大腸内視鏡で精査する。CMSは3年間隔を規定している。\n【誤答】血液検査を最優先の第一選択とするのは誤りで、進行前がん病変・早期がんの検出感度で優先検査に劣る。",
+    source: { title: "Colorectal cancer screening: An update to the American Cancer Society guideline, 2026 (CA: A Cancer Journal for Clinicians)", url: "https://acsjournals.onlinelibrary.wiley.com/doi/10.3322/caac.70083" },
+    tags: ["大腸がん検診", "ACS", "血液検査", "予防・健診"]
+  },
+  {
+    id: "cl-hipeitho-pe-01",
+    category: "clinical",
+    field: "血液",
+    difficulty: 3,
+    added: "2026-08-15",
+    question: "中等度(intermediate)リスク急性肺塞栓症に対する超音波併用カテーテル線溶療法を検討した無作為化試験(HI-PEITHO、NEJM 2026)について、支持されるものを選べ。",
+    options: ["超音波併用カテーテル線溶+抗凝固は抗凝固単独に比べ複合主要アウトカム(PE関連死・心肺代償不全/虚脱・症候性PE再発)を減らした", "対象はショックを伴う高リスク肺塞栓症に限定されていた", "頭蓋内出血は両群とも発生しなかった", "カテーテル線溶群では大出血がゼロで、抗凝固単独より少なかった"],
+    correct: [0, 2],
+    explanation: "【要点】中等度リスク肺塞栓症で、超音波併用カテーテル線溶+抗凝固は抗凝固単独に比べ複合主要アウトカムを減らし、頭蓋内出血は両群でゼロだった。\n【背景/エビデンス】HI-PEITHO(NEJM 2026、9か国544例)。RV/LV径比≥1.0かつトロポニン上昇の中等度リスクPEが対象。主要複合(PE関連死・心肺代償不全/虚脱・症候性PE再発、7日以内)が介入群で低下。大出血は介入群4.1% vs 対照2.2%と介入群で数値上多かった。\n【臨床応用/注意】ショックを伴う高リスクではなく中等度リスクが対象。出血リスクとのバランスで適応を個別評価し、施設の体制も踏まえる。\n【誤答】高リスク限定・大出血ゼロで対照より少ない、は試験と異なる。一見妥当だが本文脈で不正確である。",
+    source: { title: "Ultrasound-Facilitated, Catheter-Directed Fibrinolysis for Acute Pulmonary Embolism (NEJM)", url: "https://www.nejm.org/doi/full/10.1056/NEJMoa2516567" },
+    tags: ["肺塞栓症", "カテーテル線溶", "HI-PEITHO", "血液"]
   }
 ];
 
