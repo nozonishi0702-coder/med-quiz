@@ -3060,6 +3060,84 @@ const QUESTIONS = [
     explanation: "【要点】低用量TCAはIBSの全般症状改善に有効で二次治療として用いられ、抗コリン作用のため便秘・口渇に注意し、下痢型(IBS-D)で特に有用なことがある。\n【背景/エビデンス】神経調整薬のメタ解析でTCAはプラセボより全般症状を有意に改善(プライマリ・ケアのATLANTIS試験でも低用量アミトリプチリンが有効)。SSRIの全般症状への効果は一貫性に乏しい。うつ病用量より低用量で開始し漸増するのが原則。\n【臨床応用/注意】就眠前の少量から開始し、眠気・QT延長・抗コリン症状をモニタリングする。効果と忍容性で個別調整する。\n【誤答】『SSRIが最強で一律第一選択』『うつ病と同一用量で開始』は不適切。TCAが有効・IBS-Dで有用は妥当。",
     source: { title: "Efficacy of gut-brain neuromodulators in irritable bowel syndrome: an updated systematic review and meta-analysis (Lancet Gastroenterology & Hepatology)", url: "https://www.thelancet.com/journals/langas/article/PIIS2468-1253(25)00051-2/abstract" },
     tags: ["過敏性腸症候群", "神経調整薬", "三環系抗うつ薬", "消化器・肝"]
+  },
+  {
+    id: "jr-apicat-cavte-01",
+    category: "journal",
+    field: "血液",
+    difficulty: 3,
+    added: "2026-08-17",
+    question: "がん関連静脈血栓塞栓症(VTE)に対し、少なくとも6か月の抗凝固療法を完了した活動性がん患者での延長治療を検討したAPI-CAT試験(NEJM 2025)を踏まえ、支持される記述はどれか。",
+    options: ["延長期はアピキサバンよりも低分子ヘパリン皮下注の継続が第一選択である", "減量アピキサバン(2.5mg 1日2回)は延長期の再発予防で標準用量に劣り、標準用量を継続すべきである", "延長期には抗凝固を中止し臨床的に経過観察するのが妥当である", "減量アピキサバン(2.5mg 1日2回)は標準用量(5mg 1日2回)に対しVTE再発予防で非劣性であり、臨床的に重要な出血が少なかった"],
+    correct: 3,
+    explanation: "【要点】活動性がんVTEで6か月の抗凝固後の延長期には、減量アピキサバン2.5mg 1日2回が標準用量5mg 1日2回に対しVTE再発予防で非劣性であり、出血リスクは低かった。\n【背景/エビデンス】API-CAT(NEJM2025)は近位DVT/PEを有する活動性がん患者1766例を無作為化し12か月投与。再発VTEは非劣性で、臨床的に重要な出血は減量群12.1%対標準群15.6%(adjusted subHR 0.75)と有意に少なかった。\n【臨床応用/注意】6か月以降も抗凝固継続が必要な症例では減量が合理的な選択肢。がんの活動性・出血リスク・薬物相互作用で個別化する。\n【誤答】『減量は劣る』『中止が妥当』『LMWH継続が第一選択』は本試験の示唆と整合しない。",
+    source: { title: "Extended Reduced-Dose Apixaban for Cancer-Associated Venous Thromboembolism (New England Journal of Medicine)", url: "https://www.nejm.org/doi/full/10.1056/NEJMoa2416112" },
+    tags: ["がん関連血栓症", "静脈血栓塞栓症", "アピキサバン", "血液"]
+  },
+  {
+    id: "gl-aan-fseizure-01",
+    category: "guideline",
+    field: "神経",
+    difficulty: 2,
+    added: "2026-08-17",
+    question: "機能性発作(functional seizures)の管理に関するAAN診療ガイドライン(Neurology 2025)を踏まえ、支持される記述はどれか。",
+    options: ["併存てんかんの評価は不要で、機能性発作と診断されれば抗てんかん薬を開始する", "発作特異的な認知行動療法などの心理的介入は、発作頻度の減少やQOL改善に有効な可能性がある", "急性頓挫治療としてベンゾジアゼピンを定期的に用いることが推奨される", "併存てんかん・不安障害などの適応がなければ、頓挫目的のベンゾジアゼピン使用は避けるべきである"],
+    correct: [1, 3],
+    explanation: "【要点】機能性発作では併存てんかんの評価を行い、心理的介入(発作特異的CBTなど)が発作頻度の減少やQOL改善に有効な可能性があり、適応がなければ頓挫目的のベンゾジアゼピンは避ける。\n【背景/エビデンス】AAN(Neurology 2025年12月)は、問診・目撃者情報を用いた迅速な診断、共感的で支持的な診断告知、神経内科と精神科の協働を推奨。心理的介入(CBT、神経行動療法、動機づけ面接の併用)は発作頻度・不安・QOLの改善に寄与しうる。\n【臨床応用/注意】診断は支持的に伝え、家族を治療方針に含める。併存てんかんを見落とさない。\n【誤答】『併存評価は不要』『ベンゾを定期使用』は不適切。",
+    source: { title: "Management of Functional Seizures Practice Guideline Executive Summary (Neurology)", url: "https://www.neurology.org/doi/10.1212/WNL.0000000000214466" },
+    tags: ["機能性発作", "心因性非てんかん発作", "認知行動療法", "神経"]
+  },
+  {
+    id: "rv-antidep-deprescribe-01",
+    category: "review",
+    field: "精神・行動",
+    difficulty: 2,
+    added: "2026-08-17",
+    question: "寛解した抑うつ・不安障害での抗うつ薬中止戦略を比較したネットワークメタ解析(Lancet Psychiatry 2025)を踏まえ、支持される記述はどれか。",
+    options: ["突然の中止は緩徐な漸減と再発リスクに差がなく、患者の希望があれば選択してよい", "4週以内の速やかな漸減が再発予防と忍容性の両面で最も優れる", "4週を超える緩徐な漸減に心理的支援を併用する方法が、再発予防の点で良好で最も支持される", "減量よりも抗うつ薬の無期限継続のみが再発予防に有効である"],
+    correct: 2,
+    explanation: "【要点】寛解後の抗うつ薬中止では、4週を超える緩徐な漸減に心理的支援を併用する方法が再発予防の点で良好で、突然の中止や急速な漸減は再発リスクが高い。\n【背景/エビデンス】Lancet Psychiatry 2025のネットワークメタ解析は76 RCT・約17,000例を統合。緩徐な漸減+心理的支援は継続と同程度に再発を抑制しうる一方、突然中止が最も再発リスクが高かった。\n【臨床応用/注意】中止は数週以上かけて漸減し、心理的支援を併用、離脱症状・再燃を監視して個別化する。\n【誤答】『突然中止と差がない』『4週以内が最良』『無期限継続のみ有効』は解析の示唆と整合しない。",
+    source: { title: "Comparison of antidepressant deprescribing strategies in individuals with clinically remitted depression: a systematic review and network meta-analysis (The Lancet Psychiatry)", url: "https://www.thelancet.com/journals/lanpsy/article/PIIS2215-0366(25)00330-X/abstract" },
+    tags: ["抗うつ薬", "減薬", "漸減", "精神・行動"]
+  },
+  {
+    id: "gl-acc-immuniz-01",
+    category: "guideline",
+    field: "予防・健診",
+    difficulty: 1,
+    added: "2026-08-17",
+    question: "心血管疾患を有する成人の予防接種に関するACC専門家合意声明(JACC 2025)を踏まえ、支持される記述はどれか。",
+    options: ["50歳以上の成人には、2~6か月あけて2回の帯状疱疹(組換え)ワクチン接種が推奨される", "帯状疱疹ワクチンは心血管イベントを確実に予防することが無作為化試験で証明されている", "心血管疾患患者ではインフルエンザワクチンはむしろ避けるべきである", "帯状疱疹ワクチンは60歳以上に1回のみの接種が推奨される"],
+    correct: 0,
+    explanation: "【要点】ACC専門家合意声明(JACC 2025)は、心血管ケアの一環として50歳以上に2~6か月あけた2回の組換え帯状疱疹ワクチン接種を推奨する。\n【背景/エビデンス】観察研究・メタ解析で帯状疱疹ワクチン接種と心血管イベント低下の関連が示唆されるが因果は確立しておらず、声明はインフルエンザなど標準的な成人予防接種の徹底も併せて推奨する。\n【臨床応用/注意】ワクチン歴を確認し未接種者に接種を勧奨する。心血管リスク低減を主目的とするより、感染・合併症の予防が基盤である。\n【誤答】『RCTで心血管予防を証明』は過大、『60歳に1回のみ』は旧知見、『インフルは避ける』は不適切。",
+    source: { title: "2025 Concise Clinical Guidance: An ACC Expert Consensus Statement on Adult Immunizations as Part of Cardiovascular Care (JACC)", url: "https://www.jacc.org/doi/10.1016/j.jacc.2025.07.003" },
+    tags: ["予防接種", "帯状疱疹ワクチン", "心血管予防", "予防・健診"]
+  },
+  {
+    id: "jr-batura-asthma-01",
+    category: "journal",
+    field: "呼吸器",
+    difficulty: 2,
+    added: "2026-08-17",
+    question: "コントロール不良の軽症喘息を対象に頓用治療を比較したBATURA試験(NEJM 2025)を踏まえ、支持される記述はどれか。",
+    options: ["頓用のサルブタモール単独は、配合薬に比べ重症増悪を有意に減らした", "頓用のサルブタモール・ブデソニド配合薬は、サルブタモール単独に比べ重症増悪リスクを有意に低下させた", "両群で重症増悪リスクに差はなかった", "配合薬は全身性ステロイド使用量をむしろ増加させた"],
+    correct: 1,
+    explanation: "【要点】コントロール不良の軽症喘息では、頓用のサルブタモール・ブデソニド配合薬がサルブタモール単独に比べ重症増悪リスクを有意に低下させた。\n【背景/エビデンス】BATURA(NEJM2025)は12歳以上2421例の第IIIb相試験。重症増悪の初回発生は配合薬群5.1%対単独群9.1%(HR 0.53)、全身性ステロイド使用量も約63%減少した。\n【臨床応用/注意】軽症でもICSを含む頓用戦略が増悪抑制に寄与しうる。SABA単独への依存を避ける方向性を支持する。\n【誤答】『SABA単独が有利』『差がない』『ステロイド増加』は試験結果と整合しない。",
+    source: { title: "As-Needed Albuterol-Budesonide in Mild Asthma (New England Journal of Medicine)", url: "https://www.nejm.org/doi/abs/10.1056/NEJMoa2504544" },
+    tags: ["喘息", "頓用ICS", "重症増悪", "呼吸器"]
+  },
+  {
+    id: "cl-ruti-women-01",
+    category: "clinical",
+    field: "感染症",
+    difficulty: 3,
+    added: "2026-08-17",
+    question: "再発性の単純性尿路感染症(女性)の管理に関するAUA/CUA/SUFUガイドライン(2025改訂)を踏まえ、支持される記述はどれか。",
+    options: ["症候性UTIの治療は、地域のアンチバイオグラムに基づきニトロフラントインなどの第一選択薬を用いる", "再発予防のため、無症候性細菌尿に対しても定期的な抗菌薬治療を行うべきである", "抗菌薬の投与期間は可能な限り短くし、一般に7日を超えないようにする", "培養を確認せず、経験的に長期のフルオロキノロンを第一選択とする"],
+    correct: [0, 2],
+    explanation: "【要点】女性の再発性単純性UTIでは、症候性UTIに地域のアンチバイオグラムを踏まえた第一選択薬(ニトロフラントイン、ST合剤、ホスホマイシンなど)を用い、投与期間は可能な限り短く(一般に7日以内)とする。\n【背景/エビデンス】AUA/CUA/SUFU 2025改訂は、無症候性細菌尿の治療を推奨せず(耐性化・有害事象の懸念)、フルオロキノロンは有害事象の観点から温存する立場を示す。予防は行動療法や膣エストロゲンなども考慮する。\n【臨床応用/注意】症状があるときに治療し、耐性パターンで薬剤を選び、期間は最短に。\n【誤答】『無症候性細菌尿を治療』『培養せず長期FQを第一選択』は推奨と整合しない。",
+    source: { title: "Updates to Recurrent Uncomplicated Urinary Tract Infections in Women: AUA/CUA/SUFU Guideline (2025) (Journal of Urology)", url: "https://www.auajournals.org/doi/10.1097/JU.0000000000004723" },
+    tags: ["再発性尿路感染症", "単純性膀胱炎", "抗菌薬適正使用", "感染症"]
   }
 ];
 
