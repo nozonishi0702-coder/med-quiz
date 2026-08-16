@@ -2982,6 +2982,84 @@ const QUESTIONS = [
     explanation: "【要点】中等度リスク肺塞栓症で、超音波併用カテーテル線溶+抗凝固は抗凝固単独に比べ複合主要アウトカムを減らし、頭蓋内出血は両群でゼロだった。\n【背景/エビデンス】HI-PEITHO(NEJM 2026、9か国544例)。RV/LV径比≥1.0かつトロポニン上昇の中等度リスクPEが対象。主要複合(PE関連死・心肺代償不全/虚脱・症候性PE再発、7日以内)が介入群で低下。大出血は介入群4.1% vs 対照2.2%と介入群で数値上多かった。\n【臨床応用/注意】ショックを伴う高リスクではなく中等度リスクが対象。出血リスクとのバランスで適応を個別評価し、施設の体制も踏まえる。\n【誤答】高リスク限定・大出血ゼロで対照より少ない、は試験と異なる。一見妥当だが本文脈で不正確である。",
     source: { title: "Ultrasound-Facilitated, Catheter-Directed Fibrinolysis for Acute Pulmonary Embolism (NEJM)", url: "https://www.nejm.org/doi/full/10.1056/NEJMoa2516567" },
     tags: ["肺塞栓症", "カテーテル線溶", "HI-PEITHO", "血液"]
+  },
+  {
+    id: "gl-idsa-cap-nonendorse-01",
+    category: "guideline",
+    field: "感染症",
+    difficulty: 2,
+    added: "2026-08-16",
+    question: "2025年のATS/IDSA市中肺炎(CAP)ガイドライン改訂をめぐり、IDSAが一部の推奨を支持(endorse)しなかった。その主たる論点はどれか。",
+    options: ["重症CAP入院例への全身性コルチコステロイド併用を提案した点", "臨床的に安定化した非重症例で抗菌薬を短縮してよいとした点", "外来CAPの経験的治療でマクロライド単剤を一律の第一選択とした点", "呼吸器ウイルス陽性で細菌感染の根拠に乏しい非重症例にも経験的抗菌薬併用を推奨した点"],
+    correct: 3,
+    explanation: "【要点】IDSAは2025年ATS/IDSA CAPガイドラインの10推奨のうち8つに同意したが、併存症のある外来例やウイルス検査陽性の非重症入院例へ経験的抗菌薬を用いる推奨は支持(endorse)しなかった。\n【背景/エビデンス】理由は、ウイルス陽性のCAP患者に抗菌薬を投与して転帰が改善するという確かなデータが乏しく、不要な抗菌薬使用が耐性・有害事象を増やす懸念があるため。委員会と学会の解釈の相違は『We Dissent』等で議論された。\n【臨床応用/注意】ウイルス陽性でも細菌性肺炎を完全には否定できないため、重症度・炎症所見・経過・プロカルシトニン等を統合して個別に判断する。\n【誤答】ステロイド提案・抗菌薬短縮・マクロライド選択は、いずれも非同意の主対象ではない。事実として不正確ではないが、この文脈で論点ではない。",
+    source: { title: "IDSA Position Statement: Why IDSA Did Not Endorse the Community-Acquired Pneumonia Guidelines 2025 Update (Clinical Infectious Diseases)", url: "https://academic.oup.com/cid/advance-article/doi/10.1093/cid/ciaf625/8364653" },
+    tags: ["市中肺炎", "抗菌薬適正使用", "呼吸器ウイルス", "IDSA", "感染症"]
+  },
+  {
+    id: "jr-lixipark-pd-01",
+    category: "journal",
+    field: "神経",
+    difficulty: 3,
+    added: "2026-08-16",
+    question: "早期パーキンソン病に対するGLP-1受容体作動薬リキシセナチドの第2相試験(LIXIPARK、NEJM 2024)について、支持されるものはどれか。",
+    options: ["運動症状の進行に群間差はなく、消化器症状も少なかった", "12か月時点で運動障害の進行を抑制したが、悪心・嘔吐が高頻度で、より大規模な確認試験が必要である", "運動症状を改善したうえ疾患修飾効果が確立され、標準治療に組み込まれた", "ドパミン補充療法を不要にするほどの症状改善を示した"],
+    correct: 1,
+    explanation: "【要点】LIXIPARKは早期PDでリキシセナチドが12か月時の運動障害進行を抑えた一方、悪心が高頻度で、第2相段階のため確認試験を要する。\n【背景/エビデンス】仏の二重盲検RCT(156例)。12か月でMDS-UPDRSパートIIIはリキシセナチド群がほぼ不変(−0.04)、プラセボ群+3.04で群間差3.08点(P=0.007)と臨床的に意味のある差。悪心約46%・嘔吐約13%と消化器有害事象が多く減量を要した例もある。GLP-1の神経保護仮説を支持するが小規模・短期。\n【臨床応用/注意】現時点で標準治療ではなく、より大規模・長期の第3相での再現・安全性確認が前提。\n【誤答】『群間差なし』『疾患修飾確立』『ドパミン補充不要』は、いずれも試験結果と整合しない。",
+    source: { title: "Trial of Lixisenatide in Early Parkinson's Disease (NEJM)", url: "https://www.nejm.org/doi/full/10.1056/NEJMoa2312323" },
+    tags: ["パーキンソン病", "リキシセナチド", "GLP-1", "神経保護", "神経"]
+  },
+  {
+    id: "jr-comp005-psilo-trd-01",
+    category: "journal",
+    field: "精神・行動",
+    difficulty: 2,
+    added: "2026-08-16",
+    question: "治療抵抗性うつ病(TRD)に対する合成シロシビン(COMP360)の第3相試験(COMP005)について、支持されるものはどれか。",
+    options: ["連日内服のSSRIとして用い、数週間かけて効果が現れた", "1mgと25mgで有効性に差はみられなかった", "心理的支援下での単回25mg投与が6週時のMADRSをプラセボより有意に低下させ、主要評価項目を達成した", "重篤で予期しない安全性シグナルが多発したため試験は早期中止となった"],
+    correct: 2,
+    explanation: "【要点】COMP005(第3相)は、TRDに対する心理的支援下での単回25mg COMP360シロシビンが6週時のMADRSをプラセボより有意に低下させ、主要評価項目を達成した。\n【背景/エビデンス】独立データ安全性監視委員会は、新規・予期しない安全性所見はなく既存のCOMP360試験と一貫すると評価。長期の維持効果や再投与は追加の第3相(COMP006等)で検証が続いている。\n【臨床応用/注意】あくまで治験下の構造化された心理療法併用プロトコルであり、一般診療での自己使用とは異なる。適応・規制は地域により未確立で、過度な一般化は避ける。\n【誤答】『連日SSRI』『用量差なし』『試験早期中止』は、いずれも報告と整合しない。",
+    source: { title: "Psilocybin Safe, Effective for Treatment-Resistant Depression: Phase 3 Data (Medscape)", url: "https://www.medscape.com/viewarticle/psilocybin-safe-effective-treatment-resistant-depression-2025a1000grn" },
+    tags: ["治療抵抗性うつ病", "シロシビン", "COMP360", "精神・行動"]
+  },
+  {
+    id: "jr-tozora-copd-01",
+    category: "journal",
+    field: "呼吸器",
+    difficulty: 3,
+    added: "2026-08-16",
+    question: "COPDに対する抗IL-33抗体トゾラキマブ(tozorakimab)の第3相試験(OBERON/TITANIA、2026)について、支持されるものを選べ。",
+    options: ["主要評価項目である中等度〜重度増悪の年間発生率をプラセボ比で低下させた", "効果は血中好酸球高値の患者に限定された", "IL-33経路を標的とする生物学的製剤で、血中好酸球数によらず有効性が示された", "吸入ステロイド製剤であり、既存のICS/LABAを置換する目的で開発された"],
+    correct: [0, 2],
+    explanation: "【要点】トゾラキマブはIL-33を標的とする抗体で、OBERON/TITANIAの第3相で中等度〜重度COPD増悪の年間発生率をプラセボより低下させ、効果は血中好酸球数によらず示された。\n【背景/エビデンス】2026年に両試験で主要評価項目達成が公表された。IL-33は上流のアラーミンで好酸球性・非好酸球性の炎症経路の双方に関与しうる点が、好酸球依存性の既存生物学的製剤と異なる特徴とされる。\n【臨床応用/注意】現時点では承認前の段階であり、最終的な位置づけは査読付き論文と実臨床データを要する。過度な一般化は避ける。\n【誤答】『高好酸球例に限定』『ICS製剤で置換』は本剤の性質と異なる。増悪抑制はプラセボ比で示された。",
+    source: { title: "Tozorakimab Phase III Data Establish IL-33 Pathway in COPD (BioPharm International)", url: "https://www.biopharminternational.com/view/tozorakimab-phase-iii-data-establish-il-33-pathway-in-copd" },
+    tags: ["COPD", "トゾラキマブ", "IL-33", "生物学的製剤", "呼吸器"]
+  },
+  {
+    id: "cl-ibs-diet-01",
+    category: "clinical",
+    field: "消化器・肝",
+    difficulty: 1,
+    added: "2026-08-16",
+    question: "過敏性腸症候群(IBS)に対する食事療法の有効性を検討したネットワークメタ解析(Lancet Gastroenterol Hepatol 2025)を踏まえ、支持される記述はどれか。",
+    options: ["グルテン除去食が全般症状の改善に最も強い根拠を示した", "食事療法は薬物療法に一律に劣り第一選択にはならない", "高FODMAP食への切り替えが症状を最も改善した", "低FODMAP食が全般症状の改善で上位の有効性を示したが、管理栄養士主導での段階的な再導入が望ましい"],
+    correct: 3,
+    explanation: "【要点】IBSの食事療法のネットワークメタ解析では、低FODMAP食が全般症状の改善で上位の有効性を示す一方、実施は管理栄養士主導で制限相から段階的な再導入を行うのが望ましい。\n【背景/エビデンス】複数RCTを統合した解析で、低FODMAP食が全般症状・腹痛の改善に比較的一貫した効果を示した。ただし長期の栄養学的懸念や順守性の問題があり、無期限の厳格な制限は推奨されない。\n【臨床応用/注意】まず一般的な食事・生活指導を行い、効果があれば耐容範囲まで食品を戻し個別化する。効果が乏しければ薬物療法を併用する。\n【誤答】『高FODMAPへ切替』『グルテン除去が最強』『食事は第一選択にならない』は解析の示唆と整合しない。",
+    source: { title: "Efficacy of dietary interventions in irritable bowel syndrome: a systematic review and network meta-analysis (Lancet Gastroenterology & Hepatology)", url: "https://www.thelancet.com/journals/langas/article/PIIS2468-1253(25)00054-8/abstract" },
+    tags: ["過敏性腸症候群", "低FODMAP食", "食事療法", "消化器・肝"]
+  },
+  {
+    id: "rv-ibs-neuromod-01",
+    category: "review",
+    field: "消化器・肝",
+    difficulty: 3,
+    added: "2026-08-16",
+    question: "IBSに対する消化管-脳相互作用調整薬(gut–brain neuromodulator)の有効性に関する系統的レビュー/メタ解析(Lancet Gastroenterol Hepatol 2025)およびガイドラインを踏まえ、支持されるものを選べ。",
+    options: ["SSRIが全般症状の改善に最も確固たるエビデンスをもち一律の第一選択である", "低用量の三環系抗うつ薬(TCA)は全般症状の改善に有効で、二次治療として位置づけられる", "これらの薬はうつ病治療と同一の用量で開始するのが原則である", "TCAは抗コリン作用のため便秘・口渇に留意し、下痢型(IBS-D)で特に有用なことがある"],
+    correct: [1, 3],
+    explanation: "【要点】低用量TCAはIBSの全般症状改善に有効で二次治療として用いられ、抗コリン作用のため便秘・口渇に注意し、下痢型(IBS-D)で特に有用なことがある。\n【背景/エビデンス】神経調整薬のメタ解析でTCAはプラセボより全般症状を有意に改善(プライマリ・ケアのATLANTIS試験でも低用量アミトリプチリンが有効)。SSRIの全般症状への効果は一貫性に乏しい。うつ病用量より低用量で開始し漸増するのが原則。\n【臨床応用/注意】就眠前の少量から開始し、眠気・QT延長・抗コリン症状をモニタリングする。効果と忍容性で個別調整する。\n【誤答】『SSRIが最強で一律第一選択』『うつ病と同一用量で開始』は不適切。TCAが有効・IBS-Dで有用は妥当。",
+    source: { title: "Efficacy of gut-brain neuromodulators in irritable bowel syndrome: an updated systematic review and meta-analysis (Lancet Gastroenterology & Hepatology)", url: "https://www.thelancet.com/journals/langas/article/PIIS2468-1253(25)00051-2/abstract" },
+    tags: ["過敏性腸症候群", "神経調整薬", "三環系抗うつ薬", "消化器・肝"]
   }
 ];
 
