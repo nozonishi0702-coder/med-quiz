@@ -3255,6 +3255,84 @@ const QUESTIONS = [
     explanation: "【要点】IBDの診断ではまず潰瘍性大腸炎(UC)とCrohn病(CD)の典型像を押さえることが重要である。\n【背景/エビデンス】回盲部の深掘れ潰瘍や全身症状を伴う場合は、腸管Behçet病やMEFV遺伝子関連腸炎(家族性地中海熱)などを鑑別に挙げる。UCとCDの鑑別が困難な症例は分類不能型腸炎(IBD-U)として経過をみる姿勢が求められる。\n【臨床応用/注意】診断に迷う際は早期に専門医と連携することが患者利益につながる。\n【誤答】無理な確定診断、典型像を軽視した先行治療、専門医連携の回避はいずれも本稿の趣旨に反する。",
     source: { title: "炎症性腸疾患(IBD)を実地医家でどう診断する？（関口華瑠ほか, medicina 63巻8号, 2026）", url: "https://webview.isho.jp/journal/detail/abs/10.11477/mf.002576990630081172" },
     tags: ["炎症性腸疾患", "IBD", "潰瘍性大腸炎", "Crohn病", "腸管Behçet病", "IBD-U", "消化器・肝"]
+  },
+  {
+    id: "jr-arnasa-copd-01",
+    category: "journal",
+    field: "呼吸器",
+    difficulty: 3,
+    added: "2026-08-18",
+    question: "頻回に増悪するCOPD患者を対象に抗ST2/IL-33抗体アステゴリマブ(astegolimab)を検討した第2b/3相試験(ALIENTO/ARNASA)の知見として、支持される記述はどれか。",
+    options: ["血中好酸球高値例に限って増悪抑制効果が示された", "最適化された吸入維持療法への上乗せで増悪率に有意差は認めなかった", "血中好酸球数によらず、最適化吸入療法への上乗せで増悪を抑制する効果が示された", "既存の抗IL-5系生物学的製剤に対する優越性が直接比較で確立した"],
+    correct: 2,
+    explanation: "【要点】アステゴリマブはIL-33受容体(ST2)を標的とする抗体で、頻回増悪型COPDの増悪抑制に有効性が示された。\n【背景/エビデンス】ALIENTO(第2b相)・ARNASA(第3相)は、最大限の吸入維持療法(2剤/3剤)下でも増悪を繰り返す患者を対象に、血中好酸球数や喫煙状況を問わず登録。プラセボ上乗せと比較して年間増悪率を低下させ、IL-33/ST2経路の関与を裏づけた。\n【臨床応用/注意】好酸球依存の既存生物学的製剤(抗IL-5系)の適応外となる症例にも選択肢を広げうるが、位置づけや長期安全性は今後の検討を要する。\n【誤答】効果は好酸球高値に限定されず、増悪率は有意に低下しており、抗IL-5系との直接比較で優越を示したわけではない。",
+    source: { title: "Astegolimab for COPD with frequent exacerbations (ALIENTO and ARNASA), Lancet", url: "https://www.sciencedirect.com/science/article/abs/pii/S0140673626006379" },
+    tags: ["COPD", "アステゴリマブ", "IL-33", "ST2", "生物学的製剤", "呼吸器"]
+  },
+  {
+    id: "cl-mbc-depression-01",
+    category: "clinical",
+    field: "精神・行動",
+    difficulty: 2,
+    added: "2026-08-18",
+    question: "大うつ病性障害(MDD)の外来治療におけるmeasurement-based care(MBC:評価尺度を用いた計測に基づく治療)について、支持される記述はどれか。",
+    options: ["妥当性が検証された尺度(PHQ-9等)で症状と副作用を定期的に測定し、結果に基づき治療を調整する", "症状の定量評価は診療の質を下げるため、臨床的印象のみで用量調整を行うべきである", "MBCは標準診療に対する優位性を示した無作為化試験が存在せず、推奨されない", "無作為化試験では、MBCが標準診療に比べ抑うつ症状の改善を促進しうることが示唆されている"],
+    correct: [0, 3],
+    explanation: "【要点】MBCは、妥当性の確認された評価尺度で症状と副作用を定期測定し、その結果に基づいて薬剤や用量を調整する診療戦略である。\n【背景/エビデンス】MDD成人を対象とした評価者盲検の無作為化試験(JAMA Network Open, 2026)では、MBCが標準診療に比べ抑うつ症状の改善を促進しうることが示唆された。構造化されたモニタリングにより治療調整の遅れを減らせる点が利点とされる。\n【臨床応用/注意】PHQ-9やGAD-7などを定期評価に組み込み、反応不良や副作用の早期把握につなげる。最終判断は自殺念慮や併存症など個別状況を踏まえて行う。\n【誤答】定量評価の軽視や『優位性を示す試験は存在しない』とする記述は、近年のエビデンスと整合しない。",
+    source: { title: "Measurement-Based Care to Enhance Antidepressant Treatment Outcomes in Major Depressive Disorder: A Randomized Clinical Trial (JAMA Network Open)", url: "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2838317" },
+    tags: ["うつ病", "MBC", "PHQ-9", "抗うつ薬", "精神・行動"]
+  },
+  {
+    id: "jr-ianalumab-itp-01",
+    category: "journal",
+    field: "血液",
+    difficulty: 3,
+    added: "2026-08-18",
+    question: "免疫性血小板減少症(ITP)に対する新規抗体医薬イアナルマブ(ianalumab)に関する記述として、支持されるものはどれか。",
+    options: ["血小板膜糖蛋白に対する自己抗体そのものを中和する薬剤である", "トロンボポエチン受容体作動薬(TPO-RA)の一種として血小板産生を促す", "血栓形成を促進するため、むしろ出血傾向を悪化させる", "BAFF受容体を標的にB細胞を抑制する抗体で、ITPにおける持続的な血小板反応の改善が検討されている"],
+    correct: 3,
+    explanation: "【要点】イアナルマブはBAFF受容体(BAFF-R)を標的とし、B細胞の生存シグナル遮断と抗体依存性細胞傷害の双方でB細胞を抑制する抗体である。\n【背景/エビデンス】既治療ITPを対象とした第3相試験(NEJM, 2026)で、短期コースのイアナルマブ(エルトロンボパグ併用を含む検討)により、持続的な血小板反応の達成が検討された。自己抗体産生B細胞を標的とする点で、TPO-RAやステロイドと作用機序が異なる。\n【臨床応用/注意】B細胞抑制に伴う感染リスクやワクチン接種のタイミングに留意する。位置づけは既存治療との比較で今後精緻化される。\n【誤答】自己抗体の直接中和、TPO-RAとしての作用、血栓促進はいずれも作用機序と整合しない。",
+    source: { title: "Ianalumab plus Eltrombopag in Immune Thrombocytopenia (NEJM)", url: "https://www.nejm.org/doi/full/10.1056/NEJMoa2515168" },
+    tags: ["ITP", "イアナルマブ", "BAFF受容体", "B細胞", "血液"]
+  },
+  {
+    id: "jr-tulisokibart-uc-01",
+    category: "journal",
+    field: "消化器・肝",
+    difficulty: 3,
+    added: "2026-08-18",
+    question: "中等症〜重症の潰瘍性大腸炎(UC)に対する新規標的治療トゥリソキバルト(tulisokibart)について、支持される記述はどれか。",
+    options: ["抗TNF-α抗体であり、既存のインフリキシマブと同一の標的に作用する", "TL1A(TNF様リガンド1A)を標的とする抗体で、無作為化試験で臨床的寛解の改善が示された", "UCには無効で、効果はCrohn病にのみ限定される", "免疫調整作用をもたないため感染症リスクを高めないことが確立している"],
+    correct: 1,
+    explanation: "【要点】トゥリソキバルトはTL1A(TNF様リガンド1A)を標的とする抗体で、炎症と線維化の双方に関与する経路を抑制する新規機序の薬剤である。\n【背景/エビデンス】中等症〜重症UCを対象とした無作為化試験(第2相ARTEMIS-UC, NEJM)で、プラセボに比べ12週の臨床的寛解割合を高めた。抗TL1A抗体としては第3相(ATLAS-UC)でも主要評価項目の達成が報告され、TL1A経路の治療標的としての妥当性が支持される。\n【臨床応用/注意】既存の抗TNF薬・抗インテグリン薬・JAK阻害薬などと作用点が異なり、難治例の選択肢拡大が期待される。長期安全性や適応の位置づけは継続評価が必要。\n【誤答】抗TNF-α薬との同一標的、UC無効、免疫調整作用なしとの記述はいずれも誤り。",
+    source: { title: "Anti-TL1A Antibody Tulisokibart for Ulcerative Colitis (NEJM)", url: "https://www.nejm.org/doi/full/10.1056/NEJMoa2314076" },
+    tags: ["潰瘍性大腸炎", "トゥリソキバルト", "TL1A", "生物学的製剤", "消化器・肝"]
+  },
+  {
+    id: "cl-cap-inpt-duration-01",
+    category: "clinical",
+    field: "感染症",
+    difficulty: 2,
+    added: "2026-08-18",
+    question: "入院した市中肺炎(CAP)成人の抗菌薬投与期間に関する近年のエビデンス(標的試験エミュレーション研究等)を踏まえた記述として、支持されるものはどれか。",
+    options: ["臨床的に安定しても、再発予防のため最低14日間の投与を継続すべきである", "3日目までに臨床的に安定した患者では、短期間(3〜4日)投与が長期間(5日以上)投与に劣らない可能性が示唆される", "投与期間の短縮は、抗菌薬関連有害事象や耐性化を抑える観点から望ましい", "投与終了の判断には、解熱やバイタルサイン安定など臨床的安定の指標を用いる"],
+    correct: [1, 2, 3],
+    explanation: "【要点】入院CAPでは、臨床的安定に達した患者で抗菌薬を短縮する方向のエビデンスが蓄積している。\n【背景/エビデンス】多施設の標的試験エミュレーション(Annals of Internal Medicine, 2026)では、3日目までに臨床的安定を得た入院CAPで、短期間(3〜4日)投与が長期間(5日以上)投与に劣らない可能性が示された。ランダム化試験でも外来・入院を通じ短期間の非劣性が支持されている。\n【臨床応用/注意】終了判断は解熱・バイタル安定・経口摂取可などの臨床的安定を指標にする。免疫不全、菌血症、膿胸、緑膿菌/黄色ブドウ球菌などでは個別に延長を検討する。\n【誤答】臨床的安定後も一律14日間継続すべきとの記述は現行の方向性と整合しない。",
+    source: { title: "Short Versus Longer Antibiotic Duration for Community-Acquired Pneumonia: A Multicenter Target Trial Emulation (Annals of Internal Medicine)", url: "https://www.acpjournals.org/doi/10.7326/ANNALS-25-03538" },
+    tags: ["市中肺炎", "抗菌薬適正使用", "投与期間", "感染症"]
+  },
+  {
+    id: "jr-allegory-sle-01",
+    category: "journal",
+    field: "膠原病・骨",
+    difficulty: 3,
+    added: "2026-08-18",
+    question: "増殖性・膜性ループス腎炎を伴わない活動性の全身性エリテマトーデス(SLE)を対象に、抗CD20抗体オビヌツズマブを検討した第3相ALLEGORY試験の結果として支持される記述はどれか。",
+    options: ["標準治療への上乗せで、52週時点のSRI-4奏効割合をプラセボより高めた", "効果は増殖性ループス腎炎を有する患者に限定して認められた", "プラセボと比較して疾患活動性の改善に有意差はみられなかった", "B細胞を温存する作用機序により、免疫抑制を伴わないことが特徴である"],
+    correct: 0,
+    explanation: "【要点】オビヌツズマブ(II型抗CD20抗体)は、標準治療への上乗せで活動性SLEの疾患活動性を改善した。\n【背景/エビデンス】ALLEGORY(第3相, NEJM 2026)は、増殖性・膜性ループス腎炎を伴わない活動性SLEを対象に、標準治療下でオビヌツズマブ vs プラセボを比較。52週のSRI-4奏効割合は約77% vs 約54%と有意に高く、深いB細胞除去が有効性に寄与すると考えられる。\n【臨床応用/注意】B細胞除去に伴う感染症・低ガンマグロブリン血症、生ワクチン回避、B型肝炎再活性化のスクリーニングに注意する。適応や長期成績は今後の検討を要する。\n【誤答】効果はループス腎炎例に限定されず、疾患活動性の改善は有意で、B細胞を温存する機序でもない。",
+    source: { title: "Efficacy and Safety of Obinutuzumab in Active Systemic Lupus Erythematosus (NEJM)", url: "https://www.nejm.org/doi/abs/10.1056/NEJMoa2516150" },
+    tags: ["SLE", "オビヌツズマブ", "抗CD20抗体", "B細胞除去", "膠原病・骨"]
   }
 ];
 
