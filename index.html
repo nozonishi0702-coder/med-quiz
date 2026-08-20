@@ -539,25 +539,30 @@
       <h3>AI解説（任意）</h3>
       <p class="lead">APIキーを登録すると、解説の下に質問欄が表示され、出典を調べたうえで深掘り解説を作成します。未登録でもクイズは通常どおり使えます。</p>
       <div class="setting-row" style="flex-direction:column;align-items:flex-start;">
-        <div class="desc" style="margin-bottom:8px;">Anthropic APIキー<small>このブラウザ内にのみ保存されます</small></div>
-        <input type="password" id="apiKeyInput" placeholder="sk-ant-..." autocomplete="off"
+        <div class="desc" style="margin-bottom:8px;">AIサービス<small>キーはサービスごとに保存されます</small></div>
+        <div class="chip-group" id="chipProvider"></div>
+      </div>
+      <div class="setting-row" style="flex-direction:column;align-items:flex-start;">
+        <div class="desc" style="margin-bottom:8px;">APIキー<small>このブラウザ内にのみ保存されます</small></div>
+        <input type="password" id="apiKeyInput" placeholder="sk-..." autocomplete="off"
           style="width:100%;padding:11px 14px;border-radius:10px;border:1.5px solid var(--border);background:var(--surface);color:var(--text);font-size:.9rem;">
       </div>
-      <div class="setting-row">
-        <div class="desc">使用モデル<small>Haikuは安価・高速／Sonnetは高精度</small></div>
-        <div class="seg" id="segModel">
-          <button data-model="claude-haiku-4-5-20251001">Haiku</button>
-          <button data-model="claude-sonnet-5">Sonnet</button>
-        </div>
+      <div class="setting-row" style="flex-direction:column;align-items:flex-start;">
+        <div class="desc" style="margin-bottom:8px;">使用モデル<small>モデル名は変わることがあります。一覧から選べます</small></div>
+        <input type="text" id="modelInput" placeholder="モデル名" autocomplete="off"
+          style="width:100%;padding:11px 14px;border-radius:10px;border:1.5px solid var(--border);background:var(--surface);color:var(--text);font-size:.9rem;margin-bottom:8px;">
+        <select id="modelSelect" class="hidden"
+          style="width:100%;padding:10px 12px;border-radius:10px;border:1.5px solid var(--border);background:var(--surface);color:var(--text);font-size:.9rem;"></select>
       </div>
       <div style="display:flex;gap:10px;flex-wrap:wrap;">
-        <button class="btn small" id="saveKeyBtn">キーを保存</button>
+        <button class="btn small" id="saveKeyBtn">保存</button>
+        <button class="btn outline small" id="fetchModelsBtn">モデル一覧を取得</button>
         <button class="btn secondary small" id="clearKeyBtn">キーを削除</button>
       </div>
       <p class="field-note" id="keyStatus" style="margin-top:10px;"></p>
+      <p class="field-note" style="margin-top:6px;" id="keyHelp"></p>
       <p class="field-note" style="margin-top:6px;">
-        キーは <a href="https://console.anthropic.com/settings/keys" target="_blank" rel="noopener noreferrer">Anthropic Console</a> で発行できます。
-        キーはあなたの端末に保存され、AIへの問い合わせ以外には送信されません。共有PCでの利用後は削除を推奨します。
+        キーはあなたの端末に保存され、選んだAIサービス以外には送信されません。共有PCでの利用後は削除を推奨します。
       </p>
     </div>
 
@@ -607,8 +612,11 @@
   const K_STATS = PREFIX + "stats";      // 集計 { total, correct, catStats:{cat:{total,correct}} }
   const K_STREAK = PREFIX + "streak";    // { count, lastDate }
   const K_SETTINGS = PREFIX + "settings";// { count, cats:[], diffs:[], theme, level }
-  const K_APIKEY = PREFIX + "apikey";    // Anthropic APIキー（この端末内のみ）
-  const K_AIMODEL = PREFIX + "aimodel";  // 使用モデル
+  const K_APIKEY = PREFIX + "apikey";    // 旧: Anthropicキー（後方互換のため読み込みのみ）
+  const K_AIMODEL = PREFIX + "aimodel";  // 旧: モデル（後方互換）
+  const K_PROVIDER = PREFIX + "provider";// "anthropic" | "openai" | "gemini"
+  const K_KEY_PREFIX = PREFIX + "key_";  // プロバイダ別APIキー
+  const K_MODEL_PREFIX = PREFIX + "model_"; // プロバイダ別モデル
 
   const CATS = [
     { key: "journal",   label: "新着ジャーナル", cls: "cat-journal" },
@@ -962,9 +970,49 @@
   $("#fieldSearch").addEventListener("input", (e) => runSearch(e.target.value));
 
   // ---------- AI質問（Anthropic API を直接呼び出し / キーは端末内保存） ----------
-  const DEFAULT_MODEL = "claude-haiku-4-5-20251001";
-  function getApiKey() { try { return localStorage.getItem(K_APIKEY) || ""; } catch (e) { return ""; } }
-  function getAiModel() { try { return localStorage.getItem(K_AIMODEL) || DEFAULT_MODEL; } catch (e) { return DEFAULT_MODEL; } }
+  // 対応プロバイダ（キー・モデルはプロバイダごとに保存）
+  const PROVIDERS = {
+    anthropic: {
+      label: "Claude (Anthropic)",
+      defaultModel: "claude-haiku-4-5-20251001",
+      keyUrl: "https://console.anthropic.com/settings/keys",
+      keyHint: "sk-ant-..."
+    },
+    openai: {
+      label: "ChatGPT (OpenAI)",
+      defaultModel: "gpt-5.6",
+      keyUrl: "https://platform.openai.com/api-keys",
+      keyHint: "sk-..."
+    },
+    gemini: {
+      label: "Gemini (Google)",
+      defaultModel: "gemini-3.6-flash",
+      keyUrl: "https://aistudio.google.com/apikey",
+      keyHint: "AIza..."
+    }
+  };
+  function lsGet(k) { try { return localStorage.getItem(k) || ""; } catch (e) { return ""; } }
+  function lsSet(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+  function lsDel(k) { try { localStorage.removeItem(k); } catch (e) {} }
+
+  function getProvider() {
+    const p = lsGet(K_PROVIDER);
+    return PROVIDERS[p] ? p : "anthropic";
+  }
+  function getApiKey(p) {
+    p = p || getProvider();
+    const v = lsGet(K_KEY_PREFIX + p);
+    // 旧バージョンのAnthropicキーを引き継ぐ
+    if (!v && p === "anthropic") return lsGet(K_APIKEY);
+    return v;
+  }
+  function getAiModel(p) {
+    p = p || getProvider();
+    const v = lsGet(K_MODEL_PREFIX + p);
+    if (v) return v;
+    if (p === "anthropic" && lsGet(K_AIMODEL)) return lsGet(K_AIMODEL);
+    return PROVIDERS[p].defaultModel;
+  }
 
   // 定型の質問チップ
   const AI_PRESETS = [
@@ -980,9 +1028,10 @@
     ans.classList.add("hidden");
     ans.innerHTML = "";
     $("#aiInput").value = "";
-    const hasKey = !!getApiKey();
+    const prov = getProvider();
+    const hasKey = !!getApiKey(prov);
     $("#aiHint").textContent = hasKey
-      ? "出典を調べたうえで解説します"
+      ? PROVIDERS[prov].label + "が出典を調べて解説します"
       : "設定タブでAPIキーを登録すると使えます";
     $("#aiInput").disabled = !hasKey;
     $("#aiAskBtn").disabled = !hasKey;
@@ -1039,7 +1088,73 @@
       "5. 400〜700字程度で簡潔に。箇条書きを活用し、冗長な前置きは書かない。\n" +
       "6. 最後に必ず『これは学習用の情報であり、最終判断は一次資料と個々の患者の状況に基づいてください』の趣旨を1行添える。";
 
+    const provider = getProvider();
+    const model = getAiModel(provider);
+    const prompt = context + "\n\n【質問】\n" + userQuestion;
+
     try {
+      // まずWeb検索あり、ツール非対応などで失敗したら検索なしで再試行
+      let out;
+      try {
+        out = await callProvider(provider, key, model, system, prompt, true);
+      } catch (e1) {
+        if (e1 && e1.retryWithoutTools) {
+          ans.innerHTML = '<span class="ai-loading">Web検索なしで再試行しています…</span>';
+          out = await callProvider(provider, key, model, system, prompt, false);
+        } else { throw e1; }
+      }
+
+      let html = miniMarkdown(out.text || "回答を取得できませんでした。質問を変えてお試しください。");
+      if (out.cites && out.cites.length) {
+        html += '<div class="cites">参照: ' + out.cites.slice(0, 6).map(c =>
+          '<a href="' + escapeAttr(c.url) + '" target="_blank" rel="noopener noreferrer">' +
+          escapeHtml(String(c.title || c.url).slice(0, 60)) + "</a>").join(" / ") + "</div>";
+      }
+      ans.innerHTML = html;
+    } catch (e) {
+      ans.textContent = (e && e.userMessage)
+        ? e.userMessage
+        : "通信に失敗しました。ネットワークやAPIキーをご確認ください。（" + (e && e.message ? e.message : e) + "）";
+    } finally {
+      $("#aiAskBtn").disabled = false;
+    }
+  }
+
+  // プロバイダ共通のエラー整形
+  async function toError(res, providerLabel) {
+    let detail = "";
+    try {
+      const j = await res.json();
+      detail = (j.error && (j.error.message || j.error.status)) ? (j.error.message || j.error.status) : "";
+    } catch (e) {}
+    const err = new Error("HTTP " + res.status + " " + detail);
+    if (res.status === 401 || res.status === 403) {
+      err.userMessage = "APIキーが正しくないか、権限がありません（" + providerLabel + "）。設定タブで確認してください。";
+    } else if (res.status === 429) {
+      err.userMessage = "レート制限に達しました。しばらく待って再度お試しください。";
+    } else if (/credit|balance|quota|billing/i.test(detail)) {
+      err.userMessage = "APIの残高・利用枠が不足しています（" + providerLabel + "）。";
+    } else if (res.status === 404 || /model/i.test(detail)) {
+      err.userMessage = "モデル名が正しくない可能性があります（" + detail + "）。設定タブの「モデル一覧を取得」で選び直してください。";
+      err.retryWithoutTools = false;
+    } else if (res.status === 400) {
+      // ツール指定が原因の可能性 → 検索なしで再試行させる
+      err.retryWithoutTools = true;
+      err.userMessage = "リクエストが拒否されました（" + detail + "）。";
+    } else {
+      err.userMessage = "エラーが発生しました（" + res.status + "）。" + detail;
+    }
+    return err;
+  }
+
+  // 各社APIを呼び分ける。戻り値 { text, cites:[{url,title}] }
+  async function callProvider(provider, key, model, system, prompt, useSearch) {
+    if (provider === "anthropic") {
+      const body = {
+        model: model, max_tokens: 1600, system: system,
+        messages: [{ role: "user", content: prompt }]
+      };
+      if (useSearch) body.tools = [{ type: "web_search_20250305", name: "web_search", max_uses: 4 }];
       const res = await fetch("https://api.anthropic.com/v1/messages", {
         method: "POST",
         headers: {
@@ -1048,29 +1163,10 @@
           "anthropic-version": "2023-06-01",
           "anthropic-dangerous-direct-browser-access": "true"
         },
-        body: JSON.stringify({
-          model: getAiModel(),
-          max_tokens: 1600,
-          system: system,
-          tools: [{ type: "web_search_20250305", name: "web_search", max_uses: 4 }],
-          messages: [{ role: "user", content: context + "\n\n【質問】\n" + userQuestion }]
-        })
+        body: JSON.stringify(body)
       });
-
-      if (!res.ok) {
-        let detail = "";
-        try { const j = await res.json(); detail = (j.error && j.error.message) ? j.error.message : ""; } catch (e) {}
-        let msg;
-        if (res.status === 401) msg = "APIキーが正しくないようです。設定タブで確認してください。";
-        else if (res.status === 429) msg = "レート制限に達しました。しばらく待って再度お試しください。";
-        else if (res.status === 400 && /credit|balance/i.test(detail)) msg = "APIの残高が不足しています。Anthropic Consoleで確認してください。";
-        else msg = "エラーが発生しました（" + res.status + "）。" + detail;
-        ans.textContent = msg;
-        return;
-      }
-
+      if (!res.ok) throw await toError(res, "Anthropic");
       const data = await res.json();
-      // テキストブロックを連結し、web検索の引用元URLを集める
       let text = "", cites = [];
       (data.content || []).forEach(b => {
         if (b.type === "text") {
@@ -1080,20 +1176,107 @@
           });
         }
       });
-      if (!text) text = "回答を取得できませんでした。質問を変えてお試しください。";
-
-      let html = miniMarkdown(text);
-      if (cites.length) {
-        html += '<div class="cites">参照: ' + cites.slice(0, 6).map(c =>
-          '<a href="' + escapeAttr(c.url) + '" target="_blank" rel="noopener noreferrer">' +
-          escapeHtml(c.title.slice(0, 60)) + "</a>").join(" / ") + "</div>";
-      }
-      ans.innerHTML = html;
-    } catch (e) {
-      ans.textContent = "通信に失敗しました。ネットワーク環境をご確認ください。（" + (e && e.message ? e.message : e) + "）";
-    } finally {
-      $("#aiAskBtn").disabled = false;
+      return { text: text, cites: cites };
     }
+
+    if (provider === "openai") {
+      const body = {
+        model: model,
+        instructions: system,
+        input: prompt,
+        max_output_tokens: 1600
+      };
+      if (useSearch) body.tools = [{ type: "web_search" }];
+      const res = await fetch("https://api.openai.com/v1/responses", {
+        method: "POST",
+        headers: { "content-type": "application/json", "authorization": "Bearer " + key },
+        body: JSON.stringify(body)
+      });
+      if (!res.ok) throw await toError(res, "OpenAI");
+      const data = await res.json();
+      let text = "", cites = [];
+      if (data.output_text) text = data.output_text;
+      (data.output || []).forEach(item => {
+        (item.content || []).forEach(c => {
+          if (c.type === "output_text" || typeof c.text === "string") {
+            if (!data.output_text) text += (c.text || "");
+            (c.annotations || []).forEach(a => {
+              const u = a.url || (a.url_citation && a.url_citation.url);
+              const t = a.title || (a.url_citation && a.url_citation.title);
+              if (u && cites.every(x => x.url !== u)) cites.push({ url: u, title: t || u });
+            });
+          }
+        });
+      });
+      return { text: text, cites: cites };
+    }
+
+    if (provider === "gemini") {
+      const body = {
+        systemInstruction: { parts: [{ text: system }] },
+        contents: [{ role: "user", parts: [{ text: prompt }] }],
+        generationConfig: { maxOutputTokens: 1600 }
+      };
+      if (useSearch) body.tools = [{ google_search: {} }];
+      const url = "https://generativelanguage.googleapis.com/v1beta/models/" +
+        encodeURIComponent(model) + ":generateContent";
+      const res = await fetch(url, {
+        method: "POST",
+        headers: { "content-type": "application/json", "x-goog-api-key": key },
+        body: JSON.stringify(body)
+      });
+      if (!res.ok) throw await toError(res, "Google");
+      const data = await res.json();
+      let text = "", cites = [];
+      const cand = (data.candidates || [])[0];
+      if (cand) {
+        ((cand.content && cand.content.parts) || []).forEach(p => { if (p.text) text += p.text; });
+        const gm = cand.groundingMetadata || {};
+        (gm.groundingChunks || []).forEach(ch => {
+          const w = ch.web || {};
+          if (w.uri && cites.every(x => x.url !== w.uri)) cites.push({ url: w.uri, title: w.title || w.uri });
+        });
+      }
+      return { text: text, cites: cites };
+    }
+
+    throw new Error("unknown provider");
+  }
+
+  // 利用可能なモデル一覧を取得（モデル名の変更に追随するため）
+  async function fetchModels(provider, key) {
+    if (provider === "anthropic") {
+      const res = await fetch("https://api.anthropic.com/v1/models?limit=100", {
+        headers: {
+          "x-api-key": key, "anthropic-version": "2023-06-01",
+          "anthropic-dangerous-direct-browser-access": "true"
+        }
+      });
+      if (!res.ok) throw await toError(res, "Anthropic");
+      const d = await res.json();
+      return (d.data || []).map(m => m.id);
+    }
+    if (provider === "openai") {
+      const res = await fetch("https://api.openai.com/v1/models", {
+        headers: { "authorization": "Bearer " + key }
+      });
+      if (!res.ok) throw await toError(res, "OpenAI");
+      const d = await res.json();
+      return (d.data || []).map(m => m.id)
+        .filter(id => /^(gpt|o\d)/i.test(id)).sort();
+    }
+    if (provider === "gemini") {
+      const res = await fetch("https://generativelanguage.googleapis.com/v1beta/models", {
+        headers: { "x-goog-api-key": key }
+      });
+      if (!res.ok) throw await toError(res, "Google");
+      const d = await res.json();
+      return (d.models || [])
+        .filter(m => (m.supportedGenerationMethods || []).indexOf("generateContent") !== -1)
+        .map(m => String(m.name).replace(/^models\//, ""))
+        .filter(id => /gemini/i.test(id)).sort();
+    }
+    return [];
   }
 
   $("#aiAskBtn").addEventListener("click", () => {
@@ -1385,35 +1568,76 @@
       });
       cd.appendChild(chip);
     });
-    // AI設定（APIキー・モデル）
-    const key = getApiKey();
+    // AI設定（プロバイダ・APIキー・モデル）
+    const prov = getProvider();
+    const cp = $("#chipProvider"); cp.innerHTML = "";
+    Object.keys(PROVIDERS).forEach(p => {
+      const chip = document.createElement("button");
+      chip.className = "chip" + (p === prov ? " active" : "");
+      chip.textContent = PROVIDERS[p].label;
+      chip.addEventListener("click", () => {
+        lsSet(K_PROVIDER, p);
+        $("#modelSelect").classList.add("hidden");
+        renderSettings();
+      });
+      cp.appendChild(chip);
+    });
+    const key = getApiKey(prov);
     $("#apiKeyInput").value = key;
+    $("#apiKeyInput").placeholder = PROVIDERS[prov].keyHint;
+    $("#modelInput").value = getAiModel(prov);
     $("#keyStatus").textContent = key
-      ? "登録済み（末尾 …" + key.slice(-4) + "）。解説の下に質問欄が表示されます。"
-      : "未登録です。登録するとAI解説が使えます。";
-    const model = getAiModel();
-    $$("#segModel button").forEach(b =>
-      b.classList.toggle("active", b.dataset.model === model));
+      ? PROVIDERS[prov].label + "：登録済み（末尾 …" + key.slice(-4) + "）。解説の下に質問欄が表示されます。"
+      : PROVIDERS[prov].label + "：未登録です。キーを保存するとAI解説が使えます。";
+    $("#keyHelp").innerHTML = 'キーの発行: <a href="' + PROVIDERS[prov].keyUrl +
+      '" target="_blank" rel="noopener noreferrer">' + escapeHtml(PROVIDERS[prov].label) + '</a>';
   }
 
   // AI設定の操作
   $("#saveKeyBtn").addEventListener("click", () => {
+    const prov = getProvider();
     const v = $("#apiKeyInput").value.trim();
+    const m = $("#modelInput").value.trim();
     if (!v) { alert("APIキーを入力してください。"); return; }
-    try { localStorage.setItem(K_APIKEY, v); } catch (e) {}
+    lsSet(K_KEY_PREFIX + prov, v);
+    if (m) lsSet(K_MODEL_PREFIX + prov, m);
     renderSettings();
-    alert("APIキーを保存しました。解説の下からAIに質問できます。");
+    alert("保存しました。解説の下からAIに質問できます。");
   });
   $("#clearKeyBtn").addEventListener("click", () => {
-    try { localStorage.removeItem(K_APIKEY); } catch (e) {}
+    const prov = getProvider();
+    lsDel(K_KEY_PREFIX + prov);
+    if (prov === "anthropic") lsDel(K_APIKEY);
     $("#apiKeyInput").value = "";
     renderSettings();
     alert("APIキーを削除しました。");
   });
-  $$("#segModel button").forEach(b => b.addEventListener("click", () => {
-    try { localStorage.setItem(K_AIMODEL, b.dataset.model); } catch (e) {}
-    renderSettings();
-  }));
+  $("#fetchModelsBtn").addEventListener("click", async () => {
+    const prov = getProvider();
+    const key = $("#apiKeyInput").value.trim() || getApiKey(prov);
+    if (!key) { alert("先にAPIキーを入力してください。"); return; }
+    const btn = $("#fetchModelsBtn");
+    btn.disabled = true; btn.textContent = "取得中…";
+    try {
+      const ids = await fetchModels(prov, key);
+      const sel = $("#modelSelect");
+      sel.innerHTML = "";
+      if (!ids.length) { alert("モデルを取得できませんでした。"); return; }
+      ids.forEach(id => {
+        const o = document.createElement("option");
+        o.value = id; o.textContent = id;
+        if (id === $("#modelInput").value) o.selected = true;
+        sel.appendChild(o);
+      });
+      sel.classList.remove("hidden");
+      sel.onchange = () => { $("#modelInput").value = sel.value; };
+      alert(ids.length + "件のモデルを取得しました。一覧から選んで「保存」を押してください。");
+    } catch (e) {
+      alert(e && e.userMessage ? e.userMessage : "モデル一覧の取得に失敗しました。" + (e && e.message ? "（" + e.message + "）" : ""));
+    } finally {
+      btn.disabled = false; btn.textContent = "モデル一覧を取得";
+    }
+  });
   $$("#segCount button").forEach(b => {
     b.addEventListener("click", () => {
       settings.count = parseInt(b.dataset.count, 10);
