@@ -219,6 +219,34 @@
     font-size: .85rem; padding: 7px 0; border-top: 1px solid var(--border);
     color: var(--text); line-height: 1.5;
   }
+  /* ===== AI質問欄 ===== */
+  .ai-box {
+    border: 1.5px dashed var(--border); border-radius: 10px;
+    padding: 12px 14px; margin-bottom: 16px; background: var(--surface);
+  }
+  .ai-head { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; font-size: .9rem; font-weight: 700; }
+  .ai-note { margin-left: auto; font-weight: 400; font-size: .78rem; color: var(--text-muted); }
+  .ai-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+  .ai-chip {
+    font-size: .78rem; padding: 5px 10px; border-radius: 999px; cursor: pointer;
+    border: 1px solid var(--border); background: var(--surface-2); color: var(--text);
+  }
+  .ai-chip:hover { border-color: var(--accent); color: var(--accent-dark); }
+  .ai-input-row { display: flex; gap: 8px; }
+  .ai-input-row input {
+    flex: 1; min-width: 0; padding: 9px 12px; border-radius: 8px;
+    border: 1.5px solid var(--border); background: var(--surface);
+    color: var(--text); font-size: .9rem;
+  }
+  .ai-input-row .btn { width: auto; flex-shrink: 0; }
+  .ai-answer {
+    margin-top: 10px; padding: 12px 14px; border-radius: 8px;
+    background: var(--surface-2); font-size: .9rem; line-height: 1.75;
+    white-space: pre-line; border-left: 3px solid var(--accent);
+  }
+  .ai-answer .cites { margin-top: 10px; font-size: .8rem; color: var(--text-muted); white-space: normal; }
+  .ai-answer .cites a { color: var(--accent); }
+  .ai-loading { color: var(--text-muted); font-style: normal; }
 
   /* ===== フィードバック・解説 ===== */
   .feedback { margin-top: 18px; animation: fadeIn .3s ease; }
@@ -412,6 +440,21 @@
           <div class="explanation" id="qExplanation"></div>
           <div class="source-link" id="qSource"></div>
           <div class="tag-row" id="qTags"></div>
+
+          <!-- AIに質問（APIキー登録時のみ有効） -->
+          <div class="ai-box" id="aiBox">
+            <div class="ai-head">
+              <span>🤖 AIに質問する</span>
+              <span class="ai-note" id="aiHint">出典を調べたうえで解説します</span>
+            </div>
+            <div class="ai-chips" id="aiChips"></div>
+            <div class="ai-input-row">
+              <input type="text" id="aiInput" placeholder="この問題について質問する（例: 日本の診療での位置づけは？）">
+              <button class="btn small" id="aiAskBtn">質問</button>
+            </div>
+            <div class="ai-answer hidden" id="aiAnswer"></div>
+          </div>
+
           <button class="btn" id="nextBtn">次へ</button>
         </div>
       </div>
@@ -493,6 +536,32 @@
     </div>
 
     <div class="card">
+      <h3>AI解説（任意）</h3>
+      <p class="lead">APIキーを登録すると、解説の下に質問欄が表示され、出典を調べたうえで深掘り解説を作成します。未登録でもクイズは通常どおり使えます。</p>
+      <div class="setting-row" style="flex-direction:column;align-items:flex-start;">
+        <div class="desc" style="margin-bottom:8px;">Anthropic APIキー<small>このブラウザ内にのみ保存されます</small></div>
+        <input type="password" id="apiKeyInput" placeholder="sk-ant-..." autocomplete="off"
+          style="width:100%;padding:11px 14px;border-radius:10px;border:1.5px solid var(--border);background:var(--surface);color:var(--text);font-size:.9rem;">
+      </div>
+      <div class="setting-row">
+        <div class="desc">使用モデル<small>Haikuは安価・高速／Sonnetは高精度</small></div>
+        <div class="seg" id="segModel">
+          <button data-model="claude-haiku-4-5-20251001">Haiku</button>
+          <button data-model="claude-sonnet-5">Sonnet</button>
+        </div>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;">
+        <button class="btn small" id="saveKeyBtn">キーを保存</button>
+        <button class="btn secondary small" id="clearKeyBtn">キーを削除</button>
+      </div>
+      <p class="field-note" id="keyStatus" style="margin-top:10px;"></p>
+      <p class="field-note" style="margin-top:6px;">
+        キーは <a href="https://console.anthropic.com/settings/keys" target="_blank" rel="noopener noreferrer">Anthropic Console</a> で発行できます。
+        キーはあなたの端末に保存され、AIへの問い合わせ以外には送信されません。共有PCでの利用後は削除を推奨します。
+      </p>
+    </div>
+
+    <div class="card">
       <h3>データ管理</h3>
       <p class="lead">学習進捗はこのブラウザ内(localStorage)にのみ保存されます。</p>
       <button class="btn danger" id="resetBtn">進捗を全てリセット</button>
@@ -537,7 +606,9 @@
   const K_STATE = PREFIX + "state";      // SM-2 カード状態 { [id]: {ef, interval, reps, due, lastResult} }
   const K_STATS = PREFIX + "stats";      // 集計 { total, correct, catStats:{cat:{total,correct}} }
   const K_STREAK = PREFIX + "streak";    // { count, lastDate }
-  const K_SETTINGS = PREFIX + "settings";// { count, cats:[], diffs:[], theme }
+  const K_SETTINGS = PREFIX + "settings";// { count, cats:[], diffs:[], theme, level }
+  const K_APIKEY = PREFIX + "apikey";    // Anthropic APIキー（この端末内のみ）
+  const K_AIMODEL = PREFIX + "aimodel";  // 使用モデル
 
   const CATS = [
     { key: "journal",   label: "新着ジャーナル", cls: "cat-journal" },
@@ -890,6 +961,150 @@
   let searchHits = [];
   $("#fieldSearch").addEventListener("input", (e) => runSearch(e.target.value));
 
+  // ---------- AI質問（Anthropic API を直接呼び出し / キーは端末内保存） ----------
+  const DEFAULT_MODEL = "claude-haiku-4-5-20251001";
+  function getApiKey() { try { return localStorage.getItem(K_APIKEY) || ""; } catch (e) { return ""; } }
+  function getAiModel() { try { return localStorage.getItem(K_AIMODEL) || DEFAULT_MODEL; } catch (e) { return DEFAULT_MODEL; } }
+
+  // 定型の質問チップ
+  const AI_PRESETS = [
+    "なぜ他の選択肢は不適切なのか、根拠とともに詳しく",
+    "この試験の対象・アウトカム・限界を詳しく",
+    "日本の診療（保険・ガイドライン）での位置づけは？",
+    "具体的な処方・投与量・モニタリングは？"
+  ];
+
+  function renderAiBox(q) {
+    const box = $("#aiBox");
+    const ans = $("#aiAnswer");
+    ans.classList.add("hidden");
+    ans.innerHTML = "";
+    $("#aiInput").value = "";
+    const hasKey = !!getApiKey();
+    $("#aiHint").textContent = hasKey
+      ? "出典を調べたうえで解説します"
+      : "設定タブでAPIキーを登録すると使えます";
+    $("#aiInput").disabled = !hasKey;
+    $("#aiAskBtn").disabled = !hasKey;
+    // プリセットチップ
+    const chips = $("#aiChips");
+    chips.innerHTML = "";
+    if (hasKey) {
+      AI_PRESETS.forEach(p => {
+        const c = document.createElement("button");
+        c.className = "ai-chip";
+        c.textContent = p;
+        c.addEventListener("click", () => { $("#aiInput").value = p; askAI(q, p); });
+        chips.appendChild(c);
+      });
+    }
+  }
+
+  // 最小限のMarkdown整形（太字・見出し・箇条書き）
+  function miniMarkdown(t) {
+    let s = escapeHtml(t);
+    s = s.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+    s = s.replace(/^### (.+)$/gm, "<strong>$1</strong>");
+    s = s.replace(/^## (.+)$/gm, "<strong>$1</strong>");
+    s = s.replace(/^- /gm, "・");
+    return s;
+  }
+
+  async function askAI(q, userQuestion) {
+    const key = getApiKey();
+    if (!key) { alert("設定タブでAPIキーを登録してください。"); return; }
+    const ans = $("#aiAnswer");
+    ans.classList.remove("hidden");
+    ans.innerHTML = '<span class="ai-loading">出典を調べています…（10〜30秒ほどかかります）</span>';
+    $("#aiAskBtn").disabled = true;
+
+    const correctSet = correctSetOf(q);
+    const optText = q.options.map((o, i) =>
+      LETTERS[i] + ". " + o + (correctSet.indexOf(i) !== -1 ? "  ←正解" : "")).join("\n");
+
+    const context =
+      "【問題】\n" + q.question + "\n\n【選択肢】\n" + optText +
+      "\n\n【既存の解説】\n" + q.explanation +
+      "\n\n【出典】" + q.source.title + " ( " + q.source.url + " )" +
+      "\n【分野】" + (q.field || "") + " / 【タグ】" + (q.tags || []).join(", ");
+
+    const system =
+      "あなたは日本の総合診療医の学習を支援する医学教育アシスタントです。" +
+      "提示された問題・解説・出典を踏まえ、学習者の質問に日本語で答えてください。\n" +
+      "重要な指示:\n" +
+      "1. 可能な限り web_search で出典（原著論文・ガイドライン）や関連する一次資料を確認し、事実に基づいて答える。\n" +
+      "2. 試験に言及する際は、対象集団・介入・主要アウトカム・効果量（数値）・限界を具体的に示す。\n" +
+      "3. 確立した知見と、議論のある点・エビデンスが限定的な点を明確に区別する。断定しすぎない。\n" +
+      "4. 日本の保険診療・国内ガイドラインと海外の推奨が異なる場合はその差に触れる。\n" +
+      "5. 400〜700字程度で簡潔に。箇条書きを活用し、冗長な前置きは書かない。\n" +
+      "6. 最後に必ず『これは学習用の情報であり、最終判断は一次資料と個々の患者の状況に基づいてください』の趣旨を1行添える。";
+
+    try {
+      const res = await fetch("https://api.anthropic.com/v1/messages", {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+          "x-api-key": key,
+          "anthropic-version": "2023-06-01",
+          "anthropic-dangerous-direct-browser-access": "true"
+        },
+        body: JSON.stringify({
+          model: getAiModel(),
+          max_tokens: 1600,
+          system: system,
+          tools: [{ type: "web_search_20250305", name: "web_search", max_uses: 4 }],
+          messages: [{ role: "user", content: context + "\n\n【質問】\n" + userQuestion }]
+        })
+      });
+
+      if (!res.ok) {
+        let detail = "";
+        try { const j = await res.json(); detail = (j.error && j.error.message) ? j.error.message : ""; } catch (e) {}
+        let msg;
+        if (res.status === 401) msg = "APIキーが正しくないようです。設定タブで確認してください。";
+        else if (res.status === 429) msg = "レート制限に達しました。しばらく待って再度お試しください。";
+        else if (res.status === 400 && /credit|balance/i.test(detail)) msg = "APIの残高が不足しています。Anthropic Consoleで確認してください。";
+        else msg = "エラーが発生しました（" + res.status + "）。" + detail;
+        ans.textContent = msg;
+        return;
+      }
+
+      const data = await res.json();
+      // テキストブロックを連結し、web検索の引用元URLを集める
+      let text = "", cites = [];
+      (data.content || []).forEach(b => {
+        if (b.type === "text") {
+          text += b.text;
+          (b.citations || []).forEach(c => {
+            if (c.url && cites.every(x => x.url !== c.url)) cites.push({ url: c.url, title: c.title || c.url });
+          });
+        }
+      });
+      if (!text) text = "回答を取得できませんでした。質問を変えてお試しください。";
+
+      let html = miniMarkdown(text);
+      if (cites.length) {
+        html += '<div class="cites">参照: ' + cites.slice(0, 6).map(c =>
+          '<a href="' + escapeAttr(c.url) + '" target="_blank" rel="noopener noreferrer">' +
+          escapeHtml(c.title.slice(0, 60)) + "</a>").join(" / ") + "</div>";
+      }
+      ans.innerHTML = html;
+    } catch (e) {
+      ans.textContent = "通信に失敗しました。ネットワーク環境をご確認ください。（" + (e && e.message ? e.message : e) + "）";
+    } finally {
+      $("#aiAskBtn").disabled = false;
+    }
+  }
+
+  $("#aiAskBtn").addEventListener("click", () => {
+    const v = $("#aiInput").value.trim();
+    if (!v || !session) return;
+    askAI(session.queue[session.index], v);
+  });
+  $("#aiInput").addEventListener("keydown", (e) => {
+    if (e.key === "Enter") { e.preventDefault(); $("#aiAskBtn").click(); }
+  });
+
   // ---------- セッション管理 ----------
   let session = null; // { queue:[], index, correctCount, isWeak }
 
@@ -1022,6 +1237,7 @@
       s.className = "mini-tag"; s.textContent = "#" + t;
       tagRow.appendChild(s);
     });
+    renderAiBox(q);   // AI質問欄を初期化
     $("#qProgress").style.width = ((session.index + 1) / session.queue.length * 100) + "%";
     fb.classList.remove("hidden");
     $("#nextBtn").focus();
@@ -1169,7 +1385,35 @@
       });
       cd.appendChild(chip);
     });
+    // AI設定（APIキー・モデル）
+    const key = getApiKey();
+    $("#apiKeyInput").value = key;
+    $("#keyStatus").textContent = key
+      ? "登録済み（末尾 …" + key.slice(-4) + "）。解説の下に質問欄が表示されます。"
+      : "未登録です。登録するとAI解説が使えます。";
+    const model = getAiModel();
+    $$("#segModel button").forEach(b =>
+      b.classList.toggle("active", b.dataset.model === model));
   }
+
+  // AI設定の操作
+  $("#saveKeyBtn").addEventListener("click", () => {
+    const v = $("#apiKeyInput").value.trim();
+    if (!v) { alert("APIキーを入力してください。"); return; }
+    try { localStorage.setItem(K_APIKEY, v); } catch (e) {}
+    renderSettings();
+    alert("APIキーを保存しました。解説の下からAIに質問できます。");
+  });
+  $("#clearKeyBtn").addEventListener("click", () => {
+    try { localStorage.removeItem(K_APIKEY); } catch (e) {}
+    $("#apiKeyInput").value = "";
+    renderSettings();
+    alert("APIキーを削除しました。");
+  });
+  $$("#segModel button").forEach(b => b.addEventListener("click", () => {
+    try { localStorage.setItem(K_AIMODEL, b.dataset.model); } catch (e) {}
+    renderSettings();
+  }));
   $$("#segCount button").forEach(b => {
     b.addEventListener("click", () => {
       settings.count = parseInt(b.dataset.count, 10);
