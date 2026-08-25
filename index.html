@@ -216,9 +216,19 @@
   .field-bar > div { height: 100%; border-radius: 4px; transition: width .3s; }
   .field-note { font-size: .82rem; color: var(--text-muted); }
   .search-item {
-    font-size: .85rem; padding: 7px 0; border-top: 1px solid var(--border);
+    font-size: .85rem; padding: 8px 0; border-top: 1px solid var(--border);
     color: var(--text); line-height: 1.5;
+    display: flex; gap: 9px; align-items: flex-start;
   }
+  .search-item input.search-check { margin-top: 4px; flex-shrink: 0; width: 16px; height: 16px; cursor: pointer; }
+  .search-text {
+    flex: 1; cursor: pointer; border-radius: 6px; padding: 2px 4px; margin: -2px -4px;
+    transition: background .15s, color .15s;
+  }
+  .search-text:hover { background: var(--surface-2); color: var(--accent-dark); }
+  .search-text .s-ok { color: var(--correct); font-weight: 700; margin-right: 5px; }
+  .search-text .s-ng { color: var(--wrong); font-weight: 700; margin-right: 5px; }
+  .search-text .s-new { color: var(--text-muted); font-size: .75rem; margin-right: 5px; }
   /* ===== AI質問欄 ===== */
   .ai-box {
     border: 1.5px dashed var(--border); border-radius: 10px;
@@ -939,29 +949,79 @@
       box.innerHTML = '<p class="lead" style="margin:10px 0 0;">該当する問題がありません。</p>';
       return;
     }
-    box.innerHTML = '<p class="lead" style="margin:10px 0 8px;">' + hits.length + '問ヒット</p>';
-    const btn = document.createElement("button");
-    btn.className = "btn small";
-    btn.textContent = "この" + hits.length + "問を解く";
-    btn.addEventListener("click", () => {
+    box.innerHTML = '<p class="lead" style="margin:10px 0 8px;">' + hits.length +
+      '問ヒット<br><span class="field-note">問題文をタップすると、その1問だけを解けます。' +
+      'チェックを付けて複数まとめて解くこともできます。</span></p>';
+
+    // 操作ボタン（全問 / 選択分）
+    const row = document.createElement("div");
+    row.style.cssText = "display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px;";
+    const allBtn = document.createElement("button");
+    allBtn.className = "btn small";
+    allBtn.textContent = "全" + hits.length + "問を解く";
+    allBtn.addEventListener("click", () => {
       searchHits = shuffle(hits.slice());
       startSession("search");
     });
-    box.appendChild(btn);
-    // ヒットした問題のタイトルを一覧（参照用）
+    const selBtn = document.createElement("button");
+    selBtn.className = "btn outline small";
+    selBtn.textContent = "選択した問題を解く";
+    selBtn.disabled = true;
+    selBtn.addEventListener("click", () => {
+      const picked = [];
+      $$("#searchResult .search-check").forEach((cb, i) => {
+        if (cb.checked) picked.push(hits[parseInt(cb.dataset.idx, 10)]);
+      });
+      if (!picked.length) return;
+      searchHits = picked;
+      startSession("search");
+    });
+    row.appendChild(allBtn); row.appendChild(selBtn);
+    box.appendChild(row);
+
+    function refreshSelBtn() {
+      const n = $$("#searchResult .search-check").filter(cb => cb.checked).length;
+      selBtn.disabled = n === 0;
+      selBtn.textContent = n ? ("選択した" + n + "問を解く") : "選択した問題を解く";
+    }
+
+    // ヒット一覧（1問ずつ選択・実行できる）
     const ul = document.createElement("div");
-    ul.style.marginTop = "12px";
-    hits.slice(0, 30).forEach(q => {
+    const LIMIT = 100;
+    hits.slice(0, LIMIT).forEach((q, i) => {
       const d = document.createElement("div");
       d.className = "search-item";
-      d.innerHTML = '<span class="mini-tag">' + escapeHtml(fieldOf(q)) + '</span> ' +
-        escapeHtml(q.question.slice(0, 60)) + (q.question.length > 60 ? "…" : "");
+
+      const cb = document.createElement("input");
+      cb.type = "checkbox";
+      cb.className = "search-check";
+      cb.dataset.idx = i;
+      cb.addEventListener("change", refreshSelBtn);
+
+      // 学習状況（前回の正誤）を表示
+      const c = cardState[q.id];
+      const mark = !c ? '<span class="s-new">未</span>'
+        : (c.lastResult === "ng" ? '<span class="s-ng">✗</span>' : '<span class="s-ok">✓</span>');
+
+      const txt = document.createElement("span");
+      txt.className = "search-text";
+      txt.innerHTML = mark + '<span class="mini-tag">' + escapeHtml(fieldOf(q)) + '</span> ' +
+        escapeHtml(q.question.slice(0, 70)) + (q.question.length > 70 ? "…" : "");
+      txt.title = "この問題を解く";
+      txt.addEventListener("click", () => {
+        searchHits = [q];              // この1問だけ
+        startSession("search");
+      });
+
+      d.appendChild(cb);
+      d.appendChild(txt);
       ul.appendChild(d);
     });
-    if (hits.length > 30) {
+    if (hits.length > LIMIT) {
       const more = document.createElement("div");
       more.className = "field-note";
-      more.textContent = "他 " + (hits.length - 30) + "問…";
+      more.style.marginTop = "8px";
+      more.textContent = "他 " + (hits.length - LIMIT) + "問（キーワードを絞ると表示されます）";
       ul.appendChild(more);
     }
     box.appendChild(ul);
@@ -1314,7 +1374,7 @@
     if (mode === "weak") queue = buildWeakSession();
     else if (mode === "new") queue = buildNewSession($("#newWindow").value);
     else if (mode === "field") queue = buildFieldSession(selectedField);
-    else if (mode === "search") queue = searchHits.slice(0, Math.max(settings.count, 10));
+    else if (mode === "search") queue = searchHits.slice();  // 選んだ分をそのまま出題
     else queue = buildSession();
     if (queue.length === 0) {
       const msg = mode === "weak" ? "復習する問題がありません。"
