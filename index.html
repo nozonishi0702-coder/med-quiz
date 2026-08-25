@@ -564,6 +564,13 @@
         <select id="modelSelect" class="hidden"
           style="width:100%;padding:10px 12px;border-radius:10px;border:1.5px solid var(--border);background:var(--surface);color:var(--text);font-size:.9rem;"></select>
       </div>
+      <div class="setting-row">
+        <div class="desc">Web検索で出典を確認<small>オフにすると速く・利用枠に優しい（無料枠で制限に当たる場合はオフ推奨）</small></div>
+        <div class="seg" id="segSearch">
+          <button data-search="1">オン</button>
+          <button data-search="0">オフ</button>
+        </div>
+      </div>
       <div style="display:flex;gap:10px;flex-wrap:wrap;">
         <button class="btn small" id="saveKeyBtn">保存</button>
         <button class="btn outline small" id="fetchModelsBtn">モデル一覧を取得</button>
@@ -627,6 +634,7 @@
   const K_PROVIDER = PREFIX + "provider";// "anthropic" | "openai" | "gemini"
   const K_KEY_PREFIX = PREFIX + "key_";  // プロバイダ別APIキー
   const K_MODEL_PREFIX = PREFIX + "model_"; // プロバイダ別モデル
+  const K_USESEARCH = PREFIX + "usesearch"; // Web検索グラウンディングの使用
 
   const CATS = [
     { key: "journal",   label: "新着ジャーナル", cls: "cat-journal" },
@@ -1066,6 +1074,9 @@
     if (!v && p === "anthropic") return lsGet(K_APIKEY);
     return v;
   }
+  // Web検索（グラウンディング）を使うか。既定はオン
+  function getUseSearch() { return lsGet(K_USESEARCH) !== "0"; }
+  function setUseSearch(on) { lsSet(K_USESEARCH, on ? "1" : "0"); }
   function getAiModel(p) {
     p = p || getProvider();
     const v = lsGet(K_MODEL_PREFIX + p);
@@ -1091,7 +1102,7 @@
     const prov = getProvider();
     const hasKey = !!getApiKey(prov);
     $("#aiHint").textContent = hasKey
-      ? PROVIDERS[prov].label + "が出典を調べて解説します"
+      ? PROVIDERS[prov].label + (getUseSearch() ? "が出典を調べて解説します" : "が解説します（Web検索オフ）")
       : "設定タブでAPIキーを登録すると使えます";
     $("#aiInput").disabled = !hasKey;
     $("#aiAskBtn").disabled = !hasKey;
@@ -1156,16 +1167,8 @@
     const prompt = context + "\n\n【質問】\n" + userQuestion;
 
     try {
-      // まずWeb検索あり、ツール非対応などで失敗したら検索なしで再試行
-      let out;
-      try {
-        out = await callProvider(provider, key, model, system, prompt, true);
-      } catch (e1) {
-        if (e1 && e1.retryWithoutTools) {
-          ans.innerHTML = '<span class="ai-loading">Web検索なしで再試行しています…</span>';
-          out = await callProvider(provider, key, model, system, prompt, false);
-        } else { throw e1; }
-      }
+      const useSearch = getUseSearch();
+      const out = await askWithFallback(provider, key, model, system, prompt, useSearch, ans);
 
       let html = miniMarkdown(out.text || "回答を取得できませんでした。質問を変えてお試しください。");
       if (out.cites && out.cites.length) {
@@ -1186,29 +1189,76 @@
 
   // プロバイダ共通のエラー整形
   async function toError(res, providerLabel) {
-    let detail = "";
+    let detail = "", retrySec = 0;
     try {
       const j = await res.json();
-      detail = (j.error && (j.error.message || j.error.status)) ? (j.error.message || j.error.status) : "";
+      if (j.error) {
+        detail = j.error.message || j.error.status || "";
+        // Google は details[] に RetryInfo(retryDelay: "38s") を返すことがある
+        (j.error.details || []).forEach(d => {
+          if (d.retryDelay) {
+            const m = String(d.retryDelay).match(/([\d.]+)s/);
+            if (m) retrySec = Math.ceil(parseFloat(m[1]));
+          }
+        });
+      }
     } catch (e) {}
     const err = new Error("HTTP " + res.status + " " + detail);
+    err.status = res.status;
+    err.detail = detail;
+    err.retrySec = retrySec;
     if (res.status === 401 || res.status === 403) {
       err.userMessage = "APIキーが正しくないか、権限がありません（" + providerLabel + "）。設定タブで確認してください。";
     } else if (res.status === 429) {
-      err.userMessage = "レート制限に達しました。しばらく待って再度お試しください。";
-    } else if (/credit|balance|quota|billing/i.test(detail)) {
-      err.userMessage = "APIの残高・利用枠が不足しています（" + providerLabel + "）。";
-    } else if (res.status === 404 || /model/i.test(detail)) {
-      err.userMessage = "モデル名が正しくない可能性があります（" + detail + "）。設定タブの「モデル一覧を取得」で選び直してください。";
-      err.retryWithoutTools = false;
+      err.userMessage = "利用枠の上限に達しました（" + providerLabel + "）。" +
+        (retrySec ? retrySec + "秒ほど待つと再開できます。" : "") +
+        "\n無料枠は1分あたり・1日あたりの回数が少なめです。設定タブでWeb検索をオフにする、より制限の緩いモデル（例: gemini-2.5-flash-lite）に変える、他のAIサービスに切り替える、いずれかをお試しください。" +
+        (detail ? "\n（" + detail + "）" : "");
+    } else if (/credit|balance|billing/i.test(detail)) {
+      err.userMessage = "APIの残高・課金設定をご確認ください（" + providerLabel + "）。" + (detail ? "\n（" + detail + "）" : "");
+    } else if (res.status === 404 || /not found|is not supported|model/i.test(detail)) {
+      err.userMessage = "モデル名が使えない可能性があります。設定タブの「モデル一覧を取得」で選び直してください。" +
+        (detail ? "\n（" + detail + "）" : "");
     } else if (res.status === 400) {
       // ツール指定が原因の可能性 → 検索なしで再試行させる
       err.retryWithoutTools = true;
-      err.userMessage = "リクエストが拒否されました（" + detail + "）。";
+      err.userMessage = "リクエストが拒否されました。" + (detail ? "\n（" + detail + "）" : "");
     } else {
       err.userMessage = "エラーが発生しました（" + res.status + "）。" + detail;
     }
     return err;
+  }
+
+  const sleep = ms => new Promise(r => setTimeout(r, ms));
+
+  // Web検索あり→失敗時は検索なし→それでも429なら待って再試行、と段階的にフォールバック
+  async function askWithFallback(provider, key, model, system, prompt, useSearch, ans) {
+    try {
+      return await callProvider(provider, key, model, system, prompt, useSearch);
+    } catch (e1) {
+      // 検索グラウンディングは別枠で制限が厳しいことが多い → 検索なしで再試行
+      if (useSearch && (e1.status === 429 || e1.retryWithoutTools)) {
+        ans.innerHTML = '<span class="ai-loading">Web検索の利用枠に達したため、検索なしで再試行しています…</span>';
+        try {
+          return await callProvider(provider, key, model, system, prompt, false);
+        } catch (e2) {
+          if (e2.status === 429) {
+            const w = Math.min(Math.max(e2.retrySec || 8, 5), 30);
+            ans.innerHTML = '<span class="ai-loading">利用枠の回復を待っています…（約' + w + '秒）</span>';
+            await sleep(w * 1000);
+            return await callProvider(provider, key, model, system, prompt, false);
+          }
+          throw e2;
+        }
+      }
+      if (e1.status === 429) {
+        const w = Math.min(Math.max(e1.retrySec || 8, 5), 30);
+        ans.innerHTML = '<span class="ai-loading">利用枠の回復を待っています…（約' + w + '秒）</span>';
+        await sleep(w * 1000);
+        return await callProvider(provider, key, model, system, prompt, useSearch);
+      }
+      throw e1;
+    }
   }
 
   // 各社APIを呼び分ける。戻り値 { text, cites:[{url,title}] }
@@ -1665,8 +1715,16 @@
       ? PROVIDERS[prov].label + "：登録済み（末尾 …" + key.slice(-4) + "）。解説の下に質問欄が表示されます。"
       : PROVIDERS[prov].label + "：未登録です。キーを保存するとAI解説が使えます。";
     $("#keyHelp").innerHTML = 'キーの発行: <a href="' + PROVIDERS[prov].keyUrl +
-      '" target="_blank" rel="noopener noreferrer">' + escapeHtml(PROVIDERS[prov].label) + '</a>';
+      '" target="_blank" rel="noopener noreferrer">' + escapeHtml(PROVIDERS[prov].label) + '</a>' +
+      (prov === "gemini" ? '　※無料枠は回数制限が厳しめです。制限に当たる場合はWeb検索をオフに、モデルは gemini-2.5-flash-lite などをお試しください。' : '');
+    $$("#segSearch button").forEach(b =>
+      b.classList.toggle("active", (b.dataset.search === "1") === getUseSearch()));
   }
+
+  $$("#segSearch button").forEach(b => b.addEventListener("click", () => {
+    setUseSearch(b.dataset.search === "1");
+    renderSettings();
+  }));
 
   // AI設定の操作
   $("#saveKeyBtn").addEventListener("click", () => {
