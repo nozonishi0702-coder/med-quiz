@@ -1151,11 +1151,16 @@
       "\n\n【出典】" + q.source.title + " ( " + q.source.url + " )" +
       "\n【分野】" + (q.field || "") + " / 【タグ】" + (q.tags || []).join(", ");
 
+    const useSearch = getUseSearch();
     const system =
       "あなたは日本の総合診療医の学習を支援する医学教育アシスタントです。" +
       "提示された問題・解説・出典を踏まえ、学習者の質問に日本語で答えてください。\n" +
       "重要な指示:\n" +
-      "1. 可能な限り web_search で出典（原著論文・ガイドライン）や関連する一次資料を確認し、事実に基づいて答える。\n" +
+      (useSearch
+        ? "1. 可能な限り web_search で出典（原著論文・ガイドライン）や関連する一次資料を確認し、事実に基づいて答える。\n"
+        : "1. 今回はWeb検索が使えません。提示された問題・解説・出典情報と、あなたの知識のみで答えること。" +
+          "検索したかのような記述はしない。記憶が不確かな数値（ハザード比・p値・具体的な用量など）は" +
+          "断定せず『およそ』『正確な数値は原著の確認を推奨』と明示し、不明な点は『分からない』と述べる。\n") +
       "2. 試験に言及する際は、対象集団・介入・主要アウトカム・効果量（数値）・限界を具体的に示す。\n" +
       "3. 確立した知見と、議論のある点・エビデンスが限定的な点を明確に区別する。断定しすぎない。\n" +
       "4. 日本の保険診療・国内ガイドラインと海外の推奨が異なる場合はその差に触れる。\n" +
@@ -1167,10 +1172,14 @@
     const prompt = context + "\n\n【質問】\n" + userQuestion;
 
     try {
-      const useSearch = getUseSearch();
       const out = await askWithFallback(provider, key, model, system, prompt, useSearch, ans);
 
       let html = miniMarkdown(out.text || "回答を取得できませんでした。質問を変えてお試しください。");
+      // 出典確認をしていない回答は明示する（数値の取り違えに注意を促す）
+      if (!out.cites || !out.cites.length) {
+        html += '<div class="cites">⚠ Web検索なしの回答です（モデルの知識に基づく生成）。' +
+          '数値・最新の推奨は上の出典リンクでご確認ください。</div>';
+      }
       if (out.cites && out.cites.length) {
         html += '<div class="cites">参照: ' + out.cites.slice(0, 6).map(c =>
           '<a href="' + escapeAttr(c.url) + '" target="_blank" rel="noopener noreferrer">' +
