@@ -4908,6 +4908,115 @@ const QUESTIONS = [
     source: { title: "\"沈黙の臓器\"のサインを拾う最前線は一般内科医である―奈良宣言(浪崎正・吉治仁志, 臨床雑誌内科 138巻3号, 2026)", url: "https://webview.isho.jp/journal/detail/abs/10.15106/j_naika138_333" },
     tags: ["奈良宣言", "ALT", "慢性肝疾患", "健診", "消化器・肝"]
   }
+,
+  {
+    id: "gd-uspstf-osteoporosis-2025",
+    category: "guideline",
+    field: "予防・健診",
+    difficulty: 2,
+    added: "2026-08-27",
+    question: "骨粗鬆症スクリーニングに関する2025年の米国予防医学専門委員会(USPSTF)の推奨として適切なものはどれか。",
+    options: [
+      "スクリーニングは脆弱性骨折の既往がある女性のみを対象とする",
+      "男性に対しては有益性が確立しており全例で推奨される(グレードA)",
+      "65歳以上の女性は骨密度測定でスクリーニングし、65歳未満でも骨折リスクが高い閉経後女性を対象とする",
+      "65歳未満の閉経後女性はリスクの有無にかかわらず対象外である"
+    ],
+    correct: 2,
+    explanation: "【要点】USPSTFは2025年、65歳以上の女性全員に骨粗鬆症スクリーニング(骨密度測定)を推奨し(グレードB)、65歳未満でも骨折リスクが高い閉経後女性を対象とした(グレードB)。\n【背景/エビデンス】対象は脆弱性骨折の既往や骨を弱める疾患を持たない成人。男性についてはスクリーニングの有益性と有害性のバランスを判断する証拠が不十分としてI判定(推奨保留)とした。\n【臨床応用/注意】若年閉経後女性ではFRAX等でリスクを層別化し、DXAで骨密度を評価する。\n【誤答】対象は骨折既往者に限らず無症候者、男性はグレードA推奨ではなくI判定、65歳未満でも高リスク閉経後女性は対象となる。",
+    source: { title: "Screening for Osteoporosis to Prevent Fractures: US Preventive Services Task Force Recommendation Statement (JAMA, 2025)", url: "https://jamanetwork.com/journals/jama/fullarticle/2829238" },
+    tags: ["骨粗鬆症", "スクリーニング", "USPSTF", "DXA", "予防・健診"]
+  },
+  {
+    id: "rv-gold2025-copd-ics",
+    category: "review",
+    field: "呼吸器",
+    difficulty: 2,
+    added: "2026-08-27",
+    question: "安定期COPDの薬物療法に関するGOLD 2025レポートの記述として適切なものはどれか。",
+    options: [
+      "血中好酸球数はICS適応の判断に用いず、全例で一律にICSを導入する",
+      "LABA+LAMA+ICSの三剤併用下でも増悪を繰り返し血中好酸球数が高い(≥300/μL)例では、デュピルマブが追加治療の選択肢となる",
+      "呼吸困難が主体で増悪の少ない例では、ICSを第一選択として早期に導入する",
+      "血中好酸球数が低くICSの有益性が乏しい、あるいは肺炎などの有害事象がある場合、ICSの中止(de-escalation)を検討する"
+    ],
+    correct: [1, 3],
+    explanation: "【要点】GOLD 2025は、好酸球数や有害事象に基づくICSの中止(de-escalation)の枠組みを明確化し、好酸球性表現型の難治例にデュピルマブを追加選択肢として位置づけた。\n【背景/エビデンス】ICSの有益性は血中好酸球数が高いほど大きく、低値例では肺炎リスクが有益性を上回りうる。三剤併用でも増悪する好酸球≥300/μLの症例でデュピルマブが増悪抑制を示した。\n【臨床応用/注意】ICSの導入・中止は増悪歴・血中好酸球・肺炎リスクを統合して個別化する。\n【誤答】好酸球数はICS適応判断の指標であり一律導入は不適切、呼吸困難主体で増悪の少ない例へのICS早期第一選択は推奨されない。",
+    source: { title: "Updates to Global Initiative for Chronic Obstructive Lung Disease (GOLD) Report Released (HCPLive, 2025)", url: "https://www.hcplive.com/view/updates-global-initiative-chronic-obstructive-lung-disease-gold-report-released" },
+    tags: ["COPD", "GOLD2025", "吸入ステロイド", "好酸球", "呼吸器"]
+  },
+  {
+    id: "gd-kdigo2024-ckd-sglt2",
+    category: "guideline",
+    field: "腎・電解質",
+    difficulty: 2,
+    added: "2026-08-27",
+    question: "KDIGO 2024 CKD診療ガイドラインに基づく薬物療法の記述として適切なものはどれか。",
+    options: [
+      "SGLT2阻害薬は2型糖尿病を伴うCKDにのみ有益で、非糖尿病のCKDには推奨されない",
+      "2型糖尿病を伴うCKDでeGFR≥20mL/分/1.73m²の患者にSGLT2阻害薬を推奨する",
+      "RAS阻害薬最大耐用量でもアルブミン尿が残存する2型糖尿病・CKD(eGFR>25・血清K正常)には非ステロイド性MRA(フィネレノン)を考慮する",
+      "糖尿病の有無にかかわらずCKDへのSGLT2阻害薬導入は禁忌である"
+    ],
+    correct: [1, 2],
+    explanation: "【要点】KDIGO 2024は、2型糖尿病を伴うCKDでeGFR≥20の患者にSGLT2阻害薬を推奨し、非糖尿病CKDにも適応を拡大した。RAS阻害薬でもアルブミン尿が残る例には非ステロイド性MRA(フィネレノン)を考慮する。\n【背景/エビデンス】SGLT2阻害薬とフィネレノンは腎・心保護のエビデンスを持ち、UACR高値例では両者の併用開始も検討される。フィネレノンは高K血症に注意し血清Kが正常な症例で開始する。\n【臨床応用/注意】導入後はeGFRの初期低下や血清Kをモニタリングしつつ継続する。\n【誤答】SGLT2阻害薬は非糖尿病CKDにも有益で、いずれのCKDでも禁忌ではない。",
+    source: { title: "KDIGO 2024 Clinical Practice Guideline on Evaluation and Management of Chronic Kidney Disease: a primer (2024)", url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12158546/" },
+    tags: ["CKD", "KDIGO", "SGLT2阻害薬", "フィネレノン", "腎・電解質"]
+  },
+  {
+    id: "cl-ida-alternate-iron",
+    category: "clinical",
+    field: "血液",
+    difficulty: 2,
+    added: "2026-08-27",
+    question: "鉄欠乏性貧血に対する経口鉄剤の投与法に関する近年のエビデンスとして適切なものはどれか。",
+    options: [
+      "隔日投与は連日投与より1回あたりの鉄吸収率が低く、避けるべきである",
+      "消化器症状で連日投与が困難な場合でも、投与回数を減らすと治療効果は大きく損なわれる",
+      "連日の分割投与が吸収の面で最も優れており、単回朝1回投与は推奨されない",
+      "隔日・単回朝投与は連日投与と同等のヘモグロビン改善が得られ、消化器症状が少なく忍容性・アドヒアランスに優れうる"
+    ],
+    correct: 3,
+    explanation: "【要点】経口鉄剤の隔日・単回投与は連日投与と同等のヘモグロビン改善を示し、消化器症状が少なく忍容性・アドヒアランスに優れる可能性がある。\n【背景/エビデンス】鉄摂取後に上昇するヘプシジンが翌日まで吸収を抑制するため、隔日投与のほうが1回あたりの分割吸収率はむしろ高い。複数のRCTでHb改善は連日と同等〜早期反応良好で、連日投与で副作用が多い傾向が示された。\n【臨床応用/注意】元素鉄60〜120mgを隔日朝1回が一案。妊娠や重症など急速補充が必要な場面は個別に判断する。\n【誤答】隔日は吸収率が高く、回数を減らしても効果が大きく損なわれるわけではなく、連日分割が常に最善とは限らない。",
+    source: { title: "Alternate day versus daily oral iron for treatment of iron deficiency anemia: a randomized controlled trial (Scientific Reports, 2023)", url: "https://www.nature.com/articles/s41598-023-29034-9" },
+    tags: ["鉄欠乏性貧血", "経口鉄剤", "隔日投与", "ヘプシジン", "血液"]
+  },
+  {
+    id: "rv-uti-nitrofurantoin-firstline",
+    category: "review",
+    field: "感染症",
+    difficulty: 1,
+    added: "2026-08-27",
+    question: "閉経前で健康な成人女性の急性単純性膀胱炎に対する抗菌薬選択について適切なものはどれか。",
+    options: [
+      "フルオロキノロンを第一選択とし、ニトロフラントインは温存する",
+      "ニトロフラントイン、ST合剤(地域の耐性率が低い場合)、ホスホマイシンが第一選択の候補となる",
+      "すべての症例で治療前に尿培養と感受性結果を待ってから抗菌薬を開始する",
+      "βラクタム薬(アモキシシリン等)が最も再発が少なく第一選択となる"
+    ],
+    correct: 1,
+    explanation: "【要点】単純性膀胱炎ではニトロフラントイン、ST合剤(地域の耐性率が20%未満の場合)、ホスホマイシンが第一選択候補で、フルオロキノロンは耐性拡大や有害事象(collateral damage)の観点から温存する。\n【背景/エビデンス】ニトロフラントインは尿中で高濃度に達し全身曝露が少なく忍容性が高く、UTI特異的アンチバイオグラムでも第一選択として支持される。フルオロキノロンは腱・神経障害等の懸念から単純性UTIでは第一選択としない。\n【臨床応用/注意】男性・妊婦・腎盂腎炎は別扱いとし、地域のアンチバイオグラムを参照する。\n【誤答】キノロン第一選択は不適切、単純性膀胱炎は経験的治療でよく全例培養待ちは不要、βラクタムは治療失敗・再発が多く次善である。",
+    source: { title: "Nitrofurantoin as a preferred first-line therapy for urinary tract infection: a comparison using urinary tract infection-specific antibiograms (2024)", url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12661537/" },
+    tags: ["尿路感染症", "膀胱炎", "ニトロフラントイン", "抗菌薬", "感染症"]
+  },
+  {
+    id: "jr-essence-mash-sema",
+    category: "journal",
+    field: "消化器・肝",
+    difficulty: 2,
+    added: "2026-08-27",
+    question: "生検で確認された代謝機能障害関連脂肪肝炎(MASH)・線維化ステージF2〜F3を対象に、週1回セマグルチド2.4mgをプラセボと比較した第3相試験(ESSENCE, NEJM 2025)の72週時点の結果として適切なものはどれか。",
+    options: [
+      "線維化の悪化を伴わない脂肪肝炎の消失は、セマグルチド群で約63%、プラセボ群で約34%と有意に高かった",
+      "脂肪肝炎の消失率はセマグルチド群とプラセボ群で有意差を認めなかった",
+      "有害事象はプラセボ群で多く、その大半は肝機能障害であった",
+      "脂肪肝炎の悪化を伴わない線維化の改善は、プラセボ群で有意に多かった"
+    ],
+    correct: 0,
+    explanation: "【要点】ESSENCE試験では72週時点で、線維化悪化を伴わない脂肪肝炎(MASH)の消失がセマグルチド群62.9%対プラセボ群34.3%、脂肪肝炎悪化を伴わない線維化改善が36.8%対22.4%と、いずれも有意に良好であった。\n【背景/エビデンス】生検確認MASH・F2〜F3の1197例を2:1で週1回セマグルチド2.4mgかプラセボに割付けた国際二重盲検RCT。主な有害事象は悪心・下痢・便秘などの消化器症状であった。\n【臨床応用/注意】結果を受け線維化を伴うMASHへの適応承認が進んだが、適応は病態・併存疾患を踏まえ個別に判断する。\n【誤答】消失率には有意差があり、有害事象はセマグルチド群でやや多く大半は消化器症状、線維化改善はセマグルチド群で多い。",
+    source: { title: "Phase 3 Trial of Semaglutide in Metabolic Dysfunction-Associated Steatohepatitis (NEJM, 2025)", url: "https://www.nejm.org/doi/full/10.1056/NEJMoa2413258" },
+    tags: ["MASH", "セマグルチド", "ESSENCE", "肝線維化", "消化器・肝"]
+  }
 ];
 
 if (typeof module !== "undefined") { module.exports = QUESTIONS; }
