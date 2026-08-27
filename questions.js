@@ -5016,6 +5016,132 @@ const QUESTIONS = [
     explanation: "【要点】ESSENCE試験では72週時点で、線維化悪化を伴わない脂肪肝炎(MASH)の消失がセマグルチド群62.9%対プラセボ群34.3%、脂肪肝炎悪化を伴わない線維化改善が36.8%対22.4%と、いずれも有意に良好であった。\n【背景/エビデンス】生検確認MASH・F2〜F3の1197例を2:1で週1回セマグルチド2.4mgかプラセボに割付けた国際二重盲検RCT。主な有害事象は悪心・下痢・便秘などの消化器症状であった。\n【臨床応用/注意】結果を受け線維化を伴うMASHへの適応承認が進んだが、適応は病態・併存疾患を踏まえ個別に判断する。\n【誤答】消失率には有意差があり、有害事象はセマグルチド群でやや多く大半は消化器症状、線維化改善はセマグルチド群で多い。",
     source: { title: "Phase 3 Trial of Semaglutide in Metabolic Dysfunction-Associated Steatohepatitis (NEJM, 2025)", url: "https://www.nejm.org/doi/full/10.1056/NEJMoa2413258" },
     tags: ["MASH", "セマグルチド", "ESSENCE", "肝線維化", "消化器・肝"]
+  },
+  {
+    id: "jr-course-tezepelumab-copd",
+    category: "journal",
+    field: "呼吸器",
+    difficulty: 2,
+    added: "2026-08-28",
+    question: "中等症〜最重症COPDに対する抗TSLP抗体テゼペルマブの有効性を検討した第2a相試験(COURSE, Lancet Respir Med 2025)の結果として適切なものはどれか。",
+    options: [
+      "年間増悪率をプラセボと比較して有意に低下させ、主要評価項目を達成した",
+      "全例で一律に増悪を抑制し、血中好酸球数によらず同等に有効であった",
+      "年間増悪率の低下は主要評価項目として有意差に至らなかったが、高好酸球数のサブグループで抑制傾向が示唆された",
+      "重篤な安全性シグナルが多発し、忍容性は不良であった"
+    ],
+    correct: 2,
+    explanation: "【要点】COURSE試験でテゼペルマブは中等症〜最重症COPDの年間中等症/重症増悪率を有意には減らせず(1.75対2.11、P=0.10)、主要評価項目を達成しなかった。ただし高血中好酸球サブグループで抑制傾向が示唆された。\n【背景/エビデンス】TSLP阻害薬を52週投与した無作為化プラセボ対照第2a相試験。忍容性は良好で新たな安全性懸念はなかった。喘息では有効性が確立するが、COPD全体集団での上乗せ効果は確認されなかった。\n【臨床応用/注意】COPDの生物学的製剤は血中好酸球などバイオマーカーによる層別化が鍵で、現時点でテゼペルマブは標準治療ではない。\n【誤答】主要評価項目は未達で全体有意差なし、効果は好酸球で異なり一律ではなく、安全性は良好であった。",
+    source: { title: "Efficacy and safety of tezepelumab versus placebo in adults with moderate to very severe COPD (COURSE): a randomised, placebo-controlled, phase 2a trial (Lancet Respir Med, 2025)", url: "https://pubmed.ncbi.nlm.nih.gov/39653044/" },
+    tags: ["COPD", "テゼペルマブ", "TSLP", "好酸球", "呼吸器", "生物学的製剤"]
+  },
+  {
+    id: "jr-selectgca-upadacitinib",
+    category: "journal",
+    field: "膠原病・骨",
+    difficulty: 2,
+    added: "2026-08-28",
+    question: "新規発症または再発の巨細胞性動脈炎(GCA)にJAK阻害薬ウパダシチニブを検討した第3相試験(SELECT-GCA, NEJM 2025)の結果として適切なものはどれか。",
+    options: [
+      "ウパダシチニブ15mgはプラセボに対し52週持続寛解率で有意差を示さなかった",
+      "ウパダシチニブ15mg+26週ステロイド漸減はプラセボ+52週漸減に対し、52週持続寛解率が有意に高かった(約46%対29%)",
+      "主要心血管イベントがウパダシチニブ群で有意に増加した",
+      "累積ステロイド曝露量はプラセボ群でより少なかった"
+    ],
+    correct: 1,
+    explanation: "【要点】SELECT-GCAでウパダシチニブ15mg併用はプラセボに対し52週の持続寛解を有意に改善(約46%対29%、P=0.002)し、GCAへの適応承認につながった。\n【背景/エビデンス】新規/再発GCA 428例を2:1:1でUPA15mg/7.5mg(26週漸減)またはプラセボ(52週漸減)に割付。持続完全寛解・再燃までの時間・累積ステロイド量・患者報告アウトカムの主要副次項目でも15mgが優越し、52週で重大心血管イベントはなかった。\n【臨床応用/注意】従来のトシリズマブに加えステロイド節減の選択肢が広がるが、感染・血栓などJAK阻害薬のリスクを個別に評価する。\n【誤答】持続寛解は有意差あり、心血管イベント増加はなく、累積ステロイドはUPA群で少ない。",
+    source: { title: "A Phase 3 Trial of Upadacitinib for Giant-Cell Arteritis (NEJM, 2025)", url: "https://www.nejm.org/doi/abs/10.1056/NEJMoa2413449" },
+    tags: ["巨細胞性動脈炎", "ウパダシチニブ", "JAK阻害薬", "ステロイド節減", "膠原病・骨", "SELECT-GCA"]
+  },
+  {
+    id: "jr-atogepant-migraine-prevention",
+    category: "journal",
+    field: "神経",
+    difficulty: 2,
+    added: "2026-08-28",
+    question: "経口CGRP受容体拮抗薬アトゲパントの片頭痛予防に関する記述として適切なものはどれか。",
+    options: [
+      "急性期の頓挫のみに用い、予防効果は確認されていない",
+      "効果発現には数か月を要し、投与初期には片頭痛日数の減少は認められない",
+      "既存の複数の経口予防薬が無効・不耐だった患者では効果は期待できない",
+      "反復性・慢性片頭痛の予防で月間片頭痛日数を有意に減少させ、複数の経口予防薬が無効だった難治例でも有効性が示されている"
+    ],
+    correct: 3,
+    explanation: "【要点】アトゲパントは経口CGRP受容体拮抗薬で、反復性・慢性片頭痛の予防において月間片頭痛日数を有意に減少させ、複数の従来経口予防薬が無効・不耐だった難治例(ELEVATE試験)でも有効性が示された。\n【背景/エビデンス】無作為化プラセボ対照試験で投与初期(1週以内)から片頭痛日数の減少がみられ、忍容性は良好。悪心・便秘・体重減少が主な有害事象。CGRP経路を標的とする経口薬として予防治療の選択肢を広げた。\n【臨床応用/注意】βブロッカー・抗てんかん薬・抗うつ薬など従来予防薬で効果不十分な患者の選択肢となるが、費用と適応を考慮する。\n【誤答】予防効果は確立し、効果発現は早期で、従来薬無効例でも有効性が示されている。",
+    source: { title: "Early Improvements With Atogepant for the Preventive Treatment of Migraine (Neurology, 2025)", url: "https://www.neurology.org/doi/10.1212/WNL.0000000000210212" },
+    tags: ["片頭痛", "アトゲパント", "CGRP", "予防", "神経"]
+  },
+  {
+    id: "gd-acip-rsv-5059-2025",
+    category: "guideline",
+    field: "予防・健診",
+    difficulty: 1,
+    added: "2026-08-28",
+    question: "成人へのRSVワクチン接種に関する2025年の米国ACIP勧告について適切なものはどれか。",
+    options: [
+      "重症RSVリスクの高い50〜59歳の成人に対しても単回接種が推奨されるよう対象が拡大された",
+      "全年齢の健康成人に定期接種が推奨されるようになった",
+      "75歳以上への推奨は撤回された",
+      "妊婦への接種は一律に禁忌とされた"
+    ],
+    correct: 0,
+    explanation: "【要点】2025年にACIPは、COPD・喘息・糖尿病・心疾患などで重症RSVリスクが高い50〜59歳の成人にもRSVワクチン単回接種を推奨するよう対象を拡大した。\n【背景/エビデンス】従来は75歳以上全員、および60〜74歳のハイリスク者が対象だった。50〜59歳のリスク基準は60〜74歳と同様で、この年齢層では年間約1.5〜2万件のRSV関連入院がある。AbrysvoとArexvyが該当年齢で承認済み。\n【臨床応用/注意】接種はリスク因子と共有意思決定に基づき判断する。日本の定期接種制度とは対象・運用が異なる点に注意。\n【誤答】健康成人全員への定期接種ではなく、75歳以上への推奨は継続、妊婦へのRSVワクチンは用途に応じ推奨され一律禁忌ではない。",
+    source: { title: "ACIP Expands RSV Vaccine Recommendation to At-Risk Adults Aged 50-59 Years (2025)", url: "https://www.patientcareonline.com/view/acip-expands-rsv-vaccine-recommendation-to-at-risk-adults-aged-50-59-years" },
+    tags: ["RSVワクチン", "予防接種", "ACIP", "高齢者", "予防・健診"]
+  },
+  {
+    id: "rv-siadh-management-sglt2",
+    category: "review",
+    field: "腎・電解質",
+    difficulty: 2,
+    added: "2026-08-28",
+    question: "SIADH(不適切抗利尿ホルモン分泌症候群)による慢性低ナトリウム血症の管理について適切なものはどれか。",
+    options: [
+      "無症候性の軽度低Na血症でも直ちに高張食塩水で急速に補正する",
+      "第一選択は水分制限で、効果不十分な場合は経口尿素やトルバプタンが有効な選択肢となる",
+      "血清ナトリウムは可能な限り速やかに基準値まで正常化すべきである",
+      "SGLT2阻害薬(エンパグリフロジン等)がSIADHの血清Na上昇に有用な可能性が近年の無作為化試験で示されている"
+    ],
+    correct: [1, 3],
+    explanation: "【要点】SIADHによる慢性低Na血症の基本は水分制限で、不十分ならば経口尿素やトルバプタンが有効な二次治療となる。近年SGLT2阻害薬(エンパグリフロジン)が浸透圧利尿を介してNaを上昇させる可能性がRCTで示された。\n【背景/エビデンス】入院SIADH例でエンパグリフロジン25mg併用が水分制限単独よりNa上昇を高めた小規模試験がある(中央値+10対+7mmol/L)。ただし短期成績が中心で長期有効性は今後の検討課題。\n【臨床応用/注意】補正は緩徐に行い、浸透圧性脱髄症候群を避けるため過剰・急速な補正を避ける(目安24時間で概ね8〜10mmol/L以内)。\n【誤答】無症候性の軽度例に急速補正は不要、急速な正常化はむしろ有害、過剰補正は脱髄など合併症の原因となる。",
+    source: { title: "Hyponatraemia-treatment standard 2024 (Nephrol Dial Transplant, 2024)", url: "https://pubmed.ncbi.nlm.nih.gov/39009016/" },
+    tags: ["低ナトリウム血症", "SIADH", "SGLT2阻害薬", "トルバプタン", "腎・電解質", "複数選択"]
+  },
+  {
+    id: "cl-cbti-chronic-insomnia",
+    category: "clinical",
+    field: "精神・行動",
+    difficulty: 1,
+    added: "2026-08-28",
+    question: "成人の慢性不眠症(chronic insomnia disorder)の外来管理について適切なものはどれか。",
+    options: [
+      "不眠症に対する認知行動療法(CBT-I)を初期治療の第一選択とする",
+      "すべての患者にまずベンゾジアゼピン系睡眠薬を長期に投与する",
+      "薬物療法を用いる場合は短期使用にとどめ、有益性・有害性・費用を共有意思決定で検討する",
+      "CBT-Iは侵襲的で有害事象が多いため高齢者では避ける"
+    ],
+    correct: [0, 2],
+    explanation: "【要点】米国内科学会(ACP)などのガイドラインは、成人の慢性不眠症に対しCBT-Iを初期治療の第一選択(強い推奨)とし、薬物療法は短期使用にとどめ有益性・有害性・費用を共有意思決定で検討するとしている。\n【背景/エビデンス】CBT-Iは睡眠衛生・刺激制御・睡眠制限・認知再構成などから成り、応答率70〜80%と長期効果に優れる。睡眠薬は転倒・依存・持ち越し等のリスクがあり漫然投与を避け、通常は数週間にとどめる。\n【臨床応用/注意】高齢者でもCBT-Iは安全で有用。デジタルCBT-I(dCBT-I)はアクセス障壁を下げる手段となる。\n【誤答】BZDの長期投与を全例に行うのは不適切、CBT-Iは非侵襲的で有害事象が少なく高齢者にも推奨される。",
+    source: { title: "Management of Chronic Insomnia Disorder in Adults: A Clinical Practice Guideline From the American College of Physicians (Ann Intern Med)", url: "https://www.acpjournals.org/doi/10.7326/M15-2175" },
+    tags: ["不眠症", "CBT-I", "認知行動療法", "睡眠薬", "精神・行動", "複数選択"]
+  },
+  {
+    id: "jr-artesia-subclinical-af",
+    category: "journal",
+    field: "循環器",
+    difficulty: 2,
+    added: "2026-08-28",
+    question: "デバイスで検出された無症候性心房細動(subclinical AF, 6分〜24時間)に対しアピキサバンとアスピリンを比較した試験(ARTESiA, NEJM)の結果として適切なものはどれか。",
+    options: [
+      "アピキサバンは脳卒中・全身塞栓を減らさず、出血も増やさなかった",
+      "アピキサバンはアスピリンより脳卒中・全身塞栓が有意に多かった",
+      "アピキサバンは脳卒中・全身塞栓を有意に減らしたが、重大出血は有意に増加した",
+      "両群で有効性・安全性ともに完全に同等であった"
+    ],
+    correct: 2,
+    explanation: "【要点】ARTESiA試験では、デバイス検出の無症候性AFに対しアピキサバンはアスピリンと比較して脳卒中・全身塞栓を有意に減少させた(約0.78対1.24%/年、HR約0.63)一方、重大出血が有意に増加した(約1.71対0.94%/年)。\n【背景/エビデンス】6分〜24時間持続の無症候性AFをもつ約4000例のRCT。臨床的に顕性のAFより脳卒中の絶対リスクは低く、抗凝固による絶対的な有益性は小さい。\n【臨床応用/注意】無症候性AFでは塞栓リスクと出血リスクを個別に秤量し、一律の抗凝固は推奨されない。持続時間・CHA2DS2-VASc・出血素因を総合して判断する。\n【誤答】アピキサバンは塞栓を減らし出血を増やすため、無効・塞栓増加・完全同等とする選択肢は誤り。",
+    source: { title: "Apixaban for Stroke Prevention in Subclinical Atrial Fibrillation (ARTESiA, NEJM)", url: "https://www.nejm.org/doi/full/10.1056/NEJMoa2310234" },
+    tags: ["心房細動", "無症候性心房細動", "アピキサバン", "抗凝固", "循環器", "ARTESiA"]
   }
 ];
 
