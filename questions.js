@@ -4854,6 +4854,84 @@ const QUESTIONS = [
     explanation: "【要点】終末期の痛みは身体的側面に加え心理・社会・スピリチュアルな側面にも影響し、実存的苦悩を増幅して全人的苦痛(total pain)へと広がる。\n【背景/エビデンス】人生最期の1カ月では、がんに限らず心疾患や老衰などでも約半数が痛みを抱えるとされる。共感・関わり・人生の振り返りといった非薬物的な関わりが痛みの緩和に寄与し、「共にいること」が尊厳ある最期を支える重要なケアとなる。\n【臨床応用/注意】オピオイド等の薬物療法とあわせ、サルコペニアやロコモティブシンドロームへの配慮、心理・社会・スピリチュアルな評価を統合的に行う。\n【誤答】痛みをがん患者に限る、身体要因のみとする、スピリチュアルな苦痛を対象外とするのはいずれも誤りである。",
     source: { title: "痛みと全人的苦痛への対処（田上恵太, 総合診療 36巻8号, 2026）", url: "https://webview.isho.jp/journal/detail/abs/10.11477/mf.218880510360080842" },
     tags: ["全人的苦痛", "total pain", "緩和ケア", "終末期", "その他"]
+  },
+  {
+    id: "gl-gina-2026-asthma-01",
+    category: "guideline",
+    field: "呼吸器",
+    difficulty: 2,
+    added: "2026-08-29",
+    question: "2026年 GINA 喘息戦略アップデートの内容として、当てはまるものを選べ。",
+    options: ["軽症増悪に対してはSABA単独のみが唯一の推奨であり、ICS/ホルモテロールは選択肢に含まれない", "補助酸素は酸素飽和度が92%未満に低下しない限り推奨されない", "急性喘息の評価・治療・フォローに関する新しいフローチャートは作成されなかった", "軽症増悪の初期治療にICS/ホルモテロールがSABA吸入の代替として追加された"],
+    correct: [1, 3],
+    explanation: "【要点】2026 GINAアップデートは急性増悪の評価・治療・フォローに関する新フローチャートを整備し、酸素目標と軽症増悪の初期治療を見直した。\n【背景/エビデンス】補助酸素はSpO2 92%未満でなければ推奨せず、成人・青年・6〜11歳での目標上限は95%とされ、高酸素の害を避ける方向に改訂された。軽症増悪の初期治療にはICS/ホルモテロールがSABA吸入の代替として追加された。\n【臨床応用/注意】プライマリ・ケアでも増悪時にSABA一辺倒とせず、抗炎症を含む治療とSpO2の適正管理を行う。\n【誤答】SABA単独が唯一の推奨とするのは誤り。新フローチャートは実際に作成されており「作成されなかった」も誤り。",
+    source: { title: "GINA 2026 Update: Asthma Management in Primary Care & More (Pulmonology Advisor)", url: "https://www.pulmonologyadvisor.com/features/asthma-gina-2026-update/" },
+    tags: ["喘息", "GINA2026", "急性増悪", "酸素療法", "呼吸器", "複数選択"]
+  },
+  {
+    id: "gl-idsa-esbl-oral-2026-01",
+    category: "guideline",
+    field: "感染症",
+    difficulty: 3,
+    added: "2026-08-29",
+    question: "2026年 IDSA 薬剤耐性グラム陰性菌治療ガイダンスで、ESBL産生腸内細菌科による単純性膀胱炎に対し新たにFDA承認の経口選択肢として位置づけられたのはどれか。",
+    options: ["ニトロフラントイン", "ST合剤(TMP-SMX)", "ゲポチダシン", "エルタペネム"],
+    correct: 2,
+    explanation: "【要点】2026年IDSA更新は、ESBL産生腸内細菌科(ESBL-E)の単純性膀胱炎に対する新規FDA承認薬として、ゲポチダシン、ピブメシリナム、経口スロペネムを追加した。\n【背景/エビデンス】2026年3月時点の内容で、CLSIブレイクポイント更新や、セフェピム・エンメタゾバクタム、静注ホスホマイシンの情報も加わった。カルバペネム温存の観点から、軽症の膀胱炎を経口薬で完結させる意義が大きい。\n【臨床応用/注意】地域の感受性と薬剤の入手性を踏まえて選択する。腎盂腎炎など複雑性感染では別途評価する。\n【誤答】ニトロフラントイン・ST合剤・エルタペネムはESBL-Eに有効/従来からの選択肢だが、今回新規にFDA承認された経口薬ではない。",
+    source: { title: "New 2026 IDSA Treatment of AMR Gram-Negative Infection Guidance Update (Guideline Central)", url: "https://www.guidelinecentral.com/insights/aug-2026-idsa-treatmentamrgramnegitiveinfection-guideline-spotlight/" },
+    tags: ["ESBL", "耐性グラム陰性菌", "膀胱炎", "ゲポチダシン", "IDSA2026", "感染症"]
+  },
+  {
+    id: "gl-dyslipidemia-2026-primary-01",
+    category: "guideline",
+    field: "循環器",
+    difficulty: 2,
+    added: "2026-08-29",
+    question: "2026年 ACC/AHA/多学会 脂質異常症ガイドラインの一次予防における考え方として、正しいものはどれか。",
+    options: ["家族性でなければLDLコレステロールは治療対象とせず生活習慣指導のみとする", "リスク評価にはPooled Cohort Equationsの使用が引き続き第一に推奨される", "Lp(a)はリスク評価に有害であり測定してはならないとされた", "PREVENT 10年ASCVDリスク5〜<10%(中等度リスク)では患者と相談のうえLDL低下療法を考慮すべきとされる"],
+    correct: 3,
+    explanation: "【要点】2026年脂質ガイドラインは一次予防でPREVENT方程式(30〜79歳)を用い、10年ASCVDリスク5〜<10%(中等度)では共同意思決定のうえLDL低下療法を考慮すべきとし、3〜<5%(境界)でも考慮しうるとした。\n【背景/エビデンス】\"earlier and lower for longer\"を掲げ、Lp(a)を生涯に少なくとも一度は測定してリスク層別化に用いることを推奨。二次予防では超高リスクでLDL<55、それ以外<70 mg/dLを目標とする。\n【臨床応用/注意】リスク推定値と患者の意向を踏まえ開始を判断する。\n【誤答】PCEは旧式で今回はPREVENTを推奨。Lp(a)は測定禁止ではなく推奨対象。LDLを一律に治療対象外とするのは誤り。",
+    source: { title: "2026 Guideline on the Management of Dyslipidemia (Circulation)", url: "https://www.ahajournals.org/doi/10.1161/CIR.0000000000001423" },
+    tags: ["脂質異常症", "一次予防", "PREVENT", "Lp(a)", "循環器"]
+  },
+  {
+    id: "rv-acp-gout-2026-01",
+    category: "review",
+    field: "膠原病・骨",
+    difficulty: 2,
+    added: "2026-08-29",
+    question: "痛風の長期管理に関するACPの推奨として、適切なものはどれか。",
+    options: ["初回発作や発作が稀な多くの患者では、長期尿酸低下療法を一律には開始しない", "尿酸低下療法は高用量アロプリノールから開始することが強く推奨される", "急性発作には高用量コルヒチンレジメンを用いる", "全患者で発作後直ちに生涯の尿酸低下療法を開始する"],
+    correct: 0,
+    explanation: "【要点】ACPは、初回発作や発作頻度が低い多くの患者では長期尿酸低下療法(ULT)を一律には開始せず、症状・発作頻度に応じて判断する立場をとる。\n【背景/エビデンス】急性発作には低用量コルヒチン(初回1.2 mg、1時間後に0.6 mg)、あるいはNSAIDsやステロイドを用いる。ULTを開始する場合はアロプリノール等を低用量から開始する。ACRの厳格なtreat-to-targetとは強調点が異なる。\n【臨床応用/注意】発作頻度・腎機能・患者の意向を踏まえ共同意思決定する。\n【誤答】高用量からのULT開始、高用量コルヒチン、全例での発作後即時ULT開始は、いずれもこの立場では推奨されない。",
+    source: { title: "ACP: New Guideline for Treating Patients with Gout (Consultant360)", url: "https://www.consultant360.com/exclusives/acp-new-guideline-treating-patients-gout" },
+    tags: ["痛風", "尿酸低下療法", "コルヒチン", "アロプリノール", "膠原病・骨"]
+  },
+  {
+    id: "jr-antidepressant-deprescribing-01",
+    category: "journal",
+    field: "精神・行動",
+    difficulty: 2,
+    added: "2026-08-29",
+    question: "抗うつ薬の減薬・中止(deprescribing)に関する近年のエビデンスとして、適切なものはどれか。",
+    options: ["寛解後は全例で速やかに中止するのが再発予防に最も有効である", "緩やかな(用量が低いほど減量幅を小さくする)テーパリングは急な中止より離脱症状を軽減しうる", "離脱症状と原疾患の再発は臨床的に容易に区別でき、混同されることはない", "再発リスクが高い患者でも維持療法を考慮する意義はない"],
+    correct: 1,
+    explanation: "【要点】抗うつ薬の中止では、緩やかな(用量が低いほど減量幅を小さくする、いわゆるハイパボリック)テーパリングが、急な中止より離脱症状を軽減しうる。\n【背景/エビデンス】寛解例の減薬戦略を比較したネットワークメタ解析では、漸減方法により離脱症状の程度が異なることが示唆される。ANTLER試験など、寛解例でも中止により再発が増える集団が存在し、再発リスクの層別化が重要である。\n【臨床応用/注意】離脱症状と再発は紛らわしく、発現時期・症状の質で見極める。高リスク例では維持療法を検討する。\n【誤答】全例で速やかな中止・維持療法は無意味・離脱と再発は容易に区別できる、はいずれも誤り。",
+    source: { title: "Comparison of antidepressant deprescribing strategies in individuals with clinically remitted depression: a network meta-analysis (Lancet Psychiatry)", url: "https://www.thelancet.com/journals/lanpsy/article/PIIS2215-0366(25)00330-X/abstract" },
+    tags: ["抗うつ薬", "減薬", "テーパリング", "離脱症状", "精神・行動"]
+  },
+  {
+    id: "cl-b12-screening-riskgroups-01",
+    category: "clinical",
+    field: "血液",
+    difficulty: 1,
+    added: "2026-08-29",
+    question: "ビタミンB12欠乏の検査(スクリーニング)を考慮すべき対象として、当てはまるものを選べ。",
+    options: ["メトホルミンを4か月以上使用している患者", "厳格な菜食主義(ビーガン)を実践している患者", "リスク因子のない健康な成人への一律スクリーニング", "H2ブロッカーを2週間使用しただけの患者"],
+    correct: [0, 1],
+    explanation: "【要点】平均的リスクの成人へのB12一律スクリーニングは推奨されないが、吸収・摂取に影響する因子を持つ患者では検査を考慮する。\n【背景/エビデンス】メトホルミン4か月超、PPI/H2ブロッカーの12か月超使用、胃・小腸切除後、炎症性腸疾患、ビーガン/厳格な菜食、75歳超などが高リスク。B12欠乏は巨赤芽球性貧血や神経・精神症状の原因となる。近年はメトホルミン使用者へのB12モニタリング注意喚起もある。\n【臨床応用/注意】疑えば血清B12、必要に応じMMA・ホモシステインで評価する。\n【誤答】一律スクリーニングは非推奨。H2ブロッカーは2週間の使用では該当せず、長期使用(12か月超)が問題となる。",
+    source: { title: "Vitamin B12 Deficiency: Recognition and Management (AFP)", url: "https://www.aafp.org/afp/2017/0915/p384" },
+    tags: ["ビタミンB12欠乏", "巨赤芽球性貧血", "メトホルミン", "スクリーニング", "血液", "複数選択"]
   }
 ];
 
