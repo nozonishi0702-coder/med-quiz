@@ -5153,6 +5153,84 @@ const QUESTIONS = [
     explanation: "【要点】抗がん薬治療中の有害事象では、発熱時のFN評価、irAEと感染症の並行鑑別、症状別の初期対応の整理が要点となる。\n【背景/エビデンス】がん患者の発熱では発熱性好中球減少症(FN)の診断・リスク評価が基本。ICIや分子標的薬など新規薬剤による免疫関連有害事象(irAE)は発熱・倦怠感・腹痛・呼吸困難・頭痛・皮膚障害など多彩に現れ、感染症との鑑別が難しい。感染症対応(抗菌薬など)とirAE対応(ステロイドなど)を並行して判断する視点が重要である。\n【臨床応用/注意】症状別に鑑別を整理し、irAEを見逃さない。\n【誤答】irAEを皮膚障害に限る記述は誤りで、多臓器に及ぶ。",
     source: { title: "抗がん剤有害事象対策について，一般内科医に知っておいてほしいこと(診断と治療 114巻13号, 2026)", url: "https://webview.isho.jp/journal/detail/abs/10.34433/dt.0000001739" },
     tags: ["免疫関連有害事象", "免疫チェックポイント阻害薬", "発熱性好中球減少症", "抗がん薬", "その他"]
+  },
+  {
+    id: "cl-aud-pharm-2026-01",
+    category: "clinical",
+    field: "精神・行動",
+    difficulty: 2,
+    added: "2026-08-31",
+    question: "アルコール使用障害(AUD)に対する薬物療法として、第一選択に位置づけられるものを選べ。",
+    options: ["ジスルフィラム", "ナルトレキソン(経口/持効性注射)", "アカンプロサート", "ベンゾジアゼピン系薬の長期維持投与"],
+    correct: [1, 2],
+    explanation: "【要点】中等症〜重症AUDの薬物療法では、ナルトレキソンとアカンプロサートが第一選択に位置づけられる。\n【背景/エビデンス】米国では経口ナルトレキソン(1日1回)、持効性注射(4週ごと)、アカンプロサート(1日3回)、ジスルフィラムがFDA承認。ナルトレキソンとアカンプロサートは断酒・減酒いずれの目標でも強いエビデンスで推奨される。ナルトレキソンは飲酒の報酬を減じ、アカンプロサートは断酒維持に向く。\n【臨床応用/注意】プライマリ・ケアは信頼関係と長期フォローに強みがあり導入に適する。服薬負担も選択の実務的要素。\n【誤答】ジスルフィラムは嫌悪反応を利用する薬で全例第一選択ではない。ベンゾジアゼピンは離脱期の管理に用いる薬で維持療法ではない。",
+    source: { title: "Recommend Evidence-Based Treatment: Know the Options (NIAAA)", url: "https://www.niaaa.nih.gov/health-professionals-communities/core-resource-on-alcohol/recommend-evidence-based-treatment-know-options" },
+    tags: ["アルコール使用障害", "ナルトレキソン", "アカンプロサート", "薬物療法", "精神・行動", "複数選択"]
+  },
+  {
+    id: "gl-hyperk-acute-2026-01",
+    category: "guideline",
+    field: "腎・電解質",
+    difficulty: 2,
+    added: "2026-08-31",
+    question: "心電図変化を伴う重度の高カリウム血症の急性期初期対応として、最も優先されるものはどれか。",
+    options: ["新規カリウム吸着薬(SZC・パチロマー)投与で数分以内の血清K低下を図る", "グルコン酸カルシウム(または塩化カルシウム)静注による心筋膜の安定化", "ループ利尿薬の単独投与でカリウム排泄を促す", "生理食塩水の急速輸液のみで経過観察する"],
+    correct: 1,
+    explanation: "【要点】心電図変化を伴う重度高カリウム血症では、まずカルシウム静注で心筋膜を安定化させるのが最優先である。\n【背景/エビデンス】急性期対応は(1)膜安定化(グルコン酸/塩化カルシウム)、(2)細胞内シフト(インスリン+ブドウ糖、β2刺激薬)、(3)体外除去(利尿・カリウム吸着薬・透析)の順で組み立てる。新規吸着薬(SZC・パチロマー)は数時間単位で効果を発揮し慢性管理に有用だが、分単位の緊急是正には向かない。\n【臨床応用/注意】カルシウムはK自体を下げないため、必ずシフト・除去を併用する。\n【誤答】吸着薬単独やループ利尿薬単独は緊急是正には遅い。輸液のみの経過観察は不十分である。",
+    source: { title: "UK Kidney Association Clinical Practice Guideline: Treatment of Acute Hyperkalaemia in Adults", url: "https://www.ukkidney.org/sites/default/files/FINAL%20VERSION%20-%20UKKA%20CLINICAL%20PRACTICE%20GUIDELINE%20-%20MANAGEMENT%20OF%20HYPERKALAEMIA%20IN%20ADULTS%20-%20191223_0.pdf" },
+    tags: ["高カリウム血症", "膜安定化", "カルシウム", "カリウム吸着薬", "腎・電解質"]
+  },
+  {
+    id: "rv-first-seizure-2026-01",
+    category: "review",
+    field: "神経",
+    difficulty: 3,
+    added: "2026-08-31",
+    question: "成人の初回の誘因なし発作(first unprovoked seizure)で、再発リスクが高く抗発作薬(ASM)開始の考慮に傾く因子を選べ。",
+    options: ["脳波(EEG)でのてんかん性放電", "画像上の構造的病変", "神経学的診察が正常で誘因が明らかな状況関連発作", "焦点性起始を示唆する病歴や巣症状"],
+    correct: [0, 1, 3],
+    explanation: "【要点】初回の誘因なし発作では、再発リスクが高い因子があればASM開始を考慮する。\n【背景/エビデンス】AAN/AESガイドラインは、EEGのてんかん性放電、画像上の構造的病変、焦点性起始を示す病歴・巣症状、既往の脳障害などを再発リスク上昇因子とする。これらがあると2年再発率が高い。早期ASMは短期の再発を減らすが、長期の寛解率は変えないとされる。\n【臨床応用/注意】就労・運転・患者選好を含めた共同意思決定を行い、開始時は単剤が原則。\n【誤答】神経学的診察が正常で誘因が明らかな状況関連発作は再発リスクが相対的に低く、直ちの開始に傾く因子ではない。",
+    source: { title: "New Evidence-Based Guideline on Management of the First Unprovoked Seizure in Adults (AAN/AES, Epilepsy Foundation)", url: "https://www.epilepsy.com/stories/new-evidence-based-guideline-management-first-unprovoked-seizure-adults" },
+    tags: ["初回発作", "てんかん", "抗発作薬", "再発リスク", "神経", "複数選択"]
+  },
+  {
+    id: "gl-osteo-sequence-2026-01",
+    category: "guideline",
+    field: "膠原病・骨",
+    difficulty: 3,
+    added: "2026-08-31",
+    question: "骨折の超高リスク(very high risk)を有する閉経後女性の原発性骨粗鬆症に対し、ACPの生きたガイドライン(2025更新)が示す薬物療法の考え方として適切なものはどれか。",
+    options: ["まずビスホスホネートを長期継続し、骨形成促進薬は用いない", "デノスマブを第一選択として無期限に単剤継続する", "骨吸収抑制薬を先行し、その後に骨形成促進薬へ切り替える", "ロモソズマブまたはテリパラチド(骨形成促進薬)を先行し、その後ビスホスホネート等の骨吸収抑制薬へ移行する"],
+    correct: 3,
+    explanation: "【要点】骨折の超高リスク例では、骨形成促進薬を先行し、その後に骨吸収抑制薬へ移行する順序が推奨される。\n【背景/エビデンス】ACPの生きたガイドラインは、一般にはビスホスホネートを第一選択とする一方、超高リスク(高齢・既存骨折・ステロイド長期使用など)の閉経後女性では、ロモソズマブ(中等度の確実性)またはテリパラチドを先行し、その後ビスホスホネートへ移行する順序が骨密度増加・骨折抑制に優れるとする。\n【臨床応用/注意】ロモソズマブは心血管リスク・コスト・12か月の投与上限に留意。\n【誤答】吸収抑制薬先行は骨密度増加が小さい。デノスマブは二次選択で、中断でリバウンド骨折の懸念がある。",
+    source: { title: "Pharmacologic Treatment of Primary Osteoporosis to Prevent Fractures: A Living Clinical Guideline From the ACP (Annals of Internal Medicine)", url: "https://www.acpjournals.org/doi/10.7326/M22-1034" },
+    tags: ["骨粗鬆症", "逐次療法", "ロモソズマブ", "ビスホスホネート", "膠原病・骨"]
+  },
+  {
+    id: "rv-subclinical-hypothy-2026-01",
+    category: "review",
+    field: "内分泌・代謝",
+    difficulty: 2,
+    added: "2026-08-31",
+    question: "高齢者(概ね70歳以上)の潜在性(無症候性)甲状腺機能低下症の管理について、支持される記述はどれか。",
+    options: ["TSH軽度上昇(≤10 mIU/L)でも直ちにレボチロキシンを開始すべきである", "単回のTSH上昇のみで確定診断とし治療を開始する", "TSH参照上限は加齢とともに上昇し、高齢者ではより緩い目標が許容される", "レボチロキシン投与で高齢者の倦怠感・症状が確実に改善する強いエビデンスがある"],
+    correct: 2,
+    explanation: "【要点】高齢者の潜在性甲状腺機能低下症では、TSH参照上限が加齢で上昇し、より緩い目標が許容される。\n【背景/エビデンス】TSH上限の目安は40歳未満で約3.6、80歳超で約7.5 mIU/Lと年齢依存。潜在性甲状腺機能低下症の高齢者を対象としたTRUST試験では、レボチロキシン投与で倦怠感や症状スコアに有意な改善を認めなかった。TSH上昇の約6割は再検で自然正常化する。\n【臨床応用/注意】TSH≤10 mIU/Lでは原則経過観察とし、約2か月後に再検して確認する。\n【誤答】単回上昇での治療開始、軽度上昇での即時投与、症状改善の確実性を前提とする記述は支持されない。",
+    source: { title: "When to treat subclinical hypothyroidism, TSH goals in the elderly (Cleve Clin J Med, PubMed)", url: "https://pubmed.ncbi.nlm.nih.gov/34766382/" },
+    tags: ["潜在性甲状腺機能低下症", "TSH", "高齢者", "レボチロキシン", "内分泌・代謝"]
+  },
+  {
+    id: "jr-cap-outpatient-abx-2026-01",
+    category: "journal",
+    field: "呼吸器",
+    difficulty: 2,
+    added: "2026-08-31",
+    question: "外来管理可能な成人の市中肺炎(CAP)における抗菌薬治療について、支持される記述はどれか。",
+    options: ["併存症のない健常成人の外来CAPでは、アモキシシリン等の狭域薬が第一選択の一つとなる", "臨床的安定に達しても最低14日間の投与を要する", "すべての外来CAPでフルオロキノロンを第一選択とする", "解熱後直ちに、総投与3日未満での終了が全例で推奨される"],
+    correct: 0,
+    explanation: "【要点】併存症のない健常成人の外来CAPでは、アモキシシリン等の狭域薬が第一選択の一つとなり、投与は短期間でよい。\n【背景/エビデンス】外来CAPではアモキシシリン(またはドキシサイクリン等)が選択肢。ATSの2025年ガイドラインは、臨床的安定に達した外来成人では5日未満(最低3日)への短縮を提案する。フルオロキノロンは有効だが耐性・副作用の観点から温存する。\n【臨床応用/注意】48時間以上の解熱と臨床的改善を確認して終了する。地域の耐性状況と個々の重症度に応じて調整する。\n【誤答】全例14日、全例で総投与3日未満の一律終了、キノロン一律第一選択はいずれも不適切である。",
+    source: { title: "ATS Clinical Practice Guideline: Antibiotics and Steroids in Adults with Pneumonia (2025)", url: "https://site.thoracic.org/press-releases/treatment-with-antibiotics-and-steroids-in-adults-with-pneumonia-addressed-in-latest-clinical-practice-guideline" },
+    tags: ["市中肺炎", "外来治療", "アモキシシリン", "抗菌薬適正使用", "呼吸器"]
   }
 
 ];
