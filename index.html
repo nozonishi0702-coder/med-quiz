@@ -420,6 +420,12 @@
             <option value="30">直近30日</option>
             <option value="latest">最新の追加分のみ</option>
           </select>
+          <label style="font-size:.9rem;color:var(--text-muted);">絞り込み</label>
+          <select id="newFilter" style="padding:8px 10px;border-radius:8px;border:1px solid var(--border);background:var(--surface);color:var(--text);">
+            <option value="all">すべて</option>
+            <option value="unseen">まだ解いていない問題のみ</option>
+            <option value="wrong">間違えた問題のみ</option>
+          </select>
         </div>
         <button class="btn outline" id="newBtn">新着問題を解く</button>
       </div>
@@ -766,21 +772,28 @@
   }
 
   // 新着モード用の対象問題を返す。win は "3"/"7"/"14"/"30"(日) または "latest"(最新追加日のみ)
-  function newQuestions(win) {
+  // mode は "all"（すべて） / "unseen"（未着手のみ） / "wrong"（直近で不正解のみ）
+  function newQuestions(win, mode) {
     const pool = QUESTIONS.filter(passesFilter).filter(q => q.added);
     if (pool.length === 0) return [];
+    let list;
     if (win === "latest") {
       const maxT = Math.max.apply(null, pool.map(addedTime));
-      return pool.filter(q => addedTime(q) === maxT);
+      list = pool.filter(q => addedTime(q) === maxT);
+    } else {
+      const days = parseInt(win, 10) || 7;
+      const cutoff = todayStart() - days * 86400000;
+      list = pool.filter(q => addedTime(q) >= cutoff);
     }
-    const days = parseInt(win, 10) || 7;
-    const cutoff = todayStart() - days * 86400000;
-    return pool.filter(q => addedTime(q) >= cutoff);
+    const m = mode || ($("#newFilter") ? $("#newFilter").value : "all");
+    if (m === "unseen") return list.filter(q => !cardState[q.id]);
+    if (m === "wrong") return list.filter(q => cardState[q.id] && cardState[q.id].lastResult === "ng");
+    return list;
   }
 
   // 新着セッション: 対象を新しい順（同日内は未着手を優先）に並べ、全問出題
   function buildNewSession(win) {
-    const list = newQuestions(win);
+    const list = newQuestions(win, $("#newFilter") ? $("#newFilter").value : "all");
     list.sort((a, b) => {
       const d = addedTime(b) - addedTime(a);       // 新しい順
       if (d !== 0) return d;
@@ -842,16 +855,24 @@
     $("#homeSummary").textContent =
       "難易度[" + lvLabel + "]・1セッション " + settings.count + "問。対象 " + pool.length +
       "問（復習待ち " + dueCount + "・未着手 " + freshCount + "）から出題します。";
-    // 新着モードの対象件数
+    // 新着モードの対象件数（期間＋絞り込み）
     const newWin = $("#newWindow") ? $("#newWindow").value : "7";
-    const newList = newQuestions(newWin);
+    const newMode = $("#newFilter") ? $("#newFilter").value : "all";
+    const newList = newQuestions(newWin, newMode);
+    const winLabel = newWin === "latest" ? "最新の追加分" : ("直近" + newWin + "日");
+    const modeLabel = newMode === "unseen" ? "まだ解いていない問題"
+      : newMode === "wrong" ? "間違えた問題" : "新着問題";
     const newBtn = $("#newBtn");
     if (newList.length === 0) {
-      $("#newSummary").textContent = "この期間に追加された問題はまだありません。毎朝の自動追加をお待ちください。";
+      $("#newSummary").textContent = newMode === "unseen"
+        ? winLabel + "の新着は、すべて一度解き終えています。"
+        : newMode === "wrong"
+        ? winLabel + "の新着に、間違えたまま未克服の問題はありません。"
+        : "この期間に追加された問題はまだありません。毎朝の自動追加をお待ちください。";
       newBtn.disabled = true;
     } else {
-      const label = newWin === "latest" ? "最新の追加分" : ("直近" + newWin + "日");
-      $("#newSummary").textContent = label + "で追加された新着問題が " + newList.length + "問あります（新しい順に出題）。";
+      $("#newSummary").textContent =
+        winLabel + "の" + modeLabel + "が " + newList.length + "問あります（新しい順に出題）。";
       newBtn.disabled = false;
     }
 
@@ -1591,6 +1612,7 @@
   $("#weakBtn").addEventListener("click", () => startSession("weak"));
   $("#newBtn").addEventListener("click", () => startSession("new"));
   $("#newWindow").addEventListener("change", renderHome);
+  $("#newFilter").addEventListener("change", renderHome);
   // 難易度レベル選択（手動）
   $("#levelSelect").value = settings.level || "all";
   $("#levelSelect").addEventListener("change", (e) => {
