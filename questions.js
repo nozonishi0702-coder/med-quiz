@@ -5189,8 +5189,8 @@ const QUESTIONS = [
     question: "成人の初回の誘因なし発作(first unprovoked seizure)で、再発リスクが高く抗発作薬(ASM)開始の考慮に傾く因子を選べ。",
     options: ["脳波(EEG)でのてんかん性放電", "画像上の構造的病変", "神経学的診察が正常で誘因が明らかな状況関連発作", "焦点性起始を示唆する病歴や巣症状"],
     correct: [0, 1, 3],
-    explanation: "【要点】初回の誘因なし発作では、再発リスクが高い因子があればASM開始を考慮する。\n【背景/エビデンス】AAN/AESガイドラインは、EEGのてんかん性放電、画像上の構造的病変、焦点性起始を示す病歴・巣症状、既往の脳障害などを再発リスク上昇因子とする。これらがあると2年再発率が高い。早期ASMは短期の再発を減らすが、長期の寛解率は変えないとされる。\n【臨床応用/注意】就労・運転・患者選好を含めた共同意思決定を行い、開始時は単剤が原則。\n【誤答】神経学的診察が正常で誘因が明らかな状況関連発作は再発リスクが相対的に低く、直ちの開始に傾く因子ではない。",
-    source: { title: "New Evidence-Based Guideline on Management of the First Unprovoked Seizure in Adults (AAN/AES, Epilepsy Foundation)", url: "https://www.epilepsy.com/stories/new-evidence-based-guideline-management-first-unprovoked-seizure-adults" },
+    explanation: "【要点】初回の誘因なし発作では、再発リスクが高い因子があればASM開始を考慮する。\n【背景/エビデンス】初回の誘因なし発作後の再発リスク上昇因子として、EEGのてんかん性放電、画像上の構造的病変、焦点性起始を示す病歴・巣症状、既往の脳障害(remote symptomatic)、夜間発作が挙げられる。これらがあると最初の2年の再発率が高い(約21〜45%)。早期ASMは短期の再発を減らすが、長期の寛解率は変えないとされる。\n【臨床応用/注意】就労・運転・患者選好を含めた共同意思決定を行い、開始時は単剤が原則。\n【誤答】神経学的診察が正常で誘因が明らかな状況関連発作は再発リスクが相対的に低く、直ちの開始に傾く因子ではない。",
+    source: { title: "Evaluation After a First Seizure in Adults (AAFP, Am Fam Physician 2022)", url: "https://www.aafp.org/pubs/afp/issues/2022/0500/p507.html" },
     tags: ["初回発作", "てんかん", "抗発作薬", "再発リスク", "神経", "複数選択"]
   },
   {
