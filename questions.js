@@ -5426,6 +5426,84 @@ const QUESTIONS = [
     explanation: "【要点】薬物過敏反応の抗原認識にはハプテン仮説・p-iコンセプト・非免疫介在性の偽アレルギーがあり、p-iは感作相を経ずに成立する。\n【背景/エビデンス】ハプテン仮説では感作相を経て強固な免疫学的記憶が成立するのに対し、p-iコンセプトでは感作相なしに薬剤とHLAの緩やかな結合でエフェクター細胞が記憶なしに直接活性化される。機序は臨床病型・原因薬剤で異なり、内服開始から発症までの期間にも差がある。\n【臨床応用/注意】非専門医は皮疹の性状評価が難しいため、発熱の程度・持続、重症感、粘膜症状の有無に着目して重症薬疹を早期に疑う。\n【誤答】全薬疹がハプテン機序・偽アレルギーがIgE介在性・機序が一定とする記述はいずれも誤り。",
     source: { title: "遅延型薬物過敏反応—早期診断の決め手(末木博彦, 治療 108巻10号, 2026)", url: "https://webview.isho.jp/journal/detail/abs/10.15104/th.2026100005" },
     tags: ["薬疹", "薬物過敏反応", "p-iコンセプト", "ハプテン仮説", "重症薬疹", "膠原病・骨"]
+  },
+  {
+    id: "gl-ash-itp-secondline-2026-01",
+    category: "guideline",
+    field: "血液",
+    difficulty: 2,
+    added: "2026-09-02",
+    question: "成人の原発性免疫性血小板減少症(ITP)の二次治療に関するASH2026年ガイドライン(改訂)の考え方として、当てはまるものはどれか。",
+    options: ["二次治療では脾摘を他の薬物療法より優先し、早期に行うことが推奨される", "リツキシマブは二次治療の選択肢から除外された", "二次治療は血小板数のみで一律に決定し、患者の価値観は考慮しない", "トロンボポエチン受容体作動薬(TPO-RA)は二次治療の中心的な選択肢として位置づけられる"],
+    correct: 3,
+    explanation: "【要点】ASH2026年の改訂(focused update)は成人原発性ITPの初期・二次治療を扱い、二次治療ではトロンボポエチン受容体作動薬(TPO-RA)を中心的選択肢とし、脾摘は可能なら先送りする方向を支持する。\n【背景/エビデンス】2025年7月までの系統的レビューに基づく2019年ガイドラインの更新で、TPO-RAやリツキシマブが位置づけられ、脾摘は不可逆で感染・血栓リスクを伴うため急がず、まず薬物療法を優先する。\n【臨床応用/注意】治療選択は出血リスク・併存症・患者の価値観・アクセスを踏まえた共有意思決定で行う。\n【誤答】脾摘の早期優先、リツキシマブの除外、血小板数のみでの一律決定はいずれも改訂の趣旨に反する。",
+    source: { title: "American Society of Hematology 2026 Guidelines for Immune Thrombocytopenia (ITP): Initial and Second-Line Therapy in Adults", url: "https://www.researchgate.net/publication/412826700_American_Society_of_Hematology_2026_Guidelines_for_Immune_Thrombocytopenia_ITP_Initial_and_Second-Line_Therapy_in_Adults_with_Primary_ITP" },
+    tags: ["ITP", "免疫性血小板減少症", "TPO受容体作動薬", "脾摘", "ASH", "血液"]
+  },
+  {
+    id: "gl-acip-adult-vax-2026-01",
+    category: "guideline",
+    field: "感染症",
+    difficulty: 2,
+    added: "2026-09-02",
+    question: "2026年時点の成人予防接種(ACIP/CDC)に関する記述として、当てはまるものはどれか。",
+    options: ["新たに承認されたPCV21は、PCV20より多くの侵襲性肺炎球菌感染症の原因血清型をカバーする", "RSVワクチンは重症化リスクの有無にかかわらず50歳未満の全成人に一律で推奨される", "RSVワクチンは75歳以上の全成人に1回接種が推奨される", "50〜74歳では重症RSVのリスクが高い者に1回接種が推奨される"],
+    correct: [0, 2, 3],
+    explanation: "【要点】成人ではRSVワクチンが75歳以上の全員と50〜74歳の重症化リスク保有者に、肺炎球菌はPCV20またはPCV21が推奨される。\n【背景/エビデンス】RSVワクチンは3製剤が50歳以上に承認され、CDCは75歳以上に一律、50〜74歳はリスク保有者に1回接種を推奨する。新たに承認されたPCV21は成人の侵襲性肺炎球菌感染症の原因血清型を最大約84%カバーし、PCV20より広い。\n【臨床応用/注意】年齢・基礎疾患・重症化リスクと接種歴を確認して適応を判断する。\n【誤答】RSVワクチンを50歳未満の全成人に一律推奨とする記述は誤りで、対象は年齢とリスクで規定される。",
+    source: { title: "New ACIP recommendations for RSV, COVID-19 and pneumococcal vaccines (AMA)", url: "https://www.ama-assn.org/public-health/prevention-wellness/new-acip-recommendations-rsv-covid-19-and-pneumococcal-vaccines" },
+    tags: ["予防接種", "RSVワクチン", "肺炎球菌ワクチン", "PCV21", "ACIP", "感染症"]
+  },
+  {
+    id: "cl-ais-tnk-bp-2026-01",
+    category: "clinical",
+    field: "神経",
+    difficulty: 2,
+    added: "2026-09-02",
+    question: "2026年AHA/ASA急性期虚血性脳卒中ガイドラインに関する記述として、当てはまるものはどれか。",
+    options: ["静注血栓溶解の適応前は、収縮期血圧を140mmHg未満まで低下させることが推奨される", "テネクテプラーゼは有効性が劣るため発症4.5時間以内の適応から除外された", "発症4.5時間以内では、テネクテプラーゼ0.25mg/kg(最大25mg)がアルテプラーゼの代替として推奨される", "再灌流が得られた症例では、収縮期血圧を140mmHg未満へ積極的に下げることが推奨される"],
+    correct: 2,
+    explanation: "【要点】2026年改訂では発症4.5時間以内の血栓溶解にテネクテプラーゼ0.25mg/kg(最大25mg)がアルテプラーゼの代替として推奨された。\n【背景/エビデンス】血圧管理は静注血栓溶解前に185/110mmHg未満、施行後24時間は180/105mmHg未満を目標とする。複数の試験から、再灌流後も収縮期140mmHg未満への積極降圧は転帰を改善せず害の可能性があり推奨されない。移動脳卒中ユニットや脳底動脈閉塞への血栓回収(発症24時間以内・NIHSS≥10)も新たに位置づけられた。\n【臨床応用/注意】適応血圧域と時間枠を厳密に管理する。\n【誤答】溶解前に140mmHg未満まで降圧・テネクテプラーゼの適応除外・再灌流後の積極降圧はいずれも誤り。",
+    source: { title: "2026 Guideline for the Early Management of Patients With Acute Ischemic Stroke (AHA/ASA)", url: "https://www.ahajournals.org/doi/10.1161/STR.0000000000000513" },
+    tags: ["脳梗塞", "血栓溶解", "テネクテプラーゼ", "血圧管理", "血栓回収療法", "神経"]
+  },
+  {
+    id: "cl-acp-obesity-pharm-2026-01",
+    category: "clinical",
+    field: "内分泌・代謝",
+    difficulty: 2,
+    added: "2026-09-02",
+    question: "2026年ACPの過体重・肥満に対する薬物療法ガイドラインに関する記述として、当てはまるものはどれか。",
+    options: ["肥満に対する第一選択薬はセマグルチドとチルゼパチドである", "ナルトレキソン・ブプロピオン配合薬が第一選択として推奨される", "薬物療法は生活習慣の修正を行わず単独で開始することが原則である", "フェンテルミン・トピラマートが全例で最優先の選択肢とされる"],
+    correct: 0,
+    explanation: "【要点】ACP2026のliving guidelineは、肥満に対しセマグルチドとチルゼパチドを第一選択とし、生活習慣修正と併用することを推奨する。\n【背景/エビデンス】両薬はいずれも中等度確実性のエビデンスで支持される。第二選択はフェンテルミン・トピラマート、第三選択リラグルチド、第四選択ナルトレキソン・ブプロピオンと順位づけられた。過体重に2型糖尿病・脂質異常・高血圧・OSA・心血管疾患を伴う場合も同様の順序が示される。\n【臨床応用/注意】有益性・有害性・費用・入手可能性・患者の価値観を共有意思決定で検討する。\n【誤答】配合薬を第一選択・生活習慣修正なしの単独開始・フェンテルミン配合を全例最優先とする記述はいずれも誤り。",
+    source: { title: "Pharmacologic Treatments With Lifestyle Modifications in Adults With Overweight or Obesity: A Living Clinical Guideline From the ACP (2026)", url: "https://www.acpjournals.org/doi/10.7326/ANNALS-25-02714" },
+    tags: ["肥満", "薬物療法", "セマグルチド", "チルゼパチド", "GLP-1", "内分泌・代謝"]
+  },
+  {
+    id: "rv-masld-primarycare-2026-01",
+    category: "review",
+    field: "消化器・肝",
+    difficulty: 2,
+    added: "2026-09-02",
+    question: "代謝機能障害関連脂肪性肝疾患(MASLD)の診療に関する記述として、当てはまるものはどれか。",
+    options: ["線維化評価には常に肝生検が必須であり、非侵襲的検査は補助的な位置づけにとどまる", "レスメチロムは代償性肝硬変などの進行例を主対象とする治療薬である", "プライマリ・ケアでのスクリーニングや管理は不適切とされている", "非侵襲的線維化検査の進歩により、プライマリ・ケアでの診断・リスク層別化が可能になった"],
+    correct: 3,
+    explanation: "【要点】非侵襲的線維化検査の進歩とセマグルチド・レスメチロムの登場により、MASLDはプライマリ・ケアでも診断・層別化・管理が可能になった。\n【背景/エビデンス】レスメチロムは非硬変性のMASH(中等度〜進行線維化)を対象とする初の疾患特異的治療薬で、肝生検を要さず使用が支持される。MASLDは世界で最も頻度の高い慢性肝疾患であり、FIB-4などの非侵襲的指標で高リスク者を抽出し専門医へ紹介する。\n【臨床応用/注意】代謝リスク因子の管理と線維化リスク層別化を組み合わせる。\n【誤答】生検必須・レスメチロムが肝硬変進行例を主対象・プライマリ・ケア管理が不適とする記述はいずれも誤り。",
+    source: { title: "Evidence-based clinical practice guidelines for MASLD 2026 (Journal of Gastroenterology)", url: "https://link.springer.com/article/10.1007/s00535-026-02408-2" },
+    tags: ["MASLD", "脂肪肝", "レスメチロム", "非侵襲的線維化検査", "FIB-4", "消化器・肝"]
+  },
+  {
+    id: "jr-pmr-mtx-2026-01",
+    category: "journal",
+    field: "膠原病・骨",
+    difficulty: 2,
+    added: "2026-09-02",
+    question: "リウマチ性多発筋痛症(PMR)・巨細胞性動脈炎(GCA)の管理に関する2026年の知見として、当てはまるものはどれか。",
+    options: ["GCAの診断は画像や生検を用いず、臨床症状のみで確定してよい", "メトトレキサートは、再燃しやすい例やステロイド長期化例でグルココルチコイド節減薬として位置づけられる", "PMRではグルココルチコイド節減薬の使用は一律に推奨されない", "IL-6阻害薬はステロイド減量効果が示されず、使用は否定された"],
+    correct: 1,
+    explanation: "【要点】2026年のEULAR推奨と新規RCTにより、メトトレキサート(MTX)がPMRのグルココルチコイド(GC)節減薬として、特に再燃例・GC長期化例で位置づけられた。\n【背景/エビデンス】2026年Ann Rheum Dis掲載の新規診断PMRに対するMTX25mg/週の二重盲検RCTなどがエビデンスを補強した。GCA・TAKの診断では画像や生検による確認が求められ、超音波が生検を代替しつつある。IL-6阻害薬はステロイド減量に有効性を示す。\n【臨床応用/注意】再燃リスクとGC累積量を評価しGC節減薬を検討する。\n【誤答】GCAを臨床のみで確定・PMRでGC節減薬を一律非推奨・IL-6阻害薬の否定はいずれも誤り。",
+    source: { title: "EULAR 2026 Recommendations on PMR, GCA, and Takayasu Arteritis", url: "https://rheumnow.com/news/eular-2026-recommendations-pmr-gca-and-takayasu-arteritis" },
+    tags: ["リウマチ性多発筋痛症", "巨細胞性動脈炎", "メトトレキサート", "ステロイド節減", "IL-6阻害薬", "膠原病・骨"]
   }
 ];
 
