@@ -5582,6 +5582,97 @@ const QUESTIONS = [
     explanation: "【要点】早期PCIや脂質・抗血栓療法が普及した現代では、LVEFが保たれた心筋梗塞後患者への長期β遮断薬のルーチン投与の意義が再検討されている。\n【背景/エビデンス】β遮断薬は再灌流・スタチン・抗血小板療法が十分でなかった時代には二次予防の標準治療として死亡や再梗塞を減らす意義が大きかった。REDUCE-AMI試験はLVEFが保たれた症例で長期β遮断薬の有用性を検証し、明らかな上乗せ効果は示されなかった。\n【臨床応用/注意】LVEF低下例や心不全・不整脈など個別の適応がある場合はβ遮断薬の意義が残るため、一律の中止ではなく病態に応じて判断する。\n【誤答】大幅にイベントを減らした、常に無効だった、LVEF低下例で禁忌とする記述はいずれも誤り。",
     source: { title: "REDUCE-AMI試験（小野雅敬・杉崎陽一郎・官澤洋平, Hospitalist 13巻2号, 2026）", url: "https://webview.isho.jp/journal/detail/abs/10.11477/mf.218804090130020418" },
     tags: ["急性心筋梗塞", "β遮断薬", "REDUCE-AMI", "二次予防", "左室駆出率", "循環器"]
+  },
+  {
+    id: "jr-hypona-correction-rate-2026-01",
+    category: "journal",
+    field: "腎・電解質",
+    difficulty: 3,
+    added: "2026-09-03",
+    question: "重症低ナトリウム血症(血清Na≤120 mEq/L)の補正速度と予後を検討した2026年の大規模後方視的コホート研究(Annals of Internal Medicine)の知見として、当てはまるものはどれか。",
+    options: ["急速補正群では浸透圧性脱髄症候群が多発し、緩徐補正が一貫して有利であった", "中等度(8〜12 mEq/L)・急速(>12 mEq/L)な24時間補正は、緩徐(<8 mEq/L)な補正に比べ死亡または遅発性神経障害の複合アウトカムのリスクがむしろ低かった", "補正速度は90日死亡やアウトカムと関連しなかった", "緩徐補正群が全ての速度区分の中で最も予後良好であった"],
+    correct: 1,
+    explanation: "【要点】Kaiser Permanenteの21施設・約13,988例を対象に、24時間の最大Na上昇で緩徐(<8)/中等度(8〜12)/急速(>12 mEq/L)に分類し、90日以内の死亡または遅発性神経学的イベントの複合を比較した観察研究である。\n【背景/エビデンス】緩徐補正に比べ中等度・急速補正で複合アウトカムのリスクが低く、急速vs緩徐のリスク差は約−9.0ポイントであった。著者らは、想定リスク因子によらず、より速い補正を許容する方向でガイドラインの再検討を提言している。\n【臨床応用/注意】後方視的研究であり因果は断定できない。過補正による浸透圧性脱髄の懸念は残り、原因検索・慎重なモニタリングは引き続き重要。\n【誤答】緩徐が一貫して有利、速度と予後が無関連、緩徐群が最良とする記述は本研究の結果と反する。",
+    source: { title: "Sodium Correction Rates and Associated Outcomes Among Patients With Severe Hyponatremia (Annals of Internal Medicine, 2026)", url: "https://www.acpjournals.org/doi/10.7326/ANNALS-25-03676" },
+    tags: ["低ナトリウム血症", "ナトリウム補正", "浸透圧性脱髄", "電解質", "腎・電解質"]
+  },
+  {
+    id: "gl-cuti-duration-2026-01",
+    category: "guideline",
+    field: "感染症",
+    difficulty: 2,
+    added: "2026-09-03",
+    question: "2026年 IDSA の複雑性尿路感染症(cUTI)に関する改訂をふまえた治療期間の考え方として、当てはまるものはどれか。",
+    options: ["cUTIは全例で最低14日間の治療が推奨される", "治療期間はカテーテル留置の有無で一律に21日へ延長される", "短縮療法は菌血症を合併した例では一律に禁忌である", "有効な抗菌薬で臨床的に改善している成人では、7日間治療が14日間に対し全死亡などの主要アウトカムで非劣性であった"],
+    correct: 3,
+    explanation: "【要点】2026年のIDSA改訂は、有効治療で臨床的に改善しているcUTI成人で、7日間治療が14日間に対し全死亡や主要臨床アウトカムで非劣性であることをふまえ、短縮療法を支持する。\n【背景/エビデンス】uncomplicated/complicatedの定義を2025年版cUTIガイドラインと整合させたうえで、関連するサブグループでも7日と14日の差が小さいことが示された。過剰な長期投与は耐性化やClostridioides difficile感染などの不利益を招きうる。\n【臨床応用/注意】あくまで有効な薬剤で改善している例が対象で、閉塞の解除や適切なソースコントロール、感受性に応じた薬剤選択が前提。重症・治療反応不良例では個別に期間を判断する。\n【誤答】全例14日、一律21日、菌血症で短縮が一律禁忌とする記述は改訂の趣旨と一致しない。",
+    source: { title: "IDSA Guideline Update Recommends Shorter Antibiotic Courses for Complicated UTI (Infectious Disease Advisor, 2026)", url: "https://www.infectiousdiseaseadvisor.com/features/idsa-complicated-uti-guidelines/" },
+    tags: ["複雑性尿路感染症", "抗菌薬適正使用", "治療期間", "IDSA", "感染症"]
+  },
+  {
+    id: "rv-ida-management-2026-01",
+    category: "review",
+    field: "血液",
+    difficulty: 2,
+    added: "2026-09-03",
+    question: "鉄欠乏性貧血(IDA)の評価と治療に関するAAFP(American Family Physician)のレビューをふまえた記述として、当てはまるものはどれか。",
+    options: ["炎症のない成人ではフェリチン<45 ng/mLが鉄欠乏の診断に有用である", "経口鉄剤は隔日投与のほうが連日投与より吸収効率が高いと報告されている", "閉経後女性や成人男性のIDAでは、消化管出血源の検索として上部・下部内視鏡を考慮する", "治療は原則として静注鉄が第一選択であり、経口鉄は用いない"],
+    correct: [0, 1, 2],
+    explanation: "【要点】IDAの多くは反復する出血が原因で、診断はフェリチンとトランスフェリン飽和度で行い、治療は経口鉄が第一選択となる。\n【背景/エビデンス】炎症のない成人ではフェリチン<45 ng/mLが鉄欠乏に有用(炎症時は<100)。ヘプシジンの日内変動から隔日投与のほうが吸収効率が高い。閉経後女性・男性では出血源検索として双方向内視鏡を行い、H.pyloriやセリアック病も評価する。\n【臨床応用/注意】経口鉄は2〜4週で反応を確認し、不耐・無効例や心不全合併では静注鉄を用いる。約半数で消化器症状により服薬遵守が低下する。\n【誤答】静注鉄を一律第一選択とし経口鉄を用いないとする記述は誤りで、多くの症例で経口鉄が第一選択である。",
+    source: { title: "Iron Deficiency Anemia: Evaluation and Management (American Family Physician / AAFP, 2025)", url: "https://www.aafp.org/pubs/afp/issues/2025/1100/iron-deficiency-anemia.html" },
+    tags: ["鉄欠乏性貧血", "フェリチン", "経口鉄", "隔日投与", "内視鏡", "血液"]
+  },
+  {
+    id: "gl-migraine-prevention-2026-01",
+    category: "guideline",
+    field: "神経",
+    difficulty: 2,
+    added: "2026-09-03",
+    question: "2026年 AAN/AHS の成人片頭痛予防薬ガイドライン(2012年版の改訂)をふまえた記述として、当てはまるものはどれか。",
+    options: ["予防治療の対象は月15日以上の頭痛がある症例に限られる", "2012年版以降、新規の片頭痛予防薬は登場していない", "月に片頭痛4日以上、または頭痛が就労・日常生活に支障をきたす場合などに予防治療を検討し、CGRP標的治療も選択肢となる", "CGRP標的治療は本ガイドラインでは推奨から除外された"],
+    correct: 2,
+    explanation: "【要点】AANとAHSは2012年版を改訂し、月4日以上の片頭痛または中等度以上の頭痛日、あるいは就労・日常生活への支障がある場合に予防治療を検討するとした。\n【背景/エビデンス】2012年以降、CGRP経路を標的とするモノクローナル抗体やgepant系薬剤など多くの選択肢が登場し、反復性・慢性いずれの片頭痛にも予防薬の推奨が整理された。従来の内服予防薬(β遮断薬、トピラマート等)に加え、新規薬が位置づけられた。\n【臨床応用/注意】発作頻度・支障度・併存症・忍容性をふまえて薬剤を選択し、効果は数か月かけて評価する。\n【誤答】対象が月15日以上に限られる、新規薬が登場していない、CGRP標的治療が除外された、という記述はいずれも誤り。",
+    source: { title: "Pharmacologic Treatment for Migraine Prevention in Adults: Practice Guideline Update (Neurology, AAN/AHS 2026)", url: "https://www.neurology.org/doi/10.1212/WNL.0000000000214881" },
+    tags: ["片頭痛", "予防治療", "CGRP", "AAN", "神経"]
+  },
+  {
+    id: "gl-gina-asthma-2026-01",
+    category: "guideline",
+    field: "呼吸器",
+    difficulty: 2,
+    added: "2026-09-03",
+    question: "2026年 GINA 喘息戦略の改訂をふまえた記述として、当てはまるものはどれか。",
+    options: ["中用量ICS-LABAでコントロール不良な成人では、LAMAを加えた三剤併用(ICS-LABA-LAMA)が選択肢となる", "生物学的製剤は喘息治療から削除された", "経口ステロイド(OCS)の使用を最小化する方針が強調されている", "重症増悪の抑制効果は、三剤併用より生物学的製剤のほうがおおむね大きい"],
+    correct: [0, 2, 3],
+    explanation: "【要点】GINA 2026は、増悪管理のフローチャート整備、生物学的製剤の追加、OCS最小化などを盛り込んだ改訂である。\n【背景/エビデンス】中用量ICS-LABAでコントロール不良な成人・青年ではLAMAを追加した三剤併用が選択肢に加わった。ただし三剤併用による重症増悪の抑制はICS-LABA比で限定的で、生物学的製剤による抑制効果のほうが大きい。生物学的製剤には長時間作用型抗IL-5のdepemokimab等が新たに加わった。\n【臨床応用/注意】生物学的製剤の適応がない例で三剤併用が有用となりうる。OCSは有害事象が多く、最小化と代替療法の検討が重視される。\n【誤答】生物学的製剤が削除された、という記述は誤りで、むしろ選択肢が拡充された。",
+    source: { title: "GINA 2026 Update: Asthma Management in Primary Care, Biologic Updates (Pulmonology Advisor, 2026)", url: "https://www.pulmonologyadvisor.com/features/asthma-gina-2026-update/" },
+    tags: ["喘息", "GINA", "三剤併用", "生物学的製剤", "OCS最小化", "呼吸器"]
+  },
+  {
+    id: "jr-sema-mash-cirrhosis-2026-01",
+    category: "journal",
+    field: "消化器・肝",
+    difficulty: 3,
+    added: "2026-09-03",
+    question: "進行したMASH(線維化F2〜代償性肝硬変F4c)を対象にセマグルチドを検討した2026年の第2相試験(Lancet Gastroenterology & Hepatology)の知見として、当てはまるものはどれか。",
+    options: ["セマグルチド2.4 mg群は主要評価項目の達成割合がプラセボより高かった(約30% vs 約16%)", "代償性肝硬変を含む進行例では、セマグルチドは肝線維化をむしろ悪化させた", "本試験で初めて非代償性肝硬変での生命予後改善が証明された", "効果は非硬変例に限られ、線維化進行例では無効であった"],
+    correct: 0,
+    explanation: "【要点】22か国187施設で698例の生検確定MASH(F2〜代償性肝硬変F4c)を対象とした用量設定第2相試験で、セマグルチド2.4 mg単剤群は主要評価項目達成が約30%とプラセボの約16%より高かった(p=0.024)。\n【背景/エビデンス】代償性肝硬変を含む進行例で肝線維化の改善を示した初の試験と位置づけられ、炎症を悪化させずに線維化の指標が改善しうることが示唆された。先行するESSENCE第3相(F2〜F3)ではMASH消失・線維化改善の両共主要評価項目を達成している。\n【臨床応用/注意】あくまで第2相・名目的有意であり、非代償性肝硬変での予後改善を示すものではない。適応拡大には検証が必要で、実臨床では最新の承認・一次資料を確認する。\n【誤答】線維化を悪化、非代償性肝硬変で予後改善を証明、進行例で無効とする記述は結果と反する。",
+    source: { title: "GLP-1 Shows Promise for Patients with Advanced Fatty Liver Disease (UC San Diego; Lancet Gastroenterology & Hepatology, 2026)", url: "https://health.ucsd.edu/news/press-releases/2026-07-16-glp-1-shows-promise-for-patients-with-advanced-fatty-liver-disease/" },
+    tags: ["MASH", "セマグルチド", "肝線維化", "代償性肝硬変", "GLP-1", "消化器・肝"]
+  },
+  {
+    id: "cl-glp1-mood-2026-01",
+    category: "clinical",
+    field: "精神・行動",
+    difficulty: 2,
+    added: "2026-09-03",
+    question: "肥満・2型糖尿病を有する患者へのGLP-1受容体作動薬と精神症状に関する2026年の知見をふまえた記述として、当てはまるものはどれか。",
+    options: ["GLP-1受容体作動薬は既存の抗うつ薬を置き換える第一選択の抗うつ療法として確立している", "メタ解析では抑うつ症状スコアを大幅かつ一貫して低下させることが示された", "精神疾患を有する患者にはGLP-1受容体作動薬は一律に禁忌である", "GLP-1受容体作動薬は心理的ウェルビーイングを一定程度改善しうる一方、確立した抗うつ効果は示されていない"],
+    correct: 3,
+    explanation: "【要点】GLP-1受容体作動薬は心理的ウェルビーイングをある程度改善しうるが、抑うつ症状そのものを明確に改善する確立したエビデンスは乏しく、抗うつ薬の代替とはならない。\n【背景/エビデンス】2026年のRCTメタ解析では、GLP-1受容体作動薬は心理的ウェルビーイングの軽度改善と関連する一方、抑うつ症状スコアの明確な低下は示されなかった。大規模コホートでは肥満・糖尿病を伴う精神疾患例で精神症状悪化の増加は概して認めず、薬剤間で差がみられた報告もある。\n【臨床応用/注意】抑うつ・肥満・糖尿病が併存する例では代謝面の利益が期待できるが、開始後は気分・行動の変化をモニタリングし、必要に応じて精神科と連携する。\n【誤答】第一選択の抗うつ療法として確立、抑うつスコアを大幅低下、精神疾患で一律禁忌とする記述はいずれも過大・不正確。",
+    source: { title: "Efficacy of GLP-1 Receptor Agonists for Psychological Well-Being and Depressive Symptoms: A Systematic Review and Meta-Analysis of RCTs (2026)", url: "https://pubmed.ncbi.nlm.nih.gov/41914576/" },
+    tags: ["GLP-1受容体作動薬", "うつ", "ウェルビーイング", "肥満", "精神・行動"]
   }
 ];
 
