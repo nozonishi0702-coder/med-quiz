@@ -5998,6 +5998,84 @@ const QUESTIONS = [
     explanation: "【要点】GLP-1系薬による胃排出遅延から誤嚥が懸念されたが、近年はより許容的な運用へ移行している。\n【背景/エビデンス】ASAは2023年に中止(連日使用は1日前、週1回製剤は1週前)を推奨したが、2024年に方針を見直し、多くの患者で待機手術前も継続を許容した。AGAは待機的内視鏡前の一律中止を必須とはしていない。観察研究では誤嚥・肺合併症の有意な増加は示されていないが、個々の背景に応じた警戒は必要である。\n【臨床応用/注意】絶食延長や胃内容の超音波評価、誤嚥対策を個別化して判断する。\n【誤答】4週間前の一律中止・内視鏡禁忌・AGAが一律中止必須は、いずれも現行の考え方と異なる。",
     source: { title: "Glucagon-Like Peptide-1 Receptor Agonists and Peri-Procedural Aspiration Risk (J Endocr Soc)", url: "https://academic.oup.com/jes/article/9/9/bvaf088/8196040" },
     tags: ["GLP-1", "周術期", "内視鏡", "誤嚥", "消化器・肝"]
+  },
+  {
+    id: "gl-hyperk-binder-2026-01",
+    category: "guideline",
+    field: "腎・電解質",
+    difficulty: 2,
+    added: "2026-09-06",
+    question: "慢性腎臓病(CKD)患者の慢性高カリウム血症の管理と、カリウム吸着薬(パチロマー、ジルコニウムシクロケイ酸ナトリウム〔SZC〕)の位置づけについて、当てはまるものはどれか。",
+    options: ["ポリスチレンスルホン酸カルシウム/ナトリウムは即効性が高く、心電図変化を伴う致死的高カリウム血症の第一選択である", "SZCやパチロマーは、高カリウム血症のためにRAAS系阻害薬(RAASi)を減量・中止せざるを得ない例で、予後改善に寄与するRAASiの継続を可能にしうる", "食事中カリウム制限やRAASi以外の関与薬の調整は無効であり、最初から吸着薬を開始すべきである", "SZCはナトリウムを含み、浮腫・体液貯留に注意が必要で、心不全例では慎重に用いる"],
+    correct: [1, 3],
+    explanation: "【要点】新規カリウム吸着薬(パチロマー、SZC)は慢性高カリウム血症の維持管理に有用で、予後を改善するRAASiの継続を後押しする。\n【背景/エビデンス】KDIGO 2024 CKDガイドラインや米国腎臓専門医のポジションステートメントは、修正可能因子(食事・併用薬)への対応を第一段階としつつ、持続的な血清K管理に吸着薬を位置づける。SZCはナトリウムを含み浮腫・体液貯留に注意、パチロマーは低マグネシウム血症や他剤との相互作用(内服を2時間空ける)に留意する。\n【臨床応用/注意】急性の心電図変化を伴う高カリウム血症では、まずカルシウムやインスリン/ブドウ糖など即効性の処置を優先する。\n【誤答】ポリスチレンスルホン酸は発現が遅く致死的高カリウムの第一選択ではない。食事・薬剤調整を飛ばす方針も不適切。",
+    source: { title: "Utilization of Potassium Binders for the Management of Hyperkalemia in Chronic Kidney Disease: A Position Statement by US Nephrologists (Kidney Medicine)", url: "https://www.sciencedirect.com/science/article/pii/S2949813924001320" },
+    tags: ["高カリウム血症", "カリウム吸着薬", "CKD", "RAAS阻害薬", "腎・電解質"]
+  },
+  {
+    id: "rv-id-nonanemia-2026-01",
+    category: "review",
+    field: "血液",
+    difficulty: 2,
+    added: "2026-09-06",
+    question: "貧血を伴わない鉄欠乏(iron deficiency without anemia)に対する鉄補充と、倦怠感などの症状改善に関する記述として、支持されるものはどれか。",
+    options: ["血清フェリチンが低くても貧血がなければ鉄欠乏とは診断できず、鉄補充は一律に禁忌である", "非貧血の鉄欠乏では、静注鉄の投与により全例で倦怠感が確実かつ持続的に改善することが証明されている", "症候性の鉄欠乏(倦怠感など)では鉄補充を考慮しうるが、非貧血者への効果は一貫せず、無症状者への一律補充の利益は限定的である", "非貧血の鉄欠乏の診断にフェリチンは無用で、ヘモグロビン低下のみで判断する"],
+    correct: 2,
+    explanation: "【要点】貧血を伴わない鉄欠乏はフェリチン低値(±トランスフェリン飽和度低下)で診断され、症候性なら鉄補充を考慮するが、非貧血者での症状改善効果は一貫しない。\n【背景/エビデンス】非貧血の鉄欠乏を有する献血者を対象に静注鉄とプラセボを比較した無作為化試験では、6〜8週後の倦怠感スコアに有意差を認めなかった。一方、月経のある若年女性など一部では鉄補充で倦怠感・運動能の改善を示す報告もあり、効果は集団・症状により異なる。\n【臨床応用/注意】まず出血源など原因検索を行い、症候性で低フェリチンなら補充を試み効果を再評価する。無症状者への一律補充は推奨しにくい。\n【誤答】貧血がなくても鉄欠乏は診断でき、フェリチンは有用。全例で確実改善という記載は過大評価である。",
+    source: { title: "Intravenous iron supplementation for fatigue in non-anaemic blood donors with iron deficiency: a randomized placebo-controlled trial", url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7449957/" },
+    tags: ["鉄欠乏", "非貧血", "倦怠感", "フェリチン", "血液"]
+  },
+  {
+    id: "jr-rzv-cvd-2026-01",
+    category: "journal",
+    field: "予防・健診",
+    difficulty: 2,
+    added: "2026-09-06",
+    question: "組換え帯状疱疹ワクチン(RZV, Shingrix)の接種と心血管イベントの関連を検討した近年の大規模観察研究(Nature Medicine 2026)の知見として、支持されるものを選べ。",
+    options: ["RZV接種は、その後数年の心筋梗塞・脳卒中・心不全などの心血管イベントの発生低下と関連していた", "RZV接種は心血管イベントを有意に増加させ、心疾患患者では接種を避けるべきと示された", "無作為化比較試験により、RZVが心血管死を直接減らす因果効果が確立された", "帯状疱疹の既往やワクチン接種は心血管リスクと無関係であることが確認された"],
+    correct: 0,
+    explanation: "【要点】RZV接種は、その後の心血管イベント(心筋梗塞・脳卒中・心不全など)の発生率低下と関連するという観察研究が報告された。\n【背景/エビデンス】大規模な電子カルテ・保険データの解析で、生ワクチンや非接種と比較しRZV接種者で数年間の心血管イベントが少なかった。帯状疱疹感染自体が血管炎症を介し心血管イベントを増やすとされ、予防による恩恵が示唆される。ただし観察研究であり残余交絡は否定できず因果は断定できない。\n【臨床応用/注意】50歳以上等の適応者にはガイドラインどおりRZV接種を勧める。心血管予防のみを目的とした接種適応拡大は現時点で確立していない。\n【誤答】イベント増加・接種回避、RCTでの因果確立、関連なしは、いずれも報告と異なる。",
+    source: { title: "Recombinant shingles vaccination and the risk of cardiovascular events (Nature Medicine)", url: "https://www.nature.com/articles/s41591-026-04606-0" },
+    tags: ["帯状疱疹ワクチン", "RZV", "心血管イベント", "ワクチン", "予防・健診"]
+  },
+  {
+    id: "gl-falls-uspstf-2026-01",
+    category: "guideline",
+    field: "その他",
+    difficulty: 2,
+    added: "2026-09-06",
+    question: "地域在住高齢者の転倒予防に関する米国予防医療専門委員会(USPSTF, 2024更新)の推奨として、当てはまるものはどれか。",
+    options: ["転倒リスクの高い65歳以上の成人に対し、運動介入(バランス・筋力訓練など)を行うことが推奨される", "転倒・骨折予防のため、地域在住高齢者へのビタミンD(±カルシウム)のルーチン補充が一律に推奨される", "多因子介入は一律ではなく、個々の状況に応じて実施を判断する(個別化)ことが推奨される", "運動介入は有害事象が多く、転倒予防を目的とした運動指導は避けるべきである"],
+    correct: [0, 2],
+    explanation: "【要点】USPSTFは高リスクの地域在住高齢者への運動介入を推奨し、多因子介入は個別化して判断、転倒・骨折予防目的のビタミンD/カルシウムのルーチン補充は推奨しない。\n【背景/エビデンス】2024年の更新で、閉経後女性・60歳以上男性へのビタミンD(±Ca)は転倒・骨折の一次予防に正味の便益なし(推奨しない)と結論。一方、運動はエビデンスが比較的強く、バランス・筋力・機能訓練が転倒を減らす。\n【臨床応用/注意】高齢者では服薬・視力・環境・起立性低血圧など多面的に評価し、運動を軸に個別対応する。\n【誤答】ビタミンDの一律補充推奨、運動を避けるべきとの記載はいずれも推奨と逆である。",
+    source: { title: "Falls Prevention in Community-Dwelling Older Adults: Interventions — US Preventive Services Task Force Recommendation Statement", url: "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/falls-prevention-community-dwelling-older-adults-interventions" },
+    tags: ["転倒予防", "高齢者", "ビタミンD", "運動介入", "その他"]
+  },
+  {
+    id: "jr-ketamine-mde-2026-01",
+    category: "journal",
+    field: "精神・行動",
+    difficulty: 2,
+    added: "2026-09-06",
+    question: "大うつ病エピソード(単極性・双極性うつを含む)に対する静注ケタミン点滴の効果を検討した系統的レビュー・メタ解析(JAMA Psychiatry 2026)の知見として、支持されるものはどれか。",
+    options: ["効果発現は緩徐で、抗うつ効果が現れるまで通常4〜6週間を要した", "単回点滴で数時間以内に抑うつ症状が有意に低下し、希死念慮の軽減は最長で約1か月持続した", "重篤な有害事象が高頻度でみられ、その多くが投与中止に至った", "うつ症状への効果はプラセボ(生理食塩水・ミダゾラム)と同等で、有効性は否定された"],
+    correct: 1,
+    explanation: "【要点】静注ケタミン点滴は、大うつ病エピソードの抑うつ・希死念慮を急速(数時間以内)に軽減し、希死念慮の軽減は最長約1か月持続した。\n【背景/エビデンス】26のRCT・計1,166例(ケタミン626例、対照540例)のメタ解析。単回点滴で4時間以内に抑うつが有意に低下し、効果は1週間程度持続した。頭痛・解離・悪心・めまいなどの有害事象は一過性で数時間内に消退し、重篤な有害事象はまれであった。\n【臨床応用/注意】急性期の速効的選択肢となりうるが、長期アウトカムは未確立で、適応とモニタリング下での使用が前提となる。\n【誤答】効果発現が緩徐、重篤有害事象が多発、プラセボと同等は、いずれも解析結果と異なる。",
+    source: { title: "Ketamine Infusions and Rapid Reduction of Suicidal and Depressive Symptoms in Major Depressive Episode: A Systematic Review and Meta-Analysis (JAMA Psychiatry)", url: "https://jamanetwork.com/journals/jamapsychiatry/article-abstract/2848531" },
+    tags: ["ケタミン", "うつ病", "希死念慮", "メタ解析", "精神・行動"]
+  },
+  {
+    id: "cl-doxypep-2026-01",
+    category: "clinical",
+    field: "感染症",
+    difficulty: 2,
+    added: "2026-09-06",
+    question: "細菌性性感染症(STI)予防のためのドキシサイクリン曝露後予防(doxy-PEP)について、米国CDC 2024ガイドラインに沿った考え方として適切なものを選べ。",
+    options: ["対象は妊婦を含む全ての性的活動のある成人であり、性交のたびに予防内服を必須とする", "予防効果は淋菌感染に対して最も高く、梅毒・クラミジアにはほとんど効果がない", "曝露後72時間以降に内服しても効果は変わらないため、内服のタイミングは問わない", "過去12か月に細菌性STIの既往があるMSM・トランスジェンダー女性に対し、共有意思決定のうえ性交後72時間以内のドキシサイクリン200mg内服を提案する"],
+    correct: 3,
+    explanation: "【要点】doxy-PEPは、過去12か月に細菌性STI既往のあるMSMおよびトランスジェンダー女性に対し、共有意思決定のうえで性交後72時間以内のドキシサイクリン200mg内服を提案する予防法である。\n【背景/エビデンス】3件の大規模RCTで、梅毒・クラミジアを70%超、淋菌を約50%減少させた。CDC 2024は上記集団を対象に推奨し、3〜6か月ごとに部位別STI検査と継続の要否を評価する。包括的な性の健康(リスク低減・ワクチン・HIV PrEP連携)の中で実施する。\n【臨床応用/注意】1日200mgを超えないこと、および耐性動向のモニタリングが重要である。\n【誤答】全成人一律・妊婦への必須化、淋菌に最も有効で梅毒/クラミジアに無効、72時間超でも同等は、いずれもガイドラインと異なる。",
+    source: { title: "CDC Clinical Guidelines on the Use of Doxycycline Postexposure Prophylaxis for Bacterial Sexually Transmitted Infection Prevention, United States, 2024 (MMWR)", url: "https://www.cdc.gov/mmwr/volumes/73/rr/rr7302a1.htm" },
+    tags: ["doxy-PEP", "性感染症", "ドキシサイクリン", "曝露後予防", "感染症"]
   }
 
 ];
