@@ -6220,6 +6220,84 @@ const QUESTIONS = [
     explanation: "【要点】2型糖尿病合併CKDでは、RAS阻害薬を基盤にSGLT2阻害薬を併用し、アルブミン尿があれば非ステロイド型MR拮抗薬フィネレノンを加える多剤併用が心腎保護の柱となる。\n【背景/エビデンス】FIDELIO-DKDで腎複合エンドポイントを約18%、FIGARO-DKDで心血管イベントを約13%抑制。SGLT2阻害薬は糖尿病の有無を問わずCKD進展を抑制する。高カリウム血症はパチロマーやジルコニウムシクロケイ酸Naで管理し治療継続を図る。\n【臨床応用/注意】UACR高値でeGFR保持例ではSGLT2阻害薬とフィネレノンの併用も考慮。開始後はK・eGFRをモニタリングする。\n【誤答】SGLT2阻害薬がCKDに禁忌との記述は誤りで、糖尿病のないCKDにも適応が拡大している。",
     source: { title: "11. Chronic Kidney Disease and Risk Management: Standards of Care in Diabetes-2026 (American Diabetes Association)", url: "https://diabetesjournals.org/care/article/49/Supplement_1/S246/163914/11-Chronic-Kidney-Disease-and-Risk-Management" },
     tags: ["慢性腎臓病", "フィネレノン", "SGLT2阻害薬", "高カリウム血症", "腎・電解質"]
+  },
+  {
+    id: "gl-acp-obesity-pharm-2026-09",
+    category: "guideline",
+    field: "内分泌・代謝",
+    difficulty: 2,
+    added: "2026-09-08",
+    question: "米国内科学会(ACP)2026年のliving guidelineが、過体重・肥満の非妊娠成人の体重管理で第一選択(first-line)の薬物療法として推奨した薬剤を選べ。",
+    options: ["ナルトレキソン・ブプロピオン配合", "セマグルチド", "チルゼパチド", "フェンテルミン・トピラマート配合"],
+    correct: [1, 2],
+    explanation: "【要点】ACP 2026 living guidelineは、肥満(BMI≥30)や併存症を伴う過体重の非妊娠成人で、生活習慣修正に薬物療法を併用し、第一選択としてセマグルチドとチルゼパチドを推奨した。\n【背景/エビデンス】GRADE手法による系統的レビューに基づく。両薬(チルゼパチドはGIP/GLP-1受容体作動薬)は減量幅と心代謝指標の改善が大きい。第2選択はフェンテルミン・トピラマート、第3選択リラグルチド、第4選択ナルトレキソン・ブプロピオン。\n【臨床応用/注意】living guidelineであり新規エビデンスで随時改訂。妊婦は対象外で、生活習慣介入は全例で治療の基盤となる。\n【誤答】ナルトレキソン・ブプロピオンは第4選択、フェンテルミン・トピラマートは第2選択で、いずれも選択肢ではあるが第一選択ではない。",
+    source: { title: "Pharmacologic Treatments With Lifestyle Modifications in Nonpregnant Adults With Overweight or Obesity in Outpatient Settings: A Living Clinical Guideline From the American College of Physicians (April 2026)", url: "https://www.acpjournals.org/doi/10.7326/ANNALS-25-02714" },
+    tags: ["肥満", "GLP-1", "チルゼパチド", "ACP", "内分泌・代謝"]
+  },
+  {
+    id: "jr-phoenycs-dzp-sle-2026-09",
+    category: "journal",
+    field: "膠原病・骨",
+    difficulty: 3,
+    added: "2026-09-08",
+    question: "中等度〜重度の活動性全身性エリテマトーデス(SLE)を対象に標準治療への上乗せを検討したPHOENYCS GO第3相試験で、有効性が示された薬剤の作用機序と主要結果として、適切なものを選べ。",
+    options: ["BAFF(BLyS)を阻害し、48週のBICLA奏効を有意に改善した", "I型IFN受容体(IFNAR1)を阻害し、皮膚症状のみを改善した", "JAK1/2を阻害し、経口投与で寛解導入を達成した", "CD40リガンド(CD154)を標的とし、48週のBICLA奏効割合をプラセボより有意に高めた"],
+    correct: 3,
+    explanation: "【要点】ダピロリズマブ ペゴルはCD40リガンド(CD154)を阻害するPEG化抗体で、PHOENYCS GO試験にて標準治療への上乗せで48週のBICLA奏効を有意に改善した(約50% vs 35%)。\n【背景/エビデンス】177施設・25か国の二重盲検RCTで、静注24mg/kgを4週毎に投与。CD40-CD40L経路の遮断でB細胞活性化と自己抗体産生を抑制し、ステロイド減量下でも奏効を維持した。\n【臨床応用/注意】既存のBAFF阻害薬やI型IFN阻害薬とは機序が異なる新規モダリティで、追加選択肢となりうる。最終的な適応は今後の評価による。\n【誤答】BAFF阻害はベリムマブ、IFNAR1阻害はアニフロルマブの機序で本剤と異なる。JAK阻害薬はSLEの標準的寛解導入として確立していない。",
+    source: { title: "Efficacy and safety of the CD40 ligand inhibitor dapirolizumab pegol in systemic lupus erythematosus (PHOENYCS GO): a randomised, double-blind, placebo-controlled, phase 3 trial", url: "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)00691-4/abstract" },
+    tags: ["SLE", "ダピロリズマブ", "CD40L", "BICLA", "膠原病・骨"]
+  },
+  {
+    id: "jr-oceanic-asundexian-stroke-2026-09",
+    category: "journal",
+    field: "神経",
+    difficulty: 3,
+    added: "2026-09-08",
+    question: "非心原性の虚血性脳卒中/高リスクTIA後の患者を対象に、抗血小板療法への上乗せを検討したOCEANIC-STROKE第3相試験で、経口第XIa因子阻害薬アスンデキシアンについて示された結果として、適切なものを選べ。",
+    options: ["主要有効性アウトカム(虚血性脳卒中)を有意に減少させたが、大出血が有意に増加した", "有効性・安全性ともにプラセボと差がなかった", "虚血性脳卒中および主要心血管イベントを低下させ、大出血の有意な増加はみられなかった", "頭蓋内出血が増加し試験は早期中止となった"],
+    correct: 2,
+    explanation: "【要点】アスンデキシアン(経口第XIa因子阻害薬)は、抗血小板療法への上乗せにより、非心原性脳卒中/高リスクTIA後の虚血性脳卒中と主要心血管イベントをプラセボより低下させ、大出血の有意な増加はみられなかった。\n【背景/エビデンス】37か国・約12,300例を発症72時間以内に登録した二重盲検RCT。第XI因子低値が元来脳卒中リスク低下と関連することから、選択的XIa阻害で止血を保ちつつ病的血栓形成を抑える戦略が検証された。\n【臨床応用/注意】出血リスクを抑えた抗血栓薬として期待されるが、実装は最終的な適応と個々の出血リスク評価による。\n【誤答】大出血増加・早期中止・効果なしは、いずれも試験結果と一致しない。",
+    source: { title: "Asundexian for Secondary Stroke Prevention", url: "https://www.nejm.org/doi/full/10.1056/NEJMoa2513880" },
+    tags: ["脳卒中", "第XIa因子", "アスンデキシアン", "二次予防", "神経"]
+  },
+  {
+    id: "gl-gina-asthma-exacerbation-2026-09",
+    category: "guideline",
+    field: "呼吸器",
+    difficulty: 2,
+    added: "2026-09-08",
+    question: "GINA 2026アップデートが示す、プライマリ・ケアでの成人喘息増悪の管理について、適切なものを選べ。",
+    options: ["増悪時は不安軽減のため鎮静薬による鎮静を積極的に行う", "全例で経口ステロイドを避け、吸入β刺激薬のみで対応する", "気胸・肺塞栓・アナフィラキシー・急性心不全など非喘息性の原因を鑑別する", "鎮静薬は呼吸抑制作用があり回避可能な喘息死との関連が報告されるため、増悪時には厳に避ける"],
+    correct: [2, 3],
+    explanation: "【要点】GINA 2026は成人喘息増悪において、鎮静薬を厳に避けることと、非喘息性原因の鑑別を重視する。\n【背景/エビデンス】鎮静薬は呼吸抑制作用をもち、回避可能な喘息死との関連が報告されている。増悪様症状の鑑別には気胸・アナフィラキシー・誘発性喉頭閉塞(声帯機能不全)・肺炎・急性心不全・肺塞栓が含まれる。今回、成人〜小児(6-11歳)向けの増悪対応フローが更新された。\n【臨床応用/注意】重症増悪では経口ステロイドは依然重要で、吸入のみで対応する方針は不十分となりうる。\n【誤答】鎮静の推進は危険であり、OCSを一律避け吸入β単独とする対応は重症例で不適切。",
+    source: { title: "GINA 2026 Update: Asthma Management in Primary Care & More", url: "https://www.pulmonologyadvisor.com/features/asthma-gina-2026-update/" },
+    tags: ["喘息", "増悪", "GINA", "鎮静回避", "呼吸器"]
+  },
+  {
+    id: "cl-idsa-sab-management-2026-09",
+    category: "clinical",
+    field: "感染症",
+    difficulty: 3,
+    added: "2026-09-08",
+    question: "黄色ブドウ球菌菌血症(SAB)の成人管理に関する2026年 IDSA/ESCMID ガイダンスの考え方として、適切なものを選べ。",
+    options: ["深在性/転移性病巣のない低リスクの成人では、経胸壁心エコー(TTE)を全例で行い、抗菌薬治療は14日間を目安とする", "全例で最低6週間の静注抗菌薬を要する", "血液培養の陰性化確認は不要である", "感染性心内膜炎が否定できる明確な超低リスク集団を定義できるため、心エコーは省略してよい"],
+    correct: 0,
+    explanation: "【要点】2026 IDSA/ESCMIDガイダンスは、従来の『合併症性/非合併症性』の二分法から、深在性・転移性病巣の有無に基づく個別リスク層別化へ移行した。\n【背景/エビデンス】感染性心内膜炎の超低リスク集団を明確に定義する基準を確立できないため、成人SABでは原則としてTTEをルーチンに実施する。深在性/転移性病巣のない低リスク例では、抗菌薬14日間がより長期/短期より妥当とされた。\n【臨床応用/注意】適切な起因菌同定・感染源検索・血液培養の陰性化確認と併せて治療期間を判断する。\n【誤答】全例6週間は過剰、培養陰性化の確認は必須、超低リスクを定義して心エコーを省略とする記載は勧告と異なる。",
+    source: { title: "New 2026 IDSA/ESCMID Staphylococcus Aureus Bacteremia Guidance (Guideline Central)", url: "https://www.guidelinecentral.com/insights/jul-2026-idsaescmid-sab-guideline-spotlight/" },
+    tags: ["黄色ブドウ球菌菌血症", "心エコー", "治療期間", "IDSA", "感染症"]
+  },
+  {
+    id: "rv-aafp-diet-pcsk9-2026-09",
+    category: "review",
+    field: "予防・健診",
+    difficulty: 1,
+    added: "2026-09-08",
+    question: "米国家庭医学会(AAFP)/American Family Physician(2026年8月号)が示す、予防・生活習慣に関する助言として、適切なものを選べ。",
+    options: ["心血管予防のPCSK9モノクローナル抗体は益が確立しており全例で第一選択となる", "全粒・植物性食品を中心にし、超加工食品を控え、文化的に柔軟な食事パターンを勧め、必要に応じ管理栄養士に紹介する", "食事指導よりも早期からの薬物療法を一律に優先する", "超加工食品の摂取量は健康アウトカムと無関係である"],
+    correct: 1,
+    explanation: "【要点】AFP(2026年8月号)は、全粒・植物性食品を中心に据え、超加工食品を控え、文化的に柔軟な食事パターンを促し、必要時に管理栄養士へ紹介するよう家庭医に助言している。\n【背景/エビデンス】同号ではPCSK9モノクローナル抗体の一次・二次予防への上乗せ処方に『黄色(益が不明確)』評価が付され、便益は小さく不確実とされた。食事は依然として予防の基盤である。\n【臨床応用/注意】食事助言は患者の文化・嗜好・実行可能性に配慮して個別化する。\n【誤答】PCSK9抗体を全例第一選択とする、薬物療法を一律優先する、超加工食品が健康と無関係とする記載はいずれも不適切。",
+    source: { title: "Healthy Dietary Advice in Clinical Practice: Recommendations for Family Physicians (AFP, August 2026)", url: "https://www.aafp.org/afp/2026/0800/healthy-dietary-advice" },
+    tags: ["食事指導", "超加工食品", "PCSK9", "予防", "予防・健診"]
   }
 ];
 
