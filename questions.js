@@ -6077,7 +6077,85 @@ const QUESTIONS = [
     source: { title: "CDC Clinical Guidelines on the Use of Doxycycline Postexposure Prophylaxis for Bacterial Sexually Transmitted Infection Prevention, United States, 2024 (MMWR)", url: "https://www.cdc.gov/mmwr/volumes/73/rr/rr7302a1.htm" },
     tags: ["doxy-PEP", "性感染症", "ドキシサイクリン", "曝露後予防", "感染症"]
   }
-
+,
+  {
+    id: "jr-danflu2-highdose-flu-2026-09",
+    category: "journal",
+    field: "予防・健診",
+    difficulty: 2,
+    added: "2026-09-07",
+    question: "高齢者を対象に高用量インフルエンザワクチンと標準用量を比較した大規模実用的RCT(DANFLU-2, NEJM 2026)およびその事前規定プール解析の知見として、支持されるものを選べ。",
+    options: ["高用量ワクチンは入院を約50%減少させ、単独試験で明確な優越性が確立した", "全死亡が高用量群で有意に増加し、高齢者への接種は非推奨となった", "DANFLU-2単独ではインフルエンザ・肺炎入院を標準用量と比べ有意には減らさなかったが、GALFLU試験と統合した事前規定プール解析では入院が有意に減少した", "高用量ワクチンは重篤な有害事象を有意に増加させ、多くが接種中止に至った"],
+    correct: 2,
+    explanation: "【要点】DANFLU-2単独では高用量インフルワクチンの入院抑制は標準用量と有意差がつかなかったが、GALFLU試験と統合した事前規定プール解析(計約46.6万人)ではインフルエンザ・肺炎入院が有意に減少した。\n【背景/エビデンス】DANFLU-2はデンマークで3シーズン・65歳以上を対象とした実用的オープンラベルRCTで、個別ランダム化としては過去最大規模。単独では主要評価に有意差を認めず、有害事象プロファイルは良好であった。\n【臨床応用/注意】高齢者では高用量・アジュバント製剤が選択肢だが効果量は限定的で、接種率向上と流行株一致が重要。\n【誤答】約50%減少・単独優越、死亡増加、重篤有害事象多発は、いずれも試験結果と異なる。",
+    source: { title: "High-Dose Influenza Vaccine to Reduce Hospitalizations (DANFLU-2, NEJM)", url: "https://www.nejm.org/doi/full/10.1056/NEJMoa2509834" },
+    tags: ["インフルエンザワクチン", "高用量ワクチン", "DANFLU-2", "高齢者", "予防・健診"]
+  },
+  {
+    id: "jr-acacia-aficamten-nhcm-2026-09",
+    category: "journal",
+    field: "循環器",
+    difficulty: 2,
+    added: "2026-09-07",
+    question: "症候性の非閉塞性肥大型心筋症(nHCM)を対象に心筋ミオシン阻害薬アフィカムテンを検討した第3相RCT(ACACIA-HCM, NEJM 2026)の結果として、適切なものを選べ。",
+    options: ["左室流出路圧較差の低下のみを示し、症状や運動能には差がなかった", "運動耐容能(peak VO2)と患者報告アウトカム(KCCQ-CSS)の双方でプラセボに対し有意な改善を示した", "有効性はプラセボと同等で、nHCMに対する初の陰性試験となった", "突然死の一次予防効果が実証され、ICD適応が不要となった"],
+    correct: 1,
+    explanation: "【要点】アフィカムテンは症候性nHCMで、36週時点の最大運動能(peak VO2)と健康状態(KCCQ-CSS)という2つの主要評価項目をいずれも有意に改善した。\n【背景/エビデンス】19か国160施設で518例を5mgから最大20mgに漸増しプラセボと比較。nHCMは流出路狭窄がなく従来の心筋ミオシン阻害薬の適応外であり、有効性を示した初の対照試験となった。用量はLVEF低下に応じて調整する。\n【臨床応用/注意】閉塞性HCMと異なり圧較差は治療標的でなく、症状・運動能・QOLの改善が要点。LVEFの定期モニタリングが必要。\n【誤答】圧較差のみで症状不変、プラセボと同等(陰性)、突然死予防の実証は、いずれも結果と異なる。",
+    source: { title: "Aficamten for Symptomatic Nonobstructive Hypertrophic Cardiomyopathy (ACACIA-HCM, NEJM)", url: "https://www.nejm.org/doi/full/10.1056/NEJMoa2603021" },
+    tags: ["肥大型心筋症", "非閉塞性HCM", "アフィカムテン", "心筋ミオシン阻害薬", "循環器"]
+  },
+  {
+    id: "gl-acr-gout-t2t-2026-09",
+    category: "guideline",
+    field: "膠原病・骨",
+    difficulty: 2,
+    added: "2026-09-07",
+    question: "痛風の尿酸降下療法(ULT)に関する米国リウマチ学会(ACR)ガイドラインの推奨として、適切なものを選べ。",
+    options: ["血清尿酸値を目標(通常6mg/dL未満)に管理するtreat-to-target戦略を推奨する", "第一選択はアロプリノールで、低用量から開始し血清尿酸値をみて漸増する", "ULT開始時は少なくとも3〜6か月間、低用量コルヒチン等による抗炎症予防を併用する", "ULT開始後に痛風発作が起きた場合は、直ちにULTを中止する"],
+    correct: [0, 1, 2],
+    explanation: "【要点】ACRは血清尿酸値を目標(一般に<6mg/dL)に維持するtreat-to-target戦略を強く推奨し、第一選択はアロプリノールで低用量開始・漸増、ULT開始時は3〜6か月の低用量コルヒチン等による発作予防併用を推奨する。\n【背景/エビデンス】treat-to-targetを支持する複数のRCTがあり、目標達成でtophi縮小・発作減少が得られる。目標未達で発作やtophiが続く難治例ではペグロチカーゼへの切替を推奨。\n【臨床応用/注意】腎機能低下時は開始用量を下げる。ULT中に発作が起きても中止せず継続し、発作は別途治療する。\n【誤答】発作時にULTを中止するのは誤りで、尿酸値の急変はかえって発作を誘発しうる。",
+    source: { title: "ACR Releases Gout Management Guideline with Emphasis on Treat-to-Target Strategy for Urate-Lowering Therapy (American College of Rheumatology)", url: "https://rheumatology.org/press-releases/acr-releases-gout-management-guideline-with-emphasis-on-treat-to-target-strategy-for-urate-lowering-therapy" },
+    tags: ["痛風", "尿酸降下療法", "treat-to-target", "アロプリノール", "膠原病・骨"]
+  },
+  {
+    id: "cl-diverticulitis-noabx-2026-09",
+    category: "clinical",
+    field: "消化器・肝",
+    difficulty: 2,
+    added: "2026-09-07",
+    question: "画像で確認された急性非合併症性(単純性)左側結腸憩室炎で、全身状態が安定し免疫抑制や高リスク因子のない成人への抗菌薬使用に関する考え方として、適切なものを選べ。",
+    options: ["全例で入院のうえ静注抗菌薬による治療を要する", "選択された低リスク例では抗菌薬を投与せず、対症的な経過観察で管理してよい", "抗菌薬を用いないと穿孔・膿瘍への進展が有意に増加する", "診断確定のため全例で急性期に緊急大腸内視鏡を行う"],
+    correct: 1,
+    explanation: "【要点】合併症のない単純性憩室炎で全身状態が安定し高リスク因子のない選択例では、抗菌薬を投与せず対症的に管理してよい(ACP等)。\n【背景/エビデンス】AVOD・DIABOLO・DINAMOなど複数のRCTで、抗菌薬非投与は回復・合併症・再発・手術率で非劣性を示し、30〜90日転帰に差はなかった。近年ACG等も外来での抗菌薬ルーチン使用を控えるよう推奨している。\n【臨床応用/注意】免疫抑制・敗血症徴候・膿瘍/穿孔・高齢や重篤な併存症など高リスクでは抗菌薬適応。診断は主にCTで、内視鏡は急性期でなく消退後に大腸癌除外目的で検討する。\n【誤答】全例静注・全例緊急内視鏡は過剰で、非投与で進展が増えるとの記述も試験結果と異なる。",
+    source: { title: "Diagnosis and Management of Acute Left-Sided Colonic Diverticulitis: A Clinical Guideline From the American College of Physicians (Annals of Internal Medicine)", url: "https://www.acpjournals.org/doi/10.7326/M21-2710" },
+    tags: ["憩室炎", "抗菌薬適正使用", "単純性憩室炎", "外来管理", "消化器・肝"]
+  },
+  {
+    id: "gl-uspstf-anxiety-screen-2026-09",
+    category: "guideline",
+    field: "精神・行動",
+    difficulty: 1,
+    added: "2026-09-07",
+    question: "米国予防医療専門委員会(USPSTF)による成人の不安症・うつ病スクリーニングの推奨として、適切なものを選べ。",
+    options: ["65歳未満を含む成人・妊娠中/産後の女性に対し、不安症のスクリーニングを推奨する(中等度の便益)", "不安症のスクリーニングはあらゆる年齢で益より害が上回るため推奨しない", "うつ病(大うつ病性障害)のスクリーニングは有害事象が多く成人には推奨されない", "スクリーニングは65歳以上の高齢者の不安症で最も強く推奨される"],
+    correct: 0,
+    explanation: "【要点】USPSTFは、妊娠中/産後を含む成人の不安症スクリーニングに中等度の便益があるとして推奨する。一方、65歳以上の不安症スクリーニングは証拠不十分とした。うつ病(大うつ病性障害)のスクリーニングは19歳以上の成人で推奨される。\n【背景/エビデンス】早期発見と質の高い精神保健ケアへの連携により転帰改善が期待される。自殺行動そのもののスクリーニングは成人で証拠不十分とされる。\n【臨床応用/注意】陽性者は診断確定と適切な治療・フォロー体制が前提であり、スクリーニング単独でなく評価・治療につなぐ。\n【誤答】あらゆる年齢で非推奨、うつ病を非推奨、高齢者不安症で最も強く推奨は、いずれも勧告と異なる(65歳以上の不安症は証拠不十分)。",
+    source: { title: "Screening for Anxiety Disorders in Adults: US Preventive Services Task Force Recommendation Statement", url: "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/anxiety-adults-screening" },
+    tags: ["不安症", "うつ病", "スクリーニング", "USPSTF", "精神・行動"]
+  },
+  {
+    id: "rv-kdigo-finerenone-ckd-2026-09",
+    category: "review",
+    field: "腎・電解質",
+    difficulty: 3,
+    added: "2026-09-07",
+    question: "2型糖尿病を合併する慢性腎臓病(CKD)患者の腎・心保護治療に関する近年のガイドライン(KDIGO/ADA)の考え方として、適切なものを選べ。",
+    options: ["SGLT2阻害薬は糖尿病の有無にかかわらずCKDには禁忌である", "RAS阻害薬に加えSGLT2阻害薬を、適応患者で腎・心保護目的に用いる", "非ステロイド型MR拮抗薬フィネレノンは、アルブミン尿を伴う2型糖尿病CKDで心腎イベントを抑制する", "フィネレノンやRAS阻害薬に伴う高カリウム血症は、新規カリウム吸着薬(パチロマー等)で管理し治療継続を図りうる"],
+    correct: [1, 2, 3],
+    explanation: "【要点】2型糖尿病合併CKDでは、RAS阻害薬を基盤にSGLT2阻害薬を併用し、アルブミン尿があれば非ステロイド型MR拮抗薬フィネレノンを加える多剤併用が心腎保護の柱となる。\n【背景/エビデンス】FIDELIO-DKDで腎複合エンドポイントを約18%、FIGARO-DKDで心血管イベントを約13%抑制。SGLT2阻害薬は糖尿病の有無を問わずCKD進展を抑制する。高カリウム血症はパチロマーやジルコニウムシクロケイ酸Naで管理し治療継続を図る。\n【臨床応用/注意】UACR高値でeGFR保持例ではSGLT2阻害薬とフィネレノンの併用も考慮。開始後はK・eGFRをモニタリングする。\n【誤答】SGLT2阻害薬がCKDに禁忌との記述は誤りで、糖尿病のないCKDにも適応が拡大している。",
+    source: { title: "11. Chronic Kidney Disease and Risk Management: Standards of Care in Diabetes-2026 (American Diabetes Association)", url: "https://diabetesjournals.org/care/article/49/Supplement_1/S246/163914/11-Chronic-Kidney-Disease-and-Risk-Management" },
+    tags: ["慢性腎臓病", "フィネレノン", "SGLT2阻害薬", "高カリウム血症", "腎・電解質"]
+  }
 ];
 
 if (typeof module !== "undefined") { module.exports = QUESTIONS; }
