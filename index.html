@@ -397,6 +397,8 @@
         <h2>今日の学習</h2>
         <p class="lead" id="homeSummary">読み込み中...</p>
         <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:12px;">
+          <label style="font-size:.9rem;color:var(--text-muted);">分野</label>
+          <select id="fieldSelect" style="padding:8px 10px;border-radius:8px;border:1px solid var(--border);background:var(--surface);color:var(--text);"></select>
           <label style="font-size:.9rem;color:var(--text-muted);">難易度レベル</label>
           <select id="levelSelect" style="padding:8px 10px;border-radius:8px;border:1px solid var(--border);background:var(--surface);color:var(--text);">
             <option value="all">おまかせ（すべて）</option>
@@ -669,7 +671,7 @@
 
   // ---------- 状態初期化 ----------
   function defaultSettings() {
-    return { count: 5, cats: CATS.map(c => c.key), diffs: [1, 2, 3], theme: "light", level: "all" };
+    return { count: 5, cats: CATS.map(c => c.key), diffs: [1, 2, 3], theme: "light", level: "all", field: "all" };
   }
   function defaultStats() {
     const catStats = {};
@@ -731,8 +733,15 @@
     return q.difficulty === parseInt(lv, 10);
   }
 
+  // 分野（臓器別）による絞り込み。"all" なら全分野
+  function fieldOk(q) {
+    const f = settings.field || "all";
+    if (f === "all") return true;
+    return (q.field || "その他") === f;
+  }
+
   function passesFilter(q) {
-    return settings.cats.indexOf(q.category) !== -1 && levelDiffOk(q);
+    return settings.cats.indexOf(q.category) !== -1 && levelDiffOk(q) && fieldOk(q);
   }
 
   // セッション用の問題選定: 復習期限が来た問題を優先、なければ新規、なお足りなければ既習の中から
@@ -842,6 +851,30 @@
 
   // ---------- ホーム描画 ----------
   function renderHome() {
+    // 分野プルダウンを（件数つきで）構築
+    const fs = $("#fieldSelect");
+    if (fs) {
+      const cur = settings.field || "all";
+      const counts = {};
+      QUESTIONS.forEach(q => { const f = q.field || "その他"; counts[f] = (counts[f] || 0) + 1; });
+      fs.innerHTML = "";
+      const optAll = document.createElement("option");
+      optAll.value = "all";
+      optAll.textContent = "すべての分野（" + QUESTIONS.length + "問）";
+      fs.appendChild(optAll);
+      FIELDS.forEach(f => {
+        if (!counts[f]) return;
+        const o = document.createElement("option");
+        o.value = f;
+        o.textContent = (FIELD_ICON[f] || "") + " " + f + "（" + counts[f] + "問）";
+        fs.appendChild(o);
+      });
+      // 保存された分野が存在しない場合は「すべて」に戻す
+      const valid = (cur === "all") || !!counts[cur];
+      fs.value = valid ? cur : "all";
+      if (!valid) { settings.field = "all"; save(K_SETTINGS, settings); }
+    }
+
     const now = todayStart();
     const pool = QUESTIONS.filter(passesFilter);
     let dueCount = 0, freshCount = 0;
@@ -852,9 +885,10 @@
     });
     const LEVEL_LABEL = { all: "おまかせ", "1": "やさしい★", "2": "標準★★", "3": "難しい★★★", hard: "最難関" };
     const lvLabel = LEVEL_LABEL[settings.level || "all"];
+    const fdLabel = (settings.field && settings.field !== "all") ? settings.field : "全分野";
     $("#homeSummary").textContent =
-      "難易度[" + lvLabel + "]・1セッション " + settings.count + "問。対象 " + pool.length +
-      "問（復習待ち " + dueCount + "・未着手 " + freshCount + "）から出題します。";
+      "分野[" + fdLabel + "]・難易度[" + lvLabel + "]・1セッション " + settings.count +
+      "問。対象 " + pool.length + "問（復習待ち " + dueCount + "・未着手 " + freshCount + "）から出題します。";
     // 新着モードの対象件数（期間＋絞り込み）
     const newWin = $("#newWindow") ? $("#newWindow").value : "7";
     const newMode = $("#newFilter") ? $("#newFilter").value : "all";
@@ -1613,6 +1647,12 @@
   $("#newBtn").addEventListener("click", () => startSession("new"));
   $("#newWindow").addEventListener("change", renderHome);
   $("#newFilter").addEventListener("change", renderHome);
+  // 分野選択（今日の学習・新着モードに適用）
+  $("#fieldSelect").addEventListener("change", (e) => {
+    settings.field = e.target.value;
+    save(K_SETTINGS, settings);
+    renderHome();
+  });
   // 難易度レベル選択（手動）
   $("#levelSelect").value = settings.level || "all";
   $("#levelSelect").addEventListener("change", (e) => {
