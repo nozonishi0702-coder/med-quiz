@@ -209,6 +209,11 @@
   .field-name { font-weight: 700; font-size: 1.02rem; }
   .field-count { margin-left: auto; font-size: .85rem; color: var(--text-muted); }
   .field-go { font-size: .8rem; color: var(--accent); flex-shrink: 0; }
+  .field-card.tappable.open { border-color: var(--accent); background: var(--surface-2); }
+  .field-panel {
+    margin: -6px 0 14px; padding: 14px 16px;
+    border-left: 3px solid var(--accent);
+  }
   .field-bar {
     height: 8px; border-radius: 4px; background: var(--surface-2);
     overflow: hidden; margin-bottom: 6px;
@@ -931,6 +936,7 @@
     "神経": "🧠", "精神・行動": "💭", "予防・健診": "🛡️", "その他": "📋"
   };
   let selectedField = null;
+  let openField = null;   // 一覧を開いている分野
 
   function fieldOf(q) { return q.field || "その他"; }
 
@@ -961,13 +967,13 @@
       const rate = s.ans ? Math.round(s.ok / s.ans * 100) : null;
       // カード全体をタップ可能に（ボタンを押さずに直接出題へ）
       const card = document.createElement("button");
-      card.className = "card field-card tappable";
-      card.setAttribute("aria-label", f + "の問題を解く");
+      card.className = "card field-card tappable" + (openField === f ? " open" : "");
+      card.setAttribute("aria-label", f + "の問題一覧を開く");
       card.innerHTML =
         '<div class="field-head">' +
           '<span class="field-name">' + (FIELD_ICON[f] || "") + " " + escapeHtml(f) + '</span>' +
           '<span class="field-count">' + s.total + '問</span>' +
-          '<span class="field-go">▶</span>' +
+          '<span class="field-go">' + (openField === f ? "▼" : "▶") + '</span>' +
         '</div>' +
         '<div class="field-bar"><div style="width:' + (rate === null ? 0 : rate) + '%;background:' +
           (rate === null ? "var(--border)" : rateColor(rate)) + '"></div></div>' +
@@ -975,9 +981,135 @@
           (rate === null ? "未学習" : ("正答率 " + rate + "%（" + s.ok + "/" + s.ans + "）")) +
           " ｜ 復習待ち " + s.due + " ｜ 未着手 " + s.fresh +
         '</div>';
-      card.addEventListener("click", () => { selectedField = f; startSession("field"); });
+      // カードをタップ → その分野の問題一覧を開閉（検索結果と同じ操作感）
+      card.addEventListener("click", () => {
+        const open = openField === f;
+        openField = open ? null : f;
+        renderFields();
+        if (!open) {
+          const el = document.getElementById("fieldOpen-" + FIELDS.indexOf(f));
+          if (el) el.scrollIntoView({ block: "nearest" });
+        }
+      });
       wrap.appendChild(card);
+
+      // 開いている分野は、その下に問題一覧を表示
+      if (openField === f) {
+        const panel = document.createElement("div");
+        panel.className = "card field-panel";
+        panel.id = "fieldOpen-" + FIELDS.indexOf(f);
+        const list = QUESTIONS.filter(q => fieldOf(q) === f);
+        renderPickList(panel, list, f + "の問題");
+        wrap.appendChild(panel);
+      }
     });
+  }
+
+  // 問題リストを「1問ずつ選べる」形で描画する共通関数
+  // container: 描画先 / list: 問題配列 / label: 見出し用の語
+  function renderPickList(container, list, label) {
+    container.innerHTML = "";
+    if (!list.length) {
+      container.innerHTML = '<p class="lead" style="margin:0;">該当する問題がありません。</p>';
+      return;
+    }
+    const head = document.createElement("p");
+    head.className = "lead";
+    head.style.margin = "0 0 8px";
+    head.innerHTML = escapeHtml(label) + " " + list.length + "問<br>" +
+      '<span class="field-note">問題文をタップすると、その1問だけを解けます。' +
+      'チェックを付けて複数まとめて解くこともできます。</span>';
+    container.appendChild(head);
+
+    // 絞り込み（すべて / 未着手 / 間違えた問題）
+    const filterRow = document.createElement("div");
+    filterRow.style.cssText = "display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px;align-items:center;";
+    const sel = document.createElement("select");
+    sel.style.cssText = "padding:7px 10px;border-radius:8px;border:1px solid var(--border);background:var(--surface);color:var(--text);font-size:.85rem;";
+    [["all", "すべて"], ["unseen", "まだ解いていない問題のみ"], ["wrong", "間違えた問題のみ"]]
+      .forEach(([v, t]) => { const o = document.createElement("option"); o.value = v; o.textContent = t; sel.appendChild(o); });
+    filterRow.appendChild(sel);
+    container.appendChild(filterRow);
+
+    const btnRow = document.createElement("div");
+    btnRow.style.cssText = "display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px;";
+    const allBtn = document.createElement("button");
+    allBtn.className = "btn small";
+    const selBtn = document.createElement("button");
+    selBtn.className = "btn outline small";
+    selBtn.textContent = "選択した問題を解く";
+    selBtn.disabled = true;
+    btnRow.appendChild(allBtn); btnRow.appendChild(selBtn);
+    container.appendChild(btnRow);
+
+    const ul = document.createElement("div");
+    container.appendChild(ul);
+
+    let shown = list;
+    function refreshSelBtn() {
+      const n = $$("#" + (container.id || "x") + " .search-check").filter(cb => cb.checked).length;
+      selBtn.disabled = n === 0;
+      selBtn.textContent = n ? ("選択した" + n + "問を解く") : "選択した問題を解く";
+    }
+    function draw() {
+      const mode = sel.value;
+      shown = list.filter(q => {
+        const c = cardState[q.id];
+        if (mode === "unseen") return !c;
+        if (mode === "wrong") return c && c.lastResult === "ng";
+        return true;
+      });
+      allBtn.textContent = "全" + shown.length + "問を解く";
+      allBtn.disabled = shown.length === 0;
+      selBtn.disabled = true;
+      selBtn.textContent = "選択した問題を解く";
+      ul.innerHTML = "";
+      if (!shown.length) {
+        ul.innerHTML = '<p class="field-note">該当する問題はありません。</p>';
+        return;
+      }
+      const LIMIT = 100;
+      shown.slice(0, LIMIT).forEach((q, i) => {
+        const d = document.createElement("div");
+        d.className = "search-item";
+        const cb = document.createElement("input");
+        cb.type = "checkbox"; cb.className = "search-check"; cb.dataset.idx = i;
+        cb.addEventListener("change", refreshSelBtn);
+        const c = cardState[q.id];
+        const mark = !c ? '<span class="s-new">未</span>'
+          : (c.lastResult === "ng" ? '<span class="s-ng">✗</span>' : '<span class="s-ok">✓</span>');
+        const txt = document.createElement("span");
+        txt.className = "search-text";
+        txt.innerHTML = mark + '<span class="mini-tag">' + escapeHtml(fieldOf(q)) + '</span> ' +
+          escapeHtml(q.question.slice(0, 70)) + (q.question.length > 70 ? "…" : "");
+        txt.title = "この問題を解く";
+        txt.addEventListener("click", () => { searchHits = [q]; startSession("search"); });
+        d.appendChild(cb); d.appendChild(txt);
+        ul.appendChild(d);
+      });
+      if (shown.length > LIMIT) {
+        const more = document.createElement("div");
+        more.className = "field-note"; more.style.marginTop = "8px";
+        more.textContent = "他 " + (shown.length - LIMIT) + "問（絞り込むと表示されます）";
+        ul.appendChild(more);
+      }
+    }
+    sel.addEventListener("change", draw);
+    allBtn.addEventListener("click", () => {
+      if (!shown.length) return;
+      searchHits = shuffle(shown.slice());
+      startSession("search");
+    });
+    selBtn.addEventListener("click", () => {
+      const picked = [];
+      $$("#" + (container.id || "x") + " .search-check").forEach(cb => {
+        if (cb.checked) picked.push(shown[parseInt(cb.dataset.idx, 10)]);
+      });
+      if (!picked.length) return;
+      searchHits = picked;
+      startSession("search");
+    });
+    draw();
   }
 
   // 分野セッション: その分野内で「復習期限→未着手→既習」の順に settings.count 問
@@ -1012,83 +1144,11 @@
       box.innerHTML = '<p class="lead" style="margin:10px 0 0;">該当する問題がありません。</p>';
       return;
     }
-    box.innerHTML = '<p class="lead" style="margin:10px 0 8px;">' + hits.length +
-      '問ヒット<br><span class="field-note">問題文をタップすると、その1問だけを解けます。' +
-      'チェックを付けて複数まとめて解くこともできます。</span></p>';
-
-    // 操作ボタン（全問 / 選択分）
-    const row = document.createElement("div");
-    row.style.cssText = "display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px;";
-    const allBtn = document.createElement("button");
-    allBtn.className = "btn small";
-    allBtn.textContent = "全" + hits.length + "問を解く";
-    allBtn.addEventListener("click", () => {
-      searchHits = shuffle(hits.slice());
-      startSession("search");
-    });
-    const selBtn = document.createElement("button");
-    selBtn.className = "btn outline small";
-    selBtn.textContent = "選択した問題を解く";
-    selBtn.disabled = true;
-    selBtn.addEventListener("click", () => {
-      const picked = [];
-      $$("#searchResult .search-check").forEach((cb, i) => {
-        if (cb.checked) picked.push(hits[parseInt(cb.dataset.idx, 10)]);
-      });
-      if (!picked.length) return;
-      searchHits = picked;
-      startSession("search");
-    });
-    row.appendChild(allBtn); row.appendChild(selBtn);
-    box.appendChild(row);
-
-    function refreshSelBtn() {
-      const n = $$("#searchResult .search-check").filter(cb => cb.checked).length;
-      selBtn.disabled = n === 0;
-      selBtn.textContent = n ? ("選択した" + n + "問を解く") : "選択した問題を解く";
-    }
-
-    // ヒット一覧（1問ずつ選択・実行できる）
-    const ul = document.createElement("div");
-    const LIMIT = 100;
-    hits.slice(0, LIMIT).forEach((q, i) => {
-      const d = document.createElement("div");
-      d.className = "search-item";
-
-      const cb = document.createElement("input");
-      cb.type = "checkbox";
-      cb.className = "search-check";
-      cb.dataset.idx = i;
-      cb.addEventListener("change", refreshSelBtn);
-
-      // 学習状況（前回の正誤）を表示
-      const c = cardState[q.id];
-      const mark = !c ? '<span class="s-new">未</span>'
-        : (c.lastResult === "ng" ? '<span class="s-ng">✗</span>' : '<span class="s-ok">✓</span>');
-
-      const txt = document.createElement("span");
-      txt.className = "search-text";
-      txt.innerHTML = mark + '<span class="mini-tag">' + escapeHtml(fieldOf(q)) + '</span> ' +
-        escapeHtml(q.question.slice(0, 70)) + (q.question.length > 70 ? "…" : "");
-      txt.title = "この問題を解く";
-      txt.addEventListener("click", () => {
-        searchHits = [q];              // この1問だけ
-        startSession("search");
-      });
-
-      d.appendChild(cb);
-      d.appendChild(txt);
-      ul.appendChild(d);
-    });
-    if (hits.length > LIMIT) {
-      const more = document.createElement("div");
-      more.className = "field-note";
-      more.style.marginTop = "8px";
-      more.textContent = "他 " + (hits.length - LIMIT) + "問（キーワードを絞ると表示されます）";
-      ul.appendChild(more);
-    }
-    box.appendChild(ul);
+    // 分野一覧と同じ「1問ずつ選べる」UIを再利用
+    renderPickList(box, hits, "「" + q0 + "」の検索結果");
   }
+
+
   let searchHits = [];
   $("#fieldSearch").addEventListener("input", (e) => runSearch(e.target.value));
 
