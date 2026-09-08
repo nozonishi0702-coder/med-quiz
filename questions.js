@@ -5530,7 +5530,7 @@ const QUESTIONS = [
     explanation: "【要点】上葉優位型肺線維症(PPFE)は上肺野・胸膜直下の線維化と弾性線維増生を特徴とし、痩せ型・扁平胸郭を伴い気胸を合併しやすい進行性・予後不良の病態である。\n【背景/エビデンス】労作時呼吸困難が緩徐に進行し、体重減少・低BMI、前後径の減少した扁平胸郭(flat chest)が特徴的所見となる。特発性のほか造血幹細胞移植後や化学療法後にも生じ、拘束性換気障害を呈して進行例では気胸・縦隔気腫を繰り返す。\n【臨床応用/注意】確立した有効薬物治療は乏しく、経過観察と合併症管理を行い、進行例では肺移植も検討する。\n【誤答】下肺野優位、肥満関連で改善する良性経過、ステロイド単剤で寛解とする記述はいずれも誤り。",
     source: { title: "上葉優位型肺線維症「息切れと胸の絞扼感が続きます」（皿谷健, 臨床雑誌内科 138巻3号, 2026）", url: "https://webview.isho.jp/journal/detail/abs/10.15106/j_naika138_461" },
     tags: ["PPFE", "上葉優位型肺線維症", "扁平胸郭", "気胸", "間質性肺疾患", "呼吸器"]
-  },,
+  },
   {
     id: "cl-anaphylaxis-adrenaline-01",
     category: "clinical",
@@ -6283,7 +6283,7 @@ const QUESTIONS = [
     options: ["深在性/転移性病巣のない低リスクの成人では、経胸壁心エコー(TTE)を全例で行い、抗菌薬治療は14日間を目安とする", "全例で最低6週間の静注抗菌薬を要する", "血液培養の陰性化確認は不要である", "感染性心内膜炎が否定できる明確な超低リスク集団を定義できるため、心エコーは省略してよい"],
     correct: 0,
     explanation: "【要点】2026 IDSA/ESCMIDガイダンスは、従来の『合併症性/非合併症性』の二分法から、深在性・転移性病巣の有無に基づく個別リスク層別化へ移行した。\n【背景/エビデンス】感染性心内膜炎の超低リスク集団を明確に定義する基準を確立できないため、成人SABでは原則としてTTEをルーチンに実施する。深在性/転移性病巣のない低リスク例では、抗菌薬14日間がより長期/短期より妥当とされた。\n【臨床応用/注意】適切な起因菌同定・感染源検索・血液培養の陰性化確認と併せて治療期間を判断する。\n【誤答】全例6週間は過剰、培養陰性化の確認は必須、超低リスクを定義して心エコーを省略とする記載は勧告と異なる。",
-    source: { title: "IDSA Addresses Critical Questions on Staph aureus Bacteremia (2026 IDSA/ESCMID guidance)", url: "https://www.contagionlive.com/view/idsa-addresses-critical-questions-on-staph-aureus-bacteremia" },
+    source: { title: "IDSA/ESCMID 2026 Guidelines on Staphylococcus aureus Bacteremia: Risk Stratification, Diagnostic Evaluation, and Management of Adults and Children (IDSA)", url: "https://www.idsociety.org/2026-clinical-practice-guidelines-by-the-infectious-diseases-society-of-america-and-european-society-of-clinical-microbiology-and-infectious-diseases-on-staphylococcus-aureus-bacteremia-risk-stratification-diagnostic-evaluation-and-management-of-adults/" },
     tags: ["黄色ブドウ球菌菌血症", "心エコー", "治療期間", "IDSA", "感染症"]
   },
   {
