@@ -6283,7 +6283,7 @@ const QUESTIONS = [
     options: ["深在性/転移性病巣のない低リスクの成人では、経胸壁心エコー(TTE)を全例で行い、抗菌薬治療は14日間を目安とする", "全例で最低6週間の静注抗菌薬を要する", "血液培養の陰性化確認は不要である", "感染性心内膜炎が否定できる明確な超低リスク集団を定義できるため、心エコーは省略してよい"],
     correct: 0,
     explanation: "【要点】2026 IDSA/ESCMIDガイダンスは、従来の『合併症性/非合併症性』の二分法から、深在性・転移性病巣の有無に基づく個別リスク層別化へ移行した。\n【背景/エビデンス】感染性心内膜炎の超低リスク集団を明確に定義する基準を確立できないため、成人SABでは原則としてTTEをルーチンに実施する。深在性/転移性病巣のない低リスク例では、抗菌薬14日間がより長期/短期より妥当とされた。\n【臨床応用/注意】適切な起因菌同定・感染源検索・血液培養の陰性化確認と併せて治療期間を判断する。\n【誤答】全例6週間は過剰、培養陰性化の確認は必須、超低リスクを定義して心エコーを省略とする記載は勧告と異なる。",
-    source: { title: "New 2026 IDSA/ESCMID Staphylococcus Aureus Bacteremia Guidance (Guideline Central)", url: "https://www.guidelinecentral.com/insights/jul-2026-idsaescmid-sab-guideline-spotlight/" },
+    source: { title: "IDSA Addresses Critical Questions on Staph aureus Bacteremia (2026 IDSA/ESCMID guidance)", url: "https://www.contagionlive.com/view/idsa-addresses-critical-questions-on-staph-aureus-bacteremia" },
     tags: ["黄色ブドウ球菌菌血症", "心エコー", "治療期間", "IDSA", "感染症"]
   },
   {
