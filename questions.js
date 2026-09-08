@@ -6298,6 +6298,71 @@ const QUESTIONS = [
     explanation: "【要点】AFP(2026年8月号)は、全粒・植物性食品を中心に据え、超加工食品を控え、文化的に柔軟な食事パターンを促し、必要時に管理栄養士へ紹介するよう家庭医に助言している。\n【背景/エビデンス】同号ではPCSK9モノクローナル抗体の一次・二次予防への上乗せ処方に『黄色(益が不明確)』評価が付され、便益は小さく不確実とされた。食事は依然として予防の基盤である。\n【臨床応用/注意】食事助言は患者の文化・嗜好・実行可能性に配慮して個別化する。\n【誤答】PCSK9抗体を全例第一選択とする、薬物療法を一律優先する、超加工食品が健康と無関係とする記載はいずれも不適切。",
     source: { title: "Healthy Dietary Advice in Clinical Practice: Recommendations for Family Physicians (AFP, August 2026)", url: "https://www.aafp.org/afp/2026/0800/healthy-dietary-advice" },
     tags: ["食事指導", "超加工食品", "PCSK9", "予防", "予防・健診"]
+  },
+  {
+    id: "jr-hit-hyponatremia-2026-09",
+    category: "journal",
+    field: "腎・電解質",
+    difficulty: 3,
+    added: "2026-09-09",
+    question: "入院中の慢性低ナトリウム血症(血漿Na<130 mmol/L)患者を対象に、多面的な目標志向型の補正介入を通常ケアと比較した無作為化試験(HIT試験, NEJM Evidence 2026)の主要結果として適切なものはどれか。",
+    options: ["介入群では浸透圧性脱髄症候群が有意に増加した", "介入群は正常Na血症の到達率を高めたが、30日死亡・再入院の複合主要評価項目は改善しなかった", "介入群で30日死亡が有意に減少した", "両群で正常Na血症の到達率に差はなかった"],
+    correct: 1,
+    explanation: "【要点】目標志向型の積極補正は正常Na化を促したが、30日死亡・再入院の複合アウトカムを改善しなかった。\n【背景/エビデンス】欧州9施設で血漿Na<130の入院患者2173例を介入群/通常ケアに割付。正常Na到達率は60.4%対46.2%と介入群で高かったが、主要複合アウトカムは20.5%対21.8%(P=0.45)で有意差なし。過補正はやや多かった(2.3%対1.4%)が浸透圧性脱髄の発生はなかった。\n【臨床応用/注意】慢性低Na血症では数値の正常化そのものより、原因治療と安全な補正速度を重視する。\n【誤答】脱髄増加・死亡減少・到達率に差なし、はいずれも試験結果と異なる。",
+    source: { title: "A Randomized Trial of Targeted Hyponatremia Correction in Hospitalized Patients (NEJM Evidence)", url: "https://evidence.nejm.org/doi/full/10.1056/EVIDoa2500086" },
+    tags: ["低ナトリウム血症", "補正速度", "HIT試験", "入院管理", "腎・電解質"]
+  },
+  {
+    id: "jr-sibeprenlimab-igan-2026-09",
+    category: "journal",
+    field: "腎・電解質",
+    difficulty: 3,
+    added: "2026-09-09",
+    question: "生検確認済みIgA腎症の成人を対象に、シベプレンリマブをプラセボと比較した第3相VISIONARY試験の中間解析(NEJM 2026)で示された内容として適切なものはどれか。",
+    options: ["本剤はB細胞を直接傷害するCD20抗体で、蛋白尿は不変であった", "eGFR低下は加速し腎機能はむしろ悪化した", "補体C5を阻害する抗体で有効性は示されなかった", "APRIL(増殖誘導リガンド)を阻害する抗体で、プラセボ比で蛋白尿(uPCR)を約51%減少させた"],
+    correct: 3,
+    explanation: "【要点】シベプレンリマブはAPRILを標的とする抗体で、支持療法下のIgA腎症でプラセボ比の蛋白尿を有意に減少させた。\n【背景/エビデンス】510例を本剤400mg皮下(4週毎)/プラセボに割付。9か月時点で24時間uPCRのプラセボ調整減少は約51%(P<0.0001)。安全性は両群同等で死亡は報告されず、eGFR推移の評価は継続中。APRILはIgA産生やガラクトース欠損IgA1に関与する上流の免疫機序を担う。\n【臨床応用/注意】中間解析であり、腎機能アウトカムの最終結果を待って位置づけを判断する。\n【誤答】CD20抗体・C5阻害・eGFR悪化は、いずれも本剤の機序や結果と異なる。",
+    source: { title: "Sibeprenlimab in IgA Nephropathy — Interim Analysis of a Phase 3 Trial (NEJM)", url: "https://www.nejm.org/doi/full/10.1056/NEJMoa2512133" },
+    tags: ["IgA腎症", "シベプレンリマブ", "APRIL", "蛋白尿", "腎・電解質"]
+  },
+  {
+    id: "jr-olp-migraine-2026-09",
+    category: "journal",
+    field: "神経",
+    difficulty: 2,
+    added: "2026-09-09",
+    question: "片頭痛予防における非盲検プラセボ(open-label placebo, OLP)を通常ケア(TAU)に上乗せして比較した無作為化試験(2026)の結果として適切なものはどれか。",
+    options: ["OLP群はQOLや頭痛関連の日常生活障害、全般的改善感が向上したが、片頭痛日数の有意な減少は示されなかった", "OLP群は片頭痛日数を有意に半減させた", "OLPは倫理的に許容されず試験は中止された", "OLPは実薬の予防薬と同等の発作抑制効果を示した"],
+    correct: 0,
+    explanation: "【要点】非盲検プラセボ(患者に『これはプラセボ』と伝えて投与)の上乗せは、QOL・日常生活障害・全般的改善感を高めたが、片頭痛日数そのものは有意に減らさなかった。\n【背景/エビデンス】OLPは欺瞞なくプラセボを用い、期待や条件づけによる症状改善を狙う手法。本試験ではTAU比で主観的アウトカムが改善した一方、片頭痛日数・痛み強度・頓用薬使用・50%レスポンダー率に有意差はなかった。\n【臨床応用/注意】プラセボ反応の一部は正直な枠組みでも引き出せるが、発作頻度の客観的減少は限定的で、確立した予防薬を置き換えるものではない。\n【誤答】日数半減・実薬同等・試験中止は、いずれも結果と異なる。",
+    source: { title: "Open-Label Placebos as Adjunct for the Preventive Treatment of Migraine: A Randomized Clinical Trial (PubMed)", url: "https://pubmed.ncbi.nlm.nih.gov/41060655/" },
+    tags: ["片頭痛", "非盲検プラセボ", "プラセボ効果", "予防治療", "神経"]
+  },
+  {
+    id: "gl-eular-ra-2025update-2026-09",
+    category: "guideline",
+    field: "膠原病・骨",
+    difficulty: 2,
+    added: "2026-09-09",
+    question: "関節リウマチの合成・生物学的DMARD管理に関するEULAR 2025年更新(2026公表)の考え方として、適切なものを選べ。",
+    options: ["初期治療はメトトレキサート(可能なら短期グルココルチコイド併用)を基本とする", "JAK阻害薬は心血管・悪性腫瘍リスクを評価せず第一選択として全例に用いる", "生物学的DMARDは初回から全例で必須であり、メトトレキサートは推奨されない", "JAK阻害薬の使用前には主要心血管イベント・悪性腫瘍・血栓塞栓のリスクを慎重に評価する"],
+    correct: [0, 3],
+    explanation: "【要点】EULAR 2025更新は、初期はメトトレキサート(±短期GC)を基本とし、JAK阻害薬を使う際は心血管・悪性腫瘍・血栓塞栓リスクを事前評価する方針を明確にした。\n【背景/エビデンス】3〜6か月で効果不十分なら生物学的DMARDを追加し、リスク評価のうえでJAK阻害薬も選択肢となる。推奨総数は11から9へ整理された。ORAL Surveillance等を背景に、JAK阻害薬の安全性層別化が重視される。\n【臨床応用/注意】高齢・喫煙・心血管既往などの高リスク例ではJAK阻害薬を特に慎重に判断する。\n【誤答】リスク未評価でJAK阻害薬を一律第一選択、初回から生物学的製剤必須でMTX不要とするのは更新の趣旨に反する。",
+    source: { title: "EULAR recommendations for the management of RA with synthetic and biologic DMARDs: 2025 update (Annals of the Rheumatic Diseases)", url: "https://ard.eular.org/article/S0003-4967(26)00075-0/fulltext" },
+    tags: ["関節リウマチ", "EULAR", "JAK阻害薬", "メトトレキサート", "膠原病・骨", "複数選択"]
+  },
+  {
+    id: "rv-antiamyloid-nnt-nnh-2026-09",
+    category: "review",
+    field: "神経",
+    difficulty: 3,
+    added: "2026-09-09",
+    question: "早期アルツハイマー病に対する抗アミロイドβ抗体(レカネマブ・ドナネマブ)の効果と有害事象の定量的評価に関する近年の解析(2026)として、適切なものを選べ。",
+    options: ["ARIA(アミロイド関連画像異常)のリスクは対照群と同等である", "毒性全体を考慮した有害必要数(NNH)は概ね数名程度と小さい", "個々の患者レベルのデータが乏しく、NNT(治療必要数)の正確な算出は困難である", "これらの抗体はアミロイドを標的とせず、ARIAは生じない"],
+    correct: [1, 2],
+    explanation: "【要点】抗アミロイド抗体はARIAリスクが有意に高く(対照の約4倍)、毒性全体を考慮したNNHは数名程度と小さい一方、患者個別データの不足からNNTの正確な推定は難しい。\n【背景/エビデンス】第3相(CLARITY-AD/TRAILBLAZER-ALZ2)は認知・機能低下を統計的に緩やかにしたが、効果量の臨床的意義には議論がある。ARIA-E/Hのリスクは高く、多くは自然軽快するが重篤例もあり定期MRI監視を要する。\n【臨床応用/注意】適応(MCI〜軽度AD)を厳格にし、APOE4遺伝型や抗凝固併用でリスクを個別評価する。\n【誤答】ARIAが対照と同等・アミロイド非標的でARIAなし、は事実と異なる。",
+    source: { title: "Number needed to treat and harm for lecanemab and donanemab in early Alzheimer disease (Journal of Neurology)", url: "https://link.springer.com/article/10.1007/s00415-026-13924-9" },
+    tags: ["アルツハイマー病", "抗アミロイド抗体", "ARIA", "NNT", "神経", "複数選択"]
   }
 ];
 
