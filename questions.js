@@ -6428,6 +6428,84 @@ const QUESTIONS = [
     explanation: "【要点】診断エラーの頻度は診療の場・測定法・対象集団に強く依存し、外来では成人の約5%が年間に経験すると推定され、救急外来や入院高リスク群ではさらに高い。\n【背景/エビデンス】本邦では患者の診断エラー経験は約3〜10%の可能性があり、医療過誤訴訟の約40%が診断エラー関連とされ、プライマリ・ケア領域で重要な課題である。診断エラーは認知バイアスのみでは説明できず、労務環境・検査管理・情報伝達・コンサルテーション・業務負荷などのシステム要因が関与する。\n【臨床応用/注意】疫学データはどの誤りをどの測定法で可視化したかで数値が異なる点に注意する。\n【誤答】頻度が測定法や集団によらず一定、認知バイアスのみで説明可能とするのは本稿の趣旨と異なる。",
     source: { title: "日本のプライマリ・ケアにおける診断エラーの実態と疫学（medicina 63巻10号, 2026）", url: "https://webview.isho.jp/journal/detail/abs/10.11477/mf.002576990630101487" },
     tags: ["診断エラー", "患者安全", "疫学", "システム要因", "予防・健診"]
+  },
+  {
+    id: "jr-findckd-finerenone-2026-09",
+    category: "journal",
+    field: "腎・電解質",
+    difficulty: 2,
+    added: "2026-09-10",
+    question: "非糖尿病性の慢性腎臓病(CKD)に対するフィネレノンを検討したFIND-CKD試験の結果として適切なものはどれか。",
+    options: ["尿蛋白を有する2型糖尿病合併CKDのみを対象とし、非糖尿病例は除外された", "腎機能の指標であるeGFRスロープはプラセボと有意差を認めなかった", "対象は高血圧性腎硬化症を除く原発性糸球体疾患に限定された", "eGFRスロープの低下を有意に抑制し、腎・心血管複合アウトカムのリスクも減少させた"],
+    correct: 3,
+    explanation: "【要点】FIND-CKDは非糖尿病性CKDを対象に非ステロイド型MRAのフィネレノンを検討した第III相試験で、主要評価項目であるeGFRスロープ(総スロープ)の低下を有意に抑制した。\n【背景/エビデンス】高血圧性腎硬化症や糸球体疾患など多様な原因を含む1500例超を無作為化し、2026年のERA学会で発表・NEJMに同時掲載された。腎不全・eGFR57%以上低下・心不全入院・心血管死からなる副次複合アウトカムのリスクも有意に減少した。\n【臨床応用/注意】従来は糖尿病性腎症中心だったフィネレノンの意義が非糖尿病性CKDへ拡大しうる知見。高カリウム血症に留意して導入・増量する。\n【誤答】糖尿病例限定・糸球体疾患限定は対象を誤り、eGFRスロープに有意差なしも結果と逆である。",
+    source: { title: "FIND-CKD Results Support Finerenone Use in Nondiabetic CKD Population (Renal & Urology News)", url: "https://www.renalandurologynews.com/news/find-ckd-results-support-finerenone-use-in-nondiabetic-ckd-population/" },
+    tags: ["慢性腎臓病", "フィネレノン", "非糖尿病性CKD", "eGFRスロープ", "腎・電解質"]
+  },
+  {
+    id: "gl-itp-ash2026",
+    category: "guideline",
+    field: "血液",
+    difficulty: 2,
+    added: "2026-09-10",
+    question: "成人の原発性免疫性血小板減少症(ITP)に対する2026年ASHガイドラインの初期治療に関する記述として適切なものを選べ。",
+    options: ["初回治療は副腎皮質ステロイド単剤が唯一推奨され、併用療法は行わない", "リツキシマブと副腎皮質ステロイドの併用が、ステロイド単剤に代わる選択肢として条件付きで推奨される", "トロンボポエチン受容体作動薬と副腎皮質ステロイドの併用も、初期治療の選択肢となりうる", "血小板輸血が全例で初期治療の第一選択となる"],
+    correct: [1, 2],
+    explanation: "【要点】2026年ASHのITPガイドラインは、成人初発ITPの初期治療として、リツキシマブ+副腎皮質ステロイド、またはTPO受容体作動薬+副腎皮質ステロイドの併用を、ステロイド単剤よりも条件付きで推奨する新規勧告を示した。\n【背景/エビデンス】2025年7月までの系統的レビューに基づく。併用はより持続的な反応・寛解が期待され、患者と意思決定支援ツールを用いた共有意思決定が推奨される。\n【臨床応用/注意】出血リスク・合併症・患者の価値観を踏まえ個別化する。条件付き推奨であり、ステロイド単剤が不適切という意味ではない。\n【誤答】ステロイド単剤のみが唯一の推奨、血小板輸血が全例で第一選択、はいずれも誤り。",
+    source: { title: "American Society of Hematology 2026 Guidelines for Immune Thrombocytopenia (ITP): Initial and Second-Line Therapy in Adults (Blood Advances)", url: "https://ashpublications.org/bloodadvances/article/doi/10.1182/bloodadvances.2026021269/570274/American-Society-of-Hematology-2026-Guidelines-for" },
+    tags: ["免疫性血小板減少症", "ITP", "リツキシマブ", "TPO受容体作動薬", "血液", "複数選択"]
+  },
+  {
+    id: "rv-saphyr-pmr-2026-09",
+    category: "review",
+    field: "膠原病・骨",
+    difficulty: 2,
+    added: "2026-09-10",
+    question: "再発性リウマチ性多発筋痛症(PMR)に対するサリルマブについて適切なものはどれか。",
+    options: ["PMRの第一選択治療であり、副腎皮質ステロイドに先行して開始する", "作用機序はTNFα阻害であり、関節リウマチと同一の位置づけである", "SAPHYR試験で、ステロイド漸減下の持続的寛解の達成割合をプラセボより有意に高めた", "PMRには無効で、巨細胞性動脈炎にのみ有効性が示されている"],
+    correct: 2,
+    explanation: "【要点】サリルマブはIL-6受容体阻害薬で、SAPHYR試験において副腎皮質ステロイド漸減下でのPMRの持続的寛解の達成割合をプラセボ群より有意に高めた(約28%対10%)。\n【背景/エビデンス】現時点でPMRや巨細胞性動脈炎(GCA)でステロイド節減効果が確立した薬はIL-6経路を標的とするもの(PMRでサリルマブ、GCAでトシリズマブ)に限られる。SAPHYRは再発性PMRを対象とした無作為化試験である。\n【臨床応用/注意】ステロイドは依然として第一選択で、再発例やステロイド減量困難例で節減目的にIL-6阻害を検討する。感染症・脂質異常・好中球減少に注意する。\n【誤答】TNFα阻害・第一選択・GCA限定有効は、いずれも誤りである。",
+    source: { title: "Study Assesses Sarilumab for Polymyalgia Rheumatica (The Rheumatologist)", url: "https://www.the-rheumatologist.org/article/study-assesses-sarilumab-for-polymyalgia-rheumatica/" },
+    tags: ["リウマチ性多発筋痛症", "サリルマブ", "IL-6受容体阻害薬", "SAPHYR", "膠原病・骨"]
+  },
+  {
+    id: "gl-hpylori-treat-2026-09",
+    category: "guideline",
+    field: "消化器・肝",
+    difficulty: 2,
+    added: "2026-09-10",
+    question: "Helicobacter pylori感染症の初回治療に関する近年の考え方として適切なものはどれか。",
+    options: ["クラリスロマイシン耐性の増加を背景に、ビスマス四剤併用療法などが経験的初回治療の第一選択に位置づけられる", "クラリスロマイシンを含む三剤併用療法が、耐性を考慮せず引き続き第一選択とされる", "除菌後の治療効果判定は不要で、症状改善のみで判断してよい", "ペニシリンアレルギーの有無は治療レジメンの選択に影響しない"],
+    correct: 0,
+    explanation: "【要点】クラリスロマイシン耐性の上昇(米国では30%超)を背景に、経験的な初回治療ではクラリスロマイシン三剤併用ではなく、ビスマス四剤併用療法などが第一選択に位置づけられる。\n【背景/エビデンス】2024年ACGガイドライン改訂の要点で、ボノプラザンを含む新規レジメンも承認された。局所の耐性率が低いと確認できない限り、経験的なクラリスロマイシン三剤は推奨されない。\n【臨床応用/注意】除菌後は尿素呼気試験や便中抗原などで治療効果判定(test-of-cure)を行う。ペニシリンアレルギーはアモキシシリン含有処方の可否に影響する。\n【誤答】耐性を無視した三剤継続、効果判定不要、アレルギー無関係は、いずれも誤りである。",
+    source: { title: "Practice Tips From the Updated Helicobacter pylori Treatment Guidelines (Gastroenterology & Hepatology, 2026)", url: "https://www.gastroenterologyandhepatology.net/archives/february-2026/practice-tips-from-the-updated-helicobacter-pylori-treatment-guidelines/" },
+    tags: ["ヘリコバクター・ピロリ", "除菌治療", "クラリスロマイシン耐性", "ビスマス四剤療法", "消化器・肝"]
+  },
+  {
+    id: "gl-aasm-insomnia-combo-2026-09",
+    category: "guideline",
+    field: "精神・行動",
+    difficulty: 2,
+    added: "2026-09-10",
+    question: "成人の慢性不眠症に対する2026年AASMの併用療法ガイドラインの内容として適切なものを選べ。",
+    options: ["薬物単独と比べ、CBT-Iに薬物を併用する方が総睡眠時間などで改善が得られるとして条件付きで提案される", "CBT-I単独よりCBT-I+薬物の併用が一律に優れるため、全例で併用を強く推奨する", "慢性不眠症の初期治療としてCBT-Iは推奨されず、薬物療法を優先する", "CBT-I単独と比べCBT-I+薬物の明確な優位は乏しく、併用を一律には推奨しない"],
+    correct: [0, 3],
+    explanation: "【要点】2026年AASMの併用療法ガイドラインは2つの条件付き勧告を示した。すなわち薬物単独よりCBT-I+薬物の併用を提案する一方、CBT-I単独に対しては併用を一律には上回らないとした。\n【背景/エビデンス】いずれも低確実性エビデンスに基づく条件付き推奨である。併用は総睡眠時間など一部の睡眠指標を薬物単独より改善するが、CBT-I単独と比べた明確な優位は乏しい。\n【臨床応用/注意】CBT-Iは慢性不眠症の基盤治療。早期の総睡眠時間増加を重視する患者では併用を選ぶ余地がある。\n【誤答】全例で併用を強く推奨、CBT-I非推奨で薬物優先、は勧告と異なる。",
+    source: { title: "Combination treatment for chronic insomnia disorder in adults: an AASM clinical practice guideline (PMC)", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC13076838/" },
+    tags: ["慢性不眠症", "CBT-I", "併用療法", "AASM", "精神・行動", "複数選択"]
+  },
+  {
+    id: "gl-gold2026-aecopd-2026-09",
+    category: "guideline",
+    field: "呼吸器",
+    difficulty: 2,
+    added: "2026-09-10",
+    question: "COPD増悪の薬物治療・管理に関する2026年GOLDレポートの記載として適切なものはどれか。",
+    options: ["全身性ステロイドは2週間以上の長期投与が標準である", "重度増悪では経口プレドニゾロン40mg/日相当を5日間投与することが推奨される", "増悪時には肺塞栓症や心不全などの鑑別を考慮する必要はない", "抗菌薬は膿性痰の有無にかかわらず全例に一律投与する"],
+    correct: 1,
+    explanation: "【要点】2026年GOLDレポートでは、重度のCOPD増悪に対し経口プレドニゾロン40mg/日相当を5日間という短期投与が推奨される。\n【背景/エビデンス】全身性ステロイドの長期投与は有害事象を増やすため短期が原則。増悪の症状は肺塞栓症・肺炎・急性心不全・気胸などに類似・修飾されうるため、これらの鑑別・併存評価が重要とされる。\n【臨床応用/注意】抗菌薬は喀痰の膿性化+増量/呼吸困難増悪の所見や人工呼吸例で考慮し、全例一律ではない。血中好酸球はICS導入の指標となる。\n【誤答】2週間以上の長期ステロイド、鑑別不要、抗菌薬の全例一律投与は、いずれも誤りである。",
+    source: { title: "GOLD 2026: Transforming COPD Management with Early Intervention, Multi-dimensional Assessment, and Personalized Care (PMC)", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC13109179/" },
+    tags: ["COPD", "増悪", "全身性ステロイド", "GOLD", "呼吸器"]
   }
 ];
 
