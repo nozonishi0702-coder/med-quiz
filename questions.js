@@ -6506,6 +6506,84 @@ const QUESTIONS = [
     explanation: "【要点】2026年GOLDレポートでは、重度のCOPD増悪に対し経口プレドニゾロン40mg/日相当を5日間という短期投与が推奨される。\n【背景/エビデンス】全身性ステロイドの長期投与は有害事象を増やすため短期が原則。増悪の症状は肺塞栓症・肺炎・急性心不全・気胸などに類似・修飾されうるため、これらの鑑別・併存評価が重要とされる。\n【臨床応用/注意】抗菌薬は喀痰の膿性化+増量/呼吸困難増悪の所見や人工呼吸例で考慮し、全例一律ではない。血中好酸球はICS導入の指標となる。\n【誤答】2週間以上の長期ステロイド、鑑別不要、抗菌薬の全例一律投与は、いずれも誤りである。",
     source: { title: "GOLD 2026: Transforming COPD Management with Early Intervention, Multi-dimensional Assessment, and Personalized Care (PMC)", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC13109179/" },
     tags: ["COPD", "増悪", "全身性ステロイド", "GOLD", "呼吸器"]
+  },
+  {
+    id: "jr-apicat-cavte-2026-09",
+    category: "journal",
+    field: "血液",
+    difficulty: 2,
+    added: "2026-09-11",
+    question: "がん関連静脈血栓塞栓症(VTE)で6か月以上の抗凝固療法を終えた活動性がん患者を対象に、延長抗凝固でアピキサバン減量(2.5mg×2)と通常量(5mg×2)を比較したAPI-CAT試験の結果として適切なものはどれか。",
+    options: ["減量群は再発VTEが有意に増加し、延長療法では通常量が必須と結論された", "減量により出血は減ったが再発VTEが増え、正味の便益は否定された", "減量群は通常量群に対し再発VTE抑制で非劣性を示し、臨床的に重要な出血はむしろ減少した", "両群で再発VTE・出血ともに差はなく、投与量選択の指針は得られなかった"],
+    correct: 2,
+    explanation: "【要点】API-CAT試験は、活動性がん+近位DVT/PEで6か月以上治療した患者において、延長抗凝固の減量アピキサバン(2.5mg×2)が通常量(5mg×2)に対し再発VTE予防で非劣性であることを示した。\n【背景/エビデンス】11か国1766例の二重盲検非劣性試験(NEJM 2025)。約12か月で再発VTEは減量群2.1%・通常量群2.8%、臨床的に重要な出血は12.1%対15.6%と減量群で低かった。\n【臨床応用/注意】6か月を超えて抗凝固を続ける活動性がん例では、減量アピキサバンが出血を抑えつつ再発を防ぐ選択肢となる。\n【誤答】再発増加・便益否定・差なしは、いずれも試験結果と異なる。",
+    source: { title: "Extended Reduced-Dose Apixaban for Cancer-Associated Venous Thromboembolism (NEJM 2025)", url: "https://www.nejm.org/doi/full/10.1056/NEJMoa2416112" },
+    tags: ["静脈血栓塞栓症", "がん関連血栓症", "アピキサバン", "延長抗凝固", "血液"]
+  },
+  {
+    id: "gl-ats-cap2025-2026-09",
+    category: "guideline",
+    field: "呼吸器",
+    difficulty: 2,
+    added: "2026-09-11",
+    question: "成人市中肺炎(CAP)に関する2025年ATS臨床実践ガイドラインの記載として適切なものを選べ。",
+    options: ["臨床的安定に達した非重症例では、5日以上より短い(最短3日)抗菌薬期間が推奨される", "全例で最低7〜10日間の抗菌薬投与を継続することが推奨される", "肺超音波は診断に用いるべきでなく、胸部X線・CTのみが許容される", "非重症の入院CAPでは全身性ステロイドの投与は推奨されない(重症例では考慮しうる)"],
+    correct: [0, 3],
+    explanation: "【要点】2025年ATSのCAPガイドラインは、より選択的・短期の抗菌薬使用とステロイドの限定使用を打ち出した。\n【背景/エビデンス】臨床的に安定した非重症の外来・入院例では抗菌薬を5日未満(最短3日)に短縮することを推奨し、重症例では5日以上とする。非重症入院例では全身性ステロイドを投与しないことを強く推奨し、重症例に限り使用を考慮する。診断では肺超音波を代替画像として位置づけた。\n【臨床応用/注意】解熱・バイタル安定など臨床的安定を確認したうえで早期中止を検討する。なおIDSAはウイルス陽性CAPの抗菌薬の扱いで意見が分かれ本版を承認していない。\n【誤答】7〜10日一律継続、肺超音波の排除は、本ガイドラインと異なる。",
+    source: { title: "Diagnosis and Management of Community-acquired Pneumonia: An Official American Thoracic Society Clinical Practice Guideline (2025)", url: "https://pubmed.ncbi.nlm.nih.gov/40679934/" },
+    tags: ["市中肺炎", "抗菌薬適正使用", "治療期間", "副腎皮質ステロイド", "ATS", "呼吸器", "複数選択"]
+  },
+  {
+    id: "jr-ambient-ai-scribe-2026-09",
+    category: "journal",
+    field: "その他",
+    difficulty: 1,
+    added: "2026-09-11",
+    question: "外来診療における環境音声AI(ambient AI)スクライブを評価した無作為化試験(NEJM AI)の位置づけ・結果として適切なものはどれか。",
+    options: ["AIによる自動診断の精度を検証する試験で、医師の関与を不要にできると結論した", "文書作成負担や医師のバーンアウトを評価した初の無作為化試験で、複数の専門科の外来医を対象とした", "入院患者の死亡率を主要評価とし、AIスクライブが予後を改善すると示した", "画像診断AIの試験で、放射線科読影の代替可能性を検討した"],
+    correct: 1,
+    explanation: "【要点】本試験は、外来受診を録音し診療記録の下書きを生成する「環境音声AIスクライブ」を評価した初の無作為化試験で、文書作成の負担や医師のバーンアウトへの影響を検討した。\n【背景/エビデンス】14の専門科にわたる238名の外来医を、2種のAIスクライブ(DAX Copilot、Nabla)または通常診療に割り付け、Mini-Z 2.0や医師タスク負荷、専門職充足感(疲弊)などを指標とした。\n【臨床応用/注意】記録業務の効率化やウェルビーイング改善が期待される一方、記載の正確性・安全性・プライバシーの確認は依然として臨床医の責任である。\n【誤答】自動診断・医師不要、死亡率改善、画像診断AIは、本試験の目的・対象と異なる。",
+    source: { title: "Ambient AI Scribes in Clinical Practice: A Randomized Trial (NEJM AI, 2026)", url: "https://ai.nejm.org/doi/abs/10.1056/AIoa2501000" },
+    tags: ["医療AI", "環境音声スクライブ", "診療記録", "バーンアウト", "その他"]
+  },
+  {
+    id: "cl-gotest-finale-gout-2026-09",
+    category: "clinical",
+    field: "膠原病・骨",
+    difficulty: 2,
+    added: "2026-09-11",
+    question: "12か月以上寛解が続く痛風患者で、尿酸降下療法(ULT)を継続するか中止を試みるかを比較したGO TEST Finale試験の結果に基づく考え方として適切なものを選べ。",
+    options: ["ULT継続群は中止試行群より24か月の累積フレア発生が低かった(約12%対32%)", "寛解例ではULTを直ちに中止するのが標準で、継続は推奨されない", "中止試行群では一定割合が後にULT再開を要し、抗炎症薬の使用も継続群より多かった", "両群でフレア発生・抗炎症薬使用に差はなかった"],
+    correct: [0, 2],
+    explanation: "【要点】GO TEST Finaleは、12か月以上寛解した痛風患者で、治療目標(血清尿酸<0.36 mmol/L)を維持するULT継続が、中止試行より再燃予防に優れることを示した。\n【背景/エビデンス】オランダ9施設・309例の実用的無作為化優越性試験。24か月の累積フレア発生は継続群12.3%に対し中止試行群31.8%。中止群では約23%が中央値392日でULTを再開し、抗炎症薬使用も多かった。\n【臨床応用/注意】寛解が得られても、多くの患者では目標達成型のULT継続が有利である。中止は慎重に、再燃時の再開計画とともに検討する。\n【誤答】即時中止が標準、両群で差なしは、試験結果と反する。",
+    source: { title: "Continuing gout therapy during remission lowers future flare risk (GO TEST Finale, EULAR 2026)", url: "https://www.news-medical.net/news/20260603/Continuing-gout-therapy-during-remission-lowers-future-flare-risk.aspx" },
+    tags: ["痛風", "尿酸降下療法", "治療目標", "再燃予防", "膠原病・骨", "複数選択"]
+  },
+  {
+    id: "rv-ckd-sglt2-primarycare-2026-09",
+    category: "review",
+    field: "腎・電解質",
+    difficulty: 2,
+    added: "2026-09-11",
+    question: "慢性腎臓病(CKD)成人管理の近年のアップデート(AAFP/AFPレビュー)に関する記載として適切なものはどれか。",
+    options: ["SGLT2阻害薬は糖尿病を伴うCKDに限って有益で、非糖尿病CKDには推奨されない", "アルブミン尿の評価は不要で、eGFRのみでリスク層別化する", "SGLT2阻害薬はeGFRが低下したら直ちに中止すべきである", "SGLT2阻害薬導入初期の可逆的なeGFR低下(概ね3〜5 mL/min/1.73m²)は、通常は投与中止の理由とはならない"],
+    correct: 3,
+    explanation: "【要点】近年のCKD管理では、SGLT2阻害薬の適応が拡大し、導入初期の軽度eGFR低下は継続の妨げにならないと整理されている。\n【背景/エビデンス】2024 KDIGOに基づき、SGLT2阻害薬の腎・心保護は糖尿病の有無を問わず、アルブミン尿(概ねUACR≥200 mg/g)や心不全を有する非糖尿病CKDにも及ぶ。導入時に3〜5 mL/min/1.73m²程度の可逆的なeGFR低下が生じうるが、通常は中止しない。\n【臨床応用/注意】プライマリ・ケアではUACRとeGFRで早期・定期にスクリーニングし、適応例に早めに導入する。\n【誤答】糖尿病限定、アルブミン尿評価不要、eGFR低下で即中止は、現行の考え方と異なる。",
+    source: { title: "Updates to Management of Adults With Chronic Kidney Disease (AFP, 2025)", url: "https://www.aafp.org/afp/2025/0300/editorial-chronic-kidney-disease" },
+    tags: ["慢性腎臓病", "SGLT2阻害薬", "アルブミン尿", "KDIGO", "腎・電解質"]
+  },
+  {
+    id: "jr-essence-sema-mash-2026-09",
+    category: "journal",
+    field: "消化器・肝",
+    difficulty: 2,
+    added: "2026-09-11",
+    question: "線維化を伴うMASH(代謝機能障害関連脂肪肝炎)を対象に週1回セマグルチド2.4mgをプラセボと比較した第3相ESSENCE試験(72週)の結果として適切なものはどれか。",
+    options: ["MASH消失(線維化悪化なし)はセマグルチド群62.9%対プラセボ群34.3%で、線維化改善も上回った", "MASH消失率は両群で同等で、線維化にも差はなかった", "プラセボ群の方がMASH消失率が高かった", "肝硬変への進展をむしろ増加させた"],
+    correct: 0,
+    explanation: "【要点】第3相ESSENCE試験の72週解析で、週1回セマグルチド2.4mgはプラセボに比べMASH消失(線維化悪化なし)を有意に増やした。\n【背景/エビデンス】線維化ステージ2〜3のMASH 1197例を2:1で割付(NEJM 2025)。MASH消失は62.9%対34.3%、線維化改善(MASH悪化なし)は36.8%対22.4%と、いずれもセマグルチド群で優れた。\n【臨床応用/注意】GLP-1受容体作動薬がMASHの疾患修飾治療として位置づけられつつある。悪心などの消化器症状や膵炎・胆道系リスクに留意する。\n【誤答】両群同等、プラセボ優位、肝硬変増加は、試験結果と反する。",
+    source: { title: "Phase 3 Trial of Semaglutide in Metabolic Dysfunction-Associated Steatohepatitis (NEJM 2025)", url: "https://www.nejm.org/doi/full/10.1056/NEJMoa2413258" },
+    tags: ["MASH", "脂肪肝炎", "セマグルチド", "GLP-1受容体作動薬", "消化器・肝"]
   }
 ];
 
