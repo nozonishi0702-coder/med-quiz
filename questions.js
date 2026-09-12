@@ -6662,6 +6662,97 @@ const QUESTIONS = [
     explanation: "【要点】熱中症では重症度にかかわらず、速やかな冷却(active cooling)が治療の中心であり、深部体温を早期に低下させることが予後を左右する。\n【背景/エビデンス】熱中症は病態・重症度が多様で、発熱疾患との鑑別、重症度分類、初期治療、病棟管理の総合的判断を要する。冷却の遅れは多臓器障害の進行と関連し、労作性熱中症では現場からの早期冷却が重視される。\n【臨床応用/注意】蒸散冷却や冷水浸漬など状況に応じた方法で深部体温を下げつつ、循環・呼吸・電解質・凝固を含む全身管理を並行する。\n【誤答】解熱薬が最も有効、重症例で冷却しない、冷却開始を遅らせるは誤り。",
     source: { title: "1．熱中症：重症度にかかわらず，Active Coolingは集学的治療の中心を占める(Hospitalist 13巻2号, 2026)", url: "https://webview.isho.jp/journal/detail/abs/10.11477/mf.218804090130020223" },
     tags: ["熱中症", "active cooling", "深部体温", "初期対応", "その他"]
+  },
+  {
+    id: "jr-candesartan-migraine-2026-09",
+    category: "journal",
+    field: "神経",
+    difficulty: 2,
+    added: "2026-09-12",
+    question: "反復性(episodic)片頭痛の予防に関する2025年のランダム化試験(カンデサルタン vs プラセボ)の結果として適切なものはどれか。",
+    options: ["カンデサルタンはCGRP関連薬に属し、注射製剤として投与された", "プラセボと比較して片頭痛日数はむしろ増加した", "カンデサルタン(8mgおよび16mg)はプラセボより片頭痛日数を有意に減少させ、忍容性も良好だった", "有効性はCGRP抗体をすでに使用中の患者に限られた"],
+    correct: 2,
+    explanation: "【要点】カンデサルタン(ARB)は反復性片頭痛の予防で有効かつ安価な選択肢となりうる。\n【背景/エビデンス】ノルウェー・エストニアの計10施設で行われた三重盲検RCT(n=457、平均38.7歳、女性86%、月2〜8回の発作)。カンデサルタン8mg/16mgを12週投与し、いずれの用量もプラセボより片頭痛日数を有意に減少させ、忍容性は良好だった。\n【臨床応用/注意】β遮断薬や三環系が使いにくい例で、安価な予防薬の選択肢になりうる。慢性片頭痛(月15日以上の頭痛)は除外され一般化には注意。\n【誤答】ARBでありCGRP薬ではない。日数増加・効果がCGRP抗体併用例に限定は結果と逆。",
+    source: { title: "Candesartan versus placebo for migraine prevention in patients with episodic migraine: a randomised, triple-blind, placebo-controlled, phase 2 trial (Lancet Neurology 2025)", url: "https://www.thelancet.com/journals/laneur/article/PIIS1474-4422(25)00269-8/abstract" },
+    tags: ["片頭痛", "予防", "カンデサルタン", "ARB"]
+  },
+  {
+    id: "jr-renove-doac-2026-09",
+    category: "journal",
+    field: "血液",
+    difficulty: 3,
+    added: "2026-09-12",
+    question: "静脈血栓塞栓症(VTE)の延長抗凝固療法における減量DOAC(アピキサバン2.5mg×2 または リバーロキサバン10mg×1)について、再発高リスク例を対象としたRENOVE試験が示した結果として適切なものはどれか。",
+    options: ["減量DOACは標準用量と比べ、再発を増やさずに臨床的に重要な出血を減らした", "減量DOACは標準用量より再発VTEを有意に増加させた", "減量と標準用量で出血・再発ともにまったく差がなく、優劣はつかなかった", "減量DOACは出血は減らしたが、代償として再発が約2倍に増えた"],
+    correct: 0,
+    explanation: "【要点】再発高リスクVTEの延長治療では、減量DOACが標準用量と比べ再発を増やさず出血を有意に減らした。\n【背景/エビデンス】RENOVEは非劣性・多施設・非盲検・盲検化エンドポイント試験。6〜24か月の標準用量治療後、誘因のない初発・再発・持続的危険因子などの高リスク例で減量(アピキサバン2.5mg×2/リバーロキサバン10mg×1)と標準用量を比較。再発は両群とも低く(約1.8〜2.2%)差はなく、臨床的に重要な出血は減量群で少なかった。\n【臨床応用/注意】延長治療では多くの例で減量DOACが妥当な選択肢となる。\n【誤答】再発増加・再発2倍化・完全に差なしはいずれも結果と異なる。",
+    source: { title: "Extended treatment of venous thromboembolism with reduced-dose versus full-dose direct oral anticoagulants in patients at high risk of recurrence (RENOVE, Lancet 2025)", url: "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(24)02842-3/fulltext" },
+    tags: ["VTE", "DOAC", "延長抗凝固", "再発予防"]
+  },
+  {
+    id: "gl-colonoscopy-surveillance-adenoma-2026-09",
+    category: "guideline",
+    field: "消化器・肝",
+    difficulty: 2,
+    added: "2026-09-12",
+    question: "大腸内視鏡でのポリペクトミー後のサーベイランス間隔について適切なものはどれか。",
+    options: ["1〜2個の小さな(<10mm)管状腺腫の切除後は、一律で3年後にサーベイランスを行う", "1〜2個の小さな(<10mm)管状腺腫のみであれば、良質な内視鏡を前提に7〜10年後のサーベイランスでよい", "低リスク腺腫では大腸癌リスクが腺腫なし群より大きく上昇するため、短間隔のサーベイランスが必須である", "腸管前処置が不良な場合や第一度近親者に大腸癌がある場合は、より短い間隔を考慮する"],
+    correct: [1, 3],
+    explanation: "【要点】低リスク腺腫(1〜2個・<10mmの管状腺腫)切除後は、良質な内視鏡を前提に7〜10年へ間隔を延長でき、状況により短縮を考慮する。\n【背景/エビデンス】米国multi-society task force(2020)やNCCNは、低リスク腺腫後の間隔を従来の5〜10年から7〜10年へ延長した。低リスク腺腫例の大腸癌・関連死リスクが腺腫なし群と有意差がないというデータに基づく。\n【臨床応用/注意】前処置不良や大腸癌の家族歴がある場合は短縮を考慮。腺腫発見率(ADR)などの質指標が延長の前提となる。\n【誤答】一律3年・短間隔必須は過剰サーベイランスにつながる。",
+    source: { title: "Choosing Surveillance Intervals After Low-Risk Adenomas: Practical Pearls for Getting It Right (PMC)", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC13157133/" },
+    tags: ["大腸内視鏡", "腺腫", "サーベイランス", "大腸癌検診"]
+  },
+  {
+    id: "rv-tocilizumab-pmr-2026-09",
+    category: "review",
+    field: "膠原病・骨",
+    difficulty: 2,
+    added: "2026-09-12",
+    question: "リウマチ性多発筋痛症(PMR)におけるトシリズマブ(IL-6受容体阻害薬)のステロイド減量効果に関する2026年のシステマティックレビュー/メタ解析の知見として適切なものはどれか。",
+    options: ["トシリズマブは全PMR患者の初期第一選択薬として推奨された", "ステロイド減量効果は認めず、有害事象のみが増えた", "PMRでは生物学的製剤の有効性が示されておらず、グルココルチコイド単独が唯一の選択肢である", "再発性/ステロイド依存性PMRで、ステロイド減量(6か月で77%が≤5mg、12か月で97%)に寄与しうる"],
+    correct: 3,
+    explanation: "【要点】トシリズマブは再発性・グルココルチコイド(GC)依存性PMRのステロイド減量薬として有望である。\n【背景/エビデンス】2026年のメタ解析(RCT4件・317例+観察コホート1件)で、6か月時点で77%がプレドニゾロン≤5mg、12か月で97%まで減量でき、有害事象は少数だった。IL-6受容体阻害薬(トシリズマブ/サリルマブ)はGC累積量の低減に寄与する。\n【臨床応用/注意】全例の第一選択ではなく、再発・GC依存やGC毒性リスクが高い例で選択的に考慮する。\n【誤答】初期第一選択・効果なし・生物学的製剤無効はいずれも誤り。",
+    source: { title: "Steroid-sparing strategies in polymyalgia rheumatica: a systematic review and meta-analysis of tocilizumab with practical guidance for tapering (BMC Rheumatology 2026)", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC13251128/" },
+    tags: ["リウマチ性多発筋痛症", "トシリズマブ", "ステロイド減量", "IL-6"]
+  },
+  {
+    id: "gl-uspstf-aspirin-primary-prevention-2026-09",
+    category: "guideline",
+    field: "予防・健診",
+    difficulty: 2,
+    added: "2026-09-12",
+    question: "心血管疾患(CVD)の一次予防目的の低用量アスピリンに関する米国予防医療専門委員会(USPSTF, 2022)の推奨として適切なものはどれか。",
+    options: ["40〜59歳で10年CVDリスク≥10%の成人では正味の便益は小さく、開始は個別判断とする(出血リスクが高くない例)", "60歳以上の成人では、一次予防としてアスピリン開始を積極的に推奨する", "60歳以上での一次予防のアスピリン開始は、正味の便益がないため推奨されない", "この推奨は、確立したCVDをもつ二次予防の患者にも同様に適用される"],
+    correct: [0, 2],
+    explanation: "【要点】USPSTF(2022)は一次予防アスピリンを年齢層別に評価し、40〜59歳・10年CVDリスク≥10%で「小さな正味便益(個別判断)」、60歳以上での開始は「便益なし」とした。\n【背景/エビデンス】高齢者ではASPREE試験などで便益が乏しく大出血が増える。加齢とともに出血リスクが上がり便益/リスク比が悪化する。\n【臨床応用/注意】本推奨は無症候の一次予防が対象で、出血高リスク例は除外。CVD既往の二次予防とは明確に区別する。\n【誤答】60歳以上での積極推奨、二次予防への適用はいずれも誤り。",
+    source: { title: "Aspirin Use to Prevent Cardiovascular Disease: Preventive Medication (USPSTF Recommendation)", url: "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/aspirin-to-prevent-cardiovascular-disease-preventive-medication" },
+    tags: ["アスピリン", "一次予防", "USPSTF", "心血管予防"]
+  },
+  {
+    id: "jr-semaglutide-aud-2026-09",
+    category: "journal",
+    field: "精神・行動",
+    difficulty: 2,
+    added: "2026-09-12",
+    question: "アルコール使用障害(AUD)に対するセマグルチド(GLP-1受容体作動薬)の2026年のランダム化比較試験の知見として適切なものはどれか。",
+    options: ["セマグルチドは飲酒量に影響せず、プラセボと差がなかった", "セマグルチドはプラセボと比べ、大量飲酒日(heavy drinking days)の割合を有意に減少させた", "セマグルチドはアルコール離脱症状の治療薬として承認された", "AUDに対するGLP-1薬の効果はアルコール依存の重症例でのみ確認された"],
+    correct: 1,
+    explanation: "【要点】セマグルチドは肥満合併AUD患者で大量飲酒日を有意に減らした。\n【背景/エビデンス】Lancet(2026)の二重盲検RCT(108例)で、週1回セマグルチドは大量飲酒日割合をベースラインから−41.1ポイント(プラセボ−26.4)へ低下させ、治療差は約−13.7ポイントだった。経口セマグルチドの別RCT(Am J Psychiatry)でも大量飲酒・渇望・関連問題の減少が報告された。\n【臨床応用/注意】いずれもまだ承認適応ではなく探索的段階。肥満/糖尿病を合併するAUDでの将来的な選択肢として注目される。\n【誤答】効果なし・離脱治療薬として承認・重症例限定はいずれも誤り。",
+    source: { title: "Once-weekly semaglutide versus placebo in patients with alcohol use disorder and comorbid obesity: a randomised, double-blind, placebo-controlled trial (Lancet 2026)", url: "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)00305-3/fulltext" },
+    tags: ["アルコール使用障害", "セマグルチド", "GLP-1", "依存症"]
+  },
+  {
+    id: "gl-gabapentinoid-sciatica-2026-09",
+    category: "guideline",
+    field: "その他",
+    difficulty: 2,
+    added: "2026-09-12",
+    question: "坐骨神経痛(sciatica)・慢性腰痛に対するガバペンチノイド(ガバペンチン/プレガバリン)の使用について、2026年NICEガイドライン等の最新エビデンスとして適切なものはどれか。",
+    options: ["坐骨神経痛の第一選択薬として積極的に推奨される", "有効性は確立しており副作用も少ないため、長期投与が推奨される", "全体として有効性の明確な便益はなく有害事象が増えるため、坐骨神経痛への使用は推奨されない", "神経障害性疼痛であるため、糖尿病性神経障害と同等の強い推奨がなされている"],
+    correct: 2,
+    explanation: "【要点】坐骨神経痛(および慢性腰痛)に対するガバペンチノイドは、明確な有効性の便益がなく有害事象が増えるため推奨されない。\n【背景/エビデンス】NICE 2026は、プールされた試験データで坐骨神経痛・慢性腰痛に効果を認めず、めまい等の有害事象が増えるとして使用しないよう勧告した。最大規模のRCTでも脚痛の改善は事前設定の臨床的意義閾値に達しなかった。\n【臨床応用/注意】漫然投与を避け、運動療法や患者教育を治療の軸とする。乱用・依存の懸念にも留意する。\n【誤答】第一選択推奨・長期投与推奨・強い推奨は現行エビデンスと逆である。",
+    source: { title: "Low Back Pain and Sciatica in Over 16s: Assessment and Management (NICE Guideline, 2026 update)", url: "https://www.ncbi.nlm.nih.gov/books/NBK562933/" },
+    tags: ["坐骨神経痛", "腰痛", "ガバペンチノイド", "NICE"]
   }
 ];
 
