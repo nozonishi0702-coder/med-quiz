@@ -6753,6 +6753,84 @@ const QUESTIONS = [
     explanation: "【要点】坐骨神経痛(および慢性腰痛)に対するガバペンチノイドは、明確な有効性の便益がなく有害事象が増えるため推奨されない。\n【背景/エビデンス】NICE 2026は、プールされた試験データで坐骨神経痛・慢性腰痛に効果を認めず、めまい等の有害事象が増えるとして使用しないよう勧告した。最大規模のRCTでも脚痛の改善は事前設定の臨床的意義閾値に達しなかった。\n【臨床応用/注意】漫然投与を避け、運動療法や患者教育を治療の軸とする。乱用・依存の懸念にも留意する。\n【誤答】第一選択推奨・長期投与推奨・強い推奨は現行エビデンスと逆である。",
     source: { title: "Low Back Pain and Sciatica in Over 16s: Assessment and Management (NICE Guideline, 2026 update)", url: "https://www.ncbi.nlm.nih.gov/books/NBK562933/" },
     tags: ["坐骨神経痛", "腰痛", "ガバペンチノイド", "NICE"]
+  },
+  {
+    id: "gl-kdigo-anemia-ckd-2026-09",
+    category: "guideline",
+    field: "血液",
+    difficulty: 2,
+    added: "2026-09-13",
+    question: "2026年 KDIGO 慢性腎臓病(CKD)における貧血ガイドラインの推奨として適切なものはどれか。",
+    options: ["HIF-PHI(低酸素誘導因子プロリン水酸化酵素阻害薬)を全例で第一選択とする", "血清フェリチンが正常上限を超えていても一律に鉄補充を推奨する", "赤血球造血刺激因子製剤(ESA)は有益性・リスクが確立していることから第一選択として位置づけられる", "透析患者ではHb 13 g/dL以上を目標に積極的に是正する"],
+    correct: 2,
+    explanation: "【要点】KDIGO 2026 CKD貧血ガイドラインは、赤血球造血刺激因子製剤(ESA)を第一選択の位置づけとした。\n【背景/エビデンス】HIF-PHI(低酸素誘導因子プロリン水酸化酵素阻害薬)は経口で利便性が高い一方、心血管安全性への懸念や試験の方法論的限界が残るため、有益性・リスクが確立したESAが引き続き優先される。鉄補充は透析例でフェリチン≤500 ng/mL・TSAT≤30%など、より積極的な開始閾値が示された。\n【臨床応用/注意】Hb目標は過補正を避け、症状・輸血回避・血栓リスクを勘案して設定する。\n【誤答】HIF-PHI一律第一選択、Hb≥13目標、フェリチン高値でも一律鉄補充はいずれも誤り。",
+    source: { title: "Executive Summary of the KDIGO 2026 Clinical Practice Guideline for the Management of Anemia in Chronic Kidney Disease (CKD)", url: "https://www.sciencedirect.com/science/article/pii/S0085253825004946" },
+    tags: ["貧血", "CKD", "KDIGO", "ESA", "鉄"]
+  },
+  {
+    id: "gl-idsa-cuti-2026-09",
+    category: "guideline",
+    field: "感染症",
+    difficulty: 2,
+    added: "2026-09-13",
+    question: "2025年 IDSA 複雑性尿路感染症(cUTI)ガイドラインの考え方として適切なものはどれか。",
+    options: ["膀胱に限局する感染は単純性、全身性または上部尿路(腎盂腎炎)へ及ぶものは男女ともcUTIと分類する", "cUTIの標準治療期間は従来通り10〜14日間が推奨される", "急性腎盂腎炎は本ガイドラインでは常に単純性として扱う", "細菌性前立腺炎・精巣上体炎もcUTIに含めて同一に扱う"],
+    correct: 0,
+    explanation: "【要点】2025 IDSA cUTIガイドラインは分類を簡素化し、膀胱限局を単純性、全身性・上部尿路(腎盂腎炎)への波及をcUTIとし、男女ともに適用する。\n【背景/エビデンス】経験的治療は重症度(敗血症の有無)、耐性菌リスク因子、アレルギー・薬物相互作用、局所アンチバイオグラムの4段階で選ぶ。治療期間は従来の10〜14日から、フルオロキノロン5〜7日・非キノロン7日へ短縮された。\n【臨床応用/注意】過去12か月のキノロン曝露例では同系統を避ける。前立腺炎・精巣上体炎は本指針の対象外。\n【誤答】10〜14日継続、腎盂腎炎を常に単純性、前立腺炎を同一に扱う、はいずれも誤り。",
+    source: { title: "What's New in the 2025 IDSA Updates for Complicated UTIs? (The Hospitalist)", url: "https://www.the-hospitalist.org/hospitalist/article/40900/critical-care/whats-new-in-the-2025-idsa-updates-for-complicated-utis/" },
+    tags: ["尿路感染症", "cUTI", "IDSA", "抗菌薬適正使用", "腎盂腎炎"]
+  },
+  {
+    id: "rv-ppi-deprescribing-2026-09",
+    category: "review",
+    field: "消化器・肝",
+    difficulty: 2,
+    added: "2026-09-13",
+    question: "AGA(米国消化器病学会)のプロトンポンプ阻害薬(PPI)減薬(de-prescribing)に関するClinical Practice Updateの記載として適切なものはどれか。",
+    options: ["Barrett食道の患者は原則としてPPI減薬・中止の対象としない", "減薬を検討する全例で、まず倍量から標準用量への減量は行わず即時に完全中止する", "重症びらん性食道炎(LA分類C/D)や食道潰瘍・狭窄の既往がある例は減薬対象としない", "上部消化管出血の高リスク例は減薬対象としない"],
+    correct: [0, 2, 3],
+    explanation: "【要点】AGAのPPI減薬に関するClinical Practice Updateは、適応が消失した例で減薬・中止を促す一方、減薬すべきでない集団を明確にした。\n【背景/エビデンス】Barrett食道、好酸球性食道炎、特発性肺線維症、重症びらん性食道炎(LA分類C/D)・食道潰瘍・狭窄の既往、上部消化管出血の高リスク例は中止対象としない。高用量使用者の多くは標準用量へ段階的に減量を検討でき、突然の完全中止は基本としない。\n【臨床応用/注意】中止時は反跳性胃酸過多による一過性症状に留意する。\n【誤答】全例で即時完全中止(選択肢2)は不適切。",
+    source: { title: "AGA Clinical Practice Update on De-Prescribing of Proton Pump Inhibitors: Expert Review (Gastroenterology)", url: "https://www.gastrojournal.org/article/S0016-5085(21)04083-X/fulltext" },
+    tags: ["PPI", "減薬", "AGA", "逆流性食道炎", "複数選択"]
+  },
+  {
+    id: "jr-sglt2-gout-2026-09",
+    category: "journal",
+    field: "膠原病・骨",
+    difficulty: 2,
+    added: "2026-09-13",
+    question: "SGLT2阻害薬と痛風・高尿酸血症の関連に関する近年のコホート研究・メタ解析の知見として適切なものはどれか。",
+    options: ["SGLT2阻害薬使用は血清尿酸値を低下させる", "SGLT2阻害薬は痛風の発症・再発をむしろ増加させる", "尿酸低下作用は認められず、痛風発作頻度にも影響しない", "2型糖尿病患者で、他剤と比べ痛風発症・再発リスクの低下と関連する(発症HR≈0.66〜0.80)"],
+    correct: [0, 3],
+    explanation: "【要点】SGLT2阻害薬は血清尿酸を低下させ、2型糖尿病患者で痛風の発症・再発リスク低下と関連する。\n【背景/エビデンス】メタ解析で痛風発症HR≈0.66(95%CI 0.57–0.76)、大規模コホート・メンデルランダム化研究で発症HR≈0.80、英国プライマリ・ケアで再発発作HR≈0.79と報告。尿酸低下は尿酸排泄促進に加え産生抑制も関与するとされる。\n【臨床応用/注意】観察・関連研究が主体で、痛風の尿酸降下療法(ULT)を置き換えるものではない。適応は心・腎・血糖の主目的で判断する。\n【誤答】発作増加・効果なしは知見と逆である。",
+    source: { title: "Association of SGLT2 Inhibitors With Incident Gout Risk: A Population-Based Comparative Cohort Study With Genetic Evidence From Mendelian Randomisation (PMC)", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC13448874/" },
+    tags: ["SGLT2阻害薬", "痛風", "高尿酸血症", "尿酸", "複数選択"]
+  },
+  {
+    id: "gl-gold-copd-mimics-2026-09",
+    category: "guideline",
+    field: "呼吸器",
+    difficulty: 2,
+    added: "2026-09-13",
+    question: "2026年 GOLD COPDレポートが強調する、COPD増悪の評価に関する記載として適切なものはどれか。",
+    options: ["増悪と同様の症状を呈する肺炎・肺塞栓・心不全などの鑑別(mimics)は不要である", "増悪様症状では肺炎・肺塞栓・急性心不全・気胸などのmimicsを除外し、心血管リスク上昇を考慮して選択的に心臓バイオマーカーを用いる", "中等症〜重症増悪では全身性ステロイドを最低14日間投与する", "増悪時の初期気管支拡張薬としてLABA/LAMA配合薬を静注する"],
+    correct: 1,
+    explanation: "【要点】2026 GOLDは、COPD増悪様症状で肺炎・肺塞栓・急性心不全・気胸などのmimicsを鑑別し、増悪に伴う心血管リスク上昇を考慮して心臓バイオマーカーを選択的に用いる姿勢を強調した。\n【背景/エビデンス】早期COPD検出、多疾患併存、新技術を新たに取り上げた大改訂で、増悪が心血管イベントリスクを高めることが再確認された。増悪治療は初期にSABA(±短時間作用性抗コリン薬)、全身性ステロイドは最大5日間が目安。\n【臨床応用/注意】漫然と『増悪』と決めつけず併存病態を評価する。\n【誤答】mimics除外不要・ステロイド14日・配合薬の静注はいずれも誤り。",
+    source: { title: "2026 GOLD COPD Update Emphasizes Early COPD Detection, Multimorbidity, AI (Pulmonology Advisor)", url: "https://www.pulmonologyadvisor.com/features/gold-copd-update-2026/" },
+    tags: ["COPD", "GOLD", "増悪", "鑑別診断", "心血管リスク"]
+  },
+  {
+    id: "cl-metformin-b12-2026-09",
+    category: "clinical",
+    field: "内分泌・代謝",
+    difficulty: 2,
+    added: "2026-09-13",
+    question: "長期メトホルミン療法とビタミンB12欠乏に関する記述として適切なものはどれか。",
+    options: ["メトホルミンによるB12欠乏は極めてまれで、モニタリングは不要である", "B12欠乏による神経障害は、B12補充により多くが完全に回復する", "B12欠乏は必ず巨赤芽球性貧血を伴ってから神経症状が出現する", "長期使用例(目安4年以上)やリスク因子を持つ例では、末梢神経障害の一因となりうるB12欠乏を念頭に定期的な血清B12測定を考慮する"],
+    correct: 3,
+    explanation: "【要点】メトホルミンの長期使用はビタミンB12欠乏の一般的な原因で、末梢神経障害の一因となりうる。\n【背景/エビデンス】長期例(目安4年以上)やその他のリスク因子を持つ例では定期的な血清B12測定が推奨される。B12欠乏による神経障害は巨赤芽球性貧血に先行しうるため、貧血がなくても否定できない。神経障害はB12補充で進行が止まっても完全には回復しないことがある。\n【臨床応用/注意】倦怠感・しびれ・認知の変化があれば早期に測定・補充を検討する。\n【誤答】まれで不要・完全回復・必ず貧血が先行はいずれも誤り。",
+    source: { title: "Metformin-induced vitamin B12 deficiency: An underdiagnosed cause of diabetic neuropathy (PMC)", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC12278092/" },
+    tags: ["メトホルミン", "ビタミンB12", "糖尿病", "末梢神経障害", "モニタリング"]
   }
 ];
 
