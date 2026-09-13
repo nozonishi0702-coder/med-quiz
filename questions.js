@@ -6831,6 +6831,84 @@ const QUESTIONS = [
     explanation: "【要点】メトホルミンの長期使用はビタミンB12欠乏の一般的な原因で、末梢神経障害の一因となりうる。\n【背景/エビデンス】長期例(目安4年以上)やその他のリスク因子を持つ例では定期的な血清B12測定が推奨される。B12欠乏による神経障害は巨赤芽球性貧血に先行しうるため、貧血がなくても否定できない。神経障害はB12補充で進行が止まっても完全には回復しないことがある。\n【臨床応用/注意】倦怠感・しびれ・認知の変化があれば早期に測定・補充を検討する。\n【誤答】まれで不要・完全回復・必ず貧血が先行はいずれも誤り。",
     source: { title: "Metformin-induced vitamin B12 deficiency: An underdiagnosed cause of diabetic neuropathy (PMC)", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC12278092/" },
     tags: ["メトホルミン", "ビタミンB12", "糖尿病", "末梢神経障害", "モニタリング"]
+  },
+  {
+    id: "cl-bell-palsy-steroid-2026-09",
+    category: "clinical",
+    field: "神経",
+    difficulty: 2,
+    added: "2026-09-14",
+    question: "急性発症のBell麻痺(特発性末梢性顔面神経麻痺)の初期治療について、AANガイドライン(2012年策定・2026年再確認)が支持する記述はどれか。",
+    options: ["回復を促す目的で、全例にまず外科的顔面神経減圧術を行う", "経口ステロイドは有効性が否定されており、投与しないことが推奨される", "発症早期(目安72時間以内)の経口ステロイドが顔面機能の回復可能性を高める", "抗ウイルス薬の追加はステロイドへの上乗せ効果が確立しており、単剤ステロイドより常に優先される"],
+    correct: 2,
+    explanation: "【要点】新規発症のBell麻痺では、発症早期の経口ステロイドが顔面機能回復の可能性を高める(Level A)。\n【背景/エビデンス】AANガイドライン(2012策定、2026年再確認)は、ステロイド(例プレドニゾロン)を発症72時間以内に開始することを推奨する。抗ウイルス薬の追加は回復をわずかに高める可能性があるが確立しておらず、不確実性を説明したうえで任意に併用しうる(Level C)。\n【臨床応用/注意】完全麻痺・不全麻痺いずれも適応。閉眼不全には人工涙液・夜間眼軟膏など角膜保護を併用する。\n【誤答】外科的減圧の全例施行、ステロイド否定、抗ウイルス薬追加の効果確立・単剤優先はいずれも誤り。",
+    source: { title: "Evidence-based guideline update: Steroids and antivirals for Bell palsy (American Academy of Neurology)", url: "https://www.aan.com/Guidelines/home/GuidelineDetail/573" },
+    tags: ["Bell麻痺", "顔面神経麻痺", "ステロイド", "AAN", "神経"]
+  },
+  {
+    id: "rv-chronic-cough-p2x3-2026-09",
+    category: "review",
+    field: "呼吸器",
+    difficulty: 2,
+    added: "2026-09-14",
+    question: "成人の慢性咳嗽(8週間以上)の評価・治療に関する近年の総説の記載として、当てはまるものはどれか。",
+    options: ["慢性咳嗽ではまず難治性慢性咳嗽と診断し、原因検索より先にP2X3受容体拮抗薬を開始する", "多くの症例で上気道咳症候群・喘息(咳優位型/好酸球性気管支炎を含む)・胃食道逆流などの併存病態が同定でき、その治療最適化で管理しうる", "P2X3受容体拮抗薬ゲーファピキサントは味覚障害の有害事象がまれで、忍容性はほぼ問題にならない", "原因検索と標準治療でも遷延する難治性/原因不明の慢性咳嗽に対し、P2X3受容体拮抗薬が咳頻度を有意に減少させる"],
+    correct: [1, 3],
+    explanation: "【要点】慢性咳嗽ではまず併存病態(上気道咳症候群・喘息/好酸球性気管支炎・GERDなど)を検索・治療し、遷延する難治性/原因不明例にP2X3受容体拮抗薬が咳頻度を有意に減らす。\n【背景/エビデンス】約2/3の症例で治療可能な併存病態が同定できる。ゲーファピキサント45mg1日2回は第3相試験で24時間咳頻度をプラセボより有意に低下させた。ただし味覚関連有害事象が約6〜7割と高頻度で、約12%が有害事象で中止した。\n【臨床応用/注意】原因検索を飛ばしていきなり薬物に頼らない。\n【誤答】検索前に難治性と決めて薬剤開始(選択肢0)、味覚障害がまれ(選択肢2)は誤り。",
+    source: { title: "Therapeutic and mechanistic advances in chronic cough (Annals of Allergy, Asthma & Immunology)", url: "https://www.annallergy.org/article/S1081-1206(24)01758-7/fulltext" },
+    tags: ["慢性咳嗽", "ゲーファピキサント", "P2X3", "難治性咳嗽", "複数選択"]
+  },
+  {
+    id: "gl-cdc-doxypep-2026-09",
+    category: "guideline",
+    field: "感染症",
+    difficulty: 2,
+    added: "2026-09-14",
+    question: "細菌性性感染症(STI)予防のためのドキシサイクリン曝露後予防(doxy-PEP)に関する2024年CDCガイダンスの記載として、適切なものはどれか。",
+    options: ["対象は性別を問わず性的活動のある全成人で、リスクの層別化は行わない", "過去12か月に梅毒・クラミジア・淋菌のいずれかと診断されたMSMおよびトランスジェンダー女性に、性交後72時間以内のドキシサイクリン200mg内服を提案する", "投与は性交前の定期内服(pre-exposure)として毎日継続する", "梅毒・クラミジアには無効で、淋菌感染の予防にのみ有効である"],
+    correct: 1,
+    explanation: "【要点】CDC 2024は、過去12か月に細菌性STI(梅毒・クラミジア・淋菌)の既往があるMSM・トランスジェンダー女性に、性交後72時間以内のドキシサイクリン200mg単回内服(doxy-PEP)を共同意思決定のうえ提案する。\n【背景/エビデンス】複数のRCTで梅毒・クラミジアを7割超、淋菌を約5割減少させた。曝露後(post-exposure)予防であり毎日の予防内服ではない。シスジェンダー女性・異性愛男性ではエビデンス不十分で一律には推奨されない。\n【臨床応用/注意】抗菌薬耐性や腸内細菌叢への影響のモニタリングを併せて考慮する。\n【誤答】全成人一律・毎日内服・淋菌のみ有効はいずれも誤り。",
+    source: { title: "CDC Clinical Guidelines on the Use of Doxycycline Postexposure Prophylaxis for Bacterial STI Prevention, United States, 2024 (MMWR)", url: "https://www.cdc.gov/mmwr/volumes/73/rr/pdfs/rr7302a1-H.pdf" },
+    tags: ["doxy-PEP", "性感染症", "ドキシサイクリン", "CDC", "予防"]
+  },
+  {
+    id: "rv-mgus-imwg-riskstrat-2026-09",
+    category: "review",
+    field: "血液",
+    difficulty: 2,
+    added: "2026-09-14",
+    question: "意義不明の単クローン性ガンモパチー(MGUS)のリスク層別化と経過観察について、支持される記述はどれか。",
+    options: ["低リスクMGUSはM蛋白<15g/L・IgG型・遊離軽鎖(FLC)比正常の3条件を満たす群と定義される", "低リスクMGUSは進行リスクが高いため、確定診断の直後から化学療法を開始する", "低リスクで安定していれば、診断6か月後の再評価の後は2〜3年ごとの経過観察でよい", "リスク層別化因子として、M蛋白量・免疫グロブリンのサブタイプ・FLC比は用いない"],
+    correct: [0, 2],
+    explanation: "【要点】Mayo/IMWGモデルはM蛋白量・免疫グロブリンサブタイプ・FLC比の3因子でMGUSを層別化し、3因子とも良好(M蛋白<15g/L・IgG型・FLC比正常)なら低リスクとする。\n【背景/エビデンス】20年進行リスクは低リスク約5%、高リスク約58%。低リスクは診断6か月後にSPEPを再検し、安定なら2〜3年ごと、中〜高リスクは6か月後以降ほぼ毎年の追跡が推奨される。MGUS自体は無治療で経過観察する。\n【臨床応用/注意】貧血・腎障害・高Ca血症・骨病変(CRAB)など進行徴候があれば速やかに精査する。\n【誤答】低リスクへの化学療法開始(選択肢1)、3因子を用いない(選択肢3)は誤り。",
+    source: { title: "Diagnosis and Management of Monoclonal Gammopathy of Undetermined Significance: A Review (PMC)", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC11975479/" },
+    tags: ["MGUS", "単クローン性ガンモパチー", "リスク層別化", "経過観察", "複数選択"]
+  },
+  {
+    id: "cl-acute-conjunctivitis-abx-2026-09",
+    category: "clinical",
+    field: "その他",
+    difficulty: 1,
+    added: "2026-09-14",
+    question: "成人の急性感染性結膜炎の診断・治療についての記載として、適切なものはどれか。",
+    options: ["ウイルス性と細菌性は分泌物の性状など単一の所見で確実に鑑別できる", "細菌性結膜炎は難治性で無治療では改善しないため、全例に抗菌点眼を要する", "抗菌点眼薬はフルオロキノロン系が非フルオロキノロン系より明確に有効性が高い", "細菌性結膜炎の多くは自然軽快するため、軽症例では抗菌薬を用いない、または遅延処方(delayed prescribing)が選択肢となる"],
+    correct: 3,
+    explanation: "【要点】急性感染性結膜炎の多くは自然軽快し、軽症例では抗菌点眼を用いないか遅延処方(delayed prescribing)が妥当である。\n【背景/エビデンス】細菌性結膜炎でも約65%が2〜5日で無治療で改善し、重篤な合併症はまれ。ウイルス性と細菌性を確実に鑑別できる単一の所見はない。遅延処方は即時処方と同程度の症状コントロールが得られ、抗菌薬の種類(キノロン/非キノロン)や投与期間による有効性の明確な差もない。\n【臨床応用/注意】強い眼痛・視力低下・高度の充血・角膜所見・コンタクト装用があれば、緑内障や角膜炎など重症疾患を除外する。\n【誤答】単一所見での確実な鑑別、全例抗菌薬必須、キノロンの明確な優越はいずれも誤り。",
+    source: { title: "Antibiotics for Acute Bacterial Conjunctivitis (American Family Physician)", url: "https://www.aafp.org/pubs/afp/issues/2023/0600/mbtn-acute-bacterial-conjunctivitis.html" },
+    tags: ["結膜炎", "抗菌薬適正使用", "遅延処方", "プライマリ・ケア", "その他"]
+  },
+  {
+    id: "jr-rzv-rheumatic-flare-2026-09",
+    category: "journal",
+    field: "膠原病・骨",
+    difficulty: 2,
+    added: "2026-09-14",
+    question: "自己免疫性リウマチ性疾患で免疫抑制療法中の患者への組換え帯状疱疹ワクチン(RZV)を検討した第4相無作為化比較試験(Lancet Rheumatology 2026, ブラジル)の結果として、適切なものはどれか。",
+    options: ["RZV接種は短期の疾患フレアを増加させず、短期安全性は許容範囲で、免疫応答も得られた(ただし健常者より抗体価は低い)", "RZV接種は短期の疾患フレアを著明に増加させたため、接種は推奨されない", "免疫抑制下では免疫応答が全く得られず、接種の意義はない", "接種後の抗体価は健常者と同等以上であった"],
+    correct: 0,
+    explanation: "【要点】免疫抑制療法中の自己免疫性リウマチ性疾患患者でも、RZVは短期の疾患フレアを増やさず、短期安全性は許容範囲で、免疫応答が得られた。\n【背景/エビデンス】ブラジル単施設の二重盲検・第4相非劣性試験。安定した免疫抑制療法下の成人をワクチン2回接種(n=590)かプラセボ(n=602)に割付け、健常対照380人にも接種(各6週間隔)。疾患活動性への影響は許容範囲で、抗体応答は概ね良好だったが健常者より低かった。\n【臨床応用/注意】これらの患者は帯状疱疹の高リスクであり、疾患安定期での接種を検討する。\n【誤答】フレアの著明増加、免疫応答が皆無、健常者と同等以上の抗体価はいずれも結果と異なる。",
+    source: { title: "Recombinant herpes zoster vaccine in patients with autoimmune rheumatic diseases in Brazil: a double-blind, randomised, placebo-controlled, phase 4, non-inferiority study (Lancet Rheumatology)", url: "https://www.thelancet.com/journals/lanrhe/article/PIIS2665-9913(25)00340-6/abstract" },
+    tags: ["帯状疱疹ワクチン", "RZV", "自己免疫疾患", "免疫抑制", "膠原病・骨"]
   }
 ];
 
