@@ -6988,6 +6988,84 @@ const QUESTIONS = [
     explanation: "【要点】長期内服のベンゾジアゼピン(BZD)には身体的依存があり、急な一括中止は離脱症候群を招く。動機づけや行動変容ステージモデルで患者のやる気を保ちつつ漸減し、完全中止が難しくてもハームリダクションを目標に取り組む。\n【背景/エビデンス】BZDは筋弛緩作用や前行性健忘、持ち越し効果があり、高齢者では転倒・骨折リスクを高める。耐性・身体的依存が形成されるため、増量継続ではなく計画的な漸減が原則となる。中止は容易でなく、患者の準備性に合わせた段階的アプローチが有効である。\n【臨床応用/注意】睡眠衛生指導や非薬物療法の併用が減量を支える。\n【誤答】速やかな一括中止、効果維持のための増量継続、高齢者で筋弛緩・健忘リスクが乏しく転倒と無関係、はいずれも誤り。",
     source: { title: "❹ベンゾジアゼピン系薬長期内服患者、漸減中止する？ しない？（総合診療 36巻9号, 2026）", url: "https://webview.isho.jp/journal/detail/abs/10.11477/mf.218880510360091004" },
     tags: ["ベンゾジアゼピン", "deprescribing", "ハームリダクション", "高齢者", "精神・行動"]
+  },
+  {
+    id: "gl-aan-ahs-migraine-prev-2026-09",
+    category: "guideline",
+    field: "神経",
+    difficulty: 2,
+    added: "2026-09-15",
+    question: "成人の片頭痛の予防的薬物療法に関する2026年AAN/AHS改訂ガイドラインの記載として、適切なものを選べ。",
+    options: ["頭対頭の高品質エビデンスに基づき、抗CGRP抗体が全患者で明確に最優先の第一選択薬と位置づけられた", "月4日以上の片頭痛または中等度以上の頭痛日、あるいは生活・就労に支障がある患者に予防治療の提示が推奨される", "予防薬の選択は有効性のみで決定し、忍容性・安全性・費用・併存症・患者希望は考慮しない", "gepantや抗CGRP抗体は、従来薬の失敗を要件とせず第一選択の予防薬の選択肢として提示できる"],
+    correct: [1, 3],
+    explanation: "【要点】2026年AAN/AHS改訂ガイドラインは、月4日以上の片頭痛/中等度以上の頭痛日、または生活・就労に支障がある成人に予防治療の提示を推奨する。\n【背景/エビデンス】2024年6月までの系統的レビューに基づき、gepant(atogepant)や抗CGRP抗体、プロプラノロール、トピラマート等を、従来薬の失敗を要件とせず選べる選択肢とした。頭対頭の高品質エビデンスが乏しく単一の最優先薬は定めず、有効性・忍容性・費用・併存症・患者希望を総合して個別化する。\n【臨床応用/注意】CGRP関連薬も第一選択の一つとして提示できる。\n【誤答】抗CGRP抗体を全例で最優先とする、有効性のみで選ぶ、は個別化方針に反する。",
+    source: { title: "AAN and AHS Issue Updated Guideline on Migraine Prevention Medications for Adults (2026)", url: "https://www.aan.com/PressRoom/Home/PressRelease/5361" },
+    tags: ["片頭痛", "予防療法", "CGRP", "ガイドライン", "神経"]
+  },
+  {
+    id: "rv-aafp-ida-eval-2026-09",
+    category: "review",
+    field: "血液",
+    difficulty: 2,
+    added: "2026-09-15",
+    question: "炎症のない成人の鉄欠乏性貧血の評価・管理に関する記載として、適切なものはどれか。",
+    options: ["反復する出血が原因となるのは鉄欠乏性貧血全体の約1割にすぎない", "スクリーニングとしてH. pylori感染やセリアック病の検査は不要である", "フェリチン45 ng/mL未満、または46〜99 ng/mLかつトランスフェリン飽和度20%未満で鉄欠乏と診断する", "男性・閉経後女性では消化管の検索は不要で、経口鉄補充のみでよい"],
+    correct: 2,
+    explanation: "【要点】炎症のない成人では、フェリチン45 ng/mL未満、または46〜99 ng/mLかつトランスフェリン飽和度20%未満で鉄欠乏と診断する(炎症があればフェリチン100 ng/mL未満が診断的)。\n【背景/エビデンス】2025年のAAFPレビューでは、鉄欠乏性貧血の約94%は反復する出血が原因で、男性・閉経後女性では上下部消化管内視鏡が推奨される。H. pylori感染やセリアック病は頻度の高い原因のため非侵襲的検査が勧められる。\n【臨床応用/注意】背景にある出血源や吸収不良の検索を怠らない。\n【誤答】出血原因は1割のみ、H. pylori/セリアック検査は不要、内視鏡不要で鉄補充のみ、はいずれも誤り。",
+    source: { title: "Iron Deficiency Anemia: Evaluation and Management (American Family Physician, 2025)", url: "https://www.aafp.org/pubs/afp/issues/2025/1100/iron-deficiency-anemia.html" },
+    tags: ["鉄欠乏性貧血", "フェリチン", "内視鏡", "AAFP", "血液"]
+  },
+  {
+    id: "rv-glp1-copd-exacerbation-2026-09",
+    category: "review",
+    field: "呼吸器",
+    difficulty: 3,
+    added: "2026-09-15",
+    question: "2型糖尿病を合併するCOPD患者における血糖降下薬とCOPD増悪の関連についての記載として、適切なものはどれか。",
+    options: ["スルホニル尿素薬と比較し、GLP-1受容体作動薬の開始は中等度〜重度のCOPD増悪リスク低下と関連した", "GLP-1受容体作動薬はCOPD増悪を増加させるため2型糖尿病合併COPDでは禁忌である", "SGLT2阻害薬はCOPD増悪に一切影響しないことが確立している", "血糖降下薬の種類はCOPD増悪の頻度と無関係である"],
+    correct: 0,
+    explanation: "【要点】2型糖尿病を合併するCOPD患者で、スルホニル尿素薬と比べGLP-1受容体作動薬の開始は中等度〜重度のCOPD増悪リスク低下と関連した。\n【背景/エビデンス】血糖降下薬とCOPD増悪を比較した系統的レビュー・ネットワークメタ解析では、GLP-1受容体作動薬やSGLT2阻害薬はスルホニル尿素薬やDPP-4阻害薬より増悪が少ない傾向が示された。抗炎症・体重減少・気道への影響などが機序として推定されるが、観察研究主体で因果は限定的である。\n【臨床応用/注意】薬剤選択の一材料となりうるが、増悪予防目的の適応外使用は推奨されない。\n【誤答】GLP-1を禁忌とする、SGLT2は無関係、薬剤種類は無関係、はいずれも誤り。",
+    source: { title: "Efficacy of SGLT2 Inhibitors, GLP-1 Receptor Agonists, DPP-4 Inhibitors, and Sulfonylureas on COPD Exacerbations in Type 2 Diabetes: A Network Meta-Analysis (2026)", url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12472923/" },
+    tags: ["COPD", "GLP-1受容体作動薬", "2型糖尿病", "増悪", "呼吸器"]
+  },
+  {
+    id: "jr-track-rivaroxaban-ckd-2026-09",
+    category: "journal",
+    field: "腎・電解質",
+    difficulty: 2,
+    added: "2026-09-15",
+    question: "進行した慢性腎臓病(透析を含む)患者を対象に低用量リバーロキサバンの心血管イベント予防効果を検討したTRACK試験の結果として、適切なものはどれか。",
+    options: ["低用量リバーロキサバンはプラセボと比較して複合心血管アウトカムを有意には減少させなかった", "低用量リバーロキサバンは複合心血管アウトカムを有意に減少させた", "リバーロキサバンは出血を減らしつつ心血管イベントも減少させた", "リバーロキサバンは心血管イベントを増加させ、試験は早期中止された"],
+    correct: 0,
+    explanation: "【要点】進行した慢性腎臓病(透析を含む)患者を対象としたTRACK試験で、低用量リバーロキサバンはプラセボと比べ複合心血管アウトカムを有意には減少させなかった。\n【背景/エビデンス】2026年に報告された本試験は、進行CKDで心血管リスクを1つ以上有する患者を対象に、抗凝固の心血管イベント予防効果を初めてプラセボ対照で評価した。心血管死・非致死性心筋梗塞・脳卒中・末梢動脈疾患イベントの複合は減らず、出血リスクへの懸念が残った。\n【臨床応用/注意】適応のない進行CKDへの、心血管予防目的の抗凝固は支持されない。\n【誤答】複合を有意に減少、出血を増やさず減少、イベント増加で早期中止、はいずれも試験結果と異なる。",
+    source: { title: "TRACK Trial: Low-Dose Rivaroxaban in Advanced CKD (2026)", url: "https://www.renalandurologynews.com/reports/chronic-kidney-disease-ckd-rivaroxaban-cardiovascular-events-bleeding-risk/" },
+    tags: ["慢性腎臓病", "リバーロキサバン", "抗凝固", "心血管予防", "腎・電解質"]
+  },
+  {
+    id: "gl-aga-cdiff-fidaxomicin-2026-09",
+    category: "guideline",
+    field: "感染症",
+    difficulty: 2,
+    added: "2026-09-15",
+    question: "非重症Clostridioides difficile感染症の初回治療に関する2026年AGAの指針として、適切なものを選べ。",
+    options: ["再発率が低いことからフィダキソマイシンが第一選択として支持される", "メトロニダゾール経口が非重症例の標準的な第一選択である", "実際的な事情からバンコマイシン経口も許容される治療である", "抗菌薬は不要で経過観察のみが推奨される"],
+    correct: [0, 2],
+    explanation: "【要点】2026年AGAの指針では、非重症C. difficile感染症の初回治療として、再発率の低いフィダキソマイシン(200mg 1日2回10日)が第一選択として支持され、実際的事情からバンコマイシン(125mg 1日4回10日)経口も許容される。\n【背景/エビデンス】狭域で再発が少ない点が評価される一方、メトロニダゾールは有効性・再発の観点から初回の標準治療としては推奨されない。IBD合併例では特にフィダキソマイシンが優先される。\n【臨床応用/注意】劇症例は多職種で高用量バンコマイシン等を用い別に対応する。\n【誤答】メトロニダゾール経口を標準第一選択とする、抗菌薬不要で経過観察のみ、はいずれも不適切。",
+    source: { title: "New 2026 AGA Clostridioides difficile Infection Guidance: Key Highlights", url: "https://www.guidelinecentral.com/insights/jun-2026-aga-clostridioidesdifficileinfection-guideline-spotlight/" },
+    tags: ["CDI", "フィダキソマイシン", "バンコマイシン", "AGA", "感染症"]
+  },
+  {
+    id: "cl-subclinical-hypothyroid-lt4-2026-09",
+    category: "clinical",
+    field: "内分泌・代謝",
+    difficulty: 2,
+    added: "2026-09-15",
+    question: "60歳以上の軽度の潜在性甲状腺機能低下症(TSH 4.5〜10 mIU/L、FT4正常)へのレボチロキシン治療についての記載として、適切なものはどれか。",
+    options: ["レボチロキシン治療は主要心血管イベントを有意に減少させるため全例で開始すべきである", "レボチロキシン治療により健康関連QOLが有意に改善するエビデンスが確立している", "TSH正常化のため直ちに高用量レボチロキシンを開始するのが標準治療である", "5年以上治療してもQOL改善や心血管イベント減少は示されず、定期的な再評価を伴う経過観察が妥当である"],
+    correct: 3,
+    explanation: "【要点】60歳以上の軽度潜在性甲状腺機能低下症(TSH 4.5〜10 mIU/L、FT4正常)では、5年以上のレボチロキシン治療でもQOL改善や主要心血管イベント減少は示されず、定期的再評価を伴う経過観察が妥当である。\n【背景/エビデンス】2026年の系統的レビューは高齢者を対象としたRCTを統合し、レボチロキシンの心保護効果やQOL改善を否定した。ルーチンの薬物治療は支持されず、保存的なサーベイランスが正当化される。\n【臨床応用/注意】症状やTSHの推移など個別因子を踏まえ、過剰治療(医原性甲状腺機能亢進)を避ける。\n【誤答】全例で開始、QOL改善が確立、直ちに高用量開始、はいずれもエビデンスに反する。",
+    source: { title: "Levothyroxine for Subclinical Hypothyroidism in Older Adults: No Evidence of Benefit on Quality of Life or Cardiovascular Outcomes: A Systematic Review (2026)", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC13169851/" },
+    tags: ["潜在性甲状腺機能低下症", "レボチロキシン", "高齢者", "経過観察", "内分泌・代謝"]
   }
 ];
 
