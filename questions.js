@@ -7131,6 +7131,84 @@ const QUESTIONS = [
     explanation: "【要点】緩和ケアは終末期だけのケアではなく、診断時からの全人的支援である。早期からの緩和ケアは症状緩和・心のケア・生活支援に加え、アドバンス・ケア・プランニング(ACP)を含む包括的なケアである。\n【背景/エビデンス】ACPは早期からの緩和ケアの重要な一部分であり、継続したかかわりにより患者の価値観に基づいた意思決定を支援できる。外来診療における「2人主治医制」と地域連携が、患者の安心感と生活の質を支える。早期からの緩和ケア導入は生活の質の維持に寄与する。\n【臨床応用/注意】がん薬物療法と並行し、診断早期から支持療法・意思決定支援を組み込む。\n【誤答】終末期限定、ACPは無関係、主治医一本化で地域連携を避ける、はいずれも誤り。",
     source: { title: "がん診療における早期からの緩和ケアの役割（廣橋猛, 診断と治療 114巻13号, 2026）", url: "https://webview.isho.jp/journal/detail/abs/10.34433/dt.0000001746" },
     tags: ["緩和ケア", "アドバンス・ケア・プランニング", "ACP", "2人主治医制", "その他"]
+  },
+  {
+    id: "gl-acp-obesity-pharmacotherapy-2026-09-16",
+    category: "guideline",
+    field: "内分泌・代謝",
+    difficulty: 2,
+    added: "2026-09-16",
+    question: "肥満・過体重の成人に対する薬物療法について、2026年 ACP(米国内科学会)の生きた臨床ガイドラインが示す推奨として適切なものはどれか。",
+    options: ["薬物療法の第一選択はナルトレキソン・ブプロピオン配合薬である", "BMI≥30の成人では、生活習慣修正に加えフェンテルミン・トピラマートを第一選択として推奨する", "BMI≥30の成人で薬物療法を開始する場合、セマグルチドまたはチルゼパチドを第一選択として推奨する(条件付き・中等度の確実性)", "薬物療法はBMI≥40の高度肥満に限って考慮する"],
+    correct: 2,
+    explanation: "【要点】ACPの生きた臨床ガイドライン(2026年)は、肥満(BMI≥30)の成人で薬物療法を始める際、生活習慣修正に加えGLP-1/GIP受容体作動薬であるセマグルチドまたはチルゼパチドを第一選択(条件付き推奨・中等度の確実性)とした。\n【背景/エビデンス】過体重(BMI≥27〜30)かつ2型糖尿病・脂質異常症・高血圧・OSA・CVDのいずれかを伴う場合も同2剤が第一選択。フェンテルミン・トピラマートは二次、リラグルチドは三次、ナルトレキソン・ブプロピオンは四次に位置づけられる。\n【臨床応用/注意】薬物療法は生活習慣介入と併用し、費用・忍容性・中止後のリバウンドも考慮する。\n【誤答】ナルトレキソン・ブプロピオンやフェンテルミン・トピラマートは第一選択ではない。BMI≥40限定という閾値も誤り。",
+    source: { title: "Pharmacologic Treatments With Lifestyle Modifications in Adults With Overweight or Obesity: A Living Clinical Guideline From the ACP (Annals of Internal Medicine, 2026)", url: "https://www.acpjournals.org/doi/10.7326/ANNALS-25-02714" },
+    tags: ["肥満", "GLP-1受容体作動薬", "セマグルチド", "チルゼパチド", "内分泌・代謝"]
+  },
+  {
+    id: "rv-alpha-gal-syndrome-2026-09-16",
+    category: "review",
+    field: "その他",
+    difficulty: 2,
+    added: "2026-09-16",
+    question: "マダニ咬傷に関連するα-gal症候群(alpha-gal syndrome)について、当てはまるものはどれか。",
+    options: ["原因はガラクトース-α-1,3-ガラクトース(α-gal)に対するIgE感作で、マダニ咬傷が誘因となる", "典型例では哺乳類の肉(赤身肉)摂取の直後(数分以内)に即時型の症状が出る", "症状は非特異的で摂取から数時間後に遅発性に出現するため、診断まで数年を要することがある", "診断はα-gal特異的IgEの検出と臨床評価による"],
+    correct: [0, 2, 3],
+    explanation: "【要点】α-gal症候群はマダニ咬傷を契機にα-gal(哺乳類由来の糖鎖)へIgE感作が成立し、牛・豚などの赤身肉や哺乳類由来製品で遅発性アレルギーをきたす。\n【背景/エビデンス】米国では主にローンスターチック(Amblyomma)が媒介。特徴は摂取から数時間後に蕁麻疹・消化器症状・アナフィラキシーが遅れて出る点で、通常の即時型食物アレルギーと異なる。非特異的なため診断に数年かかることもある。診断はα-gal特異的IgEの測定と病歴による。\n【臨床応用/注意】原因不明の反復するアナフィラキシー・慢性蕁麻疹で鑑別に挙げる。\n【誤答】『摂取直後の即時型』は誤りで、本症の本質は遅発性である。",
+    source: { title: "A Review of Alpha-Gal Syndrome for the Infectious Diseases Practitioner (Open Forum Infectious Diseases, 2025)", url: "https://academic.oup.com/ofid/article/12/8/ofaf430/8209804" },
+    tags: ["α-gal症候群", "マダニ", "食物アレルギー", "アナフィラキシー", "その他"]
+  },
+  {
+    id: "gl-acr-gout-treat-to-target-2026-09-16",
+    category: "guideline",
+    field: "膠原病・骨",
+    difficulty: 2,
+    added: "2026-09-16",
+    question: "痛風の尿酸降下療法(ULT)に関する米国リウマチ学会(ACR)ガイドラインの推奨として適切なものはどれか。",
+    options: ["尿酸降下療法は高用量から開始し、速やかに目標値へ到達させる", "慢性腎臓病がある患者では、アロプリノールは第一選択から除外する", "ULT開始時は抗炎症予防を行わず、フレアが出てから対応する", "アロプリノールを低用量から開始し、血清尿酸<6 mg/dLを目標に用量を漸増する(treat-to-target)"],
+    correct: 3,
+    explanation: "【要点】ACRは痛風のULTで『treat-to-target』を強く推奨し、アロプリノールを第一選択(CKD合併例を含む)として低用量から開始し、血清尿酸<6 mg/dLを目標に2〜5週ごとに漸増する。\n【背景/エビデンス】低用量開始(アロプリノール<100 mg/日、CKDではさらに低用量)は重症皮膚反応リスクの低減に寄与する。ULT開始時は少なくとも3〜6か月、コルヒチン・NSAIDs・少量ステロイドのいずれかで抗炎症予防を併用しフレアを抑える。\n【臨床応用/注意】ULT適応は初回発作でもCKDステージ≥3・著明な高尿酸血症・尿路結石があれば考慮に拡大される。\n【誤答】高用量開始、CKDでアロプリノール除外、予防なしはいずれも推奨に反する。",
+    source: { title: "ACR Releases Gout Management Guideline With Emphasis on Treat-to-Target Strategy for Urate-Lowering Therapy (American College of Rheumatology)", url: "https://rheumatology.org/press-releases/acr-releases-gout-management-guideline-with-emphasis-on-treat-to-target-strategy-for-urate-lowering-therapy" },
+    tags: ["痛風", "尿酸降下療法", "アロプリノール", "treat-to-target", "膠原病・骨"]
+  },
+  {
+    id: "jr-vespa-vortioxetine-elderly-2026-09-16",
+    category: "journal",
+    field: "精神・行動",
+    difficulty: 2,
+    added: "2026-09-16",
+    question: "高齢者のうつ病でボルチオキセチンとSSRIを比較したVESPA試験(eClinicalMedicine, 2024)の結果として適切なものはどれか。",
+    options: ["6か月時点の有害事象による治療中止はボルチオキセチン群でむしろ多く、SSRIより忍容性が優れるとはいえなかった", "ボルチオキセチンはSSRIより有害事象による中止が有意に少なかった", "認知機能の指標はボルチオキセチンがSSRIを一貫して上回った", "うつ症状の反応率はボルチオキセチンが有意に高かった"],
+    correct: 0,
+    explanation: "【要点】VESPAは65歳以上(平均73.7歳)の大うつ病357名を対象にボルチオキセチンとSSRIを比較した実務的RCT。主要評価項目である6か月時の有害事象による治療中止は、ボルチオキセチン群44%に対しSSRI群33%で、ボルチオキセチンが優れるという仮説は支持されなかった。\n【背景/エビデンス】反応率・うつ症状・QOLに有意差はなく、認知パフォーマンスはむしろSSRIが上回った。『高齢者でボルチオキセチンは忍容性が高い』という通念の再考を促す結果である。\n【臨床応用/注意】高齢者のうつでは薬剤選択を忍容性の通念に頼らず個別化する。\n【誤答】中止が少ない・認知が優れる・反応率が高い、はいずれも本試験の結果と逆である。",
+    source: { title: "Tolerability of vortioxetine compared to SSRIs in older adults with major depressive disorder (VESPA): a randomised trial (eClinicalMedicine, 2024)", url: "https://www.thelancet.com/journals/eclinm/article/PIIS2589-5370(24)00070-1/fulltext" },
+    tags: ["うつ病", "高齢者", "ボルチオキセチン", "SSRI", "精神・行動"]
+  },
+  {
+    id: "jr-find-ckd-finerenone-2026-09-16",
+    category: "journal",
+    field: "腎・電解質",
+    difficulty: 2,
+    added: "2026-09-16",
+    question: "非糖尿病性の慢性腎臓病(CKD)患者を対象に非ステロイド性MR拮抗薬フィネレノンを検討した第III相FIND-CKD試験(2026年報告)の結果として適切なものはどれか。",
+    options: ["主要評価項目のeGFR勾配で有意差は示せず、非糖尿病CKDへの有効性は否定された", "フィネレノンはプラセボに対しeGFR勾配(年間低下率)を有意に改善し、主要評価項目を達成した", "対象は糖尿病を合併するCKD患者に限られていた", "高カリウム血症が多発したため試験は早期中止となった"],
+    correct: 1,
+    explanation: "【要点】FIND-CKDは非糖尿病性CKDを対象とした最大規模の第III相試験で、フィネレノンはプラセボに比しeGFR勾配(ベースラインから32か月の年間変化率)を有意に改善し主要評価項目を達成した。\n【背景/エビデンス】eGFR年間変化率はフィネレノン −3.3、プラセボ −4.0 mL/分/1.73m²で、差は0.7 mL/分/1.73m²。安全性は既知のプロファイルと一貫。ACE阻害薬/ARB・SGLT2阻害薬に続く『第3の柱』としての位置づけが議論されている。\n【臨床応用/注意】適応拡大はFDA審査中で、高カリウム血症のモニタリングは引き続き重要である。\n【誤答】有意差なし・糖尿病例限定・高K血症で早期中止、はいずれも誤り。",
+    source: { title: "Phase III FIND-CKD Results: Finerenone Improved eGFR Slope in Adults With Non-Diabetic CKD (Bayer)", url: "https://www.bayer.com/en/us/news-stories/kerendia-for-non-diabetic-chronic-kidney-disease" },
+    tags: ["慢性腎臓病", "フィネレノン", "MR拮抗薬", "FIND-CKD", "腎・電解質"]
+  },
+  {
+    id: "cl-rls-management-2026-09-16",
+    category: "clinical",
+    field: "神経",
+    difficulty: 2,
+    added: "2026-09-16",
+    question: "レストレスレッグス症候群(RLS)の薬物治療に関する2024年AASMガイドラインの考え方として、当てはまるものはどれか。",
+    options: ["ガバペンチン/ガバペンチン エナカルビル/プレガバリン(α2δリガンド)が主要な治療選択肢である", "血清フェリチンが低い場合(概ね<75 µg/L)は貧血の有無にかかわらず鉄補充を考慮する", "ドパミン作動薬は第一選択として長期継続することが推奨される", "ドパミン作動薬には症状増悪(augmentation)のリスクがあり、第一選択としての推奨は後退した"],
+    correct: [0, 1, 3],
+    explanation: "【要点】2024年AASMガイドラインは、α2δリガンド(ガバペンチン、ガバペンチン エナカルビル、プレガバリン)を主要な治療に位置づけ、鉄欠乏の是正を重視する一方、ドパミン作動薬はaugmentationのため第一選択としての推奨が後退した。\n【背景/エビデンス】ドパミン作動薬の長期使用ではaugmentation(症状が増悪・早発化する現象)が年7〜10%に生じる。α2δリガンドはこの現象と関連しにくい。フェリチン<75 µg/Lでは貧血がなくても鉄補充を、適応例では静注鉄(フェリックカルボキシマルトース)を考慮する。\n【臨床応用/注意】まず二次性要因と鉄動態を評価し、薬剤選択とaugmentationリスクを説明する。\n【誤答】ドパミン作動薬を第一選択で長期継続、という推奨は現行では支持されない。",
+    source: { title: "New Guideline Provides Treatment Recommendations for Restless Legs Syndrome (AASM, 2024)", url: "https://aasm.org/new-guideline-provides-treatment-recommendations-for-restless-legs-syndrome/" },
+    tags: ["レストレスレッグス症候群", "むずむず脚症候群", "α2δリガンド", "鉄", "神経"]
   }
 
 ];
