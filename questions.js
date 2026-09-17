@@ -7444,6 +7444,71 @@ const QUESTIONS = [
     source: { title: "無菌性髄膜炎が疑われる患者、腰椎穿刺する？ しない？（髙橋平安彦ほか, 総合診療 36巻9号, 2026）", url: "https://webview.isho.jp/journal/detail/abs/10.11477/mf.218880510360090991" },
     tags: ["無菌性髄膜炎", "細菌性髄膜炎", "腰椎穿刺", "経験的抗菌薬", "感染症"]
   }
-];
+  ,
+  {
+    id: "gl-acp-migraine-acute-combo-2026-09-18",
+    category: "guideline",
+    field: "神経",
+    difficulty: 2,
+    added: "2026-09-18",
+    question: "成人の急性反復性(episodic)片頭痛の薬物治療に関する2025年ACP(米国内科学会)ガイドラインの推奨として、適切なものを選べ。",
+    options: ["中等症〜重症でNSAID単剤が無効な非妊娠・非授乳の成人には、NSAIDにトリプタンを追加する併用療法が強く推奨される", "軽症の発作は、NSAID・アセトアミノフェン、またはNSAID+アセトアミノフェンの併用で治療してよい", "急性期治療は発作の頓挫を避け、頭痛が十分に強くなってから開始するほうが有効である", "アセトアミノフェン単剤が無効な場合に、アセトアミノフェンへトリプタンを追加することが条件付きで推奨される"],
+    correct: [0, 1, 3],
+    explanation: "【要点】2025年ACPは、中等症〜重症でNSAID単剤が無効な成人にNSAID+トリプタンの併用を強く推奨し(中等度の確実性)、アセトアミノフェン単剤無効時はアセトアミノフェン+トリプタンを条件付きで推奨、軽症はNSAID/アセトアミノフェン(またはその併用)で治療してよいとした。\n【背景/エビデンス】比較効果研究ではスマトリプタン+ナプロキセンの純便益が最大とされた。対象は非妊娠・非授乳の外来成人である。\n【臨床応用/注意】発作は可能な限り早期に治療を開始するほど有効で、併用療法は単剤無効例の効率を高める。薬物乱用頭痛を避ける使用頻度管理も行う。\n【誤答】頭痛が強くなるまで待つ(C)は誤りで早期開始が原則。A・B・Dはいずれも本ガイドラインの推奨に合致する。",
+    source: { title: "Pharmacologic Treatments of Acute Episodic Migraine Headache in Outpatient Settings: A Clinical Guideline From the American College of Physicians (Ann Intern Med 2025)", url: "https://www.acpjournals.org/doi/10.7326/ANNALS-24-03095" },
+    tags: ["片頭痛", "急性期治療", "トリプタン", "NSAID", "ACPガイドライン", "神経"]
+  },
+  {
+    id: "gl-acip-rsv-age50-2026-09-18",
+    category: "guideline",
+    field: "予防・健診",
+    difficulty: 1,
+    added: "2026-09-18",
+    question: "米国ACIPによる成人へのRSVワクチン接種推奨(2025年改訂を含む)として、最も適切なものはどれか。",
+    options: ["75歳以上の全員に加え、重症RSVリスクの高い50〜74歳にも単回接種を推奨する", "全成人に毎年の定期接種を推奨する", "接種は60歳以上に限られ、50歳代への拡大は行われていない", "一度接種した者にも毎シーズンの再接種を推奨する"],
+    correct: 0,
+    explanation: "【要点】ACIPは75歳以上の全員へのRSVワクチン単回接種を推奨し、2025年4月に高リスク者の接種開始年齢を60歳から50歳へ引き下げた。したがって重症RSVリスクの高い50〜74歳も単回接種の対象となる。\n【背景/エビデンス】RSVは高齢者で肺炎・COPDや心不全の増悪、入院・死亡の契機となる。使用可能なのはArexvy・Abrysvo・mResviaの3製剤で、いずれも現時点では原則として生涯に1回の接種である。\n【臨床応用/注意】50〜59歳では慢性心肺疾患・免疫低下・長期療養施設入所などのリスクを個別評価して適応を判断する。\n【誤答】全成人への毎年接種(B)、60歳以上限定で50歳代非拡大(C)、既接種者への毎シーズン再接種(D)はいずれも現行推奨と異なる。",
+    source: { title: "RSV Vaccine Recommendations for Older Adults (ACIP), Immunize.org Ask the Experts", url: "https://www.immunize.org/ask-experts/topic/rsv/vaccine-recs-adults-rsv/" },
+    tags: ["RSV", "ワクチン", "ACIP", "予防接種", "高齢者", "予防・健診"]
+  },
+  {
+    id: "jr-mirror-pegloticase-mtx-2026-09-18",
+    category: "journal",
+    field: "膠原病・骨",
+    difficulty: 2,
+    added: "2026-09-18",
+    question: "コントロール不良の痛風に対しペグロチカーゼ(尿酸分解酵素製剤)へメトトレキサート(MTX)を併用したMIRROR無作為化試験で示された知見はどれか。",
+    options: ["MTX併用はペグロチカーゼの尿酸低下反応率をむしろ低下させた", "MTX併用はインフュージョンリアクションを増加させた", "MTX併用はペグロチカーゼ単独(プラセボ併用)より尿酸低下の反応率を高め、点滴反応も減らした", "MTX併用の有無で尿酸低下の反応率に差はなかった"],
+    correct: 2,
+    explanation: "【要点】MIRROR試験は、コントロール不良痛風でペグロチカーゼにMTXを併用すると、単独(プラセボ併用)より尿酸低下の反応率が高まり、インフュージョンリアクションも減少することを示した。\n【背景/エビデンス】ペグロチカーゼは強力・迅速に血清尿酸を低下させるが、抗薬物抗体の産生で有効性が損なわれ点滴反応も起こしうる。MIRROR RCTでは6か月時の反応率がMTX併用群71.0%対プラセボ併用群38.5%で、12か月まで反応の持続性も向上し、新たな安全性シグナルはなかった。\n【臨床応用/注意】免疫調整で抗体産生を抑える戦略で、MTX禁忌例では代替の免疫調整薬を検討する。\n【誤答】反応率低下(A)、点滴反応増加(B)、差なし(D)はいずれも試験結果と逆である。",
+    source: { title: "Pegloticase Alongside Methotrexate Improves Uncontrolled Gout in MIRROR Trial (HCPLive)", url: "https://www.hcplive.com/view/pegloticase-alongside-methotrexate-improves-uncontrolled-gout-mirror-trial" },
+    tags: ["痛風", "ペグロチカーゼ", "メトトレキサート", "MIRROR試験", "膠原病・骨"]
+  },
+  {
+    id: "rv-acg-eoe-2025-2026-09-18",
+    category: "review",
+    field: "消化器・肝",
+    difficulty: 2,
+    added: "2026-09-18",
+    question: "好酸球性食道炎(EoE)の診断・治療に関する2025年ACG(米国消化器学会)ガイドラインの記載として、適切なものを選べ。",
+    options: ["初期治療は共同意思決定のもと、食事療法(経験的食物除去、例:1-FEDや2-FED)または薬物療法(PPIまたは局所ステロイド)から選択する", "局所ステロイド(ブデソニド・フルチカゾン)はEoEの治療選択肢となる", "内視鏡的拡張術を行えば抗炎症治療は不要である", "PPIに反応しない例ではデュピルマブが選択肢となる"],
+    correct: [0, 1, 3],
+    explanation: "【要点】2025年ACGガイドラインは、EoEの初期治療を共同意思決定のもとで食事療法(経験的食物除去:1-FED/2-FEDなど)または薬物療法(PPIあるいは局所ステロイド)から選ぶことを推奨し、局所ステロイド(ブデソニド・フルチカゾン)を治療選択肢、PPI不応例にはデュピルマブを位置づけた。\n【背景/エビデンス】EoEはTh2型の慢性免疫・抗原介在性食道疾患で、生検での好酸球浸潤(概ね≥15/HPF)で診断する。狭窄には内視鏡的拡張を行うが炎症は残るため、全例で抗炎症治療が必要である。\n【臨床応用/注意】治療反応は症状のみならず内視鏡・組織学的にも評価する。\n【誤答】拡張術のみで抗炎症治療不要(C)は誤りで、拡張は狭窄の対症的処置にとどまる。A・B・Dは本ガイドラインに合致する。",
+    source: { title: "ACG Clinical Guideline: Diagnosis and Management of Eosinophilic Esophagitis (Am J Gastroenterol 2025)", url: "https://pubmed.ncbi.nlm.nih.gov/39745304/" },
+    tags: ["好酸球性食道炎", "EoE", "食物除去療法", "局所ステロイド", "デュピルマブ", "消化器・肝"]
+  },
+  {
+    id: "cl-cancer-vte-doac-lmwh-2026-09-18",
+    category: "clinical",
+    field: "血液",
+    difficulty: 3,
+    added: "2026-09-18",
+    question: "活動性がん患者の静脈血栓塞栓症(VTE)に対する抗凝固薬の初期選択に関する記述のうち、最も適切なものはどれか。",
+    options: ["消化管がんの有無にかかわらず、DOACはLMWHより大出血が少ない", "消化管・尿路がんではエドキサバンやリバーロキサバンで大出血が増える傾向があり、これらの部位のがんがなく出血リスクの低い例でLMWHの代替として考慮する", "がん関連VTEでは抗凝固は不要で経過観察でよい", "上部消化管がんの活動性病変があるほうが、非消化管がんより大出血リスクは低い"],
+    correct: 1,
+    explanation: "【要点】がん関連VTEでは、消化管・尿路がんでDOAC(とくにエドキサバン・リバーロキサバン)による大出血が低分子ヘパリン(LMWH)より増える傾向があり、これらの部位のがんがなく出血リスクの低い例でDOACをLMWHの代替として考慮する。\n【背景/エビデンス】Hokusai-VTE Cancer・SELECT-D等でDOACはLMWHに対し再発予防で非劣性〜優越だが、消化管がんで大出血が多かった。アピキサバンは相対的に消化管出血シグナルが小さいとされる。\n【臨床応用/注意】がん種・出血リスク・薬物相互作用・患者選好で個別化し、上部消化管の未切除病変では特に注意する。\n【誤答】部位を問わずDOACが低出血(A)、抗凝固不要(C)、上部消化管がん活動性病変で出血リスクが低い(D)はいずれも誤り。",
+    source: { title: "Direct oral anticoagulant-associated bleeding complications in patients with gastrointestinal cancer and venous thromboembolism (Eur J Intern Med 2024)", url: "https://www.ejinme.com/article/S0953-6205(24)00171-7/fulltext" },
+    tags: ["がん関連血栓症", "VTE", "DOAC", "LMWH", "消化管出血", "血液"]
+  }];
 
 if (typeof module !== "undefined") { module.exports = QUESTIONS; }
