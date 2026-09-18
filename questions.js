@@ -7678,6 +7678,84 @@ const QUESTIONS = [
     explanation: "【要点】大動脈僧帽弁カーテンは大動脈弁と僧帽弁をつなぐ線維性構造（心臓線維骨格の一部）で、感染性心内膜炎では弁輪周囲膿瘍や偽性瘤の好発部位となる。\n【背景/エビデンス】大動脈弁の左冠尖・無冠尖と僧帽弁前尖の間をつなぎ、intervalvular fibrosa／aortomitral continuityとも呼ばれる。石灰化しやすくTAVRでは穿孔リスク部位となり、心室性不整脈の基盤にもなりうる（Radiographics 2017;37:1330-51ほか）。\n【臨床応用/注意】大動脈弁・僧帽弁の同時再建（Commando手術）で重要な操作部位であり、感染性心内膜炎の膿瘍評価では意識すべき解剖である。\n【誤答】刺激伝導系の主体ではなく筋性でもなく(A)、感染を起こしにくい部位でもない(B)。線維組織で能動的な弁開閉補助はしない(C)。",
     source: { title: "大動脈僧帽弁カーテン Aortomitral curtain（松下ERランチ・カンファレンス）", url: "https://matsushita-er.blogspot.com/2026/09/aortomitral-curtain.html" },
     tags: ["大動脈僧帽弁カーテン", "感染性心内膜炎", "解剖", "松下ERランチ・カンファレンス", "循環器"]
+  },
+  {
+    id: "jr-adhd-cvsafety-01",
+    category: "journal",
+    field: "精神・行動",
+    difficulty: 2,
+    added: "2026-09-19",
+    question: "成人の注意欠如・多動症(ADHD)の薬物療法と安全性に関する記述として、当てはまるものを選べ。",
+    options: ["確定診断がつくまで、うつ・不安・物質使用などの併存症評価は不要である", "中枢刺激薬(メチルフェニデート、リスデキサンフェタミン等)が薬物治療の第一選択となる", "心血管イベントの絶対リスクが高いため、心疾患既往のない成人でも刺激薬は原則禁忌である", "刺激薬は血圧・心拍数を軽度上昇させるため、導入前後にこれらのモニタリングを行う"],
+    correct: [1, 3],
+    explanation: "【要点】成人ADHDでも中枢刺激薬が薬物治療の第一選択で、導入前後に血圧・心拍数のモニタリングを行う。\n【背景/エビデンス】Lancet Psychiatry 2025の心血管安全性ネットワークメタ解析等では、ADHD治療薬は血圧・心拍数を軽度上昇させるが、重篤な心血管イベントの絶対リスク上昇はごくわずかとされる。心血管リスクが高い例では非刺激薬(アトモキセチン等)を先に考慮する。\n【臨床応用/注意】うつ・不安・物質使用障害などの併存症評価は診断と治療方針決定に不可欠である。\n【誤答】併存症評価は不要(A)、心疾患既往のない成人で原則禁忌(C)はいずれも誤り。",
+    source: { title: "Comparative cardiovascular safety of medications for ADHD: a systematic review and network meta-analysis (Lancet Psychiatry 2025)", url: "https://www.thelancet.com/journals/lanpsy/article/PIIS2215-0366(25)00062-8/abstract" },
+    tags: ["ADHD", "中枢刺激薬", "心血管安全性", "非刺激薬", "精神・行動"]
+  },
+  {
+    id: "cl-animal-bite-abx-01",
+    category: "clinical",
+    field: "感染症",
+    difficulty: 2,
+    added: "2026-09-19",
+    question: "犬・猫咬傷創に対する予防的抗菌薬・初期対応について、支持される記述はどれか。",
+    options: ["すべての犬咬傷創で予防的抗菌薬は不要で、感染徴候が出てから開始すればよい", "予防的抗菌薬の第一選択はセファレキシン単剤である", "予防的抗菌薬の第一選択はアモキシシリン・クラブラン酸で、猫咬傷・穿通創・手部・易感染性宿主で特に考慮する", "猫咬傷は犬咬傷より感染率が低いため、予防投与の優先度は低い"],
+    correct: 2,
+    explanation: "【要点】犬・猫咬傷創の予防的抗菌薬の第一選択はアモキシシリン・クラブラン酸で、感染高リスク例では特に考慮する。\n【背景/エビデンス】咬傷は口腔内のPasteurella multocidaや嫌気性菌を含む混合感染となりやすく、これらをカバーする必要がある。猫咬傷(穿通創になりやすい)、手部・深部創、易感染性宿主(免疫抑制・無脾・肝硬変等)は感染リスクが高く、予防投与の適応。通常3〜5日間投与する。\n【臨床応用/注意】十分な洗浄・デブリードマンを行い、破傷風、必要時は狂犬病の予防も併せて評価する。\n【誤答】全例で経過観察のみ(A)、Pasteurella・嫌気性菌カバーが不十分なセファレキシン単剤(B)、猫咬傷は低リスク(D)はいずれも誤り。",
+    source: { title: "Dog and Cat Bites (American Family Physician)", url: "https://www.aafp.org/afp/2014/0815/p239" },
+    tags: ["動物咬傷", "アモキシシリン・クラブラン酸", "パスツレラ", "予防的抗菌薬", "感染症"]
+  },
+  {
+    id: "gl-axspa-treatment-01",
+    category: "guideline",
+    field: "膠原病・骨",
+    difficulty: 3,
+    added: "2026-09-19",
+    question: "活動性の体軸性脊椎関節炎(強直性脊椎炎を含む)の治療に関する近年のACRガイドラインで支持される記述はどれか。",
+    options: ["NSAIDsが第一選択の薬物療法で、活動性例では頓用より継続投与が推奨されうる", "NSAIDs無効例ではJAK阻害薬を第一選択の生物学的/標的合成DMARDとして推奨する", "TNF阻害薬はIL-17阻害薬より一律に優先して選択すべきである", "メトトレキサートが体軸病変に対する第一選択治療である"],
+    correct: 0,
+    explanation: "【要点】体軸性脊椎関節炎ではNSAIDsが第一選択で、活動性例では継続投与が頓用より推奨されうる。\n【背景/エビデンス】ACRガイドライン(2019策定・以降更新)では、NSAIDs無効時はTNF阻害薬またはIL-17阻害薬を優先順位をつけずに推奨する(両者はおおむね同等の有効性)。JAK阻害薬も選択肢だが第一選択の生物学的製剤ではない。\n【臨床応用/注意】メトトレキサート等の従来型合成DMARDは末梢関節炎には用いるが体軸病変には無効で、運動療法も重要である。\n【誤答】JAK阻害薬を第一選択(B)、TNF阻害薬を一律優先(C)、メトトレキサートが体軸第一選択(D)はいずれも誤り。",
+    source: { title: "New Guidelines Advance Treatment of Axial Spondyloarthritis (American College of Rheumatology)", url: "https://rheumatology.org/press-releases/new-guidelines-advance-treatment-of-axial-spondyloarthritis-in-adults-and-youth" },
+    tags: ["体軸性脊椎関節炎", "強直性脊椎炎", "NSAIDs", "TNF阻害薬", "IL-17阻害薬", "膠原病・骨"]
+  },
+  {
+    id: "cl-cic-secretagogue-01",
+    category: "clinical",
+    field: "消化器・肝",
+    difficulty: 2,
+    added: "2026-09-19",
+    question: "慢性特発性便秘(CIC)の薬物療法に関するAGA/ACG合同ガイドラインの記述として、支持されるものはどれか。",
+    options: ["OTC薬のうち長期使用に強い推奨が与えられているのは酸化マグネシウムのみである", "リナクロチドは最初に試みるべき第一選択薬である", "刺激性下剤(センナ等)は依存性のため一切使用すべきでない", "OTC薬(PEG等)で効果不十分な場合、リナクロチド・プレカナチド・プルカロプリドが選択肢となる"],
+    correct: 3,
+    explanation: "【要点】CICではまず食物繊維やPEG等を用い、OTC薬で不十分ならリナクロチド・プレカナチド・プルカロプリド等を追加する段階的治療が支持される。\n【背景/エビデンス】AGA/ACG合同ガイドライン(2023)はPEGをOTC薬で唯一の長期使用に強い推奨とし、分泌促進薬(リナクロチド・プレカナチド)や5-HT4作動薬プルカロプリド、センナにも強い推奨を与えた。\n【臨床応用/注意】警告徴候(体重減少・血便・鉄欠乏・高齢発症等)があれば器質的疾患の除外を優先する。\n【誤答】強い推奨のOTCはPEGであり酸化マグネシウムのみではない(A)、リナクロチドは第一選択ではない(B)、センナは推奨され一切禁止ではない(C)はいずれも誤り。",
+    source: { title: "AGA-ACG Clinical Practice Guideline: Pharmacological Management of Chronic Idiopathic Constipation (PubMed)", url: "https://pubmed.ncbi.nlm.nih.gov/37211380/" },
+    tags: ["慢性便秘", "リナクロチド", "PEG", "分泌促進薬", "消化器・肝"]
+  },
+  {
+    id: "rv-g6pd-deficiency-01",
+    category: "review",
+    field: "血液",
+    difficulty: 2,
+    added: "2026-09-19",
+    question: "グルコース-6-リン酸脱水素酵素(G6PD)欠乏症に関する記述として、当てはまるものを選べ。",
+    options: ["感染症は急性溶血の誘因として最も多いものの一つである", "常染色体劣性遺伝であり男女で発症頻度は等しい", "ソラマメ摂取や一部の薬剤(プリマキン、サルファ剤、ダプソン等)が急性溶血を誘発しうる", "急性溶血の最中は網赤血球増加により酵素活性が偽正常化しうるため、確定検査は溶血回復後が望ましい"],
+    correct: [0, 2, 3],
+    explanation: "【要点】G6PD欠乏症はX連鎖遺伝で主に男性に発症し、感染・酸化ストレス性の薬剤・ソラマメが急性溶血の誘因となる。\n【背景/エビデンス】プリマキン等の抗マラリア薬、サルファ剤、ダプソン、ナフタレン(防虫剤)等が代表的誘因。末梢血にbite cellsやHeinz小体を認める。溶血発作中は酵素活性の高い若い赤血球・網赤血球が増えるため酵素活性が偽正常化しうる。\n【臨床応用/注意】治療の要は誘因の同定と回避で、多くは支持療法で軽快するため、確定診断は溶血回復後の測定が望ましい。\n【誤答】常染色体劣性で男女同頻度(B)は誤りで、実際はX連鎖遺伝である。",
+    source: { title: "G6PD Deficiency: Symptoms, Causes & Treatment (Cleveland Clinic)", url: "https://my.clevelandclinic.org/health/diseases/22556-g6pd-glucose-6-phosphate-dehydrogenase-deficiency" },
+    tags: ["G6PD欠乏症", "溶血性貧血", "ソラマメ", "薬剤性溶血", "血液"]
+  },
+  {
+    id: "gl-ssnhl-01",
+    category: "guideline",
+    field: "その他",
+    difficulty: 2,
+    added: "2026-09-19",
+    question: "成人の突発性感音難聴(SSNHL)の診断・初期対応に関するAAO-HNSガイドラインを踏まえた記述として、適切なものはどれか。",
+    options: ["初期評価として全例に頭部単純CTをルーチンに施行する", "後迷路病変(聴神経腫瘍等)の除外にMRIまたはABRを考慮し、発症2週以内であればステロイドを初期治療として提示しうる", "伝音難聴(耳垢塞栓等)との鑑別は不要で、まず補聴器を導入する", "自然軽快が多いため、純音聴力検査は治療終了後のみでよく初期には不要である"],
+    correct: 1,
+    explanation: "【要点】SSNHLは緊急性が高く、伝音難聴との鑑別、後迷路病変除外のMRI/ABR、発症2週以内のステロイド提示が支持される。\n【背景/エビデンス】AAO-HNSガイドライン(2019更新)はSSNHLを72時間以内に連続3周波数で30dB以上低下する感音難聴と定義。初期のルーチン頭部CTは推奨されず、聴神経腫瘍等の除外にはMRI(またはABR)を用いる。鼓室内ステロイドは不完全回復例(発症2〜6週)の救済に位置づけられる。\n【臨床応用/注意】「耳が詰まった」を耳垢や感冒と片付けず、純音聴力検査で早期に感音難聴を確認することが重要である。\n【誤答】全例ルーチンCT(A)、鑑別不要で補聴器導入(C)、初期の聴力検査は不要(D)はいずれも誤り。",
+    source: { title: "Clinical Practice Guideline: Sudden Hearing Loss (Update) — Otolaryngology–Head and Neck Surgery 2019", url: "https://aao-hnsfjournals.onlinelibrary.wiley.com/doi/10.1177/0194599819859885" },
+    tags: ["突発性感音難聴", "ステロイド", "MRI", "AAO-HNS", "その他"]
   }
 
 ];
