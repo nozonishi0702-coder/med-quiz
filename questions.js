@@ -8056,6 +8056,84 @@ const QUESTIONS = [
     explanation: "【要点】S. maltophiliaは呼吸器にしばしば定着するため、まず肺炎診断の妥当性・検体の質・他の起因菌の有無・治療を待てるかを含め、治療の要否を判断することが重要である。\n【背景/エビデンス】2026年IDSA guidanceでは侵襲性感染にセフィデロコル単剤がpreferredとなったが、根拠は臨床試験の優越性ではなくin vitro感受性ほぼ100%と動物モデルである。菌血症コホートではST合剤感受性98.9%で、ST合剤が死亡率低下と独立して関連(HR0.21)した。\n【臨床応用/注意】ST合剤は確実な選択肢だが腎毒性・高K血症で早期中止も多い。\n【誤答】第一選択はセフィデロコル(A)。L1はアズトレオナムを除くβ-ラクタムを分解し、アズトレオナムはL2が分解する(B)。チゲサイクリンは生存を改善せずDTR肺炎で過剰死亡と関連(C)。",
     source: { title: "S. maltophilia ― 治療する?何を選ぶ?(内科医のジレンマ)", url: "http://viceversa888.exblog.jp/34015517/" },
     tags: ["Stenotrophomonas maltophilia", "セフィデロコル", "ST合剤", "IDSA", "内科医のジレンマ", "感染症"]
+  },
+  {
+    id: "gl-gold2026-copd-eos-01",
+    category: "guideline",
+    field: "呼吸器",
+    difficulty: 2,
+    added: "2026-09-21",
+    question: "COPDの増悪管理とGOLD 2026の改訂点について、正しいものを選べ。",
+    options: ["中等症〜重症の増悪に対する全身性ステロイドの投与期間は最長5日間が推奨される", "膿性喀痰を伴う増悪でもルーチンに抗菌薬は推奨されない", "血中好酸球300/µL以上の症例ではICS(吸入ステロイド)の追加/併用を考慮する", "増悪後は構造化されたフォローアップは不要で、症状消失をもって管理終了とする"],
+    correct: [0, 2],
+    explanation: "【要点】GOLD 2026は増悪管理を大きく改訂し、血中好酸球に基づくICS導入と増悪後の構造化フォローアップを強調した。\n【背景/エビデンス】好酸球≥300/µLではICSの上乗せ効果が期待でき、E群の初期治療としてLABA+LAMA+ICSを考慮する。三剤併用下でも好酸球≥300で増悪が続く場合はデュピルマブやメポリズマブの追加を検討する。1回の中等症増悪でも治療強化を推奨する方向へ変わった。\n【臨床応用/注意】中等症〜重症増悪の全身ステロイドは最長5日間、膿性喀痰や既往の肺感染では抗菌薬5日間を考慮する。\n【誤答】膿性喀痰を伴う増悪では抗菌薬が推奨される(B)。増悪後は構造化フォローアップが強調される(D)。",
+    source: { title: "GOLD 2026: Transforming COPD Management with Early Intervention, Multi-dimensional Assessment, and Personalized Care", url: "https://link.springer.com/article/10.1007/s40265-026-02303-3" },
+    tags: ["COPD", "増悪", "血中好酸球", "GOLD2026", "呼吸器"]
+  },
+  {
+    id: "gl-ash2026-itp-firstline-01",
+    category: "guideline",
+    field: "血液",
+    difficulty: 3,
+    added: "2026-09-21",
+    question: "成人一次性免疫性血小板減少症(ITP)の治療に関するASH 2026ガイドラインについて、正しいものを選べ。",
+    options: ["初期治療は副腎皮質ステロイド単剤が引き続き最も強く推奨される", "初期治療としてリツキシマブ+ステロイド、またはTPO受容体作動薬+ステロイドの併用が、ステロイド単剤より条件付きで提案される", "ステロイド抵抗性の二次治療ではまず脾摘が第一に強く推奨される", "治療目標は血小板数の短期的補正のみに置くべきである"],
+    correct: 1,
+    explanation: "【要点】ASH 2026 ITPガイドラインは、成人一次性ITPの初期治療で『ステロイド単剤』からの脱却を打ち出した。\n【背景/エビデンス】2019年以降の新規試験と新薬を踏まえ、初期治療としてリツキシマブ+ステロイド、またはTPO受容体作動薬+ステロイドの併用をステロイド単剤より条件付きで提案する。目標は短期的な血小板数補正ではなく、より早期・個別化した疾患コントロールとステロイド曝露の低減にある。二次治療はTPO受容体作動薬を強く、リツキシマブを条件付きで推奨する。\n【臨床応用/注意】出血リスクや患者の価値観を踏まえた共同意思決定が重要。\n【誤答】ステロイド単剤は最推奨ではない(A)。二次治療でまず脾摘を強く推奨とはしていない(C)。短期補正のみを目標としない(D)。",
+    source: { title: "American Society of Hematology 2026 Guidelines for Immune Thrombocytopenia (ITP): Initial and Second-Line Therapy in Adults with Primary ITP", url: "https://ashpublications.org/bloodadvances/article/doi/10.1182/bloodadvances.2026021269/570274/American-Society-of-Hematology-2026-Guidelines-for" },
+    tags: ["ITP", "免疫性血小板減少症", "TPO受容体作動薬", "リツキシマブ", "ASH2026", "血液"]
+  },
+  {
+    id: "cl-hpylori-vonoprazan-va-01",
+    category: "clinical",
+    field: "消化器・肝",
+    difficulty: 2,
+    added: "2026-09-21",
+    question: "Helicobacter pylori感染症の一次除菌治療について、正しいものを選べ。",
+    options: ["従来型PPIはボノプラザン(P-CAB)より強力かつ迅速な酸分泌抑制を示す", "クラリスロマイシン耐性の増加により、近年は世界的に除菌率が上昇している", "ボノプラザン・アモキシシリン併用(VA療法)が一次除菌の選択肢として推奨される", "ボノプラザンはプロトンポンプを不可逆的に阻害するため作用発現が遅い"],
+    correct: 2,
+    explanation: "【要点】強力かつ迅速な酸分泌抑制をもつP-CAB(ボノプラザン)を用いた一次除菌が広く推奨される。\n【背景/エビデンス】ACG 2024ガイドラインは14日間のボノプラザン・アモキシシリン(VA)療法(ボノプラザン20mg 1日2回+アモキシシリン1000mg 1日3回)を一次治療の選択肢として推奨する。ボノプラザンはPPIより迅速かつ強力に胃内pHを上げ、アモキシシリンの殺菌活性を安定化させる。ボノプラザン含有ビスマス四剤療法も高い除菌率を示す。\n【臨床応用/注意】抗菌薬耐性の増加で除菌率は世界的に低下傾向にあり、地域の耐性率や既治療歴を考慮する。\n【誤答】酸分泌抑制はPPIよりP-CABが強力・迅速(A)。耐性増加で除菌率はむしろ低下(B)。ボノプラザンは可逆的なP-CABで作用発現は速い(D)。",
+    source: { title: "What are the latest guideline recommendations for the treatment of Helicobacter pylori infection in the U.S.?", url: "https://dig.pharmacy.uic.edu/faqs/2025-2/january-2025-faqs/what-are-the-latest-guideline-recommendations-for-the-treatment-of-helicobacter-pylori-infection-in-the-u-s/" },
+    tags: ["Helicobacter pylori", "ボノプラザン", "P-CAB", "一次除菌", "ACG", "消化器・肝"]
+  },
+  {
+    id: "gl-rsv-acip2026-adult-01",
+    category: "guideline",
+    field: "予防・健診",
+    difficulty: 1,
+    added: "2026-09-21",
+    question: "成人のRSVワクチンに関する米国ACIP(2026年時点)の推奨について、正しいものを選べ。",
+    options: ["75歳以上のすべての成人に単回接種が推奨される", "現時点でRSVワクチンは毎年接種が必要な年次ワクチンである", "50〜74歳では重症RSVのリスクが高い成人に単回接種が推奨される", "成人用として複数のRSVワクチンがFDA承認されている"],
+    correct: [0, 2, 3],
+    explanation: "【要点】ACIP(2026年時点)は75歳以上の全成人と、50〜74歳で重症RSVリスクの高い成人に単回接種を推奨する。\n【背景/エビデンス】2025年にはリスクを有する50〜59歳へも対象が拡大された。成人用にはArexvy、mResvia、Abrysvoの3種がFDA承認されている。現時点でRSVワクチンは年次接種ではなく、既接種者への同時期の再接種は推奨されていない。\n【臨床応用/注意】接種はリスク評価と共同意思決定に基づいて行う。\n【誤答】RSVワクチンは毎年接種する年次ワクチンではなく、単回接種が基本である(B)。したがってA・C・Dが正しい。",
+    source: { title: "RSV Vaccine Guidance for Adults | RSV | CDC", url: "https://www.cdc.gov/rsv/hcp/vaccine-clinical-guidance/adults.html" },
+    tags: ["RSVワクチン", "ACIP", "高齢者", "予防接種", "予防・健診"]
+  },
+  {
+    id: "jr-semaglutide-aud-2026-01",
+    category: "journal",
+    field: "精神・行動",
+    difficulty: 2,
+    added: "2026-09-21",
+    question: "アルコール使用障害(AUD)に対するセマグルチドの無作為化比較試験(2026年)について、正しいものを選べ。",
+    options: ["本試験は非肥満のAUD患者を対象とし、一般化可能性は既に確立された", "セマグルチドはプラセボと比較して飲酒量を増加させた", "対象は既存のAUD治療薬(ナルトレキソン)に不応の患者に限定された", "肥満を合併するAUD患者で、週1回のセマグルチドはプラセボと比べ飲酒関連アウトカムを改善した"],
+    correct: 3,
+    explanation: "【要点】肥満を合併するAUD患者で、週1回のセマグルチドがプラセボより飲酒関連アウトカムを改善した(2026年、Lancet)。\n【背景/エビデンス】AUDと肥満を併存する参加者を対象に、週1回皮下セマグルチド(最大2.4mgまで漸増)またはプラセボを26週間投与する無作為化比較試験。複数の飲酒関連アウトカムで有意な効果が示された。ただし非肥満患者を含む大規模RCTでの検証が必要で、一般化可能性は未確立とされる。\n【臨床応用/注意】現時点でAUDへのGLP-1受容体作動薬は適応外であり、既存の薬物療法・心理社会的治療が基本。\n【誤答】対象は肥満合併例で一般化は未確立(A)。飲酒量はむしろ減少した(B)。ナルトレキソン不応例に限定していない(C)。",
+    source: { title: "GLP-1 Semaglutide Promising for Alcohol Use Disorder", url: "https://www.medscape.com/viewarticle/glp-1-semaglutide-promising-alcohol-use-disorder-2026a1000e5q" },
+    tags: ["アルコール使用障害", "セマグルチド", "GLP-1受容体作動薬", "無作為化比較試験", "精神・行動"]
+  },
+  {
+    id: "rv-cgrp-migraine-firstline-01",
+    category: "review",
+    field: "神経",
+    difficulty: 2,
+    added: "2026-09-21",
+    question: "片頭痛予防におけるCGRP標的療法に関する米国頭痛学会(AHS)の見解について、正しいものを選べ。",
+    options: ["他クラスの予防薬の失敗を要件とせず、第一選択として考慮してよい", "少なくとも2クラスの予防薬の失敗後にのみ考慮すべきである", "最終手段(last-resort)としてのみ位置づけられている", "発作の頓挫にのみ有効で、予防効果はない"],
+    correct: 0,
+    explanation: "【要点】AHSはCGRP標的療法を、他クラス予防薬の失敗を要件とせず片頭痛予防の第一選択として考慮してよいとした。\n【背景/エビデンス】従来は少なくとも2クラス・各8週以上の予防薬失敗を要件としていたが、臨床試験と実臨床データで安全性・有効性・忍容性が示され、第一選択への位置づけへ転換した。CGRPモノクローナル抗体は反復性(episodic)片頭痛の予防に有効とされる。\n【臨床応用/注意】患者の重症度・併存症・価値観を踏まえ、他の第一選択薬と並置して選択する。保険適用や費用は地域で異なる。\n【誤答】2クラス失敗後にのみとするのは旧見解(B)。最終手段のみとするのは誤り(C)。CGRP標的の予防薬は予防に有効で頓挫専用ではない(D)。",
+    source: { title: "CGRP Therapies as a First-Line Option in Migraine Care", url: "https://americanheadachesociety.org/research/library/cgrp-targeting-therapies-as-a-first-line-option-for-migraine-prevention" },
+    tags: ["片頭痛", "CGRP", "予防療法", "AHS", "神経"]
   }
 ];
 
