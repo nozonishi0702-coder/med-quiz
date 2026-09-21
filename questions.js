@@ -8199,6 +8199,97 @@ const QUESTIONS = [
     explanation: "【要点】漏斗胸は胸骨が陥凹する最も頻度の高い先天性胸壁変形で、単なる美容上の問題とみなさず、診断・評価・紹介を検討する。\n【背景/エビデンス】症状は無症状から労作時呼吸困難・失神まで幅広く、加齢とともに進行しうる。手術によりQOLだけでなく心肺機能も改善しうると報告される（J Am Board Fam Med 2026のレビュー）。\n【臨床応用/注意】見た目の変形が軽くても心臓圧迫による労作時呼吸困難・運動耐容能低下・胸痛・動悸・めまいを呈することがあり、心エコー正常でも除外できないため専門医紹介を検討する。\n【誤答】無症状でも評価を要し、症状は加齢で進行しうる。心エコー正常は除外根拠にならず、美容上の問題と軽視しない。",
     source: { title: "漏斗胸レビュー（家庭医・医学教育研究者の省察的実践録）", url: "https://wannabeafamilyphysician.blogspot.com/2026/09/blog-post_19.html" },
     tags: ["漏斗胸", "pectus excavatum", "胸壁変形", "家庭医・医学教育研究者の省察的実践録", "その他"]
+  },
+  {
+    id: "gl-hbv-screening-afp2026-01",
+    category: "guideline",
+    field: "感染症",
+    difficulty: 2,
+    added: "2026-09-22",
+    question: "成人のB型肝炎ウイルス(HBV)スクリーニングと予防に関する近年の米国(CDC/ACIP)の推奨について、当てはまるものを選べ。",
+    options: ["すべての成人に生涯1回、HBs抗原・抗HBs抗体・抗HBc抗体の3項目パネルで検査する。", "スクリーニングはリスク因子を有する者に限定し、無症状でリスクのない成人には行わない。", "妊娠のたびにHBs抗原スクリーニングを行い、母子(垂直)感染の予防につなげる。", "19〜59歳の成人にはリスクの有無にかかわらず普遍的なHBワクチン接種を行う。"],
+    correct: [0, 2, 3],
+    explanation: "【要点】CDCは全成人に生涯1回の3項目パネル(HBs抗原・抗HBs抗体・抗HBc抗体)スクリーニングを、ACIPは19〜59歳全成人に普遍的HBワクチン接種を推奨する。\n【背景/エビデンス】従来のリスク因子に基づく選択的検査は見逃しとスティグマの問題があり、より簡便で非差別的な普遍的スクリーニングへ移行した。検査希望者にはリスク開示の有無を問わず提供する。妊娠のたびのHBs抗原検査は垂直感染予防に不可欠。\n【臨床応用/注意】60歳以上でもリスク因子があればワクチン接種を検討。抗ウイルス療法で肝疾患関連の罹病・死亡を減らせるため早期同定が重要。\n【誤答】リスク限定型は旧来の方針で、現行は全成人対象の普遍的スクリーニング・ワクチンが基本である。",
+    source: { title: "Hepatitis B: Part I. Updates on Screening and Prevention (AFP 2026)", url: "https://www.aafp.org/afp/2026/0300/hepatitis-b-part-1" },
+    tags: ["B型肝炎", "スクリーニング", "ワクチン", "予防", "感染症"]
+  },
+  {
+    id: "rv-nvp-firstline-afp2026-01",
+    category: "review",
+    field: "その他",
+    difficulty: 1,
+    added: "2026-09-22",
+    question: "妊娠悪阻に至らない軽症〜中等症の妊娠悪心・嘔吐(NVP)に対する第一選択の薬物療法として、最も適切なものはどれか。",
+    options: ["オンダンセトロン単剤", "ビタミンB6(ピリドキシン)±ドキシラミン", "メトクロプラミド静注", "副腎皮質ステロイド全身投与"],
+    correct: 1,
+    explanation: "【要点】軽症〜中等症NVPの薬物第一選択はビタミンB6(ピリドキシン)単独、またはドキシラミンとの併用である。\n【背景/エビデンス】ACOG/AFP 2026は、まず誘因回避や少量頻回で高蛋白の食事など生活指導を行い、薬物ではB6±ドキシラミンを第一選択とする。無効例では他の抗ヒスタミン薬やドパミン拮抗薬を追加する。\n【臨床応用/注意】オンダンセトロンは有効かつ比較的安全で、第二選択としての使用を過度に控える必要はないが第一選択ではない。\n【誤答】オンダンセトロン・メトクロプラミドは第一選択が無効な場合の次善手。ステロイド全身投与は難治例に限られ初期治療には不適である。",
+    source: { title: "Nausea and Vomiting During Pregnancy (AFP 2026)", url: "https://www.aafp.org/afp/2026/0600/nausea-vomiting-during-pregnancy" },
+    tags: ["妊娠悪心・嘔吐", "ピリドキシン", "ドキシラミン", "産科", "その他"]
+  },
+  {
+    id: "gl-finerenone-ckd-ada2026-01",
+    category: "guideline",
+    field: "腎・電解質",
+    difficulty: 2,
+    added: "2026-09-22",
+    question: "2型糖尿病を合併する慢性腎臓病(CKD)の薬物療法に関する2026年のADA/KDIGOの推奨について、最も適切なものはどれか。",
+    options: ["RAS阻害薬とSGLT2阻害薬で管理中でもアルブミン尿が残存する場合は、ステロイド性MRAのスピロノラクトン追加が第一に推奨される。", "非ステロイド性MRAはCKD進行・心血管リスク低減のエビデンスがなく推奨されない。", "RAS阻害薬使用下でアルブミン尿・心血管リスクが残存する2型糖尿病CKDに、実証された非ステロイド性MRA(フィネレノン)の追加が推奨される。", "SGLT2阻害薬はeGFRが45未満に低下した時点で禁忌となるため中止する。"],
+    correct: 2,
+    explanation: "【要点】RAS阻害薬(±SGLT2阻害薬)使用下でアルブミン尿や心血管リスクが残る2型糖尿病CKDには、実証された非ステロイド性MRAであるフィネレノンの追加が推奨される。\n【背景/エビデンス】FIDELIO/FIGARO(FIDELITY統合解析)でフィネレノンは腎・心血管アウトカムを有意に改善した。ADA 2026/KDIGO 2026は、UACR高値例でSGLT2阻害薬と非ステロイド性MRAの併用・同時開始も考慮するとした。\n【臨床応用/注意】高カリウム血症のモニタリングが必要。SGLT2阻害薬はeGFR≧20で開始でき、eGFR低下のみで一律中止しない。\n【誤答】第一選択はスピロノラクトンでなく実証された非ステロイド性MRA。エビデンスは十分にあり、eGFR 45未満で一律禁忌でもない。",
+    source: { title: "Standards of Care in Diabetes 2026: Ch.11 Chronic Kidney Disease and Risk Management (ADA)", url: "https://diabetesjournals.org/care/article/49/Supplement_1/S246/163914/11-Chronic-Kidney-Disease-and-Risk-Management" },
+    tags: ["CKD", "糖尿病", "フィネレノン", "非ステロイド性MRA", "腎・電解質"]
+  },
+  {
+    id: "jr-tirzepatide-osa-surmount-01",
+    category: "journal",
+    field: "呼吸器",
+    difficulty: 2,
+    added: "2026-09-22",
+    question: "肥満を伴う中等症〜重症の閉塞性睡眠時無呼吸(OSA)に対するチルゼパチドの無作為化試験(SURMOUNT-OSA)と近年の適応について、最も適切なものはどれか。",
+    options: ["チルゼパチドは無呼吸低呼吸指数(AHI)と体重を有意に改善し、米国で肥満を伴う中等症〜重症OSAに初めて承認された薬物療法となった。", "AHIは改善するが体重には有意な変化はみられなかった。", "全例で残存OSAが消失し、CPAPは不要となった。", "GLP-1受容体のみに作用する単剤であり、GIP受容体作用は持たない。"],
+    correct: 0,
+    explanation: "【要点】チルゼパチド(GLP-1/GIP受容体デュアル作動薬)はSURMOUNT-OSAでAHIと体重をともに有意に改善し、肥満を伴う中等症〜重症OSAに対し米国で初承認の薬物療法となった。\n【背景/エビデンス】52週の二重盲検プラセボ対照試験で、CPAP併用/非併用を問わずAHIが有意に低下。減量に加え上気道の物理的変化や換気調節の改善が機序と考えられる。\n【臨床応用/注意】ただし約半数で残存OSAが認められ長期データは限定的。CPAP等の標準治療を置き換えるものではなく併用・補助的位置づけである。\n【誤答】体重も有意に改善し、OSAは全例で消失しない。GLP-1/GIP両受容体に作用するデュアル作動薬である。",
+    source: { title: "GLP-1/GIP dual agonist tirzepatide in obstructive sleep apnea syndrome: mechanisms, evidence, and clinical perspectives (Front Med 2026)", url: "https://www.frontiersin.org/journals/medicine/articles/10.3389/fmed.2026.1752341/full" },
+    tags: ["OSA", "チルゼパチド", "GLP-1/GIP", "肥満", "呼吸器"]
+  },
+  {
+    id: "rv-iron-deficiency-nonanemic-01",
+    category: "review",
+    field: "血液",
+    difficulty: 2,
+    added: "2026-09-22",
+    question: "貧血を伴わない鉄欠乏(iron deficiency without anemia)について、当てはまるものを選べ。",
+    options: ["ヘモグロビンが正常範囲でも、疲労感・認知機能低下・運動耐容能低下などの症状を呈しうる。", "頻度は低く、閉経前女性でもまれである。", "フェリチン低値で症状がある場合、経口鉄剤による治療で症状が改善しうる。", "貧血がなければ鉄欠乏の原因検索は一切不要である。"],
+    correct: [0, 2],
+    explanation: "【要点】貧血を伴わない鉄欠乏は高頻度で、ヘモグロビン正常でも疲労・認知機能低下・運動耐容能低下を呈しうる。フェリチン低値かつ症状があれば経口鉄剤で改善が期待できる。\n【背景/エビデンス】非貧血性鉄欠乏の女性への少量経口鉄でフェリチン上昇と一部症状の改善が報告される。標準用量では消化器症状で脱落しやすく、低用量や隔日投与も選択肢となる。\n【臨床応用/注意】原因検索は重要で、特に消化管出血(大腸癌を含む)の評価を怠らない。年齢・リスクに応じ内視鏡等を検討する。\n【誤答】頻度は高く閉経前女性で一般的。貧血がなくても原因検索は必要で、放置してよいわけではない。",
+    source: { title: "Iron deficiency without anemia: an underrecognized and undertreated clinical condition (Clin Hematol Int)", url: "https://chi.scholasticahq.com/article/165952-iron-deficiency-without-anemia-an-underrecognized-and-undertreated-clinical-condition-with-special-focus-on-colorectal-cancer" },
+    tags: ["鉄欠乏", "フェリチン", "疲労", "経口鉄剤", "血液"]
+  },
+  {
+    id: "gl-gabapentinoid-lbp-sciatica-01",
+    category: "guideline",
+    field: "神経",
+    difficulty: 2,
+    added: "2026-09-22",
+    question: "慢性腰痛および坐骨神経痛(腰部神経根症)に対するガバペンチノイド(ガバペンチン・プレガバリン)の使用に関する近年のエビデンスとガイドラインについて、最も適切なものはどれか。",
+    options: ["慢性腰痛に対して短期的に有意な鎮痛効果が示され、第一選択として推奨される。", "坐骨神経痛に特異的に有効で、機能障害を大きく改善する。", "有害事象は少なく、長期使用でも安全性の懸念は小さい。", "有効性を支持するエビデンスは乏しく有害事象(傾眠・めまい等)が増えるため、ルーチンでの使用は推奨されない。"],
+    correct: 3,
+    explanation: "【要点】ガバペンチノイドは慢性腰痛・坐骨神経痛への有効性を支持する良質なエビデンスに乏しく、有害事象が増えるためルーチン使用は推奨されない。\n【背景/エビデンス】無作為化試験のプール解析で慢性腰痛・神経根痛ともにプラセボと差がなく、傾眠・めまい・悪心などの有害事象が約40%増加した。NICE等は坐骨神経痛への抗てんかん薬・全身ステロイド・ベンゾジアゼピンを推奨しない。\n【臨床応用/注意】腰痛・坐骨神経痛は本来ガバペンチンの適応外(off-label)。運動療法・患者教育など非薬物療法を中心に据える。\n【誤答】短期・特異的な有効性は示されず、長期ではむしろ有害事象が増える。安全性の懸念も小さくない。",
+    source: { title: "Low back pain and sciatica in over 16s: assessment and management (NICE NG59)", url: "https://www.ncbi.nlm.nih.gov/books/NBK562933/" },
+    tags: ["腰痛", "坐骨神経痛", "ガバペンチノイド", "神経障害性疼痛", "神経"]
+  },
+  {
+    id: "gl-benzo-tapering-older-01",
+    category: "guideline",
+    field: "精神・行動",
+    difficulty: 2,
+    added: "2026-09-22",
+    question: "高齢者におけるベンゾジアゼピン(BZD)の減薬・中止(deprescribing)について、当てはまるものを選べ。",
+    options: ["1か月を超えて服用している場合、突然中止せず臨床的監督下で漸減する。", "離脱症状(不眠・不安・けいれん等)を最小化するため、緩徐な漸減が望ましい。", "減薬を支援する目的で、CBT(不眠に対するCBT-I等)の心理社会的介入を併用しうる。", "高用量を長期服用していても、漸減は通常1週間以内で完了できる。"],
+    correct: [0, 1, 2],
+    explanation: "【要点】高齢者のBZD減薬は、1か月超の服用では突然中止を避け臨床監督下で緩徐に漸減し、CBT等の心理社会的介入を併用する。\n【背景/エビデンス】共同臨床実践ガイドライン等は、当初20〜25%程度の減量を2〜4週保持し、その後さらに小刻み(5〜12.5%程度)に減らす方法を示す。薬剤師主導の漸減にマインドフルネスを取り入れたCBTを併用し、不安・不眠を悪化させず使用量を減らせたとの報告がある。\n【臨床応用/注意】長期・高用量ほど中止に数か月〜数年を要しうる。急な中断は離脱けいれんの危険がある。\n【誤答】高用量・長期例の漸減を1週間で完了することはできない。",
+    source: { title: "Joint Clinical Practice Guideline on Benzodiazepine Tapering (J Gen Intern Med)", url: "https://link.springer.com/article/10.1007/s11606-025-09499-2" },
+    tags: ["ベンゾジアゼピン", "減薬", "高齢者", "不眠", "精神・行動"]
   }
 ];
 
